@@ -9,9 +9,13 @@ import { useIsDarkMode } from '../../theme/components/ThemeToggle'
 import { AutoColumn } from '../Column'
 
 export const PageWrapper = styled.div`
-  padding: 68px 8px 0px;
-  max-width: 480px;
   width: 100%;
+  max-width: 480px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: calc( 50vh - 187px );
+  margin-left: calc( 50vw - 240px );
 
   @media only screen and (max-width: ${({ theme }) => `${theme.breakpoint.md}px`}) {
     padding-top: 48px;

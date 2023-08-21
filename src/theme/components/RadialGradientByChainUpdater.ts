@@ -8,8 +8,8 @@ import { darkTheme, lightTheme } from '../colors'
 
 const initialStyles = {
   width: '200vw',
-  height: '200vh',
-  transform: 'translate(-50vw, -100vh)',
+  height: '100vh',
+  transform: 'translate(-50vw, -50vh)',
 }
 const backgroundResetStyles = {
   width: '100vw',
@@ -31,7 +31,7 @@ function setDefaultBackground(backgroundRadialGradientElement: HTMLElement, dark
   setBackground(initialStyles)
   const defaultLightGradient =
     'radial-gradient(100% 100% at 50% 0%, rgba(255, 184, 226, 0.51) 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF'
-  const defaultDarkGradient = 'linear-gradient(180deg, #202738 0%, #070816 100%)'
+  const defaultDarkGradient = 'linear-gradient(135deg, #2050AE 0%, #002A69 100%)'
   backgroundRadialGradientElement.style.background = darkMode ? defaultDarkGradient : defaultLightGradient
 }
 

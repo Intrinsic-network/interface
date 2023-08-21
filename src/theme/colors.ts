@@ -98,6 +98,9 @@ export const colors = {
   networkPolygonSoft: 'rgba(164, 87, 255, 0.16)',
   networkEthereumSoft: 'rgba(98, 126, 234, 0.16)',
   networkBase: '#0052FF',
+
+  //CUSTOM
+  lightBg: 'rgba(196, 214, 232, 1)' 
 }
 
 type Theme = typeof darkTheme
@@ -139,7 +142,7 @@ export const darkTheme = {
 
   userThemeColor: colors.magentaVibrant,
 
-  background: colors.gray800,
+  background: colors.lightBg,
   backgroundBackdrop: colors.gray950,
   backgroundSurface: colors.gray900,
   backgroundModule: colors.gray800,
