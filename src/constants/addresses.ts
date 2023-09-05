@@ -1,0 +1,78 @@
+import { FACTORY_ADDRESS as V2_FACTORY_ADDRESS } from '@uniswap/v2-sdk'
+
+import { constructSameAddressMap } from '../utils/constructSameAddressMap'
+import { SupportedChainId } from './chains'
+
+type AddressMap = { [chainId: number]: string }
+
+export const UNI_ADDRESS: AddressMap = {
+  [SupportedChainId.RSK_TESTNET]: '0x53376356b542B8764c64411511b74dA9B9381E87',
+}
+
+export const V2_FACTORY_ADDRESSES: AddressMap = constructSameAddressMap(V2_FACTORY_ADDRESS)
+export const V2_ROUTER_ADDRESS: AddressMap = constructSameAddressMap('0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D')
+
+// rsk testnet v3 addresses
+const RSK_TESTNET_V3_CORE_FACTORY_ADDRESSES = '0xCd8615a6eD73B7B6187E8072852C4845159Df6a7'
+const RSK_TESTNET_V3_MIGRATOR_ADDRESSES = '0xeC1A0A44b8c69C08D29B2216D0D7b305340c235f'
+const RSK_TESTNET_MULTICALL_ADDRESSES = '0xfD0597Ed74d427C82587835D22a4d0EF7047F80B'
+const RSK_TESTNET_ROUTER_ADDRESSES = '0x0A1268677f5926cDe8604472e9eCa44E85d4363f'
+const RSK_TESTNET_QUOTER_ADDRESSES = '0xF611D7e82B3a116A7027974Fb62FF53085584b57'
+const RSK_TESTNET_NONFUNGIBLE_POSITION_MANAGER_ADDRESSES = '0xA7921ebad4556a5028E0df112AcdfB10428d87fd'
+const RSK_TESTNET_TICK_LENS_ADDRESSES = '0x99FF6aDd4B7397FDF157726c3Cd1634C04F3713B'
+
+/* V3 Contract Addresses */
+export const V3_CORE_FACTORY_ADDRESSES: AddressMap = {
+  [SupportedChainId.RSK_TESTNET]: RSK_TESTNET_V3_CORE_FACTORY_ADDRESSES,
+}
+
+export const V3_MIGRATOR_ADDRESSES: AddressMap = {
+  [SupportedChainId.RSK_TESTNET]: RSK_TESTNET_V3_MIGRATOR_ADDRESSES,
+}
+
+export const MULTICALL_ADDRESS: AddressMap = {
+  [SupportedChainId.RSK_TESTNET]: RSK_TESTNET_MULTICALL_ADDRESSES,
+}
+
+export const SWAP_ROUTER_ADDRESSES: AddressMap = {
+  [SupportedChainId.RSK_TESTNET]: RSK_TESTNET_ROUTER_ADDRESSES,
+}
+
+/**
+ * The latest governor bravo that is currently admin of timelock
+ */
+export const GOVERNANCE_BRAVO_ADDRESSES: AddressMap = {
+  [SupportedChainId.RSK_TESTNET]: '0x5eb07844515F4040784d66F2422FBA6EDa80D8Cb',
+}
+
+export const TIMELOCK_ADDRESS: AddressMap = {
+  [SupportedChainId.RSK_TESTNET]: '0x9fe2798055324d438bC0725AB3F1c8709566Ea2d',
+}
+
+export const MERKLE_DISTRIBUTOR_ADDRESS: AddressMap = {
+  [SupportedChainId.RSK_MAINNET]: '0x090D4613473dEE047c3f2706764f49E0821D256e',
+}
+
+export const ARGENT_WALLET_DETECTOR_ADDRESS: AddressMap = {
+  [SupportedChainId.RSK_MAINNET]: '0xeca4B0bDBf7c55E9b7925919d03CbF8Dc82537E8',
+}
+
+export const QUOTER_ADDRESSES: AddressMap = {
+  [SupportedChainId.RSK_TESTNET]: RSK_TESTNET_QUOTER_ADDRESSES,
+}
+
+export const NONFUNGIBLE_POSITION_MANAGER_ADDRESSES: AddressMap = {
+  [SupportedChainId.RSK_TESTNET]: RSK_TESTNET_NONFUNGIBLE_POSITION_MANAGER_ADDRESSES,
+}
+
+export const ENS_REGISTRAR_ADDRESSES: AddressMap = {
+  [SupportedChainId.RSK_MAINNET]: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
+}
+
+export const SOCKS_CONTROLLER_ADDRESSES: AddressMap = {
+  [SupportedChainId.RSK_MAINNET]: '0x65770b5283117639760beA3F867b69b3697a91dd',
+}
+
+export const TICK_LENS_ADDRESSES: AddressMap = {
+  [SupportedChainId.RSK_TESTNET]: RSK_TESTNET_TICK_LENS_ADDRESSES,
+}

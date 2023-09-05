@@ -1,0 +1,1 @@
+export const BRAVO_START_BLOCK = 3854318
