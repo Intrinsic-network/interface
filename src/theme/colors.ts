@@ -82,6 +82,7 @@ export interface GlobalPalette {
   networkArbitrum: Color
   networkPolygonSoft: Color
   networkEthereumSoft: Color
+  lightBg: Color
 }
 
 export const colors: GlobalPalette = {
@@ -166,6 +167,9 @@ export const colors: GlobalPalette = {
   networkArbitrum: '#28A0F0',
   networkPolygonSoft: 'rgba(164, 87, 255, 0.16)',
   networkEthereumSoft: 'rgba(98, 126, 234, 0.16)',
+
+  //CUSTOM
+  lightBg: 'rgba(196, 214, 232, 1)',
 }
 
 export interface Palette {
@@ -297,7 +301,7 @@ export const colorsDark: Palette = {
 
   backgroundBackdrop: colors.black,
   backgroundSurface: colors.gray900,
-  backgroundModule: colors.gray800,
+  backgroundModule: colors.lightBg,
   backgroundInteractive: colors.gray700,
   backgroundFloating: opacify(12, colors.black),
   backgroundOutline: opacify(14, colors.gray300),
