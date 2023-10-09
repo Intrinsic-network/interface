@@ -3,7 +3,7 @@ import { transparentize } from 'polished'
 import { ReactNode } from 'react'
 import { AlertTriangle } from 'react-feather'
 import { Text } from 'rebass'
-import styled, { css } from 'styled-components/macro'
+import styled, { css } from 'styled-components'
 import { Z_INDEX } from 'theme/zIndex'
 
 import { AutoColumn } from '../Column'

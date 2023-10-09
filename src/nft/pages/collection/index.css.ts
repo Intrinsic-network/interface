@@ -6,7 +6,7 @@ import {
 } from 'components/Tokens/constants'
 import { buttonTextMedium } from 'nft/css/common.css'
 import { loadingBlock } from 'nft/css/loading.css'
-import { css } from 'styled-components/macro'
+import { css } from 'styled-components'
 
 import { sprinkles, vars } from '../../css/sprinkles.css'
 

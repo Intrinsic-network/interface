@@ -1,5 +1,5 @@
 import { Icon } from 'react-feather'
-import styled, { css } from 'styled-components/macro'
+import styled, { css } from 'styled-components'
 
 export const IconHoverText = styled.span`
   color: ${({ theme }) => theme.textPrimary};

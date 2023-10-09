@@ -5,7 +5,7 @@ import Modal from 'components/Modal'
 import { LoadingView, SubmittedView } from 'components/ModalViews'
 import { Link } from 'react-router-dom'
 import { Text } from 'rebass'
-import { useTheme } from 'styled-components/macro'
+import { useTheme } from 'styled-components'
 import { ExternalLink, ThemedText } from 'theme'
 import { ExplorerDataType, getExplorerLink } from 'utils/getExplorerLink'
 
@@ -18,7 +18,7 @@ export const ProposalSubmissionModal = ({
   hash: string | undefined
   onDismiss: () => void
 }) => {
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   return (
     <Modal isOpen={isOpen} onDismiss={onDismiss}>

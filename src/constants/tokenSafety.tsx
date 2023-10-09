@@ -13,8 +13,8 @@ export enum WARNING_LEVEL {
 }
 
 export function getWarningCopy(warning: Warning | null, plural = false) {
-  let heading = null,
-    description = null
+  let heading = null as any,
+    description = null as any
   if (warning) {
     switch (warning.level) {
       case WARNING_LEVEL.MEDIUM:

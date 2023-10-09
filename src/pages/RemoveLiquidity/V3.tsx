@@ -29,7 +29,7 @@ import { Text } from 'rebass'
 import { useBurnV3ActionHandlers, useBurnV3State, useDerivedV3BurnInfo } from 'state/burn/v3/hooks'
 import { useTransactionAdder } from 'state/transactions/hooks'
 import { useUserSlippageToleranceWithDefault } from 'state/user/hooks'
-import { useTheme } from 'styled-components/macro'
+import { useTheme } from 'styled-components'
 import { ThemedText } from 'theme'
 
 import TransactionConfirmationModal, { ConfirmationModalContent } from '../../components/TransactionConfirmationModal'
@@ -62,7 +62,7 @@ export default function RemoveLiquidityV3() {
 }
 function Remove({ tokenId }: { tokenId: BigNumber }) {
   const { position } = useV3PositionFromTokenId(tokenId)
-  const theme = useTheme()
+  const theme = useTheme() as any
   const { account, chainId, provider } = useWeb3React()
 
   // flag for receiving WETH

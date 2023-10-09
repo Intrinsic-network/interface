@@ -7,7 +7,7 @@ import { SUPPORTED_GAS_ESTIMATE_CHAIN_IDS } from 'constants/chains'
 import useNativeCurrency from 'lib/hooks/useNativeCurrency'
 import { useMemo } from 'react'
 import { InterfaceTrade } from 'state/routing/types'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 
 import { Separator, ThemedText } from '../../theme'
 import { computeRealizedPriceImpact } from '../../utils/prices'
@@ -51,7 +51,7 @@ export function AdvancedSwapDetails({
   syncing = false,
   hideInfoTooltips = false,
 }: AdvancedSwapDetailsProps) {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const { chainId } = useWeb3React()
   const nativeCurrency = useNativeCurrency()
 

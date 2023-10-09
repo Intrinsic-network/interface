@@ -1,6 +1,6 @@
 import { readableColor } from 'polished'
 import { PropsWithChildren } from 'react'
-import styled, { DefaultTheme } from 'styled-components/macro'
+import styled from 'styled-components'
 import { Color } from 'theme/styled'
 
 export enum BadgeVariant {
@@ -17,7 +17,7 @@ interface BadgeProps {
   variant?: BadgeVariant
 }
 
-function pickBackgroundColor(variant: BadgeVariant | undefined, theme: DefaultTheme): Color {
+function pickBackgroundColor(variant: BadgeVariant | undefined, theme: any): Color {
   switch (variant) {
     case BadgeVariant.NEGATIVE:
       return theme.deprecated_error
@@ -34,7 +34,7 @@ function pickBackgroundColor(variant: BadgeVariant | undefined, theme: DefaultTh
   }
 }
 
-function pickBorder(variant: BadgeVariant | undefined, theme: DefaultTheme): string {
+function pickBorder(variant: BadgeVariant | undefined, theme: any): string {
   switch (variant) {
     case BadgeVariant.WARNING_OUTLINE:
       return `1px solid ${theme.deprecated_warning}`
@@ -43,7 +43,7 @@ function pickBorder(variant: BadgeVariant | undefined, theme: DefaultTheme): str
   }
 }
 
-function pickFontColor(variant: BadgeVariant | undefined, theme: DefaultTheme): string {
+function pickFontColor(variant: BadgeVariant | undefined, theme: any): string {
   switch (variant) {
     case BadgeVariant.NEGATIVE:
       return readableColor(theme.deprecated_error)

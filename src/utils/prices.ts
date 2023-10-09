@@ -1,4 +1,4 @@
-import { FeeAmount } from '@intrinsic-network/intrinsic-sdk'
+import { FeeAmount, Pool } from '@intrinsic-network/intrinsic-sdk'
 import { Trade } from '@intrinsic-network/router-sdk'
 import { Currency, CurrencyAmount, Fraction, Percent, TradeType } from '@intrinsic-network/sdk-core'
 import { Pair } from '@uniswap/v2-sdk'
@@ -48,7 +48,7 @@ export function computeRealizedLPFeePercent(trade: Trade<Currency, Currency, Tra
               pool instanceof Pair
                 ? // not currently possible given protocol check above, but not fatal
                   FeeAmount.MEDIUM
-                : pool.fee
+                : (pool as Pool).fee
             return currentFee.multiply(ONE_HUNDRED_PERCENT.subtract(new Fraction(fee, 1_000_000)))
           }, ONE_HUNDRED_PERCENT)
         )

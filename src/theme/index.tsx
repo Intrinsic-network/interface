@@ -5,7 +5,7 @@ import styled, {
   css,
   DefaultTheme,
   ThemeProvider as StyledComponentsThemeProvider,
-} from 'styled-components/macro'
+} from 'styled-components'
 
 import { cssStringFromTheme } from '../nft/css/cssStringFromTheme'
 import { darkTheme } from '../nft/themes/darkTheme'
@@ -319,7 +319,7 @@ export const ThemedText = {
 
 export const ThemedGlobalStyle = createGlobalStyle`
 html {
-  color: ${({ theme }) => theme.deprecated_text1};
+  color: ${({ theme }: any) => theme.deprecated_text1};
   background-color: ${({ theme }) => theme.deprecated_bg1} !important;
 }
 

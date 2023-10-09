@@ -1,7 +1,7 @@
 import { Percent } from '@intrinsic-network/sdk-core'
 import { Trans } from '@lingui/macro'
 import { OutlineCard } from 'components/Card'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { opacify } from 'theme/utils'
 
 import { ThemedText } from '../../theme'
@@ -20,7 +20,7 @@ interface PriceImpactWarningProps {
 }
 
 export default function PriceImpactWarning({ priceImpact }: PriceImpactWarningProps) {
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   return (
     <StyledCard>

@@ -30,7 +30,7 @@ import { getTimeDifference, isValidDate } from 'nft/utils/date'
 import { putCommas } from 'nft/utils/putCommas'
 import { fallbackProvider, getRarityProviderLogo } from 'nft/utils/rarity'
 import { MouseEvent, useMemo, useState } from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { ExternalLink } from 'theme'
 import { ExplorerDataType, getExplorerLink } from 'utils/getExplorerLink'
 

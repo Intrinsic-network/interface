@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro'
 import AddressInputPanel from 'components/AddressInputPanel'
 import CurrencyInputPanel from 'components/CurrencyInputPanel'
 import React from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { ProposalAction } from './ProposalActionSelector'
 

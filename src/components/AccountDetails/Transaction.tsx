@@ -1,6 +1,6 @@
 import { useWeb3React } from '@web3-react/core'
 import { CheckCircle, Triangle } from 'react-feather'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { useAllTransactions } from '../../state/transactions/hooks'
 import { ExternalLink } from '../../theme'

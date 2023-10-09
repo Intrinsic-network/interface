@@ -23,7 +23,7 @@ import {
 } from 'react-feather'
 import { Link } from 'react-router-dom'
 import { useDarkModeManager } from 'state/user/hooks'
-import styled, { css } from 'styled-components/macro'
+import styled, { css } from 'styled-components'
 import { isDevelopmentEnv, isStagingEnv } from 'utils/env'
 
 import { ReactComponent as MenuIcon } from '../../assets/images/menu.svg'

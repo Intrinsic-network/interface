@@ -15,7 +15,7 @@ import { Text } from 'rebass'
 import { useCurrencyBalanceString } from 'state/connection/hooks'
 import { useAppDispatch } from 'state/hooks'
 import { updateSelectedWallet } from 'state/user/reducer'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { shortenAddress } from '../../nft/utils/address'
 import { useCloseModal, useToggleModal } from '../../state/application/hooks'

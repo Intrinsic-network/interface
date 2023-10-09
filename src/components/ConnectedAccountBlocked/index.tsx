@@ -1,7 +1,7 @@
 import { Trans } from '@lingui/macro'
 import Column from 'components/Column'
 import { AlertOctagon } from 'react-feather'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { ExternalLink, ThemedText } from 'theme'
 
 import { CopyHelper } from '../../theme'
@@ -28,7 +28,7 @@ interface ConnectedAccountBlockedProps {
 }
 
 export default function ConnectedAccountBlocked(props: ConnectedAccountBlockedProps) {
-  const theme = useTheme()
+  const theme = useTheme() as any
   return (
     <Modal isOpen={props.isOpen} onDismiss={Function.prototype()}>
       <ContentWrapper>

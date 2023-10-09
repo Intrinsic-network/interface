@@ -7,7 +7,7 @@ import { Box } from 'rebass'
 import { useAppDispatch } from 'state/hooks'
 import { resetMintState } from 'state/mint/actions'
 import { resetMintState as resetMintV3State } from 'state/mint/v3/actions'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { ThemedText } from 'theme'
 
 import Row, { RowBetween } from '../Row'
@@ -67,7 +67,7 @@ export function AddRemoveTabs({
   showBackLink?: boolean
   children?: ReactNode | undefined
 }) {
-  const theme = useTheme()
+  const theme = useTheme() as any
   // reset states on back
   const dispatch = useAppDispatch()
   const location = useLocation()

@@ -16,7 +16,9 @@ import { AlertTriangle, BookOpen, ChevronDown, ChevronsRight, Inbox, Layers, Plu
 import { Link } from 'react-router-dom'
 import { useToggleWalletModal } from 'state/application/hooks'
 import { useUserHideClosedPositions } from 'state/user/hooks'
-import styled, { css, useTheme } from 'styled-components/macro'
+import { useTheme, css } from 'styled-components'
+
+import styled from 'styled-components'
 import { HideSmall, ThemedText } from 'theme'
 import { PositionDetails } from 'types/position'
 
@@ -163,7 +165,7 @@ function PositionsLoadingPlaceholder() {
 }
 
 function WrongNetworkCard() {
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   return (
     <>
@@ -198,7 +200,7 @@ export default function Pool() {
   const { account, chainId } = useWeb3React()
   const toggleWalletModal = useToggleWalletModal()
 
-  const theme = useTheme()
+  const theme = useTheme() as any
   const [userHideClosedPositions, setUserHideClosedPositions] = useUserHideClosedPositions()
 
   const { positions, loading: positionsLoading } = useV3Positions(account)

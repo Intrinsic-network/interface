@@ -1,4 +1,4 @@
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 
 import { ThemedText } from '../../theme'
 import { AutoColumn } from '../Column'
@@ -52,7 +52,7 @@ interface ProgressCirclesProps {
  * @param steps  array of booleans where true means step is complete
  */
 export default function ProgressCircles({ steps, disabled = false, ...rest }: ProgressCirclesProps) {
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   return (
     <Wrapper justify={'center'} {...rest}>

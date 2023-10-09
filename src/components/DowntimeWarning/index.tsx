@@ -1,6 +1,6 @@
 import { useWeb3React } from '@web3-react/core'
 import { AlertOctagon } from 'react-feather'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { ExternalLink } from 'theme'
 
 import { isL2ChainId } from '../../utils/chains'

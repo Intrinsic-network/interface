@@ -26,7 +26,7 @@ import { Text } from 'rebass'
 import { useToggleWalletModal } from 'state/application/hooks'
 import { InterfaceTrade } from 'state/routing/types'
 import { TradeState } from 'state/routing/types'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { currencyAmountToPreciseFloat, formatTransactionAmount } from 'utils/formatNumbers'
 
 import AddressInputPanel from '../../components/AddressInputPanel'
@@ -184,7 +184,7 @@ export default function Swap() {
     [chainId, defaultTokens, urlLoadedTokens]
   )
 
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   // toggle wallet when disconnected
   const toggleWalletModal = useToggleWalletModal()

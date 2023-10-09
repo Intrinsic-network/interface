@@ -1,7 +1,7 @@
 import { Interface } from '@ethersproject/abi'
 import { CurrencyAmount, Token } from '@intrinsic-network/sdk-core'
 import { Trans } from '@lingui/macro'
-import { abi as STAKING_REWARDS_ABI } from '@uniswap/liquidity-staker/build/StakingRewards.json'
+import STAKING_REWARDS_ABI from '@uniswap/liquidity-staker/build/StakingRewards.json'
 import { Pair } from '@uniswap/v2-sdk'
 import { useWeb3React } from '@web3-react/core'
 import { SupportedChainId } from 'constants/chains'
@@ -13,7 +13,7 @@ import { ReactNode, useMemo } from 'react'
 
 import { DAI, INT, USDC_MAINNET, USDT, WBTC, WRAPPED_NATIVE_CURRENCY } from '../../constants/tokens'
 
-const STAKING_REWARDS_INTERFACE = new Interface(STAKING_REWARDS_ABI)
+const STAKING_REWARDS_INTERFACE = new Interface(STAKING_REWARDS_ABI.abi)
 
 export const STAKING_GENESIS = 1600387200
 

@@ -6,7 +6,7 @@ import { useMemo } from 'react'
 import { ChevronRight, Moon, Sun } from 'react-feather'
 import { useToggleWalletModal } from 'state/application/hooks'
 import { useDarkModeManager } from 'state/user/hooks'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { useAllTransactions } from '../../state/transactions/hooks'
 import AuthenticatedHeader from './AuthenticatedHeader'

@@ -1,4 +1,4 @@
-import styled, { keyframes, useTheme } from 'styled-components/macro'
+import styled, { keyframes, useTheme } from 'styled-components'
 
 const Wrapper = styled.div`
   height: 90px;
@@ -39,7 +39,7 @@ const PolyLine = styled.polyline`
 `
 
 export default function AnimatedConfirmation() {
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   return (
     <Wrapper className="w4rAnimated_checkmark">

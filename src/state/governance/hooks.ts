@@ -4,8 +4,8 @@ import { BigNumber } from '@ethersproject/bignumber'
 import { Contract } from '@ethersproject/contracts'
 import type { TransactionResponse } from '@ethersproject/providers'
 import { toUtf8String, Utf8ErrorFuncs, Utf8ErrorReason } from '@ethersproject/strings'
-import { abi as GOVERNANCE_ABI } from '@intrinsic-network/governance/artifacts/contracts/GovernorBravoDelegator.sol/GovernorBravoDelegator.json'
-import { abi as INT_ABI } from '@intrinsic-network/governance/artifacts/contracts/Int.sol/Int.json'
+import GOVERNANCE_ABI  from '@intrinsic-network/governance/artifacts/contracts/GovernorBravoDelegator.sol/GovernorBravoDelegator.json'
+import INT_ABI from '@intrinsic-network/governance/artifacts/contracts/Int.sol/Int.json'
 import { CurrencyAmount, Token } from '@intrinsic-network/sdk-core'
 // eslint-disable-next-line no-restricted-imports
 import { t } from '@lingui/macro'
@@ -35,7 +35,7 @@ const useLatestGovernanceContract = useGovernanceBravoContract
 export function useUniContract() {
   const { chainId } = useWeb3React()
   const uniAddress = useMemo(() => (chainId ? INT[chainId]?.address : undefined), [chainId])
-  return useContract(uniAddress, INT_ABI, true)
+  return useContract(uniAddress, INT_ABI.abi, true)
 }
 
 interface ProposalDetail {
@@ -79,7 +79,7 @@ export enum ProposalState {
   EXECUTED,
 }
 
-const GovernanceInterface = new Interface(GOVERNANCE_ABI)
+const GovernanceInterface = new Interface(GOVERNANCE_ABI.abi)
 
 // get count of all proposals made in the latest governor contract
 function useProposalCount(contract: Contract | null): number | undefined {

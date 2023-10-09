@@ -1,7 +1,7 @@
 import Tooltip from 'components/Tooltip'
 import { ReactNode, useCallback, useState } from 'react'
 import { Info } from 'react-feather'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 const InfoTipContainer = styled.div`
   display: flex;

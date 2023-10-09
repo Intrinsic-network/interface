@@ -3,7 +3,7 @@ import Loader from 'components/Loader'
 import { getChainInfo } from 'constants/chainInfo'
 import { SupportedChainId } from 'constants/chains'
 import { CheckMarkIcon } from 'nft/components/icons'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 
 const LOGO_SIZE = 20
 
@@ -73,7 +73,7 @@ export default function ChainSelectorRow({
   const active = chainId === targetChain
   const { label, logoUrl } = getChainInfo(targetChain)
 
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   return (
     <Container onClick={() => onSelectChain(targetChain)}>

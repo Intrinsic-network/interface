@@ -2,7 +2,7 @@ import { ElementName, Event, EventName } from 'analytics/constants'
 import { TraceEvent } from 'analytics/TraceEvent'
 import React from 'react'
 import { Check } from 'react-feather'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { ExternalLink } from '../../theme'
 

@@ -67,7 +67,7 @@ export default memo(function CurrencySearchModal({
   const { height: windowHeight } = useWindowSize()
   // change min height if not searching
   let modalHeight: number | undefined = 80
-  let content = null
+  let content = null as unknown as JSX.Element;
   switch (modalView) {
     case CurrencyModalView.search:
       if (windowHeight) {

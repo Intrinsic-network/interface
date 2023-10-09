@@ -15,7 +15,7 @@ import { default as Slider } from 'rc-slider'
 import { FormEvent, useEffect, useState } from 'react'
 import { FocusEventHandler } from 'react'
 import { useLocation } from 'react-router-dom'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 
 import * as styles from './PriceRange.css'
 import { TraitsHeader } from './TraitsHeader'
@@ -36,7 +36,7 @@ export const PriceRange = () => {
   const setPriceRangeHigh = usePriceRange((statae) => statae.setPriceRangeHigh)
   const prevMinMax = usePriceRange((state) => state.prevMinMax)
   const setPrevMinMax = usePriceRange((state) => state.setPrevMinMax)
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   const isMobile = useIsMobile()
   const location = useLocation()

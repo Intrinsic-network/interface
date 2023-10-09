@@ -5,7 +5,7 @@ import { TraceEvent } from 'analytics/TraceEvent'
 import { X } from 'react-feather'
 import { Link } from 'react-router-dom'
 import { useShowTokensPromoBanner } from 'state/user/hooks'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { opacify } from 'theme/utils'
 import { Z_INDEX } from 'theme/zIndex'
 
@@ -64,7 +64,7 @@ const Description = styled.span`
 `
 
 export default function TokensBanner() {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const [showTokensPromoBanner, setShowTokensPromoBanner] = useShowTokensPromoBanner()
   const { chainId: connectedChainId } = useWeb3React()
   // const chainName = chainIdToBackendName(connectedChainId).toLowerCase()

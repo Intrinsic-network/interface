@@ -1,5 +1,5 @@
 import { assetList } from 'nft/components/collection/CollectionNfts.css'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 const SkeletonPageWrapper = styled.div`
   display: flex;

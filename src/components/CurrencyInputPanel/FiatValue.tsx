@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro'
 // eslint-disable-next-line no-restricted-imports
 import { t } from '@lingui/macro'
 import { useMemo } from 'react'
-import { useTheme } from 'styled-components/macro'
+import { useTheme } from 'styled-components'
 
 import { ThemedText } from '../../theme'
 import { warningSeverity } from '../../utils/prices'
@@ -16,7 +16,7 @@ export function FiatValue({
   fiatValue: CurrencyAmount<Currency> | null | undefined
   priceImpact?: Percent
 }) {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const priceImpactColor = useMemo(() => {
     if (!priceImpact) return undefined
     if (priceImpact.lessThan('0')) return theme.deprecated_green1

@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 import { AlertTriangle, ArrowDown } from 'react-feather'
 import { Text } from 'rebass'
 import { InterfaceTrade } from 'state/routing/types'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 
 import { useStablecoinValue } from '../../hooks/useStablecoinPrice'
 import { ThemedText } from '../../theme'
@@ -73,7 +73,7 @@ export default function SwapModalHeader({
   showAcceptChanges: boolean
   onAcceptChanges: () => void
 }) {
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   const [showInverted, setShowInverted] = useState<boolean>(false)
   const [lastExecutionPrice, setLastExecutionPrice] = useState(trade.executionPrice)

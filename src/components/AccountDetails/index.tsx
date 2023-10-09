@@ -6,7 +6,7 @@ import { ExternalLink as LinkIcon } from 'react-feather'
 import { useAppDispatch } from 'state/hooks'
 import { updateSelectedWallet } from 'state/user/reducer'
 import { removeConnectedWallet } from 'state/wallets/reducer'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { isMobile } from 'utils/userAgent'
 
 import { ReactComponent as Close } from '../../assets/images/x.svg'
@@ -206,7 +206,7 @@ export default function AccountDetails({
   const { chainId, account, connector } = useWeb3React()
   const connectionType = getConnection(connector).type
 
-  const theme = useTheme()
+  const theme = useTheme() as any;
   const dispatch = useAppDispatch()
 
   const isMetaMask = getIsMetaMask()

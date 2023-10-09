@@ -13,7 +13,7 @@ import { themeVars } from 'nft/css/sprinkles.css'
 import { useIsMobile } from 'nft/hooks'
 import { useCallback, useRef, useState } from 'react'
 import { ChevronDown, ChevronUp } from 'react-feather'
-import { useTheme } from 'styled-components/macro'
+import { useTheme } from 'styled-components'
 
 import * as styles from './ChainSelector.css'
 import ChainSelectorRow from './ChainSelectorRow'
@@ -30,7 +30,7 @@ export const ChainSelector = ({ leftAlign }: ChainSelectorProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const isMobile = useIsMobile()
 
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   const ref = useRef<HTMLDivElement>(null)
   const modalRef = useRef<HTMLDivElement>(null)

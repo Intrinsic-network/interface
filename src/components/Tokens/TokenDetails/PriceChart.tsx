@@ -13,7 +13,7 @@ import { useActiveLocale } from 'hooks/useActiveLocale'
 import { useAtom } from 'jotai'
 import { ReactNode, useCallback, useEffect, useMemo, useState } from 'react'
 import { ArrowDownRight, ArrowUpRight, TrendingUp } from 'react-feather'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import {
   dayHourFormatter,
   hourFormatter,
@@ -139,7 +139,7 @@ interface PriceChartProps {
 export function PriceChart({ width, height, prices }: PriceChartProps) {
   const [timePeriod, setTimePeriod] = useAtom(filterTimeAtom)
   const locale = useActiveLocale()
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   // first price point on the x-axis of the current time period's chart
   const startingPrice = prices?.[0] ?? DATA_EMPTY
@@ -404,7 +404,7 @@ const StyledMissingChart = styled.svg`
 const chartBottomPadding = 15
 
 function MissingPriceChart({ width, height, message }: { width: number; height: number; message: ReactNode }) {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const midPoint = height / 2 + 45
   return (
     <StyledMissingChart width={width} height={height} style={{ minWidth: '100%' }}>

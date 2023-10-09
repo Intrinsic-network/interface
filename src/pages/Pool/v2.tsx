@@ -8,8 +8,8 @@ import { useMemo } from 'react'
 import { ChevronsRight } from 'react-feather'
 import { Link } from 'react-router-dom'
 import { Text } from 'rebass'
-import styled, { useTheme } from 'styled-components/macro'
-
+import { useTheme } from 'styled-components'
+import styled from 'styled-components'
 import { ButtonOutlined, ButtonPrimary, ButtonSecondary } from '../../components/Button'
 import Card from '../../components/Card'
 import { AutoColumn } from '../../components/Column'
@@ -87,7 +87,7 @@ const Layer2Prompt = styled(EmptyProposals)`
 `
 
 export default function Pool() {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const { account, chainId } = useWeb3React()
   const unsupportedV2Network = chainId
 

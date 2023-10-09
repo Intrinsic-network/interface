@@ -13,7 +13,7 @@ import { SUPPORTED_GAS_ESTIMATE_CHAIN_IDS } from 'constants/chains'
 import { useState } from 'react'
 import { ChevronDown, Info } from 'react-feather'
 import { InterfaceTrade } from 'state/routing/types'
-import styled, { keyframes, useTheme } from 'styled-components/macro'
+import styled, { keyframes, useTheme } from 'styled-components'
 import { HideSmall, ThemedText } from 'theme'
 
 import { AdvancedSwapDetails } from './AdvancedSwapDetails'
@@ -123,7 +123,7 @@ export default function SwapDetailsDropdown({
   setShowInverted,
   allowedSlippage,
 }: SwapDetailsInlineProps) {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const { chainId } = useWeb3React()
   const [showDetails, setShowDetails] = useState(false)
 

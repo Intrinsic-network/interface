@@ -6,7 +6,7 @@ import ms from 'ms.macro'
 import { darken } from 'polished'
 import { useState } from 'react'
 import { useUserSlippageTolerance, useUserTransactionTTL } from 'state/user/hooks'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 
 import { ThemedText } from '../../theme'
 import { AutoColumn } from '../Column'
@@ -106,7 +106,7 @@ const THREE_DAYS_IN_SECONDS = ms`3 days` / 1000
 
 export default function TransactionSettings({ placeholderSlippage }: TransactionSettingsProps) {
   const { chainId } = useWeb3React()
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   const [userSlippageTolerance, setUserSlippageTolerance] = useUserSlippageTolerance()
 
