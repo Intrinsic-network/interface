@@ -13,7 +13,6 @@ const isProduction = process.env.NODE_ENV === "production";
 
 process.env.REACT_APP_GIT_COMMIT_HASH = commitHash;
 const { DefinePlugin } = require("webpack");
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 // Linting and type checking are only necessary as part of development and testing.
 // Omit them from production builds, as they slow down the feedback loop.
@@ -94,7 +93,6 @@ module.exports = {
           commitHash.toString()
         ),
       }),
-      new NodePolyfillPlugin(),
     ],
     configure: (webpackConfig) => {
       // Configure webpack plugins:
