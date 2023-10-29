@@ -1,7 +1,7 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { BagItem, BagItemStatus, BagStatus, TokenType, UpdatedGenieAsset } from 'nft/types'
 import { v4 as uuidv4 } from 'uuid'
-import create from 'zustand'
+import { create } from 'zustand'
 import { devtools } from 'zustand/middleware'
 
 interface BagState {
