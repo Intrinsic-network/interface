@@ -7,6 +7,8 @@ export const darkTheme: Theme = {
     gradientColor1: "#2050ae",
     gradientColor2: "#002a69",
     bgLineColor: "#b8c9da",
+    navTextColor: "#FFFFFF",
+    textColor: vars.color.black,
 
     // uniswap
     accentFailure: vars.color.red300,

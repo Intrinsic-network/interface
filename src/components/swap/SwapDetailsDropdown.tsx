@@ -1,26 +1,26 @@
-import { Currency, Percent, TradeType } from '@intrinsic-network/sdk-core'
-import { Trans } from '@lingui/macro'
-import { useWeb3React } from '@web3-react/core'
-import { ElementName, Event, EventName } from 'analytics/constants'
-import { TraceEvent } from 'analytics/TraceEvent'
-import AnimatedDropdown from 'components/AnimatedDropdown'
-import Card, { OutlineCard } from 'components/Card'
-import { AutoColumn } from 'components/Column'
-import { LoadingOpacityContainer } from 'components/Loader/styled'
-import Row, { RowBetween, RowFixed } from 'components/Row'
-import { MouseoverTooltipContent } from 'components/Tooltip'
-import { SUPPORTED_GAS_ESTIMATE_CHAIN_IDS } from 'constants/chains'
-import { useState } from 'react'
-import { ChevronDown, Info } from 'react-feather'
-import { InterfaceTrade } from 'state/routing/types'
-import styled, { keyframes, useTheme } from 'styled-components'
-import { HideSmall, ThemedText } from 'theme'
+import { Currency, Percent, TradeType } from "@intrinsic-network/sdk-core";
+import { Trans } from "@lingui/macro";
+import { useWeb3React } from "@web3-react/core";
+import { ElementName, Event, EventName } from "analytics/constants";
+import { TraceEvent } from "analytics/TraceEvent";
+import AnimatedDropdown from "components/AnimatedDropdown";
+import Card, { OutlineCard } from "components/Card";
+import { AutoColumn } from "components/Column";
+import { LoadingOpacityContainer } from "components/Loader/styled";
+import Row, { RowBetween, RowFixed } from "components/Row";
+import { MouseoverTooltipContent } from "components/Tooltip";
+import { SUPPORTED_GAS_ESTIMATE_CHAIN_IDS } from "constants/chains";
+import { useState } from "react";
+import { ChevronDown, Info } from "react-feather";
+import { InterfaceTrade } from "state/routing/types";
+import styled, { keyframes, useTheme } from "styled-components";
+import { HideSmall, ThemedText } from "theme";
 
-import { AdvancedSwapDetails } from './AdvancedSwapDetails'
-import GasEstimateBadge from './GasEstimateBadge'
-import { ResponsiveTooltipContainer } from './styleds'
-import SwapRoute from './SwapRoute'
-import TradePrice from './TradePrice'
+import { AdvancedSwapDetails } from "./AdvancedSwapDetails";
+import GasEstimateBadge from "./GasEstimateBadge";
+import { ResponsiveTooltipContainer } from "./styleds";
+import SwapRoute from "./SwapRoute";
+import TradePrice from "./TradePrice";
 
 const Wrapper = styled(Row)`
   width: 100%;
@@ -29,30 +29,33 @@ const Wrapper = styled(Row)`
   padding: 8px 12px;
   margin-top: 0;
   min-height: 32px;
-`
+`;
 
 const StyledInfoIcon = styled(Info)`
   height: 16px;
   width: 16px;
   margin-right: 4px;
   color: ${({ theme }) => theme.deprecated_text3};
-`
+`;
 
 const StyledCard = styled(OutlineCard)`
   padding: 12px;
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
-`
+`;
 
-const StyledHeaderRow = styled(RowBetween)<{ disabled: boolean; open: boolean }>`
+const StyledHeaderRow = styled(RowBetween)<{
+  disabled: boolean;
+  open: boolean;
+}>`
   padding: 0;
   align-items: center;
-  cursor: ${({ disabled }) => (disabled ? 'initial' : 'pointer')};
-`
+  cursor: ${({ disabled }) => (disabled ? "initial" : "pointer")};
+`;
 
 const RotatingArrow = styled(ChevronDown)<{ open?: boolean }>`
-  transform: ${({ open }) => (open ? 'rotate(180deg)' : 'none')};
+  transform: ${({ open }) => (open ? "rotate(180deg)" : "none")};
   transition: transform 0.1s linear;
-`
+`;
 
 const StyledPolling = styled.div`
   display: flex;
@@ -67,7 +70,7 @@ const StyledPolling = styled.div`
   ${({ theme }) => theme.deprecated_mediaWidth.deprecated_upToMedium`
     display: none;
   `}
-`
+`;
 
 const StyledPollingDot = styled.div`
   width: 8px;
@@ -78,7 +81,7 @@ const StyledPollingDot = styled.div`
   position: relative;
   background-color: ${({ theme }) => theme.deprecated_bg2};
   transition: 250ms ease background-color;
-`
+`;
 
 const rotate360 = keyframes`
   from {
@@ -87,7 +90,7 @@ const rotate360 = keyframes`
   to {
     transform: rotate(360deg);
   }
-`
+`;
 
 const Spinner = styled.div`
   animation: ${rotate360} 1s cubic-bezier(0.83, 0, 0.17, 1) infinite;
@@ -104,15 +107,15 @@ const Spinner = styled.div`
   transition: 250ms ease border-color;
   left: -3px;
   top: -3px;
-`
+`;
 
 interface SwapDetailsInlineProps {
-  trade: InterfaceTrade<Currency, Currency, TradeType> | undefined
-  syncing: boolean
-  loading: boolean
-  showInverted: boolean
-  setShowInverted: React.Dispatch<React.SetStateAction<boolean>>
-  allowedSlippage: Percent
+  trade: InterfaceTrade<Currency, Currency, TradeType> | undefined;
+  syncing: boolean;
+  loading: boolean;
+  showInverted: boolean;
+  setShowInverted: React.Dispatch<React.SetStateAction<boolean>>;
+  allowedSlippage: Percent;
 }
 
 export default function SwapDetailsDropdown({
@@ -123,21 +126,25 @@ export default function SwapDetailsDropdown({
   setShowInverted,
   allowedSlippage,
 }: SwapDetailsInlineProps) {
-  const theme = useTheme() as any
-  const { chainId } = useWeb3React()
-  const [showDetails, setShowDetails] = useState(false)
+  const theme = useTheme() as any;
+  const { chainId } = useWeb3React();
+  const [showDetails, setShowDetails] = useState(false);
 
   return (
-    <Wrapper style={{ marginTop: '0' }}>
-      <AutoColumn gap={'8px'} style={{ width: '100%', marginBottom: '-8px' }}>
+    <Wrapper style={{ marginTop: "0" }}>
+      <AutoColumn gap={"8px"} style={{ width: "100%", marginBottom: "-8px" }}>
         <TraceEvent
           events={[Event.onClick]}
           name={EventName.SWAP_DETAILS_EXPANDED}
           element={ElementName.SWAP_DETAILS_DROPDOWN}
           shouldLogImpression={!showDetails}
         >
-          <StyledHeaderRow onClick={() => setShowDetails(!showDetails)} disabled={!trade} open={showDetails}>
-            <RowFixed style={{ position: 'relative' }}>
+          <StyledHeaderRow
+            onClick={() => setShowDetails(!showDetails)}
+            disabled={!trade}
+            open={showDetails}
+          >
+            <RowFixed style={{ position: "relative" }}>
               {loading || syncing ? (
                 <StyledPolling>
                   <StyledPollingDot>
@@ -149,13 +156,16 @@ export default function SwapDetailsDropdown({
                   <MouseoverTooltipContent
                     wrap={false}
                     content={
-                      <ResponsiveTooltipContainer origin="top right" style={{ padding: '0' }}>
+                      <ResponsiveTooltipContainer
+                        origin="top right"
+                        style={{ padding: "0" }}
+                      >
                         <Card padding="12px">
                           <AdvancedSwapDetails
                             trade={trade}
                             allowedSlippage={allowedSlippage}
                             syncing={syncing}
-                            hideInfoTooltips={true}
+                            hideInfoTooltips={false}
                           />
                         </Card>
                       </ResponsiveTooltipContainer>
@@ -163,7 +173,11 @@ export default function SwapDetailsDropdown({
                     placement="bottom"
                     disableHover={showDetails}
                   >
-                    <StyledInfoIcon color={trade ? theme.deprecated_text3 : theme.deprecated_bg3} />
+                    <StyledInfoIcon
+                      color={
+                        trade ? theme.deprecated_text3 : theme.deprecated_bg3
+                      }
+                    />
                   </MouseoverTooltipContent>
                 </HideSmall>
               )}
@@ -201,10 +215,17 @@ export default function SwapDetailsDropdown({
           </StyledHeaderRow>
         </TraceEvent>
         <AnimatedDropdown open={showDetails}>
-          <AutoColumn gap={'8px'} style={{ padding: '0', paddingBottom: '8px' }}>
+          <AutoColumn
+            gap={"8px"}
+            style={{ padding: "0", paddingBottom: "8px" }}
+          >
             {trade ? (
               <StyledCard>
-                <AdvancedSwapDetails trade={trade} allowedSlippage={allowedSlippage} syncing={syncing} />
+                <AdvancedSwapDetails
+                  trade={trade}
+                  allowedSlippage={allowedSlippage}
+                  syncing={syncing}
+                />
               </StyledCard>
             ) : null}
             {trade ? <SwapRoute trade={trade} syncing={syncing} /> : null}
@@ -212,5 +233,5 @@ export default function SwapDetailsDropdown({
         </AnimatedDropdown>
       </AutoColumn>
     </Wrapper>
-  )
+  );
 }

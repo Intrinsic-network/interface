@@ -12,10 +12,14 @@ import { cssStringFromTheme } from "../nft/css/cssStringFromTheme";
 import { darkTheme } from "../nft/themes/darkTheme";
 import { lightTheme } from "../nft/themes/lightTheme";
 import { useIsDarkMode } from "../state/user/hooks";
-import { colors as ColorsPalette, colorsDark, colorsLight } from "./colors";
+import {
+  colors as ColorsPalette,
+  colors,
+  colorsDark,
+  colorsLight,
+} from "./colors";
 import { AllColors, Colors, ThemeColors } from "./styled";
 import { opacify } from "./utils";
-import { Theme } from "nft/css/sprinkles.css";
 
 export * from "./components";
 
@@ -82,7 +86,16 @@ function uniswapThemeColors(darkMode: boolean): ThemeColors {
       ? colorsDark.gradientColor2
       : colorsLight.gradientColor2,
     bgLineColor: darkMode ? colorsDark.bgLineColor : colorsLight.bgLineColor,
-
+    navTextColor: darkMode ? colorsDark.navTextColor : colorsLight.navTextColor,
+    textColor: darkMode ? colorsDark.black : colorsLight.black,
+    intGray: darkMode ? colorsDark.intGray : colorsLight.intGray,
+    intGray2: darkMode ? colorsDark.intGray2 : colorsLight.intGray2,
+    primaryButtonColor: darkMode
+      ? colorsDark.primaryButtonColor
+      : colorsLight.primaryButtonColor,
+    secondaryButtonColor: darkMode
+      ? colorsDark.secondaryButtonColor
+      : colorsLight.secondaryButtonColor,
     // UNISWAP THEME COLORS
     userThemeColor: darkMode
       ? colorsDark.userThemeColor
@@ -365,7 +378,7 @@ export const ThemedText = {
       <TextWrapper
         fontWeight={400}
         fontSize={16}
-        color={"textPrimary"}
+        color="textPrimary"
         {...props}
       />
     );
@@ -375,7 +388,7 @@ export const ThemedText = {
       <TextWrapper
         fontWeight={400}
         fontSize={16}
-        color={"textSecondary"}
+        color="textSecondary"
         {...props}
       />
     );
@@ -386,7 +399,7 @@ export const ThemedText = {
         fontWeight={600}
         fontSize={20}
         lineHeight="28px"
-        color={"textPrimary"}
+        color="textPrimary"
         {...props}
       />
     );
@@ -396,7 +409,7 @@ export const ThemedText = {
       <TextWrapper
         fontWeight={400}
         fontSize={36}
-        color={"textPrimary"}
+        color="textPrimary"
         {...props}
       />
     );
@@ -406,7 +419,7 @@ export const ThemedText = {
       <TextWrapper
         fontWeight={600}
         fontSize={14}
-        color={"accentAction"}
+        color="accentAction"
         {...props}
       />
     );
@@ -416,7 +429,7 @@ export const ThemedText = {
       <TextWrapper
         fontWeight={400}
         fontSize={20}
-        color={"textPrimary"}
+        color="textPrimary"
         {...props}
       />
     );
@@ -426,7 +439,7 @@ export const ThemedText = {
       <TextWrapper
         fontWeight={600}
         fontSize={16}
-        color={"textPrimary"}
+        color="textPrimary"
         {...props}
       />
     );
@@ -436,42 +449,34 @@ export const ThemedText = {
       <TextWrapper
         fontWeight={500}
         fontSize={14}
-        color={"textSecondary"}
+        color="textSecondary"
         {...props}
       />
     );
   },
   DeprecatedMain(props: TextProps) {
-    return (
-      <TextWrapper fontWeight={500} color={"deprecated_text2"} {...props} />
-    );
+    return <TextWrapper fontWeight={500} color="deprecated_text2" {...props} />;
   },
   DeprecatedLink(props: TextProps) {
     return (
-      <TextWrapper fontWeight={500} color={"deprecated_primary1"} {...props} />
+      <TextWrapper fontWeight={500} color="deprecated_primary1" {...props} />
     );
   },
   DeprecatedLabel(props: TextProps) {
-    return (
-      <TextWrapper fontWeight={600} color={"deprecated_text1"} {...props} />
-    );
+    return <TextWrapper fontWeight={600} color="deprecated_text1" {...props} />;
   },
   DeprecatedBlack(props: TextProps) {
-    return (
-      <TextWrapper fontWeight={500} color={"deprecated_text1"} {...props} />
-    );
+    return <TextWrapper fontWeight={500} color="deprecated_text1" {...props} />;
   },
   DeprecatedWhite(props: TextProps) {
-    return (
-      <TextWrapper fontWeight={500} color={"deprecated_white"} {...props} />
-    );
+    return <TextWrapper fontWeight={500} color="deprecated_white" {...props} />;
   },
   DeprecatedBody(props: TextProps) {
     return (
       <TextWrapper
         fontWeight={400}
         fontSize={16}
-        color={"deprecated_text1"}
+        color="deprecated_text1"
         {...props}
       />
     );
@@ -489,30 +494,26 @@ export const ThemedText = {
     return <TextWrapper fontWeight={500} fontSize={11} {...props} />;
   },
   DeprecatedBlue(props: TextProps) {
-    return (
-      <TextWrapper fontWeight={500} color={"deprecated_blue1"} {...props} />
-    );
+    return <TextWrapper fontWeight={500} color="deprecated_blue1" {...props} />;
   },
   DeprecatedYellow(props: TextProps) {
     return (
-      <TextWrapper fontWeight={500} color={"deprecated_yellow3"} {...props} />
+      <TextWrapper fontWeight={500} color="deprecated_yellow3" {...props} />
     );
   },
   DeprecatedDarkGray(props: TextProps) {
-    return (
-      <TextWrapper fontWeight={500} color={"deprecated_text3"} {...props} />
-    );
+    return <TextWrapper fontWeight={500} color="deprecated_text3" {...props} />;
   },
   DeprecatedGray(props: TextProps) {
-    return <TextWrapper fontWeight={500} color={"deprecated_bg3"} {...props} />;
+    return <TextWrapper fontWeight={500} color="deprecated_bg3" {...props} />;
   },
   DeprecatedItalic(props: TextProps) {
     return (
       <TextWrapper
         fontWeight={500}
         fontSize={12}
-        fontStyle={"italic"}
-        color={"deprecated_text2"}
+        fontStyle="italic"
+        color="deprecated_text2"
         {...props}
       />
     );

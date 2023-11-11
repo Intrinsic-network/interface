@@ -113,14 +113,15 @@ const ArrowContainer = styled.div`
 
 const SwapSection = styled.div`
   position: relative;
-  background-color: ${({ theme }) => theme.backgroundModule};
+  background-color: ${({ theme }) => theme.intGray2};
   border-radius: 12px;
-  padding: 16px;
+  border: 1px solid #ddd;
+  padding: 16px 24px;
   color: ${({ theme }) => theme.textSecondary};
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
-
+  margin-top: 24px;
   &:before {
     box-sizing: border-box;
     background-size: 100%;
@@ -146,18 +147,8 @@ const SwapSection = styled.div`
   }
 `;
 
-const OutputSwapSection = styled(SwapSection)<{ showDetailsDropdown: boolean }>`
-  border-bottom: ${({ theme }) => `1px solid ${theme.backgroundSurface}`};
-  border-bottom-left-radius: ${({ showDetailsDropdown }) =>
-    showDetailsDropdown && "0"};
-  border-bottom-right-radius: ${({ showDetailsDropdown }) =>
-    showDetailsDropdown && "0"};
-`;
-
-const DetailsSwapSection = styled(SwapSection)`
+const DetailsSwapSection = styled.div`
   padding: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 `;
 
 export function getIsValidSwapQuote(
@@ -661,7 +652,10 @@ export default function Swap() {
         />
         <PageWrapper>
           <SwapWrapper id="swap-page">
-            <SwapHeader allowedSlippage={allowedSlippage} />
+            <SwapHeader
+              allowedSlippage={allowedSlippage}
+              setApprovalSubmitted={setApprovalSubmitted}
+            />
             <ConfirmSwapModal
               isOpen={showConfirm}
               trade={trade}
@@ -706,84 +700,60 @@ export default function Swap() {
                   />
                 </Trace>
               </SwapSection>
-              <ArrowWrapper clickable={isSupportedChain(chainId)}>
-                <TraceEvent
-                  events={[Event.onClick]}
-                  name={EventName.SWAP_TOKENS_REVERSED}
-                  element={ElementName.SWAP_TOKENS_REVERSE_ARROW_BUTTON}
-                >
-                  <ArrowContainer
-                    onClick={() => {
-                      setApprovalSubmitted(false); // reset 2 step UI for approvals
-                      onSwitchTokens();
-                    }}
-                    color={theme.textPrimary}
-                  >
-                    <ArrowDown
-                      size="16"
-                      color={
-                        currencies[Field.INPUT] && currencies[Field.OUTPUT]
-                          ? theme.deprecated_text1
-                          : theme.deprecated_text3
-                      }
+            </div>
+            <div>
+              <SwapSection>
+                <Trace section={SectionName.CURRENCY_OUTPUT_PANEL}>
+                  <SwapCurrencyInputPanel
+                    value={formattedAmounts[Field.OUTPUT]}
+                    onUserInput={handleTypeOutput}
+                    label={
+                      independentField === Field.INPUT && !showWrap ? (
+                        <Trans>To (at least)</Trans>
+                      ) : (
+                        <Trans>To</Trans>
+                      )
+                    }
+                    showMaxButton={false}
+                    hideBalance={false}
+                    fiatValue={fiatValueOutput ?? undefined}
+                    priceImpact={stablecoinPriceImpact}
+                    currency={currencies[Field.OUTPUT] ?? null}
+                    onCurrencySelect={handleOutputSelect}
+                    otherCurrency={currencies[Field.INPUT]}
+                    showCommonBases={true}
+                    id={SectionName.CURRENCY_OUTPUT_PANEL}
+                    loading={independentField === Field.INPUT && routeIsSyncing}
+                  />
+                </Trace>
+
+                {recipient !== null && !showWrap ? (
+                  <>
+                    <AutoRow
+                      justify="space-between"
+                      style={{ padding: "0 1rem" }}
+                    >
+                      <ArrowWrapper clickable={false}>
+                        <ArrowDown size="16" color={theme.deprecated_text2} />
+                      </ArrowWrapper>
+                      <LinkStyledButton
+                        id="remove-recipient-button"
+                        onClick={() => onChangeRecipient(null)}
+                      >
+                        <Trans>- Remove recipient</Trans>
+                      </LinkStyledButton>
+                    </AutoRow>
+                    <AddressInputPanel
+                      id="recipient"
+                      value={recipient}
+                      onChange={onChangeRecipient}
                     />
-                  </ArrowContainer>
-                </TraceEvent>
-              </ArrowWrapper>
+                  </>
+                ) : null}
+              </SwapSection>
             </div>
             <AutoColumn gap={"12px"}>
               <div>
-                <OutputSwapSection showDetailsDropdown={showDetailsDropdown}>
-                  <Trace section={SectionName.CURRENCY_OUTPUT_PANEL}>
-                    <SwapCurrencyInputPanel
-                      value={formattedAmounts[Field.OUTPUT]}
-                      onUserInput={handleTypeOutput}
-                      label={
-                        independentField === Field.INPUT && !showWrap ? (
-                          <Trans>To (at least)</Trans>
-                        ) : (
-                          <Trans>To</Trans>
-                        )
-                      }
-                      showMaxButton={false}
-                      hideBalance={false}
-                      fiatValue={fiatValueOutput ?? undefined}
-                      priceImpact={stablecoinPriceImpact}
-                      currency={currencies[Field.OUTPUT] ?? null}
-                      onCurrencySelect={handleOutputSelect}
-                      otherCurrency={currencies[Field.INPUT]}
-                      showCommonBases={true}
-                      id={SectionName.CURRENCY_OUTPUT_PANEL}
-                      loading={
-                        independentField === Field.INPUT && routeIsSyncing
-                      }
-                    />
-                  </Trace>
-
-                  {recipient !== null && !showWrap ? (
-                    <>
-                      <AutoRow
-                        justify="space-between"
-                        style={{ padding: "0 1rem" }}
-                      >
-                        <ArrowWrapper clickable={false}>
-                          <ArrowDown size="16" color={theme.deprecated_text2} />
-                        </ArrowWrapper>
-                        <LinkStyledButton
-                          id="remove-recipient-button"
-                          onClick={() => onChangeRecipient(null)}
-                        >
-                          <Trans>- Remove recipient</Trans>
-                        </LinkStyledButton>
-                      </AutoRow>
-                      <AddressInputPanel
-                        id="recipient"
-                        value={recipient}
-                        onChange={onChangeRecipient}
-                      />
-                    </>
-                  ) : null}
-                </OutputSwapSection>
                 {showDetailsDropdown && (
                   <DetailsSwapSection>
                     <SwapDetailsDropdown

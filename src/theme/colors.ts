@@ -90,11 +90,17 @@ export interface GlobalPalette {
   lightGradientColor1: Color;
   lightGradientColor2: Color;
   lightBgLineColor: Color;
+  lightNavTextColor: Color;
 
   darkBgColor: Color;
   darkGradientColor1: Color;
   darkGradientColor2: Color;
   darkBgLineColor: Color;
+  darkNavTextColor: Color;
+
+  intGray: Color;
+  intGray2: Color;
+  orange100: Color;
 }
 
 export const colors: GlobalPalette = {
@@ -103,12 +109,20 @@ export const colors: GlobalPalette = {
   lightGradientColor1: "#2050ae",
   lightGradientColor2: "#002a69",
   lightBgLineColor: "#b8c9da",
+  lightNavTextColor: "#FFFFFF",
 
   darkBgColor: `#c4d6e8`,
   darkGradientColor1: "#2050ae",
   darkGradientColor2: "#002a69",
   darkBgLineColor: "#b8c9da",
+  darkNavTextColor: "#FFFFFF",
 
+  intGray: "#8A8A8A",
+  intGray2: "#F6F6F6",
+
+  orange100: "#FF5E2C",
+
+  // UNISWAP
   white: "#FFFFFF",
   black: "#000000",
   gray50: "#F5F6FC",
@@ -201,6 +215,13 @@ export interface Palette {
   gradientColor1: Color;
   gradientColor2: Color;
   bgLineColor: Color;
+  navTextColor: Color;
+
+  intGray: Color;
+  intGray2: Color;
+  primaryButtonColor: Color;
+  secondaryButtonColor: Color;
+  // UNISWAP
 
   userThemeColor: Color;
 
@@ -267,7 +288,14 @@ export const colorsLight: Palette = {
   gradientColor1: colors.lightGradientColor1,
   gradientColor2: colors.lightGradientColor2,
   bgLineColor: colors.lightBgLineColor,
+  navTextColor: colors.white,
 
+  intGray: colors.intGray,
+  intGray2: colors.intGray2,
+
+  primaryButtonColor: colors.white,
+  secondaryButtonColor: colors.orange100,
+  // Uniswap
   userThemeColor: colors.magentaVibrant,
 
   backgroundBackdrop: colors.white,
@@ -336,7 +364,12 @@ export const colorsDark: Palette = {
   gradientColor1: colors.darkGradientColor1,
   gradientColor2: colors.darkGradientColor2,
   bgLineColor: colors.darkBgLineColor,
+  navTextColor: colors.white,
 
+  intGray: colors.intGray,
+  intGray2: colors.intGray2,
+  primaryButtonColor: colors.white,
+  secondaryButtonColor: colors.orange100,
   //UNISWAP COLORS
   userThemeColor: colors.magentaVibrant,
 

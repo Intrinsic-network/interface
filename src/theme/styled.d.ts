@@ -12,7 +12,12 @@ export interface ThemeColors {
   gradientColor1: string;
   gradientColor2: string;
   bgLineColor: string;
-
+  navTextColor: string;
+  textColor: string;
+  intGray: string;
+  intGray2: string;
+  primaryButtonColor: string;
+  secondaryButtonColor: string;
   // UNISWAP THEME
   userThemeColor: string;
 

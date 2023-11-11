@@ -29,11 +29,12 @@ interface TooltipContentProps extends Omit<PopoverProps, "content"> {
   disableHover?: boolean; // disable the hover and content display
 }
 
-export default function Tooltip({ text, ...rest }: TooltipProps) {
+export default function Tooltip({ text, show, children }: TooltipProps) {
   return (
     <Popover
       content={text && <TooltipContainer>{text}</TooltipContainer>}
-      {...rest}
+      children={children}
+      show={show}
     />
   );
 }
@@ -41,12 +42,14 @@ export default function Tooltip({ text, ...rest }: TooltipProps) {
 function TooltipContent({
   content,
   wrap = false,
-  ...rest
+  show,
+  children,
 }: TooltipContentProps) {
   return (
     <Popover
       content={wrap ? <TooltipContainer>{content}</TooltipContainer> : content}
-      {...rest}
+      show={show}
+      children={children}
     />
   );
 }
@@ -56,13 +59,12 @@ export function MouseoverTooltip({
   text,
   disableHover,
   children,
-  ...rest
 }: Omit<TooltipProps, "show">) {
   const [show, setShow] = useState(false);
   const open = useCallback(() => setShow(true), [setShow]);
   const close = useCallback(() => setShow(false), [setShow]);
   return show ? (
-    <Tooltip {...rest} show={true} text={disableHover ? null : text}>
+    <Tooltip show={true} text={disableHover ? null : text}>
       <div onMouseEnter={open} onMouseLeave={close}>
         {children}
       </div>
@@ -76,7 +78,7 @@ export function MouseoverTooltipContent({
   children,
   onOpen: openCallback = undefined,
   disableHover,
-  ...rest
+  wrap,
 }: Omit<TooltipContentProps, "show">) {
   const [show, setShow] = useState(false);
   const open = useCallback(() => {
@@ -86,8 +88,8 @@ export function MouseoverTooltipContent({
   const close = useCallback(() => setShow(false), [setShow]);
   return (
     <TooltipContent
-      {...rest}
       show={show}
+      wrap={wrap}
       content={disableHover ? null : content}
     >
       <div

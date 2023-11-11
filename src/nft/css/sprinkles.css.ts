@@ -11,6 +11,9 @@ const themeContractValues = {
     gradientColor1: "",
     gradientColor2: "",
     bgLineColor: "",
+    navTextColor: "",
+    textColor: "",
+
     // UNISWAP
     accentFailure: "",
     accentFailureSoft: "",
@@ -98,6 +101,7 @@ const dimensions = {
   "292": "292px",
   "332": "332px",
   "386": "386px",
+  "625": "625px",
   half: "50%",
   full: "100%",
   min: "min-content",
@@ -193,7 +197,7 @@ export const vars = createGlobalTheme(":root", {
     grey900: "#0E111A",
     grey800: "#141B2B",
     grey700: "#293249",
-    grey500: "#5E6887",
+    grey500: "#8A8A8A",
     grey400: "#7C85A2",
     grey300: "#99A1BD",
     grey200: "#B7BED4",
@@ -203,6 +207,14 @@ export const vars = createGlobalTheme(":root", {
     outline: "rgba(153, 161, 189, 0.24)",
     lightGrayOverlay: "#99A1BD14",
     accentActiveSoft: "#4c82fb3d",
+    // Intrinsic Colors:
+    bgColor: `#c4d6e8`,
+    gradientColor1: "#2050ae",
+    gradientColor2: "#002a69",
+    bgLineColor: "#b8c9da",
+    navTextColor: "#FFFFFF",
+    navTextColor2: "black",
+    textColor: "black",
   },
   border: {
     transculent: "1.5px solid rgba(0, 0, 0, 0.1)",
