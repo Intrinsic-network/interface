@@ -67,6 +67,7 @@ const BodyWrapper = styled.div`
   padding: 72px 0px 0px 0px;
   align-items: center;
   flex: 1;
+  z-index: 1;
   ${({ theme }) => theme.deprecated_mediaWidth.deprecated_upToSmall`
     padding: 52px 0px 16px 0px;
   `};

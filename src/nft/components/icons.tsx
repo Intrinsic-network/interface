@@ -77,10 +77,10 @@ export const IntrinsicIcon = (props: SVGProps) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_935_455)">
+    <g clipPath="url(#clip0_935_455)">
       <rect width="22" height="22" transform="translate(0 4.5)" fill="white" />
-      <path d="M0 4.5L7 11.5" stroke="#2050AE" stroke-width="2" />
-      <path d="M15 19.5L22 26.5" stroke="#2050AE" stroke-width="2" />
+      <path d="M0 4.5L7 11.5" stroke="#2050AE" strokeWidth="2" />
+      <path d="M15 19.5L22 26.5" stroke="#2050AE" strokeWidth="2" />
       <rect
         width="10"
         height="10"

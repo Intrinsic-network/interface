@@ -407,8 +407,8 @@ export const ThemedText = {
   LargeHeader(props: TextProps) {
     return (
       <TextWrapper
-        fontWeight={400}
-        fontSize={36}
+        fontWeight={600}
+        fontSize={24}
         color="textPrimary"
         {...props}
       />
