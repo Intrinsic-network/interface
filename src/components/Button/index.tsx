@@ -76,9 +76,9 @@ export const ButtonPrimary = styled(BaseButton)`
     background-color: ${({ theme, altDisabledStyle, disabled }) =>
       altDisabledStyle
         ? disabled
-          ? theme.deprecated_primary1
-          : theme.deprecated_bg2
-        : theme.deprecated_bg2};
+          ? theme.intGray3
+          : theme.intGray3
+        : theme.intGray3};
     color: ${({ altDisabledStyle, disabled, theme }) =>
       altDisabledStyle
         ? disabled

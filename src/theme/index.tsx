@@ -90,6 +90,7 @@ function uniswapThemeColors(darkMode: boolean): ThemeColors {
     textColor: darkMode ? colorsDark.black : colorsLight.black,
     intGray: darkMode ? colorsDark.intGray : colorsLight.intGray,
     intGray2: darkMode ? colorsDark.intGray2 : colorsLight.intGray2,
+    intGray3: darkMode ? colorsDark.intGray3 : colorsLight.intGray3,
     primaryButtonColor: darkMode
       ? colorsDark.primaryButtonColor
       : colorsLight.primaryButtonColor,

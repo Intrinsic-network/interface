@@ -100,6 +100,7 @@ export interface GlobalPalette {
 
   intGray: Color;
   intGray2: Color;
+  intGray3: Color;
   orange100: Color;
 }
 
@@ -119,6 +120,7 @@ export const colors: GlobalPalette = {
 
   intGray: "#8A8A8A",
   intGray2: "#F6F6F6",
+  intGray3: "#CCCCCC",
 
   orange100: "#FF5E2C",
 
@@ -219,6 +221,7 @@ export interface Palette {
 
   intGray: Color;
   intGray2: Color;
+  intGray3: Color;
   primaryButtonColor: Color;
   secondaryButtonColor: Color;
   // UNISWAP
@@ -292,6 +295,7 @@ export const colorsLight: Palette = {
 
   intGray: colors.intGray,
   intGray2: colors.intGray2,
+  intGray3: colors.intGray3,
 
   primaryButtonColor: colors.white,
   secondaryButtonColor: colors.orange100,
@@ -368,6 +372,8 @@ export const colorsDark: Palette = {
 
   intGray: colors.intGray,
   intGray2: colors.intGray2,
+  intGray3: colors.intGray3,
+
   primaryButtonColor: colors.white,
   secondaryButtonColor: colors.orange100,
   //UNISWAP COLORS

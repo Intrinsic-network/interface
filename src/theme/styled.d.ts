@@ -16,6 +16,7 @@ export interface ThemeColors {
   textColor: string;
   intGray: string;
   intGray2: string;
+  intGray3: string;
   primaryButtonColor: string;
   secondaryButtonColor: string;
   // UNISWAP THEME

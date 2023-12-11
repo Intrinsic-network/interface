@@ -67,12 +67,9 @@ const CurrencySelect = styled(ButtonGray)<{
 }>`
   align-items: center;
   background-color: ${({ selected, theme }) =>
-    selected ? theme.backgroundInteractive : theme.accentAction};
+    selected ? theme.white : theme.white};
   opacity: ${({ disabled }) => (!disabled ? 1 : 0.4)};
-  box-shadow: ${({ selected }) =>
-    selected ? "none" : "0px 6px 10px rgba(0, 0, 0, 0.075)"};
-  color: ${({ selected, theme }) =>
-    selected ? theme.deprecated_text1 : theme.deprecated_white};
+
   cursor: pointer;
   height: unset;
   border-radius: 16px;
@@ -87,11 +84,13 @@ const CurrencySelect = styled(ButtonGray)<{
   gap: 8px;
   justify-content: space-between;
   margin-left: ${({ hideInput }) => (hideInput ? "0" : "12px")};
+  color: ${({ selected, theme }) =>
+    selected ? theme.textColor : theme.intGray3};
 
   &:hover,
   &:active {
     background-color: ${({ theme, selected }) =>
-      selected ? theme.backgroundInteractive : theme.accentAction};
+      selected ? theme.backgroundInteractive : theme.backgroundInteractive};
   }
 
   &:before {
@@ -157,7 +156,7 @@ const StyledDropDown = styled(DropDown)<{ selected: boolean }>`
 
   path {
     stroke: ${({ selected, theme }) =>
-      selected ? theme.deprecated_text1 : theme.deprecated_white};
+      selected ? theme.deprecated_text1 : theme.deprecated_text1};
     stroke-width: 2px;
   }
 `;
