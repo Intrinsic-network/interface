@@ -32,7 +32,7 @@ export const FALLBACK_URLS: { [key in SupportedChainId]: string[] } = {
  */
 export const RPC_URLS: { [key in SupportedChainId]: string[] } = {
   [SupportedChainId.RSK_MAINNET]: ['https://public-node.rsk.co', ...FALLBACK_URLS[SupportedChainId.RSK_MAINNET]],
-  [SupportedChainId.RSK_TESTNET]: ['http://34.227.23.224:4444', ...FALLBACK_URLS[SupportedChainId.RSK_TESTNET]],
+  [SupportedChainId.RSK_TESTNET]: ['https://34.227.23.224:4444', ...FALLBACK_URLS[SupportedChainId.RSK_TESTNET]],
   // [SupportedChainId.RSK_TESTNET]: [
   //   'https://public-node.testnet.rsk.co',
   //   ...FALLBACK_URLS[SupportedChainId.RSK_TESTNET],
