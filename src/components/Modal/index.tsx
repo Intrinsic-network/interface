@@ -1,15 +1,17 @@
-import { DialogContent, DialogOverlay } from '@reach/dialog'
-import React from 'react'
-import { animated, useSpring, useTransition } from 'react-spring'
-import { useGesture } from 'react-use-gesture'
-import styled, { css } from 'styled-components'
-import { Z_INDEX } from 'theme/zIndex'
+import { DialogContent, DialogOverlay } from "@reach/dialog";
+import React from "react";
+import { animated, useSpring, useTransition } from "react-spring";
+import { useGesture } from "react-use-gesture";
+import styled, { css } from "styled-components";
+import { Z_INDEX } from "theme/zIndex";
 
-import { isMobile } from '../../utils/userAgent'
+import { isMobile } from "../../utils/userAgent";
 
-const AnimatedDialogOverlay = animated(DialogOverlay)
+const AnimatedDialogOverlay = animated(DialogOverlay);
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const StyledDialogOverlay = styled(AnimatedDialogOverlay)<{ scrollOverlay?: boolean }>`
+const StyledDialogOverlay = styled(AnimatedDialogOverlay)<{
+  scrollOverlay?: boolean;
+}>`
   &[data-reach-dialog-overlay] {
     z-index: ${Z_INDEX.modalBackdrop};
     background-color: transparent;
@@ -17,20 +19,29 @@ const StyledDialogOverlay = styled(AnimatedDialogOverlay)<{ scrollOverlay?: bool
 
     display: flex;
     align-items: center;
-    overflow-y: ${({ scrollOverlay }) => scrollOverlay && 'scroll'};
+    overflow-y: ${({ scrollOverlay }) => scrollOverlay && "scroll"};
     justify-content: center;
 
     background-color: ${({ theme }) => theme.backgroundScrim};
   }
-`
+`;
 
-const AnimatedDialogContent = animated(DialogContent)
+const AnimatedDialogContent = animated(DialogContent);
 // destructure to not pass custom props to Dialog DOM element
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const StyledDialogContent = styled(({ minHeight, maxHeight, mobile, isOpen, scrollOverlay, ...rest }) => (
-  <AnimatedDialogContent {...rest} />
-)).attrs({
-  'aria-label': 'dialog',
+const StyledDialogContent = styled(
+  ({
+    minHeight,
+    maxHeight,
+    minWidth,
+    maxWidth,
+    mobile,
+    isOpen,
+    scrollOverlay,
+    ...rest
+  }) => <AnimatedDialogContent {...rest} />
+).attrs({
+  "aria-label": "dialog",
 })`
   overflow-y: auto;
 
@@ -44,9 +55,18 @@ const StyledDialogContent = styled(({ minHeight, maxHeight, mobile, isOpen, scro
     overflow-y: auto;
     overflow-x: hidden;
 
-    align-self: ${({ mobile }) => mobile && 'flex-end'};
+    align-self: ${({ mobile }) => mobile && "flex-end"};
 
-    max-width: 420px;
+    ${({ maxWidth }) =>
+      maxWidth &&
+      css`
+        max-width: ${maxWidth}vw;
+      `}
+    ${({ minWidth }) =>
+      minWidth &&
+      css`
+        min-width: ${minWidth}vw;
+      `}
     ${({ maxHeight }) =>
       maxHeight &&
       css`
@@ -57,7 +77,8 @@ const StyledDialogContent = styled(({ minHeight, maxHeight, mobile, isOpen, scro
       css`
         min-height: ${minHeight}vh;
       `}
-    display: ${({ scrollOverlay }) => (scrollOverlay ? 'inline-table' : 'flex')};
+    display: ${({ scrollOverlay }) =>
+      scrollOverlay ? "inline-table" : "flex"};
     border-radius: 20px;
     ${({ theme }) => theme.deprecated_mediaWidth.deprecated_upToMedium`
       width: 65vw;
@@ -76,16 +97,18 @@ const StyledDialogContent = styled(({ minHeight, maxHeight, mobile, isOpen, scro
       }
     `}
   }
-`
+`;
 
 interface ModalProps {
-  isOpen: boolean
-  onDismiss: () => void
-  minHeight?: number | false
-  maxHeight?: number
-  initialFocusRef?: React.RefObject<any>
-  children?: React.ReactNode
-  scrollOverlay?: boolean
+  isOpen: boolean;
+  onDismiss: () => void;
+  minHeight?: number | false;
+  maxHeight?: number;
+  minWidth?: number | false;
+  maxWidth?: number;
+  initialFocusRef?: React.RefObject<any>;
+  children?: React.ReactNode;
+  scrollOverlay?: boolean;
 }
 
 export default function Modal({
@@ -93,6 +116,8 @@ export default function Modal({
   onDismiss,
   minHeight = false,
   maxHeight = 90,
+  minWidth = false,
+  maxWidth = 32,
   initialFocusRef,
   children,
   scrollOverlay,
@@ -102,19 +127,25 @@ export default function Modal({
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
-  })
+  });
 
-  const [{ y }, set] = useSpring(() => ({ y: 0, config: { mass: 1, tension: 210, friction: 20 } }))
+  const [{ y }, set] = useSpring(() => ({
+    y: 0,
+    config: { mass: 1, tension: 210, friction: 20 },
+  }));
   const bind = useGesture({
     onDrag: (state) => {
       set({
         y: state.down ? state.movement[1] : 0,
-      })
-      if (state.movement[1] > 300 || (state.velocity > 3 && state.direction[1] > 0)) {
-        onDismiss()
+      });
+      if (
+        state.movement[1] > 300 ||
+        (state.velocity > 3 && state.direction[1] > 0)
+      ) {
+        onDismiss();
       }
     },
-  })
+  });
 
   return (
     <>
@@ -123,7 +154,9 @@ export default function Modal({
           item && (
             <StyledDialogOverlay
               as={AnimatedDialogOverlay}
-              style={{ opacity: opacity.to({ range: [0.0, 1.0], output: [0, 1] }) }}
+              style={{
+                opacity: opacity.to({ range: [0.0, 1.0], output: [0, 1] }),
+              }}
               onDismiss={onDismiss}
               initialFocusRef={initialFocusRef}
               unstable_lockFocusAcrossFrames={false}
@@ -133,12 +166,18 @@ export default function Modal({
                 {...(isMobile
                   ? {
                       ...bind(),
-                      style: { transform: y.interpolate((y) => `translateY(${(y as number) > 0 ? y : 0}px)`) },
+                      style: {
+                        transform: y.interpolate(
+                          (y) => `translateY(${(y as number) > 0 ? y : 0}px)`
+                        ),
+                      },
                     }
                   : {})}
                 aria-label="dialog content"
                 minHeight={minHeight}
                 maxHeight={maxHeight}
+                minWidth={minWidth}
+                maxWidth={maxWidth}
                 mobile={isMobile}
                 scrollOverlay={scrollOverlay}
               >
@@ -150,5 +189,5 @@ export default function Modal({
           )
       )}
     </>
-  )
+  );
 }

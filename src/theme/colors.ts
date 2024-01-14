@@ -101,7 +101,11 @@ export interface GlobalPalette {
   intGray: Color;
   intGray2: Color;
   intGray3: Color;
+  currencyBgColor: Color;
   orange100: Color;
+  orangeAccent: Color;
+  intBlue: Color;
+  intTeal: Color;
 }
 
 export const colors: GlobalPalette = {
@@ -122,8 +126,12 @@ export const colors: GlobalPalette = {
   intGray2: "#F6F6F6",
   intGray3: "#CCCCCC",
 
-  orange100: "#FF5E2C",
+  currencyBgColor: "#F0F4F5",
 
+  orange100: "#FF5E2C",
+  orangeAccent: "#FFF3EF",
+  intBlue: "#75BDF1",
+  intTeal: "#D4F5FF",
   // UNISWAP
   white: "#FFFFFF",
   black: "#000000",
@@ -222,8 +230,13 @@ export interface Palette {
   intGray: Color;
   intGray2: Color;
   intGray3: Color;
+  currencyBgColor: Color;
   primaryButtonColor: Color;
   secondaryButtonColor: Color;
+  secondaryAccentColor: Color;
+  tertiaryButtonColor: Color;
+  tertiaryAccentColor: Color;
+  textColor: Color;
   // UNISWAP
 
   userThemeColor: Color;
@@ -297,8 +310,14 @@ export const colorsLight: Palette = {
   intGray2: colors.intGray2,
   intGray3: colors.intGray3,
 
+  currencyBgColor: colors.currencyBgColor,
+
   primaryButtonColor: colors.white,
   secondaryButtonColor: colors.orange100,
+  secondaryAccentColor: colors.orangeAccent,
+  tertiaryButtonColor: colors.intBlue,
+  tertiaryAccentColor: colors.intTeal,
+  textColor: colors.black,
   // Uniswap
   userThemeColor: colors.magentaVibrant,
 
@@ -374,8 +393,14 @@ export const colorsDark: Palette = {
   intGray2: colors.intGray2,
   intGray3: colors.intGray3,
 
+  currencyBgColor: colors.currencyBgColor,
+
   primaryButtonColor: colors.white,
   secondaryButtonColor: colors.orange100,
+  secondaryAccentColor: colors.orangeAccent,
+  tertiaryButtonColor: colors.intBlue,
+  tertiaryAccentColor: colors.intTeal,
+  textColor: colors.black,
   //UNISWAP COLORS
   userThemeColor: colors.magentaVibrant,
 

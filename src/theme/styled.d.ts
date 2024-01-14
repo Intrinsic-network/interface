@@ -17,8 +17,14 @@ export interface ThemeColors {
   intGray: string;
   intGray2: string;
   intGray3: string;
+  currencyBgColor: string;
+
   primaryButtonColor: string;
   secondaryButtonColor: string;
+  secondaryAccentColor: string;
+
+  tertiaryButtonColor: string;
+  tertiaryAccentColor: string;
   // UNISWAP THEME
   userThemeColor: string;
 

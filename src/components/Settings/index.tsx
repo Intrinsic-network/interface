@@ -229,81 +229,88 @@ export default function SettingsTab({
       </StyledMenuButton>
       {open && (
         <MenuFlyout>
-          <AutoColumn gap="md" style={{ padding: "1rem" }}>
-            <Text fontWeight={600} fontSize={14}>
+          <AutoColumn gap="lg" style={{ padding: "1.5rem" }}>
+            <Text fontWeight={600} fontSize={20}>
               <Trans>Settings</Trans>
             </Text>
             <TransactionSettings placeholderSlippage={placeholderSlippage} />
-            <Text fontWeight={600} fontSize={14}>
-              <Trans>Interface Settings</Trans>
-            </Text>
-            {isSupportedChainId(chainId) && (
+            <div>
+              <Text
+                fontWeight={600}
+                fontSize={20}
+                style={{ marginBottom: "16px" }}
+              >
+                <Trans>Interface Settings</Trans>
+              </Text>
+
+              {isSupportedChainId(chainId) && (
+                <RowBetween style={{ marginBottom: "16px" }}>
+                  <RowFixed>
+                    <ThemedText.DeprecatedBlack
+                      fontWeight={400}
+                      fontSize={14}
+                      color={theme.textColor}
+                    >
+                      <Trans>Auto Router API</Trans>
+                    </ThemedText.DeprecatedBlack>
+                    <QuestionHelper
+                      text={
+                        <Trans>
+                          Use the Uniswap Labs API to get faster quotes.
+                        </Trans>
+                      }
+                    />
+                  </RowFixed>
+                  <Toggle
+                    id="toggle-optimized-router-button"
+                    isActive={!clientSideRouter}
+                    toggle={() => {
+                      sendEvent({
+                        category: "Routing",
+                        action: clientSideRouter
+                          ? "enable routing API"
+                          : "disable routing API",
+                      });
+                      setClientSideRouter(!clientSideRouter);
+                    }}
+                  />
+                </RowBetween>
+              )}
               <RowBetween>
                 <RowFixed>
                   <ThemedText.DeprecatedBlack
                     fontWeight={400}
                     fontSize={14}
-                    color={theme.deprecated_text2}
+                    color={theme.textColor}
                   >
-                    <Trans>Auto Router API</Trans>
+                    <Trans>Expert Mode</Trans>
                   </ThemedText.DeprecatedBlack>
                   <QuestionHelper
                     text={
                       <Trans>
-                        Use the Uniswap Labs API to get faster quotes.
+                        Allow high price impact trades and skip the confirm
+                        screen. Use at your own risk.
                       </Trans>
                     }
                   />
                 </RowFixed>
                 <Toggle
-                  id="toggle-optimized-router-button"
-                  isActive={!clientSideRouter}
-                  toggle={() => {
-                    sendEvent({
-                      category: "Routing",
-                      action: clientSideRouter
-                        ? "enable routing API"
-                        : "disable routing API",
-                    });
-                    setClientSideRouter(!clientSideRouter);
-                  }}
-                />
-              </RowBetween>
-            )}
-            <RowBetween>
-              <RowFixed>
-                <ThemedText.DeprecatedBlack
-                  fontWeight={400}
-                  fontSize={14}
-                  color={theme.deprecated_text2}
-                >
-                  <Trans>Expert Mode</Trans>
-                </ThemedText.DeprecatedBlack>
-                <QuestionHelper
-                  text={
-                    <Trans>
-                      Allow high price impact trades and skip the confirm
-                      screen. Use at your own risk.
-                    </Trans>
+                  id="toggle-expert-mode-button"
+                  isActive={expertMode}
+                  toggle={
+                    expertMode
+                      ? () => {
+                          toggleExpertMode();
+                          setShowConfirmation(false);
+                        }
+                      : () => {
+                          toggle();
+                          setShowConfirmation(true);
+                        }
                   }
                 />
-              </RowFixed>
-              <Toggle
-                id="toggle-expert-mode-button"
-                isActive={expertMode}
-                toggle={
-                  expertMode
-                    ? () => {
-                        toggleExpertMode();
-                        setShowConfirmation(false);
-                      }
-                    : () => {
-                        toggle();
-                        setShowConfirmation(true);
-                      }
-                }
-              />
-            </RowBetween>
+              </RowBetween>
+            </div>
           </AutoColumn>
         </MenuFlyout>
       )}

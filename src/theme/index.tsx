@@ -87,16 +87,29 @@ function uniswapThemeColors(darkMode: boolean): ThemeColors {
       : colorsLight.gradientColor2,
     bgLineColor: darkMode ? colorsDark.bgLineColor : colorsLight.bgLineColor,
     navTextColor: darkMode ? colorsDark.navTextColor : colorsLight.navTextColor,
-    textColor: darkMode ? colorsDark.black : colorsLight.black,
+    textColor: darkMode ? colorsDark.textColor : colorsLight.textColor,
     intGray: darkMode ? colorsDark.intGray : colorsLight.intGray,
     intGray2: darkMode ? colorsDark.intGray2 : colorsLight.intGray2,
     intGray3: darkMode ? colorsDark.intGray3 : colorsLight.intGray3,
+    currencyBgColor: darkMode
+      ? colorsDark.currencyBgColor
+      : colorsLight.currencyBgColor,
     primaryButtonColor: darkMode
       ? colorsDark.primaryButtonColor
       : colorsLight.primaryButtonColor,
     secondaryButtonColor: darkMode
       ? colorsDark.secondaryButtonColor
       : colorsLight.secondaryButtonColor,
+
+    secondaryAccentColor: darkMode
+      ? colorsDark.secondaryAccentColor
+      : colorsLight.secondaryAccentColor,
+    tertiaryButtonColor: darkMode
+      ? colorsDark.tertiaryButtonColor
+      : colorsLight.tertiaryButtonColor,
+    tertiaryAccentColor: darkMode
+      ? colorsDark.tertiaryAccentColor
+      : colorsLight.tertiaryAccentColor,
     // UNISWAP THEME COLORS
     userThemeColor: darkMode
       ? colorsDark.userThemeColor

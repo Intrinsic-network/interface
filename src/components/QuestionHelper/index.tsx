@@ -45,19 +45,17 @@ export default function QuestionHelper({
   const close = useCallback(() => setShow(false), [setShow]);
   return (
     <span style={{ marginLeft: 4, display: "flex", alignItems: "center" }}>
-      {show ? (
-        <Tooltip text={text} show={true}>
-          <QuestionWrapper
-            onClick={open}
-            onMouseEnter={open}
-            onMouseLeave={close}
-          >
-            <QuestionMark>
-              <HelpCircle size={16} />
-            </QuestionMark>
-          </QuestionWrapper>
-        </Tooltip>
-      ) : null}
+      <Tooltip text={text} show={show}>
+        <QuestionWrapper
+          onClick={open}
+          onMouseEnter={open}
+          onMouseLeave={close}
+        >
+          <QuestionMark>
+            <HelpCircle size={16} />
+          </QuestionMark>
+        </QuestionWrapper>
+      </Tooltip>
     </span>
   );
 }
