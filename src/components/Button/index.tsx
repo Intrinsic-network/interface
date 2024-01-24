@@ -243,6 +243,18 @@ export const ButtonYellow = styled(BaseButton)`
   }
 `;
 
+export const ButtonNakedBlack = styled(BaseButton)`
+  background-color: white;
+  color: black;
+  &:hover {
+    background: ${({ theme }) => theme.stateOverlayHover};
+    mix-blend-mode: normal;
+  }
+  &:active {
+    background-color: ${({ theme }) => theme.stateOverlayHover};
+  }
+`;
+
 export const ButtonEmpty = styled(BaseButton)`
   background-color: transparent;
   color: ${({ theme }) => theme.secondaryButtonColor};

@@ -63,13 +63,13 @@ export function MouseoverTooltip({
   const [show, setShow] = useState(false);
   const open = useCallback(() => setShow(true), [setShow]);
   const close = useCallback(() => setShow(false), [setShow]);
-  return show ? (
-    <Tooltip show={true} text={disableHover ? null : text}>
+  return (
+    <Tooltip show={show} text={disableHover ? null : text}>
       <div onMouseEnter={open} onMouseLeave={close}>
         {children}
       </div>
     </Tooltip>
-  ) : null;
+  );
 }
 
 /** Tooltip that displays custom content. */
