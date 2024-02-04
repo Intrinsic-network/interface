@@ -25,6 +25,8 @@ export interface ThemeColors {
 
   tertiaryButtonColor: string;
   tertiaryAccentColor: string;
+  thumbColor: string;
+  externalLinkTextColor: string;
   // UNISWAP THEME
   userThemeColor: string;
 

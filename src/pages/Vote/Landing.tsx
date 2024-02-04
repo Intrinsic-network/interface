@@ -59,8 +59,11 @@ const PageWrapper = styled(AutoColumn)`
 `;
 
 const TopSection = styled(AutoColumn)`
-  max-width: 640px;
+  max-width: 800px;
   width: 100%;
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
 `;
 
 const Proposal = styled(Button)`
@@ -100,16 +103,13 @@ const ProposalTitle = styled.span`
 `;
 
 const VoteCard = styled(DataCard)`
-  background: radial-gradient(
-    76.02% 75.41% at 1.84% 0%,
-    #27ae60 0%,
-    #000000 100%
-  );
+  background: white;
   overflow: hidden;
+  color: black;
 `;
 
 const WrapSmall = styled(RowBetween)`
-  margin-bottom: 1rem;
+  margin-bottom: 24px;
   ${({ theme }) => theme.deprecated_mediaWidth.deprecated_upToSmall`
     flex-wrap: wrap;
   `};
@@ -169,7 +169,7 @@ export default function Landing() {
   return (
     <>
       <Trace page={PageName.VOTE_PAGE} shouldLogImpression>
-        <PageWrapper gap="lg" justify="center">
+        <PageWrapper gap="32px" justify="center">
           <DelegateModal
             isOpen={showDelegateModal}
             onDismiss={toggleDelegateModal}
@@ -183,49 +183,43 @@ export default function Landing() {
           />
           <TopSection gap="md">
             <VoteCard>
-              <CardBGImage />
-              <CardNoise />
               <CardSection>
                 <AutoColumn gap="md">
                   <RowBetween>
-                    <ThemedText.DeprecatedWhite fontWeight={600}>
+                    <ThemedText.DeprecatedBlack fontWeight={600} fontSize={24}>
                       <Trans>Intrinsic Governance</Trans>
-                    </ThemedText.DeprecatedWhite>
+                    </ThemedText.DeprecatedBlack>
                   </RowBetween>
                   <RowBetween>
-                    <ThemedText.DeprecatedWhite fontSize={14}>
+                    <ThemedText.DeprecatedBlack fontSize={16} fontWeight={400}>
                       <Trans>
                         INT tokens represent voting shares in Intrinsic
                         governance. You can vote on each proposal yourself or
                         delegate your votes to a third party.
                       </Trans>
-                    </ThemedText.DeprecatedWhite>
+                    </ThemedText.DeprecatedBlack>
                   </RowBetween>
                   <ExternalLink
                     style={{
-                      color: theme.deprecated_white,
+                      color: theme.externalLinkTextColor,
                       textDecoration: "underline",
                     }}
                     href="https://uniswap.org/blog/uni"
                     target="_blank"
                   >
-                    <ThemedText.DeprecatedWhite fontSize={14}>
+                    <ThemedText.LinkText fontSize={16} fontWeight={400}>
                       <Trans>Read more about Intrinsic governance</Trans>
-                    </ThemedText.DeprecatedWhite>
+                    </ThemedText.LinkText>
                   </ExternalLink>
                 </AutoColumn>
               </CardSection>
-              <CardBGImage />
-              <CardNoise />
             </VoteCard>
           </TopSection>
           <TopSection gap="2px">
             <WrapSmall>
-              <ThemedText.DeprecatedMediumHeader
-                style={{ margin: "0.5rem 0.5rem 0.5rem 0", flexShrink: 0 }}
-              >
+              <ThemedText.DeprecatedBlack fontSize={24} fontWeight={600}>
                 <Trans>Proposals</Trans>
-              </ThemedText.DeprecatedMediumHeader>
+              </ThemedText.DeprecatedBlack>
               <AutoRow gap="6px" justify="flex-end">
                 {loadingProposals || loadingAvailableVotes ? <Loader /> : null}
                 {showUnlockVoting ? (
@@ -344,14 +338,21 @@ export default function Landing() {
                   </Proposal>
                 );
               })}
+            <div
+              style={{
+                paddingTop: "24px",
+                borderTop: "1px solid #DDDDDD",
+                marginTop: "24px",
+              }}
+            >
+              <ThemedText.DeprecatedSubHeader color="text3">
+                <Trans>
+                  A minimum threshold of 0.25% of the total INT supply is
+                  required to submit proposals
+                </Trans>
+              </ThemedText.DeprecatedSubHeader>
+            </div>
           </TopSection>
-
-          <ThemedText.DeprecatedSubHeader color="text3">
-            <Trans>
-              A minimum threshold of 0.25% of the total INT supply is required
-              to submit proposals
-            </Trans>
-          </ThemedText.DeprecatedSubHeader>
         </PageWrapper>
       </Trace>
       <SwitchLocaleLink />

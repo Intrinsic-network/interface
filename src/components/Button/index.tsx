@@ -95,26 +95,26 @@ export const ButtonPrimary = styled(BaseButton)`
 `;
 
 export const ButtonLight = styled(BaseButton)`
-  background-color: ${({ theme }) => theme.accentActionSoft};
-  color: ${({ theme }) => theme.accentAction};
+  background-color: ${({ theme }) => theme.secondaryAccentColor};
+  color: ${({ theme }) => theme.secondaryButtonColor};
   font-size: 20px;
   font-weight: 600;
 
   &:focus {
     box-shadow: 0 0 0 1pt
-      ${({ theme, disabled }) => !disabled && theme.accentActionSoft};
+      ${({ theme, disabled }) => !disabled && theme.secondaryAccentColor};
     background-color: ${({ theme, disabled }) =>
-      !disabled && theme.accentActionSoft};
+      !disabled && theme.secondaryAccentColor};
   }
   &:hover {
     background-color: ${({ theme, disabled }) =>
-      !disabled && theme.accentActionSoft};
+      !disabled && theme.secondaryAccentColor};
   }
   &:active {
     box-shadow: 0 0 0 1pt
-      ${({ theme, disabled }) => !disabled && theme.accentActionSoft};
+      ${({ theme, disabled }) => !disabled && theme.secondaryAccentColor};
     background-color: ${({ theme, disabled }) =>
-      !disabled && theme.accentActionSoft};
+      !disabled && theme.secondaryAccentColor};
   }
   :disabled {
     opacity: 0.4;

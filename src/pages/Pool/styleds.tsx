@@ -15,23 +15,24 @@ export const ClickableText = styled(Text)`
 `;
 export const MaxButton = styled.button<{ width: string }>`
   padding: 0.5rem 1rem;
-  background-color: ${({ theme }) => theme.deprecated_primary5};
-  border: 1px solid ${({ theme }) => theme.deprecated_primary5};
+  background-color: ${({ theme }) => theme.primaryButtonColor};
+  border: 1px solid ${({ theme }) => theme.intGray};
   border-radius: 0.5rem;
-  font-size: 1rem;
+  font-size: 16px;
   ${({ theme }) => theme.deprecated_mediaWidth.deprecated_upToSmall`
     padding: 0.25rem 0.5rem;
   `};
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   margin: 0.25rem;
   overflow: hidden;
-  color: ${({ theme }) => theme.secondaryButtonColor};
+  color: ${({ theme }) => theme.textColor};
   :hover {
-    border: 1px solid ${({ theme }) => theme.secondaryButtonColor};
+    border: 1px solid ${({ theme }) => theme.tertiaryAccentColor};
   }
   :focus {
-    border: 1px solid ${({ theme }) => theme.secondaryButtonColor};
+    border: 1px solid ${({ theme }) => theme.tertiaryAccentColor};
+    background-color: ${({ theme }) => theme.tertiaryButtonColor};
     outline: none;
   }
 `;

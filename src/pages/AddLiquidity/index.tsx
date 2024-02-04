@@ -13,7 +13,7 @@ import { sendEvent } from "components/analytics";
 import UnsupportedCurrencyFooter from "components/swap/UnsupportedCurrencyFooter";
 import useParsedQueryString from "hooks/useParsedQueryString";
 import { useCallback, useEffect, useState } from "react";
-import { AlertTriangle } from "react-feather";
+import { AlertTriangle, Settings, XCircle } from "react-feather";
 import { useNavigate, useParams } from "react-router-dom";
 import { Text } from "rebass";
 import {
@@ -678,9 +678,15 @@ export default function AddLiquidity() {
               >
                 <MediumOnly>
                   <ButtonText onClick={clearAll} margin="0 15px 0 0">
-                    <ThemedText.DeprecatedBlue fontSize="12px">
+                    <XCircle size="24"></XCircle>
+                    <ThemedText.DeprecatedBlack
+                      fontWeight={500}
+                      fontSize={16}
+                      lineHeight={"24px"}
+                      marginLeft={"8px"}
+                    >
                       <Trans>Clear All</Trans>
-                    </ThemedText.DeprecatedBlue>
+                    </ThemedText.DeprecatedBlack>
                   </ButtonText>
                 </MediumOnly>
                 {baseCurrency && quoteCurrency ? (

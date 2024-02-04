@@ -106,6 +106,8 @@ export interface GlobalPalette {
   orangeAccent: Color;
   intBlue: Color;
   intTeal: Color;
+  sliderThumbColor: Color;
+  externalLinkTextColor: Color;
 }
 
 export const colors: GlobalPalette = {
@@ -132,6 +134,8 @@ export const colors: GlobalPalette = {
   orangeAccent: "#FFF3EF",
   intBlue: "#75BDF1",
   intTeal: "#D4F5FF",
+  sliderThumbColor: "#2050AE",
+  externalLinkTextColor: "#0052CC",
   // UNISWAP
   white: "#FFFFFF",
   black: "#000000",
@@ -237,6 +241,8 @@ export interface Palette {
   tertiaryButtonColor: Color;
   tertiaryAccentColor: Color;
   textColor: Color;
+  thumbColor: Color;
+  externalLinkTextColor: Color;
   // UNISWAP
 
   userThemeColor: Color;
@@ -318,6 +324,8 @@ export const colorsLight: Palette = {
   tertiaryButtonColor: colors.intBlue,
   tertiaryAccentColor: colors.intTeal,
   textColor: colors.black,
+  thumbColor: colors.sliderThumbColor,
+  externalLinkTextColor: colors.externalLinkTextColor,
   // Uniswap
   userThemeColor: colors.magentaVibrant,
 
@@ -401,6 +409,8 @@ export const colorsDark: Palette = {
   tertiaryButtonColor: colors.intBlue,
   tertiaryAccentColor: colors.intTeal,
   textColor: colors.black,
+  thumbColor: colors.sliderThumbColor,
+  externalLinkTextColor: colors.externalLinkTextColor,
   //UNISWAP COLORS
   userThemeColor: colors.magentaVibrant,
 

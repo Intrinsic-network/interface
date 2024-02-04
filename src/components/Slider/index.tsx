@@ -1,5 +1,5 @@
-import { ChangeEvent, useCallback } from 'react'
-import styled from 'styled-components'
+import { ChangeEvent, useCallback } from "react";
+import styled from "styled-components";
 
 const StyledRangeInput = styled.input<{ size: number }>`
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
@@ -19,7 +19,7 @@ const StyledRangeInput = styled.input<{ size: number }>`
     -webkit-appearance: none;
     height: ${({ size }) => size}px;
     width: ${({ size }) => size}px;
-    background-color: ${({ theme }) => theme.deprecated_blue1};
+    background-color: ${({ theme }) => theme.thumbColor};
     border-radius: 100%;
     border: none;
     transform: translateY(-50%);
@@ -27,7 +27,8 @@ const StyledRangeInput = styled.input<{ size: number }>`
 
     &:hover,
     &:focus {
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 16px 24px rgba(0, 0, 0, 0.06),
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1),
+        0px 4px 8px rgba(0, 0, 0, 0.08), 0px 16px 24px rgba(0, 0, 0, 0.06),
         0px 24px 32px rgba(0, 0, 0, 0.04);
     }
   }
@@ -38,11 +39,12 @@ const StyledRangeInput = styled.input<{ size: number }>`
     background-color: #565a69;
     border-radius: 100%;
     border: none;
-    color: ${({ theme }) => theme.deprecated_bg1};
+    color: ${({ theme }) => theme.thumbColor};
 
     &:hover,
     &:focus {
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 16px 24px rgba(0, 0, 0, 0.06),
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1),
+        0px 4px 8px rgba(0, 0, 0, 0.08), 0px 16px 24px rgba(0, 0, 0, 0.06),
         0px 24px 32px rgba(0, 0, 0, 0.04);
     }
   }
@@ -52,11 +54,12 @@ const StyledRangeInput = styled.input<{ size: number }>`
     width: ${({ size }) => size}px;
     background-color: #565a69;
     border-radius: 100%;
-    color: ${({ theme }) => theme.deprecated_bg1};
+    color: ${({ theme }) => theme.thumbColor};
 
     &:hover,
     &:focus {
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 16px 24px rgba(0, 0, 0, 0.06),
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1),
+        0px 4px 8px rgba(0, 0, 0, 0.08), 0px 16px 24px rgba(0, 0, 0, 0.06),
         0px 24px 32px rgba(0, 0, 0, 0.04);
     }
   }
@@ -64,14 +67,18 @@ const StyledRangeInput = styled.input<{ size: number }>`
   &::-webkit-slider-runnable-track {
     background: linear-gradient(
       90deg,
-      ${({ theme }) => theme.deprecated_blue1},
-      ${({ theme }) => theme.deprecated_blue2}
+      ${({ theme }) => theme.intGray2},
+      ${({ theme }) => theme.intGray}
     );
     height: 2px;
   }
 
   &::-moz-range-track {
-    background: linear-gradient(90deg, ${({ theme }) => theme.deprecated_bg5}, ${({ theme }) => theme.deprecated_bg3});
+    background: linear-gradient(
+      90deg,
+      ${({ theme }) => theme.intGray2},
+      ${({ theme }) => theme.intGray}
+    );
     height: 2px;
   }
 
@@ -80,24 +87,24 @@ const StyledRangeInput = styled.input<{ size: number }>`
     border-color: transparent;
     color: transparent;
 
-    background: ${({ theme }) => theme.deprecated_bg5};
+    background: ${({ theme }) => theme.intGray};
     height: 2px;
   }
   &::-ms-fill-lower {
-    background: ${({ theme }) => theme.deprecated_bg5};
+    background: ${({ theme }) => theme.intGray};
   }
   &::-ms-fill-upper {
-    background: ${({ theme }) => theme.deprecated_bg3};
+    background: ${({ theme }) => theme.intGray};
   }
-`
+`;
 
 interface InputSliderProps {
-  value: number
-  onChange: (value: number) => void
-  step?: number
-  min?: number
-  max?: number
-  size?: number
+  value: number;
+  onChange: (value: number) => void;
+  step?: number;
+  min?: number;
+  max?: number;
+  size?: number;
 }
 
 export default function Slider({
@@ -111,10 +118,10 @@ export default function Slider({
 }: InputSliderProps) {
   const changeCallback = useCallback(
     (e: ChangeEvent<HTMLInputElement>) => {
-      onChange(parseInt(e.target.value))
+      onChange(parseInt(e.target.value));
     },
     [onChange]
-  )
+  );
 
   return (
     <StyledRangeInput
@@ -122,12 +129,12 @@ export default function Slider({
       {...rest}
       type="range"
       value={value}
-      style={{ padding: '15px 0' }}
+      style={{ padding: "15px 0" }}
       onChange={changeCallback}
       aria-labelledby="input slider"
       step={step}
       min={min}
       max={max}
     />
-  )
+  );
 }

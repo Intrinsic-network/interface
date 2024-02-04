@@ -110,6 +110,10 @@ function uniswapThemeColors(darkMode: boolean): ThemeColors {
     tertiaryAccentColor: darkMode
       ? colorsDark.tertiaryAccentColor
       : colorsLight.tertiaryAccentColor,
+    thumbColor: darkMode ? colorsDark.thumbColor : colorsLight.thumbColor,
+    externalLinkTextColor: darkMode
+      ? colorsDark.externalLinkTextColor
+      : colorsLight.externalLinkTextColor,
     // UNISWAP THEME COLORS
     userThemeColor: darkMode
       ? colorsDark.userThemeColor
@@ -466,6 +470,11 @@ export const ThemedText = {
         color="textSecondary"
         {...props}
       />
+    );
+  },
+  LinkText(props: TextProps) {
+    return (
+      <TextWrapper fontWeight={500} color="externalLinkTextColor" {...props} />
     );
   },
   DeprecatedMain(props: TextProps) {
