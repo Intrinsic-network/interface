@@ -25,7 +25,7 @@ import {
   ButtonNakedBlack,
   ButtonPrimary,
 } from "components/Button";
-import { DarkCard, LightCard } from "components/Card";
+import { DarkCard, DarkGreyCard, GreyCard, LightCard } from "components/Card";
 import { AutoColumn } from "components/Column";
 import CurrencyLogo from "components/CurrencyLogo";
 import DoubleCurrencyLogo from "components/DoubleLogo";
@@ -657,40 +657,40 @@ export function PositionPage() {
   function modalHeader() {
     return (
       <AutoColumn gap={"md"} style={{ marginTop: "20px" }}>
-        <LightCard padding="12px 16px">
+        <GreyCard padding="12px 16px">
           <AutoColumn gap="md">
-            <RowBetween>
+            <RowBetween style={{ marginBottom: "4px" }}>
               <RowFixed>
                 <CurrencyLogo
                   currency={feeValueUpper?.currency}
-                  size={"20px"}
-                  style={{ marginRight: "0.5rem" }}
+                  size={"24px"}
+                  style={{ marginRight: "8px" }}
                 />
-                <ThemedText.DeprecatedMain>
+                <ThemedText.DeprecatedBlack fontWeight={600} fontSize={"16px"}>
                   {feeValueUpper ? formatCurrencyAmount(feeValueUpper, 4) : "-"}
-                </ThemedText.DeprecatedMain>
+                </ThemedText.DeprecatedBlack>
               </RowFixed>
-              <ThemedText.DeprecatedMain>
+              <ThemedText.DeprecatedBlack fontWeight={600} fontSize={"16px"}>
                 {feeValueUpper?.currency?.symbol}
-              </ThemedText.DeprecatedMain>
+              </ThemedText.DeprecatedBlack>
             </RowBetween>
             <RowBetween>
               <RowFixed>
                 <CurrencyLogo
                   currency={feeValueLower?.currency}
-                  size={"20px"}
-                  style={{ marginRight: "0.5rem" }}
+                  size={"24px"}
+                  style={{ marginRight: "8px" }}
                 />
-                <ThemedText.DeprecatedMain>
+                <ThemedText.DeprecatedBlack fontWeight={600} fontSize={"16px"}>
                   {feeValueLower ? formatCurrencyAmount(feeValueLower, 4) : "-"}
-                </ThemedText.DeprecatedMain>
+                </ThemedText.DeprecatedBlack>
               </RowFixed>
-              <ThemedText.DeprecatedMain>
+              <ThemedText.DeprecatedBlack fontWeight={600} fontSize={"16px"}>
                 {feeValueLower?.currency?.symbol}
-              </ThemedText.DeprecatedMain>
+              </ThemedText.DeprecatedBlack>
             </RowBetween>
           </AutoColumn>
-        </LightCard>
+        </GreyCard>
         <ThemedText.DeprecatedItalic>
           <Trans>
             Collecting fees will withdraw currently available fees for you.

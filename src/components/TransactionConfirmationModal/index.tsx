@@ -243,9 +243,9 @@ export function ConfirmationModalContent({
 }) {
   return (
     <Wrapper>
-      <Section>
+      <Section style={{ padding: "16px 16px 16px 16px" }}>
         <RowBetween>
-          <Text fontWeight={500} fontSize={16}>
+          <Text fontWeight={600} fontSize={24}>
             {title}
           </Text>
           <CloseIcon onClick={onDismiss} data-cy="confirmation-close-icon" />

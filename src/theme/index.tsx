@@ -335,6 +335,8 @@ function oldColors(darkMode: boolean): Colors {
 }
 
 function getTheme(darkMode: boolean): DefaultTheme {
+  // TODO: Remove this for light and dark mode feature
+  darkMode = false;
   return {
     ...uniswapThemeColors(darkMode),
     ...oldColors(darkMode),

@@ -789,7 +789,13 @@ export default function AddLiquidity() {
                   />
                 )}
               </AutoColumn>
-              <div>
+              <div
+                style={{
+                  padding: "24px 26px",
+                  border: "1px solid #DDDDDD",
+                  borderRadius: "12px",
+                }}
+              >
                 <DynamicSection
                   disabled={
                     tickLower === undefined ||
@@ -799,7 +805,7 @@ export default function AddLiquidity() {
                   }
                 >
                   <AutoColumn gap="md">
-                    <ThemedText.DeprecatedLabel>
+                    <ThemedText.DeprecatedLabel fontSize={"20px"}>
                       {hasExistingPosition ? (
                         <Trans>Add more liquidity</Trans>
                       ) : (

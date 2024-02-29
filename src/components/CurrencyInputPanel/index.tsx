@@ -37,7 +37,7 @@ const InputPanel = styled.div<{ hideInput?: boolean }>`
   position: relative;
   border-radius: ${({ hideInput }) => (hideInput ? "16px" : "20px")};
   background-color: ${({ theme, hideInput }) =>
-    hideInput ? "transparent" : theme.deprecated_bg2};
+    hideInput ? "transparent" : theme.intGray2};
   z-index: 1;
   width: ${({ hideInput }) => (hideInput ? "100%" : "initial")};
   transition: height 1s ease;
@@ -58,8 +58,8 @@ const FixedContainer = styled.div`
 
 const Container = styled.div<{ hideInput: boolean; disabled: boolean }>`
   border-radius: ${({ hideInput }) => (hideInput ? "16px" : "20px")};
+  padding-bottom: 8px;
   border: 1px solid ${({ theme }) => theme.deprecated_bg0};
-  background-color: ${({ theme }) => theme.deprecated_bg1};
   width: ${({ hideInput }) => (hideInput ? "100%" : "initial")};
   ${({ theme, hideInput, disabled }) =>
     !disabled &&
