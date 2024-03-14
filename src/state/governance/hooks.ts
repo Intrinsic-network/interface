@@ -230,7 +230,7 @@ export function useAllProposalData(): { data: ProposalData[]; loading: boolean }
   const proposalStates = useSingleContractMultipleData(govBravo, 'state', govBravoProposalIndexes)
 
   // get metadata from past events
-  const formattedProposalCreatedLogs = useFormattedProposalCreatedLogs(govBravo, govBravoProposalIndexes, 3820064)
+  const formattedProposalCreatedLogs = useFormattedProposalCreatedLogs(govBravo, govBravoProposalIndexes, 0x4440a8)
 
   const int = useMemo(() => (chainId ? INT[chainId] : undefined), [chainId])
 
