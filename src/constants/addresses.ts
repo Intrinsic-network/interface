@@ -42,11 +42,11 @@ export const SWAP_ROUTER_ADDRESSES: AddressMap = {
  * The latest governor bravo that is currently admin of timelock
  */
 export const GOVERNANCE_BRAVO_ADDRESSES: AddressMap = {
-  [SupportedChainId.RSK_TESTNET]: '0x5eb07844515F4040784d66F2422FBA6EDa80D8Cb',
+  [SupportedChainId.RSK_TESTNET]: '0x9b7869691f4aeefcf97fef165ca3e679a3077f54',
 }
 
 export const TIMELOCK_ADDRESS: AddressMap = {
-  [SupportedChainId.RSK_TESTNET]: '0x9fe2798055324d438bC0725AB3F1c8709566Ea2d',
+  [SupportedChainId.RSK_TESTNET]: '0xc3a370582ef6676e1716bee33424dd308cc2d4a3',
 }
 
 export const MERKLE_DISTRIBUTOR_ADDRESS: AddressMap = {

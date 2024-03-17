@@ -230,7 +230,7 @@ export function useAllProposalData(): { data: ProposalData[]; loading: boolean }
   const proposalStates = useSingleContractMultipleData(govBravo, 'state', govBravoProposalIndexes)
 
   // get metadata from past events
-  const formattedProposalCreatedLogs = useFormattedProposalCreatedLogs(govBravo, govBravoProposalIndexes, 0x4440a8)
+  const formattedProposalCreatedLogs = useFormattedProposalCreatedLogs(govBravo, govBravoProposalIndexes, 0x4b0834)
 
   const int = useMemo(() => (chainId ? INT[chainId] : undefined), [chainId])
 
@@ -307,7 +307,7 @@ export function useUserDelegatee(): string {
 }
 
 // gets the users current votes
-export function useUserVotes(): { loading: boolean; votes: CurrencyAmount<Token> | undefined } {
+export function useUserVotes(): { loading: boolean; votes?: CurrencyAmount<Token> } {
   const { account, chainId } = useWeb3React()
   const uniContract = useUniContract()
 
