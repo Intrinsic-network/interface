@@ -30,8 +30,8 @@ const StyledHistoryLink = styled(HistoryLink)<{ flex: string | undefined }>`
 `;
 
 const ActiveText = styled.div`
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 24px;
 `;
 
 const StyledArrowLeft = styled(ArrowLeft)`
@@ -126,14 +126,21 @@ export function AddRemoveTabs({
 export function CreateProposalTabs() {
   return (
     <Tabs>
-      <Row style={{ padding: "32px 32px 0px 32px" }}>
-        <HistoryLink to="/vote">
-          <StyledArrowLeft />
-        </HistoryLink>
-        <ActiveText style={{ marginLeft: "auto", marginRight: "auto" }}>
-          Create Proposal
-        </ActiveText>
-      </Row>
+      <div style={{ padding: "32px 32px 0px 32px", width: "100%" }}>
+        <Row
+          style={{
+            borderBottom: "1px solid #DDDDDD",
+            paddingBottom: "24px",
+          }}
+        >
+          <HistoryLink to="/vote">
+            <StyledArrowLeft />
+          </HistoryLink>
+          <ActiveText style={{ marginLeft: "16px" }}>
+            Create Proposal
+          </ActiveText>
+        </Row>
+      </div>
     </Tabs>
   );
 }

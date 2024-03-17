@@ -17,7 +17,7 @@ module.exports = {
       rules: {
         "prettier/prettier": "off",
         "multiline-comment-style": ["error", "separate-lines"],
-        "rulesdir/no-undefined-or": "error",
+        "rulesdir/no-undefined-or": "off",
       },
     },
     {

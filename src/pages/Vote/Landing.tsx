@@ -113,6 +113,9 @@ const WrapSmall = styled(RowBetween)`
   ${({ theme }) => theme.deprecated_mediaWidth.deprecated_upToSmall`
     flex-wrap: wrap;
   `};
+
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 24px;
 `;
 
 const TextButton = styled(ThemedText.DeprecatedMain)`
@@ -224,7 +227,7 @@ export default function Landing() {
                 {loadingProposals || loadingAvailableVotes ? <Loader /> : null}
                 {showUnlockVoting ? (
                   <ButtonPrimary
-                    style={{ width: "fit-content" }}
+                    style={{ width: "fit-content", fontSize: "16px" }}
                     padding="8px"
                     $borderRadius="8px"
                     onClick={toggleDelegateModal}
@@ -257,64 +260,79 @@ export default function Landing() {
                 <ButtonPrimary
                   as={Link}
                   to="/create-proposal"
-                  style={{ width: "fit-content", borderRadius: "8px" }}
+                  style={{
+                    width: "fit-content",
+                    borderRadius: "8px",
+                    fontSize: "16px",
+                  }}
                   padding="8px"
                 >
                   <Trans>Create Proposal</Trans>
                 </ButtonPrimary>
               </AutoRow>
             </WrapSmall>
-            {!showUnlockVoting && (
-              <RowBetween>
-                <div />
-                {userDelegatee && userDelegatee !== ZERO_ADDRESS ? (
-                  <RowFixed>
-                    <ThemedText.DeprecatedBody fontWeight={500} mr="4px">
-                      <Trans>Delegated to:</Trans>
-                    </ThemedText.DeprecatedBody>
-                    <AddressButton>
-                      <StyledExternalLink
-                        href={getExplorerLink(
-                          1,
-                          userDelegatee,
-                          ExplorerDataType.ADDRESS
-                        )}
-                        style={{ margin: "0 4px" }}
-                      >
-                        {userDelegatee === account ? (
-                          <Trans>Self</Trans>
-                        ) : (
-                          shortenAddress(userDelegatee)
-                        )}
-                      </StyledExternalLink>
-                      <TextButton
-                        onClick={toggleDelegateModal}
-                        style={{ marginLeft: "4px" }}
-                      >
-                        <Trans>(edit)</Trans>
-                      </TextButton>
-                    </AddressButton>
-                  </RowFixed>
-                ) : (
-                  ""
-                )}
-              </RowBetween>
-            )}
 
             {allProposals?.length === 0 && <ProposalEmptyState />}
 
             {allProposals?.length > 0 && (
-              <AutoColumn gap="md">
+              <AutoColumn
+                gap="md"
+                style={{
+                  padding: "24px",
+                  border: "1px solid #DDDDDD",
+                  borderRadius: "12px",
+                }}
+              >
                 <RowBetween>
-                  <ThemedText.DeprecatedMain>
+                  <ThemedText.DeprecatedBlack
+                    style={{ marginRight: "48px", width: "172px" }}
+                    fontWeight={500}
+                    fontSize={20}
+                  >
                     <Trans>Show Cancelled</Trans>
-                  </ThemedText.DeprecatedMain>
+                  </ThemedText.DeprecatedBlack>
                   <Toggle
                     isActive={!hideCancelled}
                     toggle={() =>
                       setHideCancelled((hideCancelled) => !hideCancelled)
                     }
                   />
+                  {!showUnlockVoting && (
+                    <RowBetween>
+                      <div />
+                      {userDelegatee && userDelegatee !== ZERO_ADDRESS ? (
+                        <RowFixed>
+                          <ThemedText.DeprecatedBody fontWeight={500} mr="4px">
+                            <Trans>Delegated to:</Trans>
+                          </ThemedText.DeprecatedBody>
+                          <AddressButton>
+                            <StyledExternalLink
+                              href={getExplorerLink(
+                                1,
+                                userDelegatee,
+                                ExplorerDataType.ADDRESS
+                              )}
+                              style={{ margin: "0 4px" }}
+                            >
+                              {userDelegatee === account ? (
+                                <Trans>Self</Trans>
+                              ) : (
+                                shortenAddress(userDelegatee)
+                              )}
+                            </StyledExternalLink>
+                            <TextButton
+                              onClick={toggleDelegateModal}
+                              style={{ marginLeft: "4px" }}
+                            >
+                              <Trans>(edit)</Trans>
+                            </TextButton>
+                          </AddressButton>
+                        </RowFixed>
+                      ) : (
+                        ""
+                      )}
+                    </RowBetween>
+                  )}
                 </RowBetween>
               </AutoColumn>
             )}

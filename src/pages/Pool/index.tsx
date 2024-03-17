@@ -251,26 +251,26 @@ export default function Pool() {
       link: "/add/ETH",
       external: false,
     },
-    {
-      content: (
-        <MenuItem>
-          <Trans>Migrate</Trans>
-          <ChevronsRight size={16} />
-        </MenuItem>
-      ),
-      link: "/migrate/v2",
-      external: false,
-    },
-    {
-      content: (
-        <MenuItem>
-          <Trans>V2 liquidity</Trans>
-          <Layers size={16} />
-        </MenuItem>
-      ),
-      link: "/pool/v2",
-      external: false,
-    },
+    // {
+    //   content: (
+    //     <MenuItem>
+    //       <Trans>Migrate</Trans>
+    //       <ChevronsRight size={16} />
+    //     </MenuItem>
+    //   ),
+    //   link: "/migrate/v2",
+    //   external: false,
+    // },
+    // {
+    //   content: (
+    //     <MenuItem>
+    //       <Trans>V2 liquidity</Trans>
+    //       <Layers size={16} />
+    //     </MenuItem>
+    //   ),
+    //   link: "/pool/v2",
+    //   external: false,
+    // },
     {
       content: (
         <MenuItem>
