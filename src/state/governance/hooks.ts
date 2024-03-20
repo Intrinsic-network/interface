@@ -266,7 +266,7 @@ export function useAllProposalData(): {
   );
 
   // get metadata from past events
-  const formattedProposalCreatedLogs = useFormattedProposalCreatedLogs(govBravo, govBravoProposalIndexes, 0x4b0834)
+  const formattedProposalCreatedLogs = useFormattedProposalCreatedLogs(govBravo, govBravoProposalIndexes, 0x4b2fcb)
 
   const int = useMemo(() => (chainId ? INT[chainId] : undefined), [chainId]);
 
