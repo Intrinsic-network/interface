@@ -317,6 +317,14 @@ ${bodyValue}
         ];
         break;
       }
+
+      case ProposalAction.ACCEPT_ADMIN: {
+        createProposalData.targets = [toAddressValue]
+        types = []
+        values = []
+        createProposalData.signatures = [`_acceptAdmin()`]
+        break
+      }
     }
 
     createProposalData.calldatas = [];

@@ -78,6 +78,12 @@ export const ProposalActionDetail = ({
         label: <Trans>Recipient</Trans>,
       },
     ],
+    [ProposalAction.ACCEPT_ADMIN]: [
+      {
+        type: ProposalActionDetailField.ADDRESS,
+        label: <Trans>Delegator Address</Trans>,
+      },
+    ],
   }
 
   return (
