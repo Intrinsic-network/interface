@@ -6,7 +6,7 @@ import { RowBetween } from 'components/Row'
 import { MenuItem, PaddedColumn, Separator } from 'components/SearchModal/styleds'
 import React, { useCallback } from 'react'
 import { Text } from 'rebass'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { CloseIcon } from 'theme'
 
 export enum ProposalAction {
@@ -14,6 +14,7 @@ export enum ProposalAction {
   APPROVE_TOKEN = 'Approve Token',
   SET_FEE_PROTOCOL = 'Set Fee Protocol',
   COLLECT_PROTOCOL = 'Collect Protocol',
+  ACCEPT_ADMIN = 'Accept Admin',
 }
 
 interface ProposalActionSelectorModalProps {
@@ -136,6 +137,13 @@ export function ProposalActionSelectorModal({
           <Column>
             <Text fontWeight={500}>
               <Trans>Collect Protocol</Trans>
+            </Text>
+          </Column>
+        </MenuItem>
+        <MenuItem onClick={() => handleProposalActionSelect(ProposalAction.ACCEPT_ADMIN)}>
+          <Column>
+            <Text fontWeight={500}>
+              <Trans>Accept Admin</Trans>
             </Text>
           </Column>
         </MenuItem>

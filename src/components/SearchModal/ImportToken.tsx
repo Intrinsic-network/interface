@@ -10,7 +10,7 @@ import { SectionBreak } from 'components/swap/styleds'
 import { useUnsupportedTokens } from 'hooks/Tokens'
 import { AlertCircle, ArrowLeft } from 'react-feather'
 import { useAddUserToken } from 'state/user/hooks'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { CloseIcon, ThemedText } from 'theme'
 
 import BlockedToken from './BlockedToken'
@@ -39,7 +39,7 @@ const formatAnalyticsEventProperties = (tokens: Token[]) => ({
 
 export function ImportToken(props: ImportProps) {
   const { tokens, list, onBack, onDismiss, handleCurrencySelect } = props
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   const addToken = useAddUserToken()
 

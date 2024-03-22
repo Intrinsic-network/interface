@@ -3,7 +3,7 @@ import { sendEvent } from 'components/analytics'
 import { ButtonOutlined } from 'components/Button'
 import { AutoRow } from 'components/Row'
 import React from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { ThemedText } from 'theme'
 
 const Button = styled(ButtonOutlined).attrs(() => ({

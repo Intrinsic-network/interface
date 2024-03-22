@@ -5,7 +5,7 @@ import { useLocationLinkProps } from 'hooks/useLocationLinkProps'
 import { Check } from 'react-feather'
 import { Link } from 'react-router-dom'
 import { Text } from 'rebass'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 
 import { SlideOutMenu } from './SlideOutMenu'
 
@@ -39,7 +39,7 @@ const InternalLinkMenuItem = styled(InternalMenuItem)`
 
 function LanguageMenuItem({ locale, isActive }: { locale: SupportedLocale; isActive: boolean }) {
   const { to, onClick } = useLocationLinkProps(locale)
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   if (!to) return null
 

@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro'
 import useStablecoinPrice from 'hooks/useStablecoinPrice'
 import { useCallback } from 'react'
 import { Text } from 'rebass'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { ThemedText } from 'theme'
 import { formatDollar, formatTransactionAmount, priceToPreciseFloat } from 'utils/formatNumbers'
 
@@ -31,7 +31,7 @@ const StyledPriceContainer = styled.button`
 `
 
 export default function TradePrice({ price, showInverted, setShowInverted }: TradePriceProps) {
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   const usdcPrice = useStablecoinPrice(showInverted ? price.baseCurrency : price.quoteCurrency)
 

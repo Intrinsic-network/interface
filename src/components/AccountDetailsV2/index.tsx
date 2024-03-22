@@ -3,7 +3,7 @@ import { getChainInfoOrDefault } from 'constants/chainInfo'
 import { SupportedChainId } from 'constants/chains'
 import { useMemo } from 'react'
 import { AlertTriangle, CheckCircle } from 'react-feather'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { colors } from 'theme/colors'
 
 import { TransactionDetails } from '../../state/transactions/types'

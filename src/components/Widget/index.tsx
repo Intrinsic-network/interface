@@ -139,7 +139,6 @@ export default function Widget({ token, onTokenChange, onReviewSwapClick }: Widg
   return (
     <>
       <SwapWidget
-        disableBranding
         hideConnectionUI
         routerUrl={WIDGET_ROUTER_URL}
         locale={locale}

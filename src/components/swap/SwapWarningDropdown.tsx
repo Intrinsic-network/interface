@@ -4,7 +4,7 @@ import { RowBetween } from 'components/Row'
 import { MouseoverTooltipContent } from 'components/Tooltip'
 import { Info } from 'react-feather'
 import { InterfaceTrade } from 'state/routing/types'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { ThemedText } from 'theme'
 
 import { ResponsiveTooltipContainer } from './styleds'

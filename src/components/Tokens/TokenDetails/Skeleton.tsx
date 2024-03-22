@@ -2,7 +2,7 @@ import { WidgetSkeleton } from 'components/Widget'
 import { WIDGET_WIDTH } from 'components/Widget'
 import { ArrowLeft } from 'react-feather'
 import { useParams } from 'react-router-dom'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 
 import { LoadingBubble } from '../loading'
 import { AboutContainer, AboutHeader } from './About'
@@ -120,7 +120,7 @@ const Space = styled.div<{ heightSize: number }>`
 `
 
 function Wave() {
-  const theme = useTheme()
+  const theme = useTheme() as any
   return (
     <svg width="416" height="160" xmlns="http://www.w3.org/2000/svg">
       <path d="M 0 80 Q 104 10, 208 80 T 416 80" stroke={theme.backgroundOutline} fill="transparent" strokeWidth="2" />

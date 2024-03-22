@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
 import useAutoRouterSupported from 'hooks/useAutoRouterSupported'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { ThemedText } from 'theme'
 
 import { ReactComponent as StaticRouterIcon } from '../../assets/svg/static_route.svg'

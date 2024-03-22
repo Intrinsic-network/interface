@@ -72,20 +72,20 @@ function useSortedTokens(tokens: NonNullable<TopTokens100Query['response']['topT
     let tokenArray = Array.from(tokens)
     switch (sortMethod) {
       case TokenSortMethod.PRICE:
-        tokenArray = tokenArray.sort((a, b) => (b?.market?.price?.value ?? 0) - (a?.market?.price?.value ?? 0))
+        tokenArray = tokenArray.sort((a, b: any) => (b?.market?.price?.value ?? 0) - (a?.market?.price?.value ?? 0))
         break
       case TokenSortMethod.PERCENT_CHANGE:
         tokenArray = tokenArray.sort(
-          (a, b) => (b?.market?.pricePercentChange?.value ?? 0) - (a?.market?.pricePercentChange?.value ?? 0)
+          (a, b: any) => (b?.market?.pricePercentChange?.value ?? 0) - (a?.market?.pricePercentChange?.value ?? 0)
         )
         break
       case TokenSortMethod.TOTAL_VALUE_LOCKED:
         tokenArray = tokenArray.sort(
-          (a, b) => (b?.market?.totalValueLocked?.value ?? 0) - (a?.market?.totalValueLocked?.value ?? 0)
+          (a, b: any) => (b?.market?.totalValueLocked?.value ?? 0) - (a?.market?.totalValueLocked?.value ?? 0)
         )
         break
       case TokenSortMethod.VOLUME:
-        tokenArray = tokenArray.sort((a, b) => (b?.market?.volume?.value ?? 0) - (a?.market?.volume?.value ?? 0))
+        tokenArray = tokenArray.sort((a, b: any) => (b?.market?.volume?.value ?? 0) - (a?.market?.volume?.value ?? 0))
         break
     }
 

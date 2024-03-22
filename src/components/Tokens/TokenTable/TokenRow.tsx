@@ -12,7 +12,7 @@ import { ForwardedRef, forwardRef } from 'react'
 import { CSSProperties, ReactNode } from 'react'
 import { ArrowDown, ArrowUp } from 'react-feather'
 import { Link, useParams } from 'react-router-dom'
-import styled, { css, useTheme } from 'styled-components/macro'
+import styled, { css, useTheme } from 'styled-components'
 import { ClickableStyle } from 'theme'
 import { formatDollar } from 'utils/formatNumbers'
 
@@ -317,7 +317,7 @@ function HeaderCell({
 }: {
   category: TokenSortMethod // TODO: change this to make it work for trans
 }) {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const sortAscending = useAtomValue(sortAscendingAtom)
   const handleSortCategory = useSetSortMethod(category)
   const sortMethod = useAtomValue(sortMethodAtom)

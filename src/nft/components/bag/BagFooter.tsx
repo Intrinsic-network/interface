@@ -16,7 +16,7 @@ import { PropsWithChildren, useCallback, useMemo } from 'react'
 import { AlertTriangle } from 'react-feather'
 import { useModalIsOpen, useToggleWalletModal } from 'state/application/hooks'
 import { ApplicationModal } from 'state/application/reducer'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { ThemedText } from 'theme'
 import { switchChain } from 'utils/switchChain'
 
@@ -119,7 +119,7 @@ export const BagFooter = ({
   const { buttonText, disabled, warningText } = useMemo(() => {
     let buttonText = <Trans>Something went wrong</Trans>
     let disabled = true
-    let warningText = null
+    let warningText = null as unknown as JSX.Element;
 
     if (connected && chainId !== SupportedChainId.RSK_MAINNET) {
       buttonText = <Trans>Switch networks</Trans>

@@ -1,6 +1,6 @@
 import { Warning, WARNING_LEVEL } from 'constants/tokenSafety'
 import { AlertTriangle } from 'react-feather'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 const VerifiedContainer = styled.div`
   margin-left: 4px;

@@ -9,7 +9,7 @@ import ListLogo from 'components/ListLogo'
 import { RowFixed } from 'components/Row'
 import { transparentize } from 'polished'
 import { AlertCircle } from 'react-feather'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { ExternalLink, ThemedText } from 'theme'
 import { ExplorerDataType, getExplorerLink } from 'utils/getExplorerLink'
 
@@ -32,7 +32,7 @@ interface TokenImportCardProps {
   token: Token
 }
 const TokenImportCard = ({ list, token }: TokenImportCardProps) => {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const { chainId } = useWeb3React()
   return (
     <Card backgroundColor={theme.deprecated_bg2} padding="2rem">

@@ -5,7 +5,7 @@ import { CollectionStatsFetcher } from 'nft/queries'
 import { Markets, TrendingCollection } from 'nft/types'
 import { formatWeiToDecimal } from 'nft/utils'
 import { useQuery } from 'react-query'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { ThemedText } from 'theme'
 
 const CarouselCardContainer = styled.div`
@@ -202,7 +202,7 @@ export const CarouselCard = ({ collection, onClick }: CarouselCardProps) => {
     }
   )
 
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   return (
     <CarouselCardContainer onClick={onClick}>

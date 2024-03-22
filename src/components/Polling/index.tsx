@@ -9,7 +9,7 @@ import JSBI from 'jsbi'
 import useBlockNumber from 'lib/hooks/useBlockNumber'
 import ms from 'ms.macro'
 import { useEffect, useState } from 'react'
-import styled, { keyframes, useTheme } from 'styled-components/macro'
+import styled, { keyframes, useTheme } from 'styled-components'
 import { ExternalLink, ThemedText } from 'theme'
 import { ExplorerDataType, getExplorerLink } from 'utils/getExplorerLink'
 
@@ -105,7 +105,7 @@ export default function Polling() {
   const [isHover, setIsHover] = useState(false)
   const machineTime = useMachineTimeMs(NETWORK_HEALTH_CHECK_MS)
   const blockTime = useCurrentBlockTimestamp()
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   const ethGasPrice = useGasPrice()
   const priceGwei = ethGasPrice ? JSBI.divide(ethGasPrice, JSBI.BigInt(1000000000)) : undefined

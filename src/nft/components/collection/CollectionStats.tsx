@@ -11,7 +11,7 @@ import { GenieCollection } from 'nft/types'
 import { floorFormatter, quantityFormatter, roundWholePercentage, volumeFormatter } from 'nft/utils/numbers'
 import { ReactNode, useEffect, useReducer, useRef, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { DiscordIcon, EllipsisIcon, ExternalIcon, InstagramIcon, TwitterIcon, VerifiedIcon, XMarkIcon } from '../icons'
 import * as styles from './CollectionStats.css'

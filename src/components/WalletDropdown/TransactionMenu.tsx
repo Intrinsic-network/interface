@@ -4,7 +4,7 @@ import { getYear, isSameDay, isSameWeek, isSameYear } from 'date-fns'
 import ms from 'ms.macro'
 import { useCallback, useMemo } from 'react'
 import { useAppDispatch } from 'state/hooks'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { useAllTransactions } from '../../state/transactions/hooks'
 import { clearAllTransactions } from '../../state/transactions/reducer'
@@ -123,7 +123,7 @@ export const TransactionHistoryMenu = ({ onClose }: { onClose: () => void }) => 
   const allTransactions = useAllTransactions()
   const { chainId } = useWeb3React()
   const dispatch = useAppDispatch()
-  const transactionGroupsInformation = []
+  const transactionGroupsInformation = [] as any[]
 
   const clearAllTransactionsCallback = useCallback(() => {
     if (chainId) dispatch(clearAllTransactions({ chainId }))
@@ -153,7 +153,7 @@ export const TransactionHistoryMenu = ({ onClose }: { onClose: () => void }) => 
       <Divider />
       {transactionGroupsInformation.length > 0 ? (
         <>
-          {transactionGroupsInformation.map((transactionInformation, index) => (
+          {transactionGroupsInformation.map((transactionInformation: any, index)=> (
             <TransactionList key={transactionInformation.title} transactionInformation={transactionInformation} />
           ))}
         </>

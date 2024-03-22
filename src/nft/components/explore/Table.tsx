@@ -4,7 +4,7 @@ import { useWindowSize } from 'hooks/useWindowSize'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Column, ColumnInstance, HeaderGroup, IdType, useSortBy, useTable } from 'react-table'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { ThemedText } from 'theme'
 
 import { Box } from '../../components/Box'
@@ -93,7 +93,7 @@ export function Table<D extends Record<string, unknown>>({
   classNames,
   ...props
 }: TableProps<D>) {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const { width } = useWindowSize()
 
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow, setHiddenColumns, visibleColumns } =

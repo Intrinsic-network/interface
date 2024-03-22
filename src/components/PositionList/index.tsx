@@ -1,9 +1,9 @@
-import { Trans } from '@lingui/macro'
-import PositionListItem from 'components/PositionListItem'
-import React from 'react'
-import styled from 'styled-components/macro'
-import { MEDIA_WIDTHS } from 'theme'
-import { PositionDetails } from 'types/position'
+import { Trans } from "@lingui/macro";
+import PositionListItem from "components/PositionListItem";
+import React from "react";
+import styled from "styled-components";
+import { MEDIA_WIDTHS } from "theme";
+import { PositionDetails } from "types/position";
 
 const DesktopHeader = styled.div`
   display: none;
@@ -21,7 +21,7 @@ const DesktopHeader = styled.div`
       margin-right: 12px;
     }
   }
-`
+`;
 
 const MobileHeader = styled.div`
   font-weight: medium;
@@ -43,13 +43,13 @@ const MobileHeader = styled.div`
     flex-direction: row;
     justify-content: space-between;
   }
-`
+`;
 
 const ToggleWrap = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-`
+`;
 
 const ToggleLabel = styled.button`
   cursor: pointer;
@@ -57,13 +57,13 @@ const ToggleLabel = styled.button`
   border: none;
   color: ${({ theme }) => theme.accentAction};
   font-size: 1rem;
-`
+`;
 
 type PositionListProps = React.PropsWithChildren<{
-  positions: PositionDetails[]
-  setUserHideClosedPositions: any
-  userHideClosedPositions: boolean
-}>
+  positions: PositionDetails[];
+  setUserHideClosedPositions: any;
+  userHideClosedPositions: boolean;
+}>;
 
 export default function PositionList({
   positions,
@@ -72,7 +72,7 @@ export default function PositionList({
 }: PositionListProps) {
   return (
     <>
-      <DesktopHeader>
+      {/* <DesktopHeader>
         <div>
           <Trans>Your positions</Trans>
           {positions && ' (' + positions.length + ')'}
@@ -86,22 +86,28 @@ export default function PositionList({
         >
           {userHideClosedPositions ? <Trans>Show closed positions</Trans> : <Trans>Hide closed positions</Trans>}
         </ToggleLabel>
-      </DesktopHeader>
-      <MobileHeader>
+      </DesktopHeader> */}
+      {/* <MobileHeader>
         <Trans>Your positions</Trans>
         <ToggleWrap>
           <ToggleLabel
             onClick={() => {
-              setUserHideClosedPositions(!userHideClosedPositions)
+              setUserHideClosedPositions(!userHideClosedPositions);
             }}
           >
-            {userHideClosedPositions ? <Trans>Show closed positions</Trans> : <Trans>Hide closed positions</Trans>}
+            {userHideClosedPositions ? (
+              <Trans>Show closed positions</Trans>
+            ) : (
+              <Trans>Hide closed positions</Trans>
+            )}
           </ToggleLabel>
         </ToggleWrap>
-      </MobileHeader>
+      </MobileHeader> */}
       {positions.map((p) => {
-        return <PositionListItem key={p.tokenId.toString()} positionDetails={p} />
+        return (
+          <PositionListItem key={p.tokenId.toString()} positionDetails={p} />
+        );
       })}
     </>
-  )
+  );
 }

@@ -2,7 +2,7 @@ import { PageName } from 'analytics/constants'
 import { Trace } from 'analytics/Trace'
 import Banner from 'nft/components/explore/Banner'
 import TrendingCollections from 'nft/components/explore/TrendingCollections'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 const ExploreContainer = styled.div`
   display: flex;

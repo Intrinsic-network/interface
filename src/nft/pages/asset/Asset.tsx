@@ -8,7 +8,7 @@ import { fetchSingleAsset } from 'nft/queries'
 import { useMemo } from 'react'
 import { useQuery } from 'react-query'
 import { useParams } from 'react-router-dom'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 const AssetContainer = styled.div`
   display: flex;

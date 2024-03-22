@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro'
 import StakingRewardsJson from '@uniswap/liquidity-staker/build/StakingRewards.json'
 import { useWeb3React } from '@web3-react/core'
 import { ReactNode, useState } from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { useContract } from '../../hooks/useContract'
 import { StakingInfo } from '../../state/stake/hooks'

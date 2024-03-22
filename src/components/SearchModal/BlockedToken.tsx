@@ -2,7 +2,7 @@ import { Token } from '@intrinsic-network/sdk-core'
 import { Trans } from '@lingui/macro'
 import { ButtonPrimary } from 'components/Button'
 import { AlertCircle, ArrowLeft } from 'react-feather'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { CloseIcon, ThemedText } from 'theme'
 
 import TokenImportCard from './TokenImportCard'

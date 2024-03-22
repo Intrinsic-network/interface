@@ -5,7 +5,7 @@ import { useRef } from 'react'
 import { Check, ChevronDown, ChevronUp } from 'react-feather'
 import { useModalIsOpen, useToggleModal } from 'state/application/hooks'
 import { ApplicationModal } from 'state/application/reducer'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 
 import { MOBILE_MEDIA_BREAKPOINT, SMALL_MEDIA_BREAKPOINT } from '../constants'
 import { filterTimeAtom } from '../state'
@@ -102,7 +102,7 @@ const Chevron = styled.span<{ open: boolean }>`
 
 // TODO: change this to reflect data pipeline
 export default function TimeSelector() {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const node = useRef<HTMLDivElement | null>(null)
   const open = useModalIsOpen(ApplicationModal.TIME_SELECTOR)
   const toggleMenu = useToggleModal(ApplicationModal.TIME_SELECTOR)

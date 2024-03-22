@@ -1,5 +1,5 @@
 import { loadingAnimation } from 'components/Loader/styled'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 /* Loading state bubbles (animation style from: src/components/Loader/styled.tsx) */
 export const LoadingBubble = styled.div`

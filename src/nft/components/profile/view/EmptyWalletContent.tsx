@@ -3,7 +3,7 @@ import { useWeb3React } from '@web3-react/core'
 import { EmptyNFTWalletIcon } from 'nft/components/icons'
 import { headlineMedium } from 'nft/css/common.css'
 import { useNavigate } from 'react-router-dom'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { shortenAddress } from 'utils'
 
 const EmptyWalletContainer = styled.div`

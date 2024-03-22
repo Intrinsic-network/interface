@@ -8,7 +8,7 @@ import Row, { RowBetween, RowFixed } from 'components/Row'
 import { useToken } from 'hooks/Tokens'
 import { ChangeEvent, RefObject, useCallback, useMemo, useRef, useState } from 'react'
 import { useRemoveUserAddedToken, useUserAddedTokens } from 'state/user/hooks'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { ButtonText, ExternalLink, ExternalLinkIcon, ThemedText, TrashIcon } from 'theme'
 import { isAddress } from 'utils'
 
@@ -46,7 +46,7 @@ export default function ManageTokens({
   const { chainId } = useWeb3React()
 
   const [searchQuery, setSearchQuery] = useState<string>('')
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   // manage focus on modal show
   const inputRef = useRef<HTMLInputElement>()

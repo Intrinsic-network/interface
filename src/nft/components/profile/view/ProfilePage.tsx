@@ -21,7 +21,7 @@ import { Dispatch, SetStateAction, useEffect, useMemo, useReducer, useState } fr
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { useInfiniteQuery, useQuery } from 'react-query'
 import { useSpring } from 'react-spring'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { EmptyWalletContent } from './EmptyWalletContent'
 import { ProfileAccountDetails } from './ProfileAccountDetails'

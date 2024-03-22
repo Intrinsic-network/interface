@@ -9,7 +9,7 @@ import Row, { AutoRow } from 'components/Row'
 import { RoutingDiagramEntry } from 'components/swap/SwapRoute'
 import { useTokenInfoFromActiveList } from 'hooks/useTokenInfoFromActiveList'
 import { Box } from 'rebass'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { ThemedText } from 'theme'
 import { Z_INDEX } from 'theme/zIndex'
 

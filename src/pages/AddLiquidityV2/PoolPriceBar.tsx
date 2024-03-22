@@ -1,7 +1,7 @@
 import { Currency, Percent, Price } from '@intrinsic-network/sdk-core'
 import { Trans } from '@lingui/macro'
 import { Text } from 'rebass'
-import { useTheme } from 'styled-components/macro'
+import { useTheme } from 'styled-components'
 
 import { AutoColumn } from '../../components/Column'
 import { AutoRow } from '../../components/Row'
@@ -20,7 +20,7 @@ export function PoolPriceBar({
   poolTokenPercentage?: Percent
   price?: Price<Currency, Currency>
 }) {
-  const theme = useTheme()
+  const theme = useTheme() as any
   return (
     <AutoColumn gap="md">
       <AutoRow justify="space-around" gap="4px">

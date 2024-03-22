@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
 import { ReactNode } from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { ThemedText } from 'theme'
 import { textFadeIn } from 'theme/animations'
 import { formatDollar } from 'utils/formatNumbers'

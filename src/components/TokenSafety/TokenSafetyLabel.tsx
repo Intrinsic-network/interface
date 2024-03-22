@@ -3,7 +3,7 @@ import { useTokenWarningColor } from 'hooks/useTokenWarningColor'
 import { ReactNode } from 'react'
 import { AlertOctagon, AlertTriangle } from 'react-feather'
 import { Text } from 'rebass'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { Color } from 'theme/styled'
 
 const Label = styled.div<{ color: Color }>`

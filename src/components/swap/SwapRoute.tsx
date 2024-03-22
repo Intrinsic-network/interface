@@ -1,4 +1,4 @@
-import { FeeAmount } from '@intrinsic-network/intrinsic-sdk'
+import { FeeAmount, Pool } from '@intrinsic-network/intrinsic-sdk'
 import { Protocol } from '@intrinsic-network/router-sdk'
 import { Currency, Percent, TradeType } from '@intrinsic-network/sdk-core'
 import { Trans } from '@lingui/macro'
@@ -17,7 +17,7 @@ import { memo, useState } from 'react'
 import { Plus } from 'react-feather'
 import { InterfaceTrade } from 'state/routing/types'
 import { useDarkModeManager } from 'state/user/hooks'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { Separator, ThemedText } from 'theme'
 
 import { AutoRouterLabel, AutoRouterLogo } from './RouterLabel'
@@ -144,7 +144,7 @@ export function getTokenPath(trade: InterfaceTrade<Currency, Currency, TradeType
       const entry: RoutingDiagramEntry['path'][0] = [
         tokenIn,
         tokenOut,
-        nextPool instanceof Pair ? V2_DEFAULT_FEE_TIER : nextPool.fee,
+        nextPool instanceof Pair ? V2_DEFAULT_FEE_TIER : (nextPool as Pool).fee,
       ]
       path.push(entry)
     }

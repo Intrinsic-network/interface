@@ -1,7 +1,9 @@
 import { Trans } from '@lingui/macro'
 import { useWeb3React } from '@web3-react/core'
 import JSBI from 'jsbi'
-import styled, { useTheme } from 'styled-components/macro'
+import { useTheme } from 'styled-components'
+
+import styled from 'styled-components'
 
 import { OutlineCard } from '../../components/Card'
 import { AutoColumn } from '../../components/Column'
@@ -49,7 +51,7 @@ flex-direction: column;
 `
 
 export default function Earn() {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const { chainId } = useWeb3React()
 
   // staking info for connected account

@@ -10,7 +10,7 @@ import { SwitchLocaleLink } from 'components/SwitchLocaleLink'
 import { PairState, useV2Pairs } from 'hooks/useV2Pairs'
 import { ReactNode, useMemo } from 'react'
 import { Text } from 'rebass'
-import { useTheme } from 'styled-components/macro'
+import { useTheme } from 'styled-components'
 
 import { LightCard } from '../../components/Card'
 import { AutoColumn } from '../../components/Column'
@@ -51,7 +51,7 @@ function toSushiLiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
 }
 
 export default function MigrateV2() {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const { account, chainId } = useWeb3React()
 
   const v2FactoryAddress = chainId ? V2_FACTORY_ADDRESSES[chainId] : undefined

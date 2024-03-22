@@ -1,7 +1,7 @@
 import { Trans } from '@lingui/macro'
 import { darken } from 'polished'
 import { useState } from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { ThemedText } from 'theme'
 import { textFadeIn } from 'theme/animations'
 

@@ -11,7 +11,7 @@ import React, { ReactNode, useCallback, useMemo } from 'react'
 import { BarChart2, CloudOff, Inbox } from 'react-feather'
 import { batch } from 'react-redux'
 import { Bound } from 'state/mint/v3/actions'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 
 import { ThemedText } from '../../theme'
 import { Chart } from './Chart'
@@ -88,7 +88,7 @@ export default function LiquidityChartRangeInput({
   onRightRangeInput: (typedValue: string) => void
   interactive: boolean
 }) {
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   const tokenAColor = useColor(currencyA?.wrapped)
   const tokenBColor = useColor(currencyB?.wrapped)

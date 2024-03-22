@@ -1,7 +1,7 @@
 import { Currency } from '@intrinsic-network/sdk-core'
 import useCurrencyLogoURIs from 'lib/hooks/useCurrencyLogoURIs'
 import React, { useMemo } from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import Logo from '../Logo'
 

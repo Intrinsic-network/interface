@@ -1,7 +1,7 @@
 import { useWeb3React } from '@web3-react/core'
 import { UNI_ADDRESS } from 'constants/addresses'
 import { TransactionInfo, TransactionType } from 'state/transactions/types'
-import styled, { css } from 'styled-components/macro'
+import styled, { css } from 'styled-components'
 
 import { nativeOnChain } from '../../constants/tokens'
 import { useCurrency } from '../../hooks/Tokens'

@@ -1,7 +1,7 @@
 import { Column, Row } from 'nft/components/Flex'
 import { BagCloseIcon } from 'nft/components/icons'
 import { roundAndPluralize } from 'nft/utils/roundAndPluralize'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { ButtonText, ThemedText } from 'theme'
 
 import * as styles from './BagHeader.css'

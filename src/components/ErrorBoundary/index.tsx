@@ -1,7 +1,7 @@
 import { Trans } from '@lingui/macro'
 import { sendEvent } from 'components/analytics'
 import React, { ErrorInfo, PropsWithChildren } from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import store, { AppState } from '../../state'
 import { ExternalLink, ThemedText } from '../../theme'

@@ -40,7 +40,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { useInfiniteQuery } from 'react-query'
 import { useLocation } from 'react-router-dom'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { CollectionAssetLoading } from './CollectionAssetLoading'
 import { MARKETPLACE_ITEMS } from './MarketplaceSelect'
@@ -200,7 +200,7 @@ export const CollectionNfts = ({ contractAddress, collectionStats, rarityVerifie
       },
     ],
     async ({ pageParam = 0 }) => {
-      let sort = undefined
+      let sort = undefined as any;
       switch (sortBy) {
         case SortBy.HighToLow: {
           sort = { currentEthPrice: 'desc' }

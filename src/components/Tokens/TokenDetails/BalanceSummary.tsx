@@ -8,7 +8,7 @@ import { CHAIN_ID_TO_BACKEND_NAME } from 'graphql/data/util'
 import { useStablecoinValue } from 'hooks/useStablecoinPrice'
 import useCurrencyBalance from 'lib/hooks/useCurrencyBalance'
 import { useMemo } from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { StyledInternalLink } from 'theme'
 import { currencyAmountToPreciseFloat, formatDollar } from 'utils/formatNumbers'
 

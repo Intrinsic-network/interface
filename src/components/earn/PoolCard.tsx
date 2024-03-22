@@ -1,7 +1,7 @@
 import { CurrencyAmount, Token } from '@intrinsic-network/sdk-core'
 import { Trans } from '@lingui/macro'
 import JSBI from 'jsbi'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { BIG_INT_SECONDS_IN_WEEK } from '../../constants/misc'
 import { useColor } from '../../hooks/useColor'
