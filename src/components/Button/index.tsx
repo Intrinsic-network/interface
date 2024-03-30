@@ -329,10 +329,11 @@ const ButtonErrorStyle = styled(BaseButton)`
   }
   &:disabled {
     opacity: 50%;
+    color: white;
     cursor: auto;
     box-shadow: none;
-    background-color: ${({ theme }) => theme.deprecated_red1};
-    border: 1px solid ${({ theme }) => theme.deprecated_red1};
+    background-color: #dddddd;
+    border: 1px solid #dddddd;
   }
 `;
 
