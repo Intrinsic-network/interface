@@ -136,7 +136,6 @@ export const ButtonLink = styled(BaseButton)`
 
   &:focus {
     box-shadow: 0 0 0 1pt ${({ theme, disabled }) => !disabled && `#0052CC`};
-    background-color: ${({ theme, disabled }) => !disabled && `#0052CC`};
   }
   &:hover {
     background-color: ${({ theme, disabled }) => !disabled && theme.intGray3};
@@ -145,7 +144,7 @@ export const ButtonLink = styled(BaseButton)`
   &:active {
     box-shadow: 0 0 0 1pt
       ${({ theme, disabled }) => !disabled && theme.accentActionSoft};
-    background-color: ${({ theme, disabled }) => !disabled && `transparent`};
+    
   }
 
   :disabled {

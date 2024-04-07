@@ -9,7 +9,7 @@ const ProposalEditorHeader = styled(Text)`
   font-size: 16px;
   font-weight: 600;
   padding-top: 20px;
-  width: 150px
+  width: 202px;
 `;
 
 const ProposalTitle = memo(styled(TextInput)`

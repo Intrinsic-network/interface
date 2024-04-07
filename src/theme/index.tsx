@@ -565,39 +565,15 @@ a {
 }
 
 :root {
-  background-color: ${({ theme }) => theme.bgColor}; 
+  position: relative; /* Add position relative to establish a positioning context for pseudo-elements */
+  height: 100%;
+  background-color: ${({ theme }) => theme.gradientColor1};
   ${({ theme }) =>
     theme.darkMode
       ? cssStringFromTheme(darkTheme)
       : cssStringFromTheme(lightTheme)}
 }
 
-:root::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(97deg, ${({ theme }) =>
-    theme.gradientColor1} 0%, ${({ theme }) => theme.gradientColor2} 100%);
-  right: 0;
-  top: 0;
-}
 
-:root::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  background-color: #c4d6e8;
-  background: repeating-linear-gradient(
-    135deg,
-    transparent 1px,
-    transparent 5px,
-    ${({ theme }) => theme.bgLineColor} 5px,
-    ${({ theme }) => theme.bgLineColor} 7px
-  );
-  /* Replace #stripeColor with the color of your stripes */
-  left: 0;
-  bottom: 0;
-}
+
 `;
