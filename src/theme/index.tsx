@@ -565,13 +565,40 @@ a {
 }
 
 :root {
-  position: relative; /* Add position relative to establish a positioning context for pseudo-elements */
-  height: 100%;
-  background-color: ${({ theme }) => theme.gradientColor1};
+  background-color: ${({ theme }) => theme.bgColor}; 
+  
   ${({ theme }) =>
     theme.darkMode
       ? cssStringFromTheme(darkTheme)
       : cssStringFromTheme(lightTheme)}
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 50%;
+}
+
+body::before {
+  background: linear-gradient(97deg, ${({ theme }) =>
+    theme.gradientColor1} 0%, ${({ theme }) => theme.gradientColor2} 100%);
+  right: 0;
+  top: 0;
+}
+
+body::after {
+  background-color: #c4d6e8;
+  background: repeating-linear-gradient(
+    135deg,
+    transparent 1px,
+    transparent 5px,
+    ${({ theme }) => theme.bgLineColor} 5px,
+    ${({ theme }) => theme.bgLineColor} 7px
+  );
+  left: 0;
+  bottom: 0;
 }
 
 
