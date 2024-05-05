@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: uniswap-interface\n"
+"Project-Id-Version: Intrinsic-interface\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2022-10-27 02:48\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: uniswap-interface\n"
+"X-Crowdin-Project: Intrinsic-interface\n"
 "X-Crowdin-Project-ID: 458284\n"
 "X-Crowdin-Language: sw-TZ\n"
 "X-Crowdin-File: en-US.po\n"
@@ -60,8 +60,8 @@ msgid "24H volume"
 msgstr "Kiasi cha 24H"
 
 #: src/components/Tokens/TokenDetails/StatsSection.tsx
-msgid "24H volume is the amount of the asset that has been traded on Uniswap v3 during the past 24 hours."
-msgstr "Kiasi cha 24H ni kiasi cha mali ambacho kimeuzwa kwenye Uniswap v3 katika saa 24 zilizopita."
+msgid "24H volume is the amount of the asset that has been traded on Intrinsic during the past 24 hours."
+msgstr "Kiasi cha 24H ni kiasi cha mali ambacho kimeuzwa kwenye Intrinsic katika saa 24 zilizopita."
 
 #: src/pages/RemoveLiquidity/V3.tsx
 msgid "25%"
@@ -157,8 +157,8 @@ msgid "Add"
 msgstr "Ongeza"
 
 #: src/components/AccountDetails/TransactionSummary.tsx
-msgid "Add <0/> and <1/> to Uniswap V2"
-msgstr "Ongeza <0/> na <1/> kwenye Uniswap V2"
+msgid "Add <0/> and <1/> to Intrinsic"
+msgstr "Ongeza <0/> na <1/> kwenye Intrinsic"
 
 #: src/components/vote/DelegateModal.tsx
 msgid "Add Delegate +"
@@ -227,7 +227,7 @@ msgstr "Ruhusu biashara ya athari za bei ya juu na uruke skrini ya thibitisho. T
 
 #: src/pages/Swap/index.tsx
 msgid "Allow Intrinsic to use your {0}"
-msgstr "Ruhusu Itifaki ya Uniswap kutumia {0}"
+msgstr "Ruhusu Itifaki ya Intrinsic kutumia {0}"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
 msgid "Allowed"
@@ -247,8 +247,8 @@ msgid "An error occurred loading tokens. Please try again."
 msgstr "Hitilafu imetokea wakati wa kupakia tokeni. Tafadhali jaribu tena."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note: fee on transfer and rebase tokens are incompatible with Uniswap V3."
-msgstr "Hitilafu ilitokea wakati wa kujaribu kutekeleza ubadilishaji huu. Unaweza kuhitaji kuongeza uvumilivu wako wa kuteleza. Ikiwa hiyo haifanyi kazi, kunaweza kuwa na kutokubaliana na ishara unayofanya biashara. Kumbuka: ada ya uhamishaji na toa rehani haziendani na Uniswap V3."
+msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note: fee on transfer and rebase tokens are incompatible with Intrinsic."
+msgstr "Hitilafu ilitokea wakati wa kujaribu kutekeleza ubadilishaji huu. Unaweza kuhitaji kuongeza uvumilivu wako wa kuteleza. Ikiwa hiyo haifanyi kazi, kunaweza kuwa na kutokubaliana na ishara unayofanya biashara. Kumbuka: ada ya uhamishaji na toa rehani haziendani na Intrinsic."
 
 #: src/components/AccountDetailsV2/TransactionBody.tsx
 #: src/components/earn/StakingModal.tsx
@@ -295,8 +295,8 @@ msgid "Are you sure?"
 msgstr "Una uhakika?"
 
 #: src/components/claim/ClaimModal.tsx
-msgid "As a member of the Uniswap community you may claim INT to be used for voting and governance.<0/><1/><2>Read more about INT</2>"
-msgstr "Kama mwanachama wa jamii ya Uniswap unaweza kudai INT kutumika kwa kupiga kura na utawala. <0 /> <1 /> <2> Soma zaidi kuhusu INT</2>"
+msgid "As a member of the Intrinsic community you may claim INT to be used for voting and governance.<0/><1/><2>Read more about INT</2>"
+msgstr "Kama mwanachama wa jamii ya Intrinsic unaweza kudai INT kutumika kwa kupiga kura na utawala. <0 /> <1 /> <2> Soma zaidi kuhusu INT</2>"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
 msgid "At least {0} {1} and {2} {3} will be refunded to your wallet due to selected price range."
@@ -352,11 +352,11 @@ msgid "By adding liquidity you'll earn 0.3% of all trades on this pair proportio
 msgstr "Kwa kuongeza ukwasi utapata 0.3% ya biashara zote kwenye jozi hii sawia na sehemu yako ya dimbwi. Ada zinaongezwa kwenye dimbwi, zinapatikana kwa wakati halisi na zinaweza kudaiwa kwa kuondoa ukwasi wako."
 
 #: src/components/WalletModal/index.tsx
-msgid "By connecting a wallet, you agree to Uniswap Labs’ <0>Terms of Service</0> and acknowledge that you have read and understand the Uniswap <1>Protocol Disclaimer</1>."
-msgstr "Kwa kuunganisha mkoba, unakubaliana na Uniswap Labs ' <0>Masharti ya Huduma</0> na kutambua kwamba umesoma na kuelewa Uniswap <1>Itifaki Kanusho</1>."
+msgid "By connecting a wallet, you agree to Intrinsic Labs’ <0>Terms of Service</0> and acknowledge that you have read and understand the Intrinsic <1>Protocol Disclaimer</1>."
+msgstr "Kwa kuunganisha mkoba, unakubaliana na Intrinsic Labs ' <0>Masharti ya Huduma</0> na kutambua kwamba umesoma na kuelewa Intrinsic <1>Itifaki Kanusho</1>."
 
 #: src/components/WalletModal/index.tsx
-msgid "By connecting a wallet, you agree to Uniswap Labs’ <0>Terms of Service</0> and consent to its <1>Privacy Policy</1>."
+msgid "By connecting a wallet, you agree to Intrinsic Labs’ <0>Terms of Service</0> and consent to its <1>Privacy Policy</1>."
 msgstr "Kwa kuunganisha pochi, unakubali Sheria na Masharti <0>ya</0> Labs na kukubali <1>Sera yake ya Faragha</1>."
 
 #: src/pages/Vote/styled.tsx
@@ -695,8 +695,8 @@ msgid "Deposit tokens to the {label} network."
 msgstr "Weka alama kwenye mtandao {label}"
 
 #: src/pages/Earn/index.tsx
-msgid "Deposit your Liquidity Provider tokens to receive INT, the Uniswap protocol governance token."
-msgstr "Weka ishara zako za Mtoaji wa Liquidity kupokea INT, ishara ya utawala wa itifaki ya Uniswap."
+msgid "Deposit your Liquidity Provider tokens to receive INT, the Intrinsic protocol governance token."
+msgstr "Weka ishara zako za Mtoaji wa Liquidity kupokea INT, ishara ya utawala wa itifaki ya Intrinsic."
 
 #: src/components/earn/UnstakingModal.tsx
 msgid "Deposited liquidity:"
@@ -749,7 +749,7 @@ msgstr "Je! Huoni moja ya nafasi zako za v2? <0> Ingiza.</0>"
 
 #: src/components/vote/DelegateModal.tsx
 msgid "Earned INT tokens represent voting shares in Intrinsic governance."
-msgstr "Ishara zilizopatikana za INT zinawakilisha hisa za kupiga kura katika utawala wa Uniswap."
+msgstr "Ishara zilizopatikana za INT zinawakilisha hisa za kupiga kura katika utawala wa Intrinsic."
 
 #: src/components/FeeSelector/index.tsx
 msgid "Edit"
@@ -862,16 +862,16 @@ msgid "Explore"
 msgstr "Chunguza"
 
 #: src/components/Tokens/TokensBanner.tsx
-msgid "Explore Top Tokens on Uniswap"
-msgstr "Gundua Tokeni Kuu kwenye Uniswap"
+msgid "Explore Top Tokens on Intrinsic"
+msgstr "Gundua Tokeni Kuu kwenye Intrinsic"
 
 #: src/pages/Pool/CTACards.tsx
-msgid "Explore Uniswap Analytics."
-msgstr "Gundua Takwimu za Uniswap."
+msgid "Explore Intrinsic Analytics."
+msgstr "Gundua Takwimu za Intrinsic."
 
 #: src/components/Popups/FailedNetworkSwitchPopup.tsx
-msgid "Failed to switch networks from the Uniswap Interface. In order to use Uniswap on {0}, you must change the network in your wallet."
-msgstr "Imeshindwa kubadilisha mitandao kutoka kwa Kiolesura cha Uniswap. Ili kutumia Uniswap kwenye {0}, lazima ubadilishe mtandao kwenye pochi yako."
+msgid "Failed to switch networks from the Intrinsic Interface. In order to use Intrinsic on {0}, you must change the network in your wallet."
+msgstr "Imeshindwa kubadilisha mitandao kutoka kwa Kiolesura cha Intrinsic. Ili kutumia Intrinsic kwenye {0}, lazima ubadilishe mtandao kwenye pochi yako."
 
 #: src/components/NavBar/MenuDropdown.tsx
 msgid "Feature Flags"
@@ -898,8 +898,8 @@ msgid "For"
 msgstr "Kwa maana"
 
 #: src/pages/MigrateV2/index.tsx
-msgid "For each pool shown below, click migrate to remove your liquidity from Uniswap V2 and deposit it into Uniswap V3."
-msgstr "Kwa kila dimbwi lililoonyeshwa hapa chini, bonyeza hamisha ili kuondoa ukwasi wako kutoka kwa Uniswap V2 na uweke kwenye Uniswap V3."
+msgid "For each pool shown below, click migrate to remove your liquidity from Intrinsic and deposit it into Intrinsic."
+msgstr "Kwa kila dimbwi lililoonyeshwa hapa chini, bonyeza hamisha ili kuondoa ukwasi wako kutoka kwa Intrinsic na uweke kwenye Intrinsic."
 
 #: src/pages/Swap/index.tsx
 msgid "From"
@@ -1160,8 +1160,8 @@ msgid "Migrate V2 Liquidity"
 msgstr "Hamisha Kioevu cha V2"
 
 #: src/pages/MigrateV2/index.tsx
-msgid "Migrate your liquidity tokens from Uniswap V2 to Uniswap V3."
-msgstr "Hamisha ishara zako za ukwasi kutoka kwa Uniswap V2 hadi Uniswap V3."
+msgid "Migrate your liquidity tokens from Intrinsic to Intrinsic."
+msgstr "Hamisha ishara zako za ukwasi kutoka kwa Intrinsic hadi Intrinsic."
 
 #: src/components/AccountDetails/TransactionSummary.tsx
 msgid "Migrate {0}/{1} liquidity to V3"
@@ -1489,7 +1489,7 @@ msgstr "Soma zaidi kuhusu INT"
 
 #: src/pages/Vote/Landing.tsx
 msgid "Read more about Intrinsic governance"
-msgstr "Soma zaidi kuhusu Uniswap utawala"
+msgstr "Soma zaidi kuhusu Intrinsic utawala"
 
 #: src/pages/Pool/v2.tsx
 msgid "Read more about providing liquidity"
@@ -1761,23 +1761,23 @@ msgid "TVL"
 msgstr "TVL"
 
 #: src/components/Popups/SurveyPopup.tsx
-msgid "Take a 10 minute survey to help us improve your experience in the Uniswap app."
-msgstr "Fanya utafiti wa dakika 10 ili utusaidie kuboresha matumizi yako katika programu ya Uniswap."
+msgid "Take a 10 minute survey to help us improve your experience in the Intrinsic app."
+msgstr "Fanya utafiti wa dakika 10 ili utusaidie kuboresha matumizi yako katika programu ya Intrinsic."
 
 #: src/components/Popups/SurveyPopup.tsx
 msgid "Tell us what you think ↗"
 msgstr "Tuambie unachofikiria ↗"
 
 #: src/components/Popups/ClaimPopup.tsx
-msgid "Thanks for being part of the Uniswap community <0/>"
-msgstr "Asante kwa kuwa sehemu ya jamii ya Uniswap <0 />"
+msgid "Thanks for being part of the Intrinsic community <0/>"
+msgstr "Asante kwa kuwa sehemu ya jamii ya Intrinsic <0 />"
 
 #: src/components/FeeSelector/index.tsx
 msgid "The % you will earn in fees."
 msgstr "% Utakayopata katika ada."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "The Uniswap invariant x*y=k was not satisfied by the swap. This usually means one of the tokens you are swapping incorporates custom behavior on transfer."
+msgid "The Intrinsic invariant x*y=k was not satisfied by the swap. This usually means one of the tokens you are swapping incorporates custom behavior on transfer."
 msgstr "Kiasi kisichobadilika x * y = k hakiridhika na ubadilishaji. Hii kawaida inamaanisha moja ya ishara unazobadilisha zinajumuisha tabia ya kawaida kwenye uhamishaji."
 
 #: src/components/swap/AdvancedSwapDetails.tsx
@@ -1793,8 +1793,8 @@ msgid "The app fetches on-chain data and constructs contract calls with an Infur
 msgstr "Programu huchota data ya mtandaoni na kuunda simu za mkataba kwa kutumia API ya Infura."
 
 #: src/components/PrivacyPolicy/index.tsx
-msgid "The app fetches the optimal trade route from a Uniswap Labs server."
-msgstr "Programu hutafuta njia mojawapo ya biashara kutoka kwa seva ya Uniswap Labs."
+msgid "The app fetches the optimal trade route from a Intrinsic Labs server."
+msgstr "Programu hutafuta njia mojawapo ya biashara kutoka kwa seva ya Intrinsic Labs."
 
 #: src/components/PrivacyPolicy/index.tsx
 msgid "The app logs anonymized usage statistics in order to improve over time."
@@ -1850,8 +1850,8 @@ msgid "The output token cannot be transferred. There may be an issue with the ou
 msgstr "Ishara ya pato haiwezi kuhamishwa. Kunaweza kuwa na shida na ishara ya pato."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "The output token cannot be transferred. There may be an issue with the output token. Note: fee on transfer and rebase tokens are incompatible with Uniswap V3."
-msgstr "Ishara ya pato haiwezi kuhamishwa. Kunaweza kuwa na shida na ishara ya pato. Kumbuka: ada ya uhamishaji na toa rehani haziendani na Uniswap V3."
+msgid "The output token cannot be transferred. There may be an issue with the output token. Note: fee on transfer and rebase tokens are incompatible with Intrinsic."
+msgstr "Ishara ya pato haiwezi kuhamishwa. Kunaweza kuwa na shida na ishara ya pato. Kumbuka: ada ya uhamishaji na toa rehani haziendani na Intrinsic."
 
 #: src/components/Badge/RangeBadge.tsx
 msgid "The price of this pool is outside of your selected range. Your position is not currently earning fees."
@@ -1874,8 +1874,8 @@ msgid "There is no liquidity data."
 msgstr "Hakuna data ya ukwasi."
 
 #: src/components/ConnectedAccountBlocked/index.tsx
-msgid "This address is blocked on the Uniswap Labs interface because it is associated with one or more"
-msgstr "Anwani hii imezuiwa kwenye kiolesura cha Uniswap Labs kwa sababu inahusishwa na moja au zaidi"
+msgid "This address is blocked on the Intrinsic Labs interface because it is associated with one or more"
+msgstr "Anwani hii imezuiwa kwenye kiolesura cha Intrinsic Labs kwa sababu inahusishwa na moja au zaidi"
 
 #: src/components/PrivacyPolicy/index.tsx
 msgid "This app uses the following third-party APIs:"
@@ -1898,20 +1898,20 @@ msgid "This token doesn't appear on the active token list(s). Make sure this is 
 msgstr "Ishara hii haionekani kwenye orodha (s) zinazotumika. Hakikisha hii ndio ishara kwamba unataka kufanya biashara."
 
 #: src/components/Tokens/TokenDetails/PriceChart.tsx
-msgid "This token doesn't have chart data because it hasn't been traded on Uniswap v3"
-msgstr "Tokeni hii haina data ya chati kwa sababu haijauzwa kwenye Uniswap v3"
+msgid "This token doesn't have chart data because it hasn't been traded on Intrinsic"
+msgstr "Tokeni hii haina data ya chati kwa sababu haijauzwa kwenye Intrinsic"
 
 #: src/components/SearchModal/BlockedToken.tsx
-msgid "This token is not supported in the Uniswap Labs app"
-msgstr "Tokeni hii haitumiki katika programu ya Uniswap Labs"
+msgid "This token is not supported in the Intrinsic Labs app"
+msgstr "Tokeni hii haitumiki katika programu ya Intrinsic Labs"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
 msgid "This tool will safely migrate your {0} liquidity to V3. The process is completely trustless thanks to the"
 msgstr "Chombo hiki kitahamisha {0} kwa V3. Mchakato huo hauna shukrani kabisa kwa"
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "This transaction will not succeed due to price movement. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Uniswap V3."
-msgstr "Uuzaji huu hautafaulu kwa sababu ya harakati za bei. Jaribu kuongeza uvumilivu wako wa kuteleza. Kumbuka: ada ya uhamishaji na toa rehani haziendani na Uniswap V3."
+msgid "This transaction will not succeed due to price movement. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Intrinsic."
+msgstr "Uuzaji huu hautafaulu kwa sababu ya harakati za bei. Jaribu kuongeza uvumilivu wako wa kuteleza. Kumbuka: ada ya uhamishaji na toa rehani haziendani na Intrinsic."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
 msgid "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance."
@@ -1949,8 +1949,8 @@ msgid "Top pools"
 msgstr "Mabwawa ya juu"
 
 #: src/pages/Tokens/index.tsx
-msgid "Top tokens on Uniswap"
-msgstr "Ishara kuu kwenye Uniswap"
+msgid "Top tokens on Intrinsic"
+msgstr "Ishara kuu kwenye Intrinsic"
 
 #: src/components/earn/PoolCard.tsx
 msgid "Total deposited"
@@ -1961,8 +1961,8 @@ msgid "Total deposits"
 msgstr "Amana ya jumla"
 
 #: src/components/Tokens/TokenTable/TokenRow.tsx
-msgid "Total value locked (TVL) is the amount of the asset that’s currently in a Uniswap v3 liquidity pool."
-msgstr "Jumla ya thamani iliyofungwa (TVL) ni kiasi cha kipengee ambacho kwa sasa kiko kwenye kundi la ukwasi la Uniswap v3."
+msgid "Total value locked (TVL) is the amount of the asset that’s currently in a Intrinsic liquidity pool."
+msgstr "Jumla ya thamani iliyofungwa (TVL) ni kiasi cha kipengee ambacho kwa sasa kiko kwenye kundi la ukwasi la Intrinsic."
 
 #: src/components/swap/RouterLabel.tsx
 msgid "Trade Route"
@@ -2022,7 +2022,7 @@ msgstr "INT imefika"
 
 #: src/pages/Vote/Landing.tsx
 msgid "INT tokens represent voting shares in Intrinsic governance. You can vote on each proposal yourself or delegate your votes to a third party."
-msgstr "Ishara za INT zinawakilisha hisa za kupiga kura katika utawala wa Uniswap. Unaweza kupiga kura kwa kila pendekezo mwenyewe au kupeana kura zako kwa mtu wa tatu."
+msgstr "Ishara za INT zinawakilisha hisa za kupiga kura katika utawala wa Intrinsic. Unaweza kupiga kura kwa kila pendekezo mwenyewe au kupeana kura zako kwa mtu wa tatu."
 
 #: src/pages/RemoveLiquidity/index.tsx
 msgid "INT {0}/{1} Burned"
@@ -2062,11 +2062,11 @@ msgid "Intrinsic Governance"
 msgstr "Utawala usiobadilika"
 
 #: src/components/PrivacyPolicy/index.tsx
-msgid "Uniswap Labs' Terms of Service"
-msgstr "Sheria na Masharti ya Uniswap Labs"
+msgid "Intrinsic Labs' Terms of Service"
+msgstr "Sheria na Masharti ya Intrinsic Labs"
 
 #: src/components/SwitchLocaleLink/index.tsx
-msgid "Uniswap available in: <0>{0}</0>"
+msgid "Intrinsic available in: <0>{0}</0>"
 msgstr "Kubadilisha kunapatikana katika: <0>{0}</0>"
 
 #: src/components/vote/ProposalEmptyState.tsx
@@ -2074,11 +2074,11 @@ msgid "Intrinsic governance is only available on Layer 1. Switch your network to
 msgstr "Utawala usiobadilishwa unapatikana tu kwenye Tabaka la 1. Badilisha mtandao wako uwe Ethereum Mainnet ili uone Mapendekezo na Kura."
 
 #: src/pages/Earn/index.tsx
-msgid "Uniswap liquidity mining"
+msgid "Intrinsic liquidity mining"
 msgstr "Uchimbaji wa ukwasi usiobadilika"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
-msgid "Uniswap migration contract↗"
+msgid "Intrinsic migration contract↗"
 msgstr "Mkataba wa uhamiaji usiobadilika↗"
 
 #: src/components/SearchModal/TokenImportCard.tsx
@@ -2086,8 +2086,8 @@ msgid "Unknown Source"
 msgstr "Chanzo kisichojulikana"
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "Unknown error{0}. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Uniswap V3."
-msgstr "Hitilafu isiyojulikana{0}. Jaribu kuongeza uvumilivu wako wa kuteleza. Kumbuka: ada ya uhamishaji na toa rehani haziendani na Uniswap V3."
+msgid "Unknown error{0}. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Intrinsic."
+msgstr "Hitilafu isiyojulikana{0}. Jaribu kuongeza uvumilivu wako wa kuteleza. Kumbuka: ada ya uhamishaji na toa rehani haziendani na Intrinsic."
 
 #: src/pages/Vote/Landing.tsx
 #: src/pages/Vote/VotePage.tsx
@@ -2138,8 +2138,8 @@ msgid "Update Delegation"
 msgstr "Sasisha Ujumbe"
 
 #: src/components/Settings/index.tsx
-msgid "Use the Uniswap Labs API to get faster quotes."
-msgstr "Tumia API ya Uniswap Labs kupata manukuu haraka zaidi."
+msgid "Use the Intrinsic Labs API to get faster quotes."
+msgstr "Tumia API ya Intrinsic Labs kupata manukuu haraka zaidi."
 
 #: src/components/claim/ClaimModal.tsx
 msgid "User"
@@ -2190,8 +2190,8 @@ msgid "View transaction on Explorer"
 msgstr "Angalia shughuli kwenye Kivinjari"
 
 #: src/components/Tokens/TokenTable/TokenRow.tsx
-msgid "Volume is the amount of the asset that has been traded on Uniswap v3 during the selected time frame."
-msgstr "Kiasi ni kiasi cha kipengee ambacho kimeuzwa kwenye Uniswap v3 katika muda uliochaguliwa."
+msgid "Volume is the amount of the asset that has been traded on Intrinsic during the selected time frame."
+msgstr "Kiasi ni kiasi cha kipengee ambacho kimeuzwa kwenye Intrinsic katika muda uliochaguliwa."
 
 #: src/pages/Vote/VotePage.tsx
 msgid "Vote Against"
@@ -2339,7 +2339,7 @@ msgid "You are creating a pool"
 msgstr "Unaunda dimbwi"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
-msgid "You are the first liquidity provider for this Uniswap V3 pool. Your liquidity will migrate at the current {0} price."
+msgid "You are the first liquidity provider for this Intrinsic pool. Your liquidity will migrate at the current {0} price."
 msgstr "Wewe ndiye mtoaji wa kwanza wa ukwasi wa dimbwi hili la V3 lisilobadilishwa. Ukwasi wako kuhamia kwa bei {0}"
 
 #: src/pages/AddLiquidityV2/index.tsx
@@ -2375,16 +2375,16 @@ msgid "You must connect an account."
 msgstr "Lazima uunganishe akaunti."
 
 #: src/pages/Swap/index.tsx
-msgid "You must give the Uniswap smart contracts permission to use your {0}. You only have to do this once per token."
-msgstr "Lazima upe Mkataba wa Uniswap ruhusa ya kutumia {0}yako. Lazima ufanye hivi mara moja tu kwa ishara."
+msgid "You must give the Intrinsic smart contracts permission to use your {0}. You only have to do this once per token."
+msgstr "Lazima upe Mkataba wa Intrinsic ruhusa ya kutumia {0}yako. Lazima ufanye hivi mara moja tu kwa ishara."
 
 #: src/pages/CreateProposal/index.tsx
 msgid "You must have {formattedProposalThreshold} votes to submit a proposal"
 msgstr "Lazima uwe na {formattedProposalThreshold} ili kuwasilisha pendekezo"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
-msgid "You should only deposit liquidity into Uniswap V3 at a price you believe is correct. <0/>If the price seems incorrect, you can either make a swap to move the price or wait for someone else to do so."
-msgstr "Unapaswa kuweka tu ukwasi kwenye Uniswap V3 kwa bei unayoamini ni sahihi. <0 /> Ikiwa bei inaonekana si sahihi, unaweza kubadilisha kwa kuhamisha bei au subiri mtu mwingine afanye hivyo."
+msgid "You should only deposit liquidity into Intrinsic at a price you believe is correct. <0/>If the price seems incorrect, you can either make a swap to move the price or wait for someone else to do so."
+msgstr "Unapaswa kuweka tu ukwasi kwenye Intrinsic kwa bei unayoamini ni sahihi. <0 /> Ikiwa bei inaonekana si sahihi, unaweza kubadilisha kwa kuhamisha bei au subiri mtu mwingine afanye hivyo."
 
 #: src/pages/RemoveLiquidity/V3.tsx
 msgid "You will also collect fees earned from this position."
@@ -2566,16 +2566,16 @@ msgid "{0, plural, =1 {Import token} other {Import tokens}}"
 msgstr "{0, plural, =1 {Leta ishara} other {Leta tokeni}}"
 
 #: src/constants/tokenSafety.tsx
-msgid "{0, plural, =1 {This token isn't traded on leading U.S. centralized exchanges or frequently swapped on Uniswap.} other {These tokens aren't traded on leading U.S. centralized exchanges or frequently swapped on Uniswap.}}"
-msgstr "{0, plural, =1 {Tokeni hii haiuzwi kwenye masoko ya kati ya Marekani au hubadilishwa mara kwa mara kwenye Uniswap.} other {Tokeni hizi haziuzwi kwenye masoko ya kati ya Marekani au hubadilishwa mara kwa mara kwenye Uniswap.}}"
+msgid "{0, plural, =1 {This token isn't traded on leading U.S. centralized exchanges or frequently swapped on Intrinsic.} other {These tokens aren't traded on leading U.S. centralized exchanges or frequently swapped on Intrinsic.}}"
+msgstr "{0, plural, =1 {Tokeni hii haiuzwi kwenye masoko ya kati ya Marekani au hubadilishwa mara kwa mara kwenye Intrinsic.} other {Tokeni hizi haziuzwi kwenye masoko ya kati ya Marekani au hubadilishwa mara kwa mara kwenye Intrinsic.}}"
 
 #: src/constants/tokenSafety.tsx
 msgid "{0, plural, =1 {This token isn't traded on leading U.S. centralized exchanges.} other {These tokens aren't traded on leading U.S. centralized exchanges.}}"
 msgstr "{0, plural, =1 {Tokeni hii haiuzwi kwenye masoko ya kati ya Marekani yanayoongoza.} other {Tokeni hizi haziuzwi kwenye ubadilishanaji wa kati wa Marekani.}}"
 
 #: src/constants/tokenSafety.tsx
-msgid "{0, plural, =1 {You can't trade this token using the Uniswap App.} other {You can't trade these tokens using the Uniswap App.}}"
-msgstr "{0, plural, =1 {Huwezi kufanya biashara ya tokeni hii kwa kutumia Programu ya Uniswap.} other {Huwezi kufanya biashara ya tokeni hizi kwa kutumia Programu ya Uniswap.}}"
+msgid "{0, plural, =1 {You can't trade this token using the Intrinsic App.} other {You can't trade these tokens using the Intrinsic App.}}"
+msgstr "{0, plural, =1 {Huwezi kufanya biashara ya tokeni hii kwa kutumia Programu ya Intrinsic.} other {Huwezi kufanya biashara ya tokeni hizi kwa kutumia Programu ya Intrinsic.}}"
 
 #: src/components/RateToggle/index.tsx
 #: src/components/RateToggle/index.tsx

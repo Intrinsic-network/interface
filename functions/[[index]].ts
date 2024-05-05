@@ -4,10 +4,10 @@ import { MetaTagInjector } from './components/metaTagInjector'
 export const onRequest: PagesFunction = async ({ request, next }) => {
   const imageUri = new URL(request.url).origin + '/images/1200x630_Rich_Link_Preview_Image.png'
   const data = {
-    title: 'Uniswap Interface',
+    title: 'Intrinsic Interface',
     image: imageUri,
     url: request.url,
-    description: 'Swap or provide liquidity on the Uniswap Protocol',
+    description: 'Swap or provide liquidity on the Intrinsic Protocol',
   }
   const res = next()
   try {

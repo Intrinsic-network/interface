@@ -76,19 +76,19 @@ export default function Earn() {
             <AutoColumn gap="md">
               <RowBetween>
                 <ThemedText.DeprecatedWhite fontWeight={600}>
-                  <Trans>Uniswap liquidity mining</Trans>
+                  <Trans>Intrinsic liquidity mining</Trans>
                 </ThemedText.DeprecatedWhite>
               </RowBetween>
               <RowBetween>
                 <ThemedText.DeprecatedWhite fontSize={14}>
                   <Trans>
-                    Deposit your Liquidity Provider tokens to receive INT, the Uniswap protocol governance token.
+                    Deposit your Liquidity Provider tokens to receive INT, the Intrinsic protocol governance token.
                   </Trans>
                 </ThemedText.DeprecatedWhite>
               </RowBetween>{' '}
               <ExternalLink
                 style={{ color: theme.deprecated_white, textDecoration: 'underline' }}
-                href="https://uniswap.org/blog/uni/"
+                href="https://docs.intrinsic.finance"
                 target="_blank"
               >
                 <ThemedText.DeprecatedWhite fontSize={14}>

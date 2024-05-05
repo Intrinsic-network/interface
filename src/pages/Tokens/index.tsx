@@ -99,7 +99,7 @@ const Tokens = () => {
       <ExploreContainer>
         <TitleContainer>
           <ThemedText.LargeHeader>
-            <Trans>Top tokens on Uniswap</Trans>
+            <Trans>Top tokens on Intrinsic</Trans>
           </ThemedText.LargeHeader>
         </TitleContainer>
         <FiltersWrapper>

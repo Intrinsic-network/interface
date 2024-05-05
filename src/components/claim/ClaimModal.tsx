@@ -151,10 +151,10 @@ export default function ClaimModal() {
           <AutoColumn gap="md" style={{ padding: '1rem', paddingTop: '0' }} justify="center">
             <ThemedText.DeprecatedSubHeader fontWeight={500}>
               <Trans>
-                As a member of the Uniswap community you may claim INT to be used for voting and governance.
+                As a member of the Intrinsic community you may claim INT to be used for voting and governance.
                 <br />
                 <br />
-                <ExternalLink href="https://uniswap.org/blog/uni">Read more about INT</ExternalLink>
+                <ExternalLink href="https://docs.intrinsic.finance">Read more about INT</ExternalLink>
               </Trans>
             </ThemedText.DeprecatedSubHeader>
             <ButtonPrimary

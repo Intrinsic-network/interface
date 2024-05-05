@@ -4,12 +4,12 @@ import client from '../client'
 
 function formatTitleName(symbol: string | undefined, name: string | undefined) {
   if (symbol) {
-    return 'Get ' + symbol + ' on Uniswap'
+    return 'Get ' + symbol + ' on Intrinsic'
   }
   if (name) {
-    return 'Get ' + name + ' on Uniswap'
+    return 'Get ' + name + ' on Intrinsic'
   }
-  return 'View Token on Uniswap'
+  return 'View Token on Intrinsic'
 }
 
 const convertTokenAddress = (networkName: string, tokenAddress: string) => {

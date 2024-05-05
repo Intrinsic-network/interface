@@ -256,7 +256,7 @@ export default function SettingsTab({
                     <QuestionHelper
                       text={
                         <Trans>
-                          Use the Uniswap Labs API to get faster quotes.
+                          Use the Intrinsic Labs API to get faster quotes.
                         </Trans>
                       }
                     />

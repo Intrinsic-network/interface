@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: uniswap-interface\n"
+"Project-Id-Version: Intrinsic-interface\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2022-10-27 02:48\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: uniswap-interface\n"
+"X-Crowdin-Project: Intrinsic-interface\n"
 "X-Crowdin-Project-ID: 458284\n"
 "X-Crowdin-Language: de\n"
 "X-Crowdin-File: en-US.po\n"
@@ -60,8 +60,8 @@ msgid "24H volume"
 msgstr "24-Stunden-Lautstärke"
 
 #: src/components/Tokens/TokenDetails/StatsSection.tsx
-msgid "24H volume is the amount of the asset that has been traded on Uniswap v3 during the past 24 hours."
-msgstr "Das 24-Stunden-Volumen ist der Betrag des Vermögenswerts, der in den letzten 24 Stunden auf Uniswap v3 gehandelt wurde."
+msgid "24H volume is the amount of the asset that has been traded on Intrinsic during the past 24 hours."
+msgstr "Das 24-Stunden-Volumen ist der Betrag des Vermögenswerts, der in den letzten 24 Stunden auf Intrinsic gehandelt wurde."
 
 #: src/pages/RemoveLiquidity/V3.tsx
 msgid "25%"
@@ -157,8 +157,8 @@ msgid "Add"
 msgstr "Hinzufügen"
 
 #: src/components/AccountDetails/TransactionSummary.tsx
-msgid "Add <0/> and <1/> to Uniswap V2"
-msgstr "<0/> und <1/> zu Uniswap V2 hinzufügen"
+msgid "Add <0/> and <1/> to Intrinsic"
+msgstr "<0/> und <1/> zu Intrinsic hinzufügen"
 
 #: src/components/vote/DelegateModal.tsx
 msgid "Add Delegate +"
@@ -227,7 +227,7 @@ msgstr "Erlaube hohe Preisauswirkungen und überspringe den Bestätigungsbildsch
 
 #: src/pages/Swap/index.tsx
 msgid "Allow Intrinsic to use your {0}"
-msgstr "Erlaube dem Uniswap Protokoll, {0} zu verwenden"
+msgstr "Erlaube dem Intrinsic Protokoll, {0} zu verwenden"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
 msgid "Allowed"
@@ -247,8 +247,8 @@ msgid "An error occurred loading tokens. Please try again."
 msgstr "Beim Laden der Token ist ein Fehler aufgetreten. Bitte versuche es erneut."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note: fee on transfer and rebase tokens are incompatible with Uniswap V3."
-msgstr "Beim Versuch, diesen Swap auszuführen, ist ein Fehler aufgetreten. Möglicherweise müssen Sie Ihre Schlupftoleranz erhöhen. Wenn dies nicht funktioniert, liegt möglicherweise eine Inkompatibilität mit dem Token vor, den Sie handeln. Hinweis: Gebühren für Transfer- und Rebase-Token sind nicht mit Uniswap V3 kompatibel."
+msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note: fee on transfer and rebase tokens are incompatible with Intrinsic."
+msgstr "Beim Versuch, diesen Swap auszuführen, ist ein Fehler aufgetreten. Möglicherweise müssen Sie Ihre Schlupftoleranz erhöhen. Wenn dies nicht funktioniert, liegt möglicherweise eine Inkompatibilität mit dem Token vor, den Sie handeln. Hinweis: Gebühren für Transfer- und Rebase-Token sind nicht mit Intrinsic kompatibel."
 
 #: src/components/AccountDetailsV2/TransactionBody.tsx
 #: src/components/earn/StakingModal.tsx
@@ -295,8 +295,8 @@ msgid "Are you sure?"
 msgstr "Sind Sie sicher?"
 
 #: src/components/claim/ClaimModal.tsx
-msgid "As a member of the Uniswap community you may claim INT to be used for voting and governance.<0/><1/><2>Read more about INT</2>"
-msgstr "Als Mitglied der Uniswap-Community können Sie INT beantragen, dass für Abstimmungen verwendet wird.<0/><1/><2>Lesen Sie mehr über INT</2>"
+msgid "As a member of the Intrinsic community you may claim INT to be used for voting and governance.<0/><1/><2>Read more about INT</2>"
+msgstr "Als Mitglied der Intrinsic-Community können Sie INT beantragen, dass für Abstimmungen verwendet wird.<0/><1/><2>Lesen Sie mehr über INT</2>"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
 msgid "At least {0} {1} and {2} {3} will be refunded to your wallet due to selected price range."
@@ -352,12 +352,12 @@ msgid "By adding liquidity you'll earn 0.3% of all trades on this pair proportio
 msgstr "Durch das Hinzufügen von Liquidität verdienen Sie 0,3% aller Transaktionen an diesem Paar, proportional zu Ihrem Anteil am Pool. Diese Gebühren werden dem Pool zugerechnet, fallen in Echtzeit an und können durch Entfernen Ihrer Liquidität geltend gemacht werden."
 
 #: src/components/WalletModal/index.tsx
-msgid "By connecting a wallet, you agree to Uniswap Labs’ <0>Terms of Service</0> and acknowledge that you have read and understand the Uniswap <1>Protocol Disclaimer</1>."
+msgid "By connecting a wallet, you agree to Intrinsic Labs’ <0>Terms of Service</0> and acknowledge that you have read and understand the Intrinsic <1>Protocol Disclaimer</1>."
 msgstr "Durch das Verbinden einer Brieftasche stimmen Sie den <0>Nutzungsbedingungen von</0> und bestätigen, dass Sie den Haftungsausschluss für das Protokoll von <1></1>."
 
 #: src/components/WalletModal/index.tsx
-msgid "By connecting a wallet, you agree to Uniswap Labs’ <0>Terms of Service</0> and consent to its <1>Privacy Policy</1>."
-msgstr "Indem Sie ein Wallet verbinden, stimmen Sie den <0>Nutzungsbedingungen</0> von Uniswap Labs und der <1>Datenschutzrichtlinie</1>zu."
+msgid "By connecting a wallet, you agree to Intrinsic Labs’ <0>Terms of Service</0> and consent to its <1>Privacy Policy</1>."
+msgstr "Indem Sie ein Wallet verbinden, stimmen Sie den <0>Nutzungsbedingungen</0> von Intrinsic Labs und der <1>Datenschutzrichtlinie</1>zu."
 
 #: src/pages/Vote/styled.tsx
 msgid "Canceled"
@@ -695,8 +695,8 @@ msgid "Deposit tokens to the {label} network."
 msgstr "Hinterlegen Sie Token im {label} Netzwerk."
 
 #: src/pages/Earn/index.tsx
-msgid "Deposit your Liquidity Provider tokens to receive INT, the Uniswap protocol governance token."
-msgstr "Deponieren Sie Ihre Liquiditäts-Provider Token um INT zu erhalten, den Uniswap-Protokoll-Governance-Token."
+msgid "Deposit your Liquidity Provider tokens to receive INT, the Intrinsic protocol governance token."
+msgstr "Deponieren Sie Ihre Liquiditäts-Provider Token um INT zu erhalten, den Intrinsic-Protokoll-Governance-Token."
 
 #: src/components/earn/UnstakingModal.tsx
 msgid "Deposited liquidity:"
@@ -749,7 +749,7 @@ msgstr "Sie sehen eine Ihrer v2-Positionen nicht? <0>Importiere sie.</0>"
 
 #: src/components/vote/DelegateModal.tsx
 msgid "Earned INT tokens represent voting shares in Intrinsic governance."
-msgstr "Erhaltene INT-Token stellen Stimmbeteiligungen an der Uniswap-Governance dar."
+msgstr "Erhaltene INT-Token stellen Stimmbeteiligungen an der Intrinsic-Governance dar."
 
 #: src/components/FeeSelector/index.tsx
 msgid "Edit"
@@ -862,16 +862,16 @@ msgid "Explore"
 msgstr "Entdecken"
 
 #: src/components/Tokens/TokensBanner.tsx
-msgid "Explore Top Tokens on Uniswap"
-msgstr "Entdecken Sie Top-Token auf Uniswap"
+msgid "Explore Top Tokens on Intrinsic"
+msgstr "Entdecken Sie Top-Token auf Intrinsic"
 
 #: src/pages/Pool/CTACards.tsx
-msgid "Explore Uniswap Analytics."
-msgstr "Entdecken Sie Uniswap Analytics."
+msgid "Explore Intrinsic Analytics."
+msgstr "Entdecken Sie Intrinsic Analytics."
 
 #: src/components/Popups/FailedNetworkSwitchPopup.tsx
-msgid "Failed to switch networks from the Uniswap Interface. In order to use Uniswap on {0}, you must change the network in your wallet."
-msgstr "Netzwerkwechsel über die Uniswap-Schnittstelle fehlgeschlagen. Um Uniswap auf {0}, müssen Sie das Netzwerk in Ihrem Wallet ändern."
+msgid "Failed to switch networks from the Intrinsic Interface. In order to use Intrinsic on {0}, you must change the network in your wallet."
+msgstr "Netzwerkwechsel über die Intrinsic-Schnittstelle fehlgeschlagen. Um Intrinsic auf {0}, müssen Sie das Netzwerk in Ihrem Wallet ändern."
 
 #: src/components/NavBar/MenuDropdown.tsx
 msgid "Feature Flags"
@@ -898,8 +898,8 @@ msgid "For"
 msgstr "Dafür"
 
 #: src/pages/MigrateV2/index.tsx
-msgid "For each pool shown below, click migrate to remove your liquidity from Uniswap V2 and deposit it into Uniswap V3."
-msgstr "Klicken Sie für jeden unten angezeigten Pool auf migrieren, um Ihre Liquidität aus Uniswap V2 zu entfernen und in Uniswap V3 zu deponieren."
+msgid "For each pool shown below, click migrate to remove your liquidity from Intrinsic and deposit it into Intrinsic."
+msgstr "Klicken Sie für jeden unten angezeigten Pool auf migrieren, um Ihre Liquidität aus Intrinsic zu entfernen und in Intrinsic zu deponieren."
 
 #: src/pages/Swap/index.tsx
 msgid "From"
@@ -1160,8 +1160,8 @@ msgid "Migrate V2 Liquidity"
 msgstr "V2-Liquidität migrieren"
 
 #: src/pages/MigrateV2/index.tsx
-msgid "Migrate your liquidity tokens from Uniswap V2 to Uniswap V3."
-msgstr "Migrieren Sie Ihre Liquiditäts-Token von Uniswap V2 nach Uniswap V3."
+msgid "Migrate your liquidity tokens from Intrinsic to Intrinsic."
+msgstr "Migrieren Sie Ihre Liquiditäts-Token von Intrinsic nach Intrinsic."
 
 #: src/components/AccountDetails/TransactionSummary.tsx
 msgid "Migrate {0}/{1} liquidity to V3"
@@ -1761,24 +1761,24 @@ msgid "TVL"
 msgstr "TVL"
 
 #: src/components/Popups/SurveyPopup.tsx
-msgid "Take a 10 minute survey to help us improve your experience in the Uniswap app."
-msgstr "Nehmen Sie an einer 10-minütigen Umfrage teil, um uns dabei zu helfen, Ihre Erfahrung in der Uniswap-App zu verbessern."
+msgid "Take a 10 minute survey to help us improve your experience in the Intrinsic app."
+msgstr "Nehmen Sie an einer 10-minütigen Umfrage teil, um uns dabei zu helfen, Ihre Erfahrung in der Intrinsic-App zu verbessern."
 
 #: src/components/Popups/SurveyPopup.tsx
 msgid "Tell us what you think ↗"
 msgstr "Sagen Sie uns Ihre Meinung ↗"
 
 #: src/components/Popups/ClaimPopup.tsx
-msgid "Thanks for being part of the Uniswap community <0/>"
-msgstr "Danke, dass du Teil der Uniswap-Community bist <0/>"
+msgid "Thanks for being part of the Intrinsic community <0/>"
+msgstr "Danke, dass du Teil der Intrinsic-Community bist <0/>"
 
 #: src/components/FeeSelector/index.tsx
 msgid "The % you will earn in fees."
 msgstr "Der Prozentsatz, den Sie an Gebühren verdienen."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "The Uniswap invariant x*y=k was not satisfied by the swap. This usually means one of the tokens you are swapping incorporates custom behavior on transfer."
-msgstr "Die Uniswap-Invariante x*y=k wurde durch den Tausch nicht erfüllt. Dies bedeutet normalerweise, dass einer der Token, die Sie austauschen, ein benutzerdefiniertes Verhalten bei der Übertragung enthält."
+msgid "The Intrinsic invariant x*y=k was not satisfied by the swap. This usually means one of the tokens you are swapping incorporates custom behavior on transfer."
+msgstr "Die Intrinsic-Invariante x*y=k wurde durch den Tausch nicht erfüllt. Dies bedeutet normalerweise, dass einer der Token, die Sie austauschen, ein benutzerdefiniertes Verhalten bei der Übertragung enthält."
 
 #: src/components/swap/AdvancedSwapDetails.tsx
 msgid "The amount you expect to receive at the current market price. You may receive less or more if the market price changes while your transaction is pending."
@@ -1793,8 +1793,8 @@ msgid "The app fetches on-chain data and constructs contract calls with an Infur
 msgstr "Die App ruft On-Chain-Daten ab und erstellt Vertragsaufrufe mit einer Infura-API."
 
 #: src/components/PrivacyPolicy/index.tsx
-msgid "The app fetches the optimal trade route from a Uniswap Labs server."
-msgstr "Die App ruft die optimale Handelsroute von einem Uniswap Labs-Server ab."
+msgid "The app fetches the optimal trade route from a Intrinsic Labs server."
+msgstr "Die App ruft die optimale Handelsroute von einem Intrinsic Labs-Server ab."
 
 #: src/components/PrivacyPolicy/index.tsx
 msgid "The app logs anonymized usage statistics in order to improve over time."
@@ -1850,8 +1850,8 @@ msgid "The output token cannot be transferred. There may be an issue with the ou
 msgstr "Der Ausgabe-Token kann nicht übertragen werden. Möglicherweise liegt ein Problem mit dem Token vor."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "The output token cannot be transferred. There may be an issue with the output token. Note: fee on transfer and rebase tokens are incompatible with Uniswap V3."
-msgstr "Das Ausgabetoken kann nicht übertragen werden. Möglicherweise liegt ein Problem mit dem Ausgabetoken vor. Hinweis: Gebühren für Transfer- und Rebase-Token sind nicht mit Uniswap V3 kompatibel."
+msgid "The output token cannot be transferred. There may be an issue with the output token. Note: fee on transfer and rebase tokens are incompatible with Intrinsic."
+msgstr "Das Ausgabetoken kann nicht übertragen werden. Möglicherweise liegt ein Problem mit dem Ausgabetoken vor. Hinweis: Gebühren für Transfer- und Rebase-Token sind nicht mit Intrinsic kompatibel."
 
 #: src/components/Badge/RangeBadge.tsx
 msgid "The price of this pool is outside of your selected range. Your position is not currently earning fees."
@@ -1874,8 +1874,8 @@ msgid "There is no liquidity data."
 msgstr "Keine Liquiditätsdaten vorhanden."
 
 #: src/components/ConnectedAccountBlocked/index.tsx
-msgid "This address is blocked on the Uniswap Labs interface because it is associated with one or more"
-msgstr "Diese Adresse ist auf der Uniswap Labs-Schnittstelle blockiert, da sie mit einer oder mehreren verknüpft ist"
+msgid "This address is blocked on the Intrinsic Labs interface because it is associated with one or more"
+msgstr "Diese Adresse ist auf der Intrinsic Labs-Schnittstelle blockiert, da sie mit einer oder mehreren verknüpft ist"
 
 #: src/components/PrivacyPolicy/index.tsx
 msgid "This app uses the following third-party APIs:"
@@ -1898,20 +1898,20 @@ msgid "This token doesn't appear on the active token list(s). Make sure this is 
 msgstr "Dieser Token erscheint nicht in der/den aktiven Token-Liste(n). Stellen Sie sicher, dass dies der Token ist, den Sie handeln möchten."
 
 #: src/components/Tokens/TokenDetails/PriceChart.tsx
-msgid "This token doesn't have chart data because it hasn't been traded on Uniswap v3"
-msgstr "Dieser Token hat keine Chartdaten, da er nicht auf Uniswap v3 gehandelt wurde"
+msgid "This token doesn't have chart data because it hasn't been traded on Intrinsic"
+msgstr "Dieser Token hat keine Chartdaten, da er nicht auf Intrinsic gehandelt wurde"
 
 #: src/components/SearchModal/BlockedToken.tsx
-msgid "This token is not supported in the Uniswap Labs app"
-msgstr "Dieses Token wird in der Uniswap Labs-App nicht unterstützt"
+msgid "This token is not supported in the Intrinsic Labs app"
+msgstr "Dieses Token wird in der Intrinsic Labs-App nicht unterstützt"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
 msgid "This tool will safely migrate your {0} liquidity to V3. The process is completely trustless thanks to the"
 msgstr "Dieses Tool wird Ihre {0}-Liquidität sicher auf V3 migrieren. Der Prozess ist dank des"
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "This transaction will not succeed due to price movement. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Uniswap V3."
-msgstr "Diese Transaktion wird aufgrund von Preisbewegungen nicht erfolgreich sein. Versuchen Sie, Ihre Schlupftoleranz zu erhöhen. Hinweis: Gebühren für Transfer- und Rebase-Token sind nicht mit Uniswap V3 kompatibel."
+msgid "This transaction will not succeed due to price movement. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Intrinsic."
+msgstr "Diese Transaktion wird aufgrund von Preisbewegungen nicht erfolgreich sein. Versuchen Sie, Ihre Schlupftoleranz zu erhöhen. Hinweis: Gebühren für Transfer- und Rebase-Token sind nicht mit Intrinsic kompatibel."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
 msgid "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance."
@@ -1949,8 +1949,8 @@ msgid "Top pools"
 msgstr "Top Pools"
 
 #: src/pages/Tokens/index.tsx
-msgid "Top tokens on Uniswap"
-msgstr "Top-Token auf Uniswap"
+msgid "Top tokens on Intrinsic"
+msgstr "Top-Token auf Intrinsic"
 
 #: src/components/earn/PoolCard.tsx
 msgid "Total deposited"
@@ -1961,8 +1961,8 @@ msgid "Total deposits"
 msgstr "Gesamteinlagen"
 
 #: src/components/Tokens/TokenTable/TokenRow.tsx
-msgid "Total value locked (TVL) is the amount of the asset that’s currently in a Uniswap v3 liquidity pool."
-msgstr "Der gesperrte Gesamtwert (TVL) ist der Betrag des Vermögenswerts, der sich derzeit in einem Liquiditätspool von Uniswap v3 befindet."
+msgid "Total value locked (TVL) is the amount of the asset that’s currently in a Intrinsic liquidity pool."
+msgstr "Der gesperrte Gesamtwert (TVL) ist der Betrag des Vermögenswerts, der sich derzeit in einem Liquiditätspool von Intrinsic befindet."
 
 #: src/components/swap/RouterLabel.tsx
 msgid "Trade Route"
@@ -2062,32 +2062,32 @@ msgid "Intrinsic Governance"
 msgstr "Intrinsic Governance"
 
 #: src/components/PrivacyPolicy/index.tsx
-msgid "Uniswap Labs' Terms of Service"
-msgstr "Nutzungsbedingungen von Uniswap Labs"
+msgid "Intrinsic Labs' Terms of Service"
+msgstr "Nutzungsbedingungen von Intrinsic Labs"
 
 #: src/components/SwitchLocaleLink/index.tsx
-msgid "Uniswap available in: <0>{0}</0>"
-msgstr "Uniswap verfügbar in: <0>{0}</0>"
+msgid "Intrinsic available in: <0>{0}</0>"
+msgstr "Intrinsic verfügbar in: <0>{0}</0>"
 
 #: src/components/vote/ProposalEmptyState.tsx
 msgid "Intrinsic governance is only available on Layer 1. Switch your network to Ethereum Mainnet to view Proposals and Vote."
-msgstr "Uniswap-Governance ist nur auf Layer 1 verfügbar. Schalten Sie Ihr Netzwerk auf Ethereum Mainnet um, um Anträge und Abstimmungen anzuzeigen."
+msgstr "Intrinsic-Governance ist nur auf Layer 1 verfügbar. Schalten Sie Ihr Netzwerk auf Ethereum Mainnet um, um Anträge und Abstimmungen anzuzeigen."
 
 #: src/pages/Earn/index.tsx
-msgid "Uniswap liquidity mining"
-msgstr "Uniswap Liquiditätsförderung"
+msgid "Intrinsic liquidity mining"
+msgstr "Intrinsic Liquiditätsförderung"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
-msgid "Uniswap migration contract↗"
-msgstr "Uniswap Migrations-contract↗"
+msgid "Intrinsic migration contract↗"
+msgstr "Intrinsic Migrations-contract↗"
 
 #: src/components/SearchModal/TokenImportCard.tsx
 msgid "Unknown Source"
 msgstr "Unbekannte Quelle"
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "Unknown error{0}. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Uniswap V3."
-msgstr "Unbekannter Fehler{0}. Versuchen Sie, Ihre Schlupftoleranz zu erhöhen. Hinweis: Gebühren für Transfer- und Rebase-Token sind nicht mit Uniswap V3 kompatibel."
+msgid "Unknown error{0}. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Intrinsic."
+msgstr "Unbekannter Fehler{0}. Versuchen Sie, Ihre Schlupftoleranz zu erhöhen. Hinweis: Gebühren für Transfer- und Rebase-Token sind nicht mit Intrinsic kompatibel."
 
 #: src/pages/Vote/Landing.tsx
 #: src/pages/Vote/VotePage.tsx
@@ -2138,8 +2138,8 @@ msgid "Update Delegation"
 msgstr "Delegation aktualisieren"
 
 #: src/components/Settings/index.tsx
-msgid "Use the Uniswap Labs API to get faster quotes."
-msgstr "Verwenden Sie die Uniswap Labs-API, um schnellere Angebote zu erhalten."
+msgid "Use the Intrinsic Labs API to get faster quotes."
+msgstr "Verwenden Sie die Intrinsic Labs-API, um schnellere Angebote zu erhalten."
 
 #: src/components/claim/ClaimModal.tsx
 msgid "User"
@@ -2190,8 +2190,8 @@ msgid "View transaction on Explorer"
 msgstr "Transaktion im Explorer anzeigen"
 
 #: src/components/Tokens/TokenTable/TokenRow.tsx
-msgid "Volume is the amount of the asset that has been traded on Uniswap v3 during the selected time frame."
-msgstr "Das Volumen ist der Betrag des Vermögenswerts, der während des ausgewählten Zeitrahmens auf Uniswap v3 gehandelt wurde."
+msgid "Volume is the amount of the asset that has been traded on Intrinsic during the selected time frame."
+msgstr "Das Volumen ist der Betrag des Vermögenswerts, der während des ausgewählten Zeitrahmens auf Intrinsic gehandelt wurde."
 
 #: src/pages/Vote/VotePage.tsx
 msgid "Vote Against"
@@ -2339,8 +2339,8 @@ msgid "You are creating a pool"
 msgstr "Sie erstellen einen Pool"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
-msgid "You are the first liquidity provider for this Uniswap V3 pool. Your liquidity will migrate at the current {0} price."
-msgstr "Sie sind der erste Liquiditätsgeber für diesen Uniswap V3 Pool. Ihre Liquidität wird zum aktuellen {0}-Preis migriert."
+msgid "You are the first liquidity provider for this Intrinsic pool. Your liquidity will migrate at the current {0} price."
+msgstr "Sie sind der erste Liquiditätsgeber für diesen Intrinsic Pool. Ihre Liquidität wird zum aktuellen {0}-Preis migriert."
 
 #: src/pages/AddLiquidityV2/index.tsx
 msgid "You are the first liquidity provider."
@@ -2375,16 +2375,16 @@ msgid "You must connect an account."
 msgstr "Sie müssen ein Konto verbinden."
 
 #: src/pages/Swap/index.tsx
-msgid "You must give the Uniswap smart contracts permission to use your {0}. You only have to do this once per token."
-msgstr "Sie müssen den Uniswap Smart Contracts die Erlaubnis erteilen, Ihre {0} zu verwenden. Sie müssen dies nur einmal pro Token tun."
+msgid "You must give the Intrinsic smart contracts permission to use your {0}. You only have to do this once per token."
+msgstr "Sie müssen den Intrinsic Smart Contracts die Erlaubnis erteilen, Ihre {0} zu verwenden. Sie müssen dies nur einmal pro Token tun."
 
 #: src/pages/CreateProposal/index.tsx
 msgid "You must have {formattedProposalThreshold} votes to submit a proposal"
 msgstr "Sie müssen {formattedProposalThreshold} Stimmen haben, um einen Vorschlag einzureichen"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
-msgid "You should only deposit liquidity into Uniswap V3 at a price you believe is correct. <0/>If the price seems incorrect, you can either make a swap to move the price or wait for someone else to do so."
-msgstr "Sie sollten nur Liquidität in Uniswap V3 zu einem Preis einzahlen, den Sie für richtig halten. <0/>Wenn der Preis falsch erscheint, können Sie entweder durch einen Tausch den Preis verändern oder warten bis jemand anderes dies tut."
+msgid "You should only deposit liquidity into Intrinsic at a price you believe is correct. <0/>If the price seems incorrect, you can either make a swap to move the price or wait for someone else to do so."
+msgstr "Sie sollten nur Liquidität in Intrinsic zu einem Preis einzahlen, den Sie für richtig halten. <0/>Wenn der Preis falsch erscheint, können Sie entweder durch einen Tausch den Preis verändern oder warten bis jemand anderes dies tut."
 
 #: src/pages/RemoveLiquidity/V3.tsx
 msgid "You will also collect fees earned from this position."
@@ -2566,16 +2566,16 @@ msgid "{0, plural, =1 {Import token} other {Import tokens}}"
 msgstr "{0, plural, =1 {Token importieren} other {Token importieren}}"
 
 #: src/constants/tokenSafety.tsx
-msgid "{0, plural, =1 {This token isn't traded on leading U.S. centralized exchanges or frequently swapped on Uniswap.} other {These tokens aren't traded on leading U.S. centralized exchanges or frequently swapped on Uniswap.}}"
-msgstr "{0, plural, =1 {Dieser Token wird nicht an führenden zentralisierten US-Börsen gehandelt oder häufig auf Uniswap getauscht.} other {Diese Token werden nicht an führenden zentralisierten US-Börsen gehandelt oder häufig auf Uniswap getauscht.}}"
+msgid "{0, plural, =1 {This token isn't traded on leading U.S. centralized exchanges or frequently swapped on Intrinsic.} other {These tokens aren't traded on leading U.S. centralized exchanges or frequently swapped on Intrinsic.}}"
+msgstr "{0, plural, =1 {Dieser Token wird nicht an führenden zentralisierten US-Börsen gehandelt oder häufig auf Intrinsic getauscht.} other {Diese Token werden nicht an führenden zentralisierten US-Börsen gehandelt oder häufig auf Intrinsic getauscht.}}"
 
 #: src/constants/tokenSafety.tsx
 msgid "{0, plural, =1 {This token isn't traded on leading U.S. centralized exchanges.} other {These tokens aren't traded on leading U.S. centralized exchanges.}}"
 msgstr "{0, plural, =1 {Dieser Token wird nicht an führenden zentralisierten US-Börsen gehandelt.} other {Diese Token werden nicht an führenden zentralisierten US-Börsen gehandelt.}}"
 
 #: src/constants/tokenSafety.tsx
-msgid "{0, plural, =1 {You can't trade this token using the Uniswap App.} other {You can't trade these tokens using the Uniswap App.}}"
-msgstr "{0, plural, =1 {Sie können diesen Token nicht über die Uniswap-App handeln.} other {Sie können diese Token nicht über die Uniswap-App handeln.}}"
+msgid "{0, plural, =1 {You can't trade this token using the Intrinsic App.} other {You can't trade these tokens using the Intrinsic App.}}"
+msgstr "{0, plural, =1 {Sie können diesen Token nicht über die Intrinsic-App handeln.} other {Sie können diese Token nicht über die Intrinsic-App handeln.}}"
 
 #: src/components/RateToggle/index.tsx
 #: src/components/RateToggle/index.tsx

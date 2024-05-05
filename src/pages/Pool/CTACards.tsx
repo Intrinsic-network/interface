@@ -99,7 +99,7 @@ export default function CTACards() {
     <CTASection>
       <CTA1
         href={
-          "https://help.uniswap.org/en/articles/5391541-providing-liquidity-on-uniswap-v3"
+          "https://docs.intrinsic.finance/add-liquidity"
         }
       >
         <ResponsiveColumn>
@@ -114,7 +114,7 @@ export default function CTACards() {
           </ThemedText.DeprecatedBody>
         </ResponsiveColumn>
       </CTA1>
-      <CTA2 data-testid="cta-infolink" href={infoLink + "pools"}>
+      {/* <CTA2 data-testid="cta-infolink" href={infoLink + "pools"}>
         <ResponsiveColumn>
           <HeaderText style={{ alignSelf: "flex-start" }}>
             <Trans>Top pools</Trans>
@@ -123,10 +123,10 @@ export default function CTACards() {
             fontWeight={400}
             style={{ alignSelf: "flex-start" }}
           >
-            <Trans>Explore Uniswap Analytics.</Trans>
+            <Trans>Explore Intrinsic Analytics.</Trans>
           </ThemedText.DeprecatedBody>
         </ResponsiveColumn>
-      </CTA2>
+      </CTA2> */}
     </CTASection>
   );
 }

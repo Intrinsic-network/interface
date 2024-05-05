@@ -84,7 +84,7 @@ export default function TokensBanner() {
         <PopupContainer>
           <Header>
             <HeaderText>
-              <Trans>Explore Top Tokens on Uniswap</Trans>
+              <Trans>Explore Top Tokens on Intrinsic</Trans>
             </HeaderText>
             <X
               size={20}

@@ -869,7 +869,7 @@ export default function Swap() {
                             <MouseoverTooltip
                               text={
                                 <Trans>
-                                  You must give the Uniswap smart contracts
+                                  You must give the Intrinsic smart contracts
                                   permission to use your{" "}
                                   {currencies[Field.INPUT]?.symbol}. You only
                                   have to do this once per token.

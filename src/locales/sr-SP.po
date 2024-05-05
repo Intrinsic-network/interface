@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: uniswap-interface\n"
+"Project-Id-Version: Intrinsic-interface\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2022-10-27 02:48\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Crowdin-Project: uniswap-interface\n"
+"X-Crowdin-Project: Intrinsic-interface\n"
 "X-Crowdin-Project-ID: 458284\n"
 "X-Crowdin-Language: sr\n"
 "X-Crowdin-File: en-US.po\n"
@@ -60,7 +60,7 @@ msgid "24H volume"
 msgstr "24Х волуме"
 
 #: src/components/Tokens/TokenDetails/StatsSection.tsx
-msgid "24H volume is the amount of the asset that has been traded on Uniswap v3 during the past 24 hours."
+msgid "24H volume is the amount of the asset that has been traded on Intrinsic during the past 24 hours."
 msgstr "24Х обим је износ имовине којом се трговало на Унисвап в3 током протекла 24 сата."
 
 #: src/pages/RemoveLiquidity/V3.tsx
@@ -157,7 +157,7 @@ msgid "Add"
 msgstr "Додати"
 
 #: src/components/AccountDetails/TransactionSummary.tsx
-msgid "Add <0/> and <1/> to Uniswap V2"
+msgid "Add <0/> and <1/> to Intrinsic"
 msgstr "Додајте <0/> и <1/> у Унисвап В2"
 
 #: src/components/vote/DelegateModal.tsx
@@ -227,7 +227,7 @@ msgstr "Омогућите трговање утицајем високе цен
 
 #: src/pages/Swap/index.tsx
 msgid "Allow Intrinsic to use your {0}"
-msgstr "Дозволите Uniswap протоколу да користи вашу {0}"
+msgstr "Дозволите Intrinsic протоколу да користи вашу {0}"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
 msgid "Allowed"
@@ -247,7 +247,7 @@ msgid "An error occurred loading tokens. Please try again."
 msgstr "Дошло је до грешке при учитавању токена. Молим вас, покушајте поново."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note: fee on transfer and rebase tokens are incompatible with Uniswap V3."
+msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note: fee on transfer and rebase tokens are incompatible with Intrinsic."
 msgstr "Дошло је до грешке приликом покушаја извршења ове замене. Можда ћете морати повећати толеранцију клизања. Ако то не успе, можда постоји некомпатибилност са токеном којим тргујете. Напомена: накнада за токене за пренос и пребазу није компатибилна са Унисвап В3."
 
 #: src/components/AccountDetailsV2/TransactionBody.tsx
@@ -295,8 +295,8 @@ msgid "Are you sure?"
 msgstr "Јеси ли сигуран?"
 
 #: src/components/claim/ClaimModal.tsx
-msgid "As a member of the Uniswap community you may claim INT to be used for voting and governance.<0/><1/><2>Read more about INT</2>"
-msgstr "Као члан Uniswap заједнице можете затражити да се УНИ користи за гласање и управљање. <0/> <1/> <2> Прочитајте више о УНИ</2>"
+msgid "As a member of the Intrinsic community you may claim INT to be used for voting and governance.<0/><1/><2>Read more about INT</2>"
+msgstr "Као члан Intrinsic заједнице можете затражити да се УНИ користи за гласање и управљање. <0/> <1/> <2> Прочитајте више о УНИ</2>"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
 msgid "At least {0} {1} and {2} {3} will be refunded to your wallet due to selected price range."
@@ -352,11 +352,11 @@ msgid "By adding liquidity you'll earn 0.3% of all trades on this pair proportio
 msgstr "Додавањем ликвидности зарадићете 0,3% свих трговина на овом пару пропорционално вашем уделу у фонду. Накнаде се додају у фонд, прикупљају се у реалном времену и могу се захтевати повлачењем ваше ликвидности."
 
 #: src/components/WalletModal/index.tsx
-msgid "By connecting a wallet, you agree to Uniswap Labs’ <0>Terms of Service</0> and acknowledge that you have read and understand the Uniswap <1>Protocol Disclaimer</1>."
+msgid "By connecting a wallet, you agree to Intrinsic Labs’ <0>Terms of Service</0> and acknowledge that you have read and understand the Intrinsic <1>Protocol Disclaimer</1>."
 msgstr "Povezivanjem novčanika prihvatate Uslove korišćenja usluge <0></0> i potvrđujete da ste pročitali i razumeli Odricanje odgovornosti</1><1>."
 
 #: src/components/WalletModal/index.tsx
-msgid "By connecting a wallet, you agree to Uniswap Labs’ <0>Terms of Service</0> and consent to its <1>Privacy Policy</1>."
+msgid "By connecting a wallet, you agree to Intrinsic Labs’ <0>Terms of Service</0> and consent to its <1>Privacy Policy</1>."
 msgstr "Повезивањем новчаника прихватате Услове коришћења услуге <0>Унисвап Лабс-а</0> и сагласни сте са његовом <1>Политиком приватности</1>."
 
 #: src/pages/Vote/styled.tsx
@@ -695,8 +695,8 @@ msgid "Deposit tokens to the {label} network."
 msgstr "Депонујте токене на мрежу {label}."
 
 #: src/pages/Earn/index.tsx
-msgid "Deposit your Liquidity Provider tokens to receive INT, the Uniswap protocol governance token."
-msgstr "Положите своје токене Добављача ликвидности да бисте добили УНИ, токен управљања протоколом Uniswap."
+msgid "Deposit your Liquidity Provider tokens to receive INT, the Intrinsic protocol governance token."
+msgstr "Положите своје токене Добављача ликвидности да бисте добили УНИ, токен управљања протоколом Intrinsic."
 
 #: src/components/earn/UnstakingModal.tsx
 msgid "Deposited liquidity:"
@@ -749,7 +749,7 @@ msgstr "Не видите ниједну од ваших V2 позиција? <0
 
 #: src/components/vote/DelegateModal.tsx
 msgid "Earned INT tokens represent voting shares in Intrinsic governance."
-msgstr "Зарађени INT токени представљају акције са правом гласа у управљању Uniswap-ом."
+msgstr "Зарађени INT токени представљају акције са правом гласа у управљању Intrinsic-ом."
 
 #: src/components/FeeSelector/index.tsx
 msgid "Edit"
@@ -862,15 +862,15 @@ msgid "Explore"
 msgstr "Истражите"
 
 #: src/components/Tokens/TokensBanner.tsx
-msgid "Explore Top Tokens on Uniswap"
+msgid "Explore Top Tokens on Intrinsic"
 msgstr "Истражите најбоље токене на Унисвап-у"
 
 #: src/pages/Pool/CTACards.tsx
-msgid "Explore Uniswap Analytics."
+msgid "Explore Intrinsic Analytics."
 msgstr "Истражите Унисвап Аналитицс."
 
 #: src/components/Popups/FailedNetworkSwitchPopup.tsx
-msgid "Failed to switch networks from the Uniswap Interface. In order to use Uniswap on {0}, you must change the network in your wallet."
+msgid "Failed to switch networks from the Intrinsic Interface. In order to use Intrinsic on {0}, you must change the network in your wallet."
 msgstr "Пребацивање мреже са Унисвап интерфејса није успело. Да бисте користили Унисвап на {0}, морате променити мрежу у свом новчанику."
 
 #: src/components/NavBar/MenuDropdown.tsx
@@ -898,8 +898,8 @@ msgid "For"
 msgstr "За"
 
 #: src/pages/MigrateV2/index.tsx
-msgid "For each pool shown below, click migrate to remove your liquidity from Uniswap V2 and deposit it into Uniswap V3."
-msgstr "За сваки фонд приказан у наставку кликните на мигрирај да бисте уклонили своју ликвидност из Uniswap V2 и депоновали је у Uniswap V3."
+msgid "For each pool shown below, click migrate to remove your liquidity from Intrinsic and deposit it into Intrinsic."
+msgstr "За сваки фонд приказан у наставку кликните на мигрирај да бисте уклонили своју ликвидност из Intrinsic и депоновали је у Intrinsic."
 
 #: src/pages/Swap/index.tsx
 msgid "From"
@@ -1160,8 +1160,8 @@ msgid "Migrate V2 Liquidity"
 msgstr "Миграција V2 ликвидности"
 
 #: src/pages/MigrateV2/index.tsx
-msgid "Migrate your liquidity tokens from Uniswap V2 to Uniswap V3."
-msgstr "Пребаците своје токене ликвидности са Uniswap V2 на Uniswap V3."
+msgid "Migrate your liquidity tokens from Intrinsic to Intrinsic."
+msgstr "Пребаците своје токене ликвидности са Intrinsic на Intrinsic."
 
 #: src/components/AccountDetails/TransactionSummary.tsx
 msgid "Migrate {0}/{1} liquidity to V3"
@@ -1489,7 +1489,7 @@ msgstr "Прочитајте више о INT-ју"
 
 #: src/pages/Vote/Landing.tsx
 msgid "Read more about Intrinsic governance"
-msgstr "Прочитајте више о управљању Uniswap-ом"
+msgstr "Прочитајте више о управљању Intrinsic-ом"
 
 #: src/pages/Pool/v2.tsx
 msgid "Read more about providing liquidity"
@@ -1761,7 +1761,7 @@ msgid "TVL"
 msgstr "ТВЛ"
 
 #: src/components/Popups/SurveyPopup.tsx
-msgid "Take a 10 minute survey to help us improve your experience in the Uniswap app."
+msgid "Take a 10 minute survey to help us improve your experience in the Intrinsic app."
 msgstr "Попуните 10-минутну анкету да бисте нам помогли да побољшамо ваше искуство у апликацији Унисвап."
 
 #: src/components/Popups/SurveyPopup.tsx
@@ -1769,16 +1769,16 @@ msgid "Tell us what you think ↗"
 msgstr "Реците нам шта мислите ↗"
 
 #: src/components/Popups/ClaimPopup.tsx
-msgid "Thanks for being part of the Uniswap community <0/>"
-msgstr "Хвала вам што сте део заједнице Uniswap <0/>"
+msgid "Thanks for being part of the Intrinsic community <0/>"
+msgstr "Хвала вам што сте део заједнице Intrinsic <0/>"
 
 #: src/components/FeeSelector/index.tsx
 msgid "The % you will earn in fees."
 msgstr "% Који ћете зарадити на накнадама."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "The Uniswap invariant x*y=k was not satisfied by the swap. This usually means one of the tokens you are swapping incorporates custom behavior on transfer."
-msgstr "Uniswap непроменљива x*y=k није испоштована разменом. То обично значи да један од токена које замењујете укључује прилагођено понашање приликом преноса."
+msgid "The Intrinsic invariant x*y=k was not satisfied by the swap. This usually means one of the tokens you are swapping incorporates custom behavior on transfer."
+msgstr "Intrinsic непроменљива x*y=k није испоштована разменом. То обично значи да један од токена које замењујете укључује прилагођено понашање приликом преноса."
 
 #: src/components/swap/AdvancedSwapDetails.tsx
 msgid "The amount you expect to receive at the current market price. You may receive less or more if the market price changes while your transaction is pending."
@@ -1793,8 +1793,8 @@ msgid "The app fetches on-chain data and constructs contract calls with an Infur
 msgstr "Aplikacija preuzima podatke na lancu i konstruiše ugovorne pozive pomoću Infura API-ja."
 
 #: src/components/PrivacyPolicy/index.tsx
-msgid "The app fetches the optimal trade route from a Uniswap Labs server."
-msgstr "Aplikacija preuzima optimalni trgovački put sa servera Uniswap Labs."
+msgid "The app fetches the optimal trade route from a Intrinsic Labs server."
+msgstr "Aplikacija preuzima optimalni trgovački put sa servera Intrinsic Labs."
 
 #: src/components/PrivacyPolicy/index.tsx
 msgid "The app logs anonymized usage statistics in order to improve over time."
@@ -1850,7 +1850,7 @@ msgid "The output token cannot be transferred. There may be an issue with the ou
 msgstr "Излазни токен се не може пренети. Можда постоји проблем са излазним токеном."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "The output token cannot be transferred. There may be an issue with the output token. Note: fee on transfer and rebase tokens are incompatible with Uniswap V3."
+msgid "The output token cannot be transferred. There may be an issue with the output token. Note: fee on transfer and rebase tokens are incompatible with Intrinsic."
 msgstr "Излазни токен се не може пренети. Можда постоји проблем са излазним токеном. Напомена: накнада за токене за пренос и пребазу није компатибилна са Унисвап В3."
 
 #: src/components/Badge/RangeBadge.tsx
@@ -1874,7 +1874,7 @@ msgid "There is no liquidity data."
 msgstr "Нема података о ликвидности."
 
 #: src/components/ConnectedAccountBlocked/index.tsx
-msgid "This address is blocked on the Uniswap Labs interface because it is associated with one or more"
+msgid "This address is blocked on the Intrinsic Labs interface because it is associated with one or more"
 msgstr "Ова адреса је блокирана на интерфејсу Унисвап Лабс јер је повезана са једном или више њих"
 
 #: src/components/PrivacyPolicy/index.tsx
@@ -1898,19 +1898,19 @@ msgid "This token doesn't appear on the active token list(s). Make sure this is 
 msgstr "Овај токен се не појављује на листи активних токена. Уверите се да је ово жетон којим желите да тргујете."
 
 #: src/components/Tokens/TokenDetails/PriceChart.tsx
-msgid "This token doesn't have chart data because it hasn't been traded on Uniswap v3"
+msgid "This token doesn't have chart data because it hasn't been traded on Intrinsic"
 msgstr "Овај токен нема податке графикона јер се њиме није трговало на Унисвап в3"
 
 #: src/components/SearchModal/BlockedToken.tsx
-msgid "This token is not supported in the Uniswap Labs app"
-msgstr "Ovaj token nije podržan u aplikaciji Uniswap Labs"
+msgid "This token is not supported in the Intrinsic Labs app"
+msgstr "Ovaj token nije podržan u aplikaciji Intrinsic Labs"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
 msgid "This tool will safely migrate your {0} liquidity to V3. The process is completely trustless thanks to the"
 msgstr "Овај алат ће безбедно пребацити вашу {0} ликвидност на V3. Процес је потпуно неповерљив захваљујући"
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "This transaction will not succeed due to price movement. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Uniswap V3."
+msgid "This transaction will not succeed due to price movement. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Intrinsic."
 msgstr "Ова трансакција неће успети због кретања цена. Покушајте да повећате толеранцију на клизање. Напомена: накнада за токене за пренос и пребазу није компатибилна са Унисвап В3."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
@@ -1949,7 +1949,7 @@ msgid "Top pools"
 msgstr "Врхунски фондови"
 
 #: src/pages/Tokens/index.tsx
-msgid "Top tokens on Uniswap"
+msgid "Top tokens on Intrinsic"
 msgstr "Најбољи токени на Унисвап-у"
 
 #: src/components/earn/PoolCard.tsx
@@ -1961,7 +1961,7 @@ msgid "Total deposits"
 msgstr "Укупни депозити"
 
 #: src/components/Tokens/TokenTable/TokenRow.tsx
-msgid "Total value locked (TVL) is the amount of the asset that’s currently in a Uniswap v3 liquidity pool."
+msgid "Total value locked (TVL) is the amount of the asset that’s currently in a Intrinsic liquidity pool."
 msgstr "Укупна закључана вредност (ТВЛ) је износ имовине који се тренутно налази у Унисвап в3 фонду ликвидности."
 
 #: src/components/swap/RouterLabel.tsx
@@ -2022,7 +2022,7 @@ msgstr "INT је стигао"
 
 #: src/pages/Vote/Landing.tsx
 msgid "INT tokens represent voting shares in Intrinsic governance. You can vote on each proposal yourself or delegate your votes to a third party."
-msgstr "INT токени представљају акције са правом гласа у управљању Uniswap-ом. Можете сами гласати за сваки предлог или пренети своје гласове трећој страни."
+msgstr "INT токени представљају акције са правом гласа у управљању Intrinsic-ом. Можете сами гласати за сваки предлог или пренети своје гласове трећој страни."
 
 #: src/pages/RemoveLiquidity/index.tsx
 msgid "INT {0}/{1} Burned"
@@ -2059,34 +2059,34 @@ msgstr "Неочекивани проблем са проценом гаса. М
 
 #: src/pages/Vote/Landing.tsx
 msgid "Intrinsic Governance"
-msgstr "Uniswap управљање"
+msgstr "Intrinsic управљање"
 
 #: src/components/PrivacyPolicy/index.tsx
-msgid "Uniswap Labs' Terms of Service"
-msgstr "Uslovi korišćenja usluge Uniswap Labs"
+msgid "Intrinsic Labs' Terms of Service"
+msgstr "Uslovi korišćenja usluge Intrinsic Labs"
 
 #: src/components/SwitchLocaleLink/index.tsx
-msgid "Uniswap available in: <0>{0}</0>"
-msgstr "Uniswap доступан у: <0>{0}</0>"
+msgid "Intrinsic available in: <0>{0}</0>"
+msgstr "Intrinsic доступан у: <0>{0}</0>"
 
 #: src/components/vote/ProposalEmptyState.tsx
 msgid "Intrinsic governance is only available on Layer 1. Switch your network to Ethereum Mainnet to view Proposals and Vote."
 msgstr "Управљање разменом је доступно само на слоју 1. Пребаците мрежу на Етхереум Маиннет да бисте видели предлоге и гласали."
 
 #: src/pages/Earn/index.tsx
-msgid "Uniswap liquidity mining"
-msgstr "Uniswap рударење ликвидности"
+msgid "Intrinsic liquidity mining"
+msgstr "Intrinsic рударење ликвидности"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
-msgid "Uniswap migration contract↗"
-msgstr "Uniswap уговор о миграцији↗"
+msgid "Intrinsic migration contract↗"
+msgstr "Intrinsic уговор о миграцији↗"
 
 #: src/components/SearchModal/TokenImportCard.tsx
 msgid "Unknown Source"
 msgstr "Непознат извор"
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "Unknown error{0}. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Uniswap V3."
+msgid "Unknown error{0}. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Intrinsic."
 msgstr "Непозната грешка{0}. Покушајте повећати толеранцију клизања. Напомена: накнада за токене за пренос и поновну надоградњу није компатибилна са Унисвап В3."
 
 #: src/pages/Vote/Landing.tsx
@@ -2138,7 +2138,7 @@ msgid "Update Delegation"
 msgstr "Ажурирање делегације"
 
 #: src/components/Settings/index.tsx
-msgid "Use the Uniswap Labs API to get faster quotes."
+msgid "Use the Intrinsic Labs API to get faster quotes."
 msgstr "Користите Унисвап Лабс АПИ да бисте добили брже понуде."
 
 #: src/components/claim/ClaimModal.tsx
@@ -2190,7 +2190,7 @@ msgid "View transaction on Explorer"
 msgstr "Погледајте трансакцију у Екплореру"
 
 #: src/components/Tokens/TokenTable/TokenRow.tsx
-msgid "Volume is the amount of the asset that has been traded on Uniswap v3 during the selected time frame."
+msgid "Volume is the amount of the asset that has been traded on Intrinsic during the selected time frame."
 msgstr "Обим је износ средства којим се трговало на Унисвап в3 током изабраног временског оквира."
 
 #: src/pages/Vote/VotePage.tsx
@@ -2339,8 +2339,8 @@ msgid "You are creating a pool"
 msgstr "Стварате фонд"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
-msgid "You are the first liquidity provider for this Uniswap V3 pool. Your liquidity will migrate at the current {0} price."
-msgstr "Ви сте први пружалац ликвидности за овај Uniswap V3 фонд. Ваша ликвидност ће се мигрирати по тренутној цени {0}."
+msgid "You are the first liquidity provider for this Intrinsic pool. Your liquidity will migrate at the current {0} price."
+msgstr "Ви сте први пружалац ликвидности за овај Intrinsic фонд. Ваша ликвидност ће се мигрирати по тренутној цени {0}."
 
 #: src/pages/AddLiquidityV2/index.tsx
 msgid "You are the first liquidity provider."
@@ -2375,16 +2375,16 @@ msgid "You must connect an account."
 msgstr "Морате повезати налог."
 
 #: src/pages/Swap/index.tsx
-msgid "You must give the Uniswap smart contracts permission to use your {0}. You only have to do this once per token."
-msgstr "Морате да дате дозволу Uniswap паметним уговорима да бисте користили {0}. То морате учинити само једном по токену."
+msgid "You must give the Intrinsic smart contracts permission to use your {0}. You only have to do this once per token."
+msgstr "Морате да дате дозволу Intrinsic паметним уговорима да бисте користили {0}. То морате учинити само једном по токену."
 
 #: src/pages/CreateProposal/index.tsx
 msgid "You must have {formattedProposalThreshold} votes to submit a proposal"
 msgstr "Морате да имате {formattedProposalThreshold} гласова да бисте поднели предлог"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
-msgid "You should only deposit liquidity into Uniswap V3 at a price you believe is correct. <0/>If the price seems incorrect, you can either make a swap to move the price or wait for someone else to do so."
-msgstr "Ликвидност треба да депонујете у Uniswap V3 само по цени за коју сматрате да је тачна. <0/> Ако се цена чини нетачном, можете извршити замену да бисте преместили цену или сачекајте да то учини неко други."
+msgid "You should only deposit liquidity into Intrinsic at a price you believe is correct. <0/>If the price seems incorrect, you can either make a swap to move the price or wait for someone else to do so."
+msgstr "Ликвидност треба да депонујете у Intrinsic само по цени за коју сматрате да је тачна. <0/> Ако се цена чини нетачном, можете извршити замену да бисте преместили цену или сачекајте да то учини неко други."
 
 #: src/pages/RemoveLiquidity/V3.tsx
 msgid "You will also collect fees earned from this position."
@@ -2566,7 +2566,7 @@ msgid "{0, plural, =1 {Import token} other {Import tokens}}"
 msgstr "{0, plural, =1 {Увези токен} other {Увоз токена}}"
 
 #: src/constants/tokenSafety.tsx
-msgid "{0, plural, =1 {This token isn't traded on leading U.S. centralized exchanges or frequently swapped on Uniswap.} other {These tokens aren't traded on leading U.S. centralized exchanges or frequently swapped on Uniswap.}}"
+msgid "{0, plural, =1 {This token isn't traded on leading U.S. centralized exchanges or frequently swapped on Intrinsic.} other {These tokens aren't traded on leading U.S. centralized exchanges or frequently swapped on Intrinsic.}}"
 msgstr "{0, plural, =1 {Овим токеном се не тргује на водећим америчким централизованим берзама нити се често мења на Унисвап-у.} other {Овим токенима се не тргује на водећим америчким централизованим берзама нити се често мењају на Унисвап-у.}}"
 
 #: src/constants/tokenSafety.tsx
@@ -2574,7 +2574,7 @@ msgid "{0, plural, =1 {This token isn't traded on leading U.S. centralized excha
 msgstr "{0, plural, =1 {Овим токеном се не тргује на водећим америчким централизованим берзама.} other {Овим токенима се не тргује на водећим америчким централизованим берзама.}}"
 
 #: src/constants/tokenSafety.tsx
-msgid "{0, plural, =1 {You can't trade this token using the Uniswap App.} other {You can't trade these tokens using the Uniswap App.}}"
+msgid "{0, plural, =1 {You can't trade this token using the Intrinsic App.} other {You can't trade these tokens using the Intrinsic App.}}"
 msgstr "{0, plural, =1 {Не можете трговати овим токеном користећи Унисвап апликацију.} other {Не можете трговати овим токенима користећи Унисвап апликацију.}}"
 
 #: src/components/RateToggle/index.tsx

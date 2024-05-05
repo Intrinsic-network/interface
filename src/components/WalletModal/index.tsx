@@ -389,7 +389,7 @@ export default function WalletModal({
         <AutoRow style={{ flexWrap: "nowrap", padding: "4px 16px" }}>
           <ThemedText.BodySecondary fontSize={16} lineHeight={"24px"}>
             <Trans>
-              By connecting a wallet, you agree to Uniswap Labs’{" "}
+              By connecting a wallet, you agree to Intrinsic Labs’{" "}
               <ExternalLink href="https://uniswap.org/terms-of-service/">
                 Terms of Service
               </ExternalLink>{" "}
@@ -406,14 +406,14 @@ export default function WalletModal({
           <AutoRow style={{ flexWrap: "nowrap" }}>
             <ThemedText.DeprecatedBody fontSize={12}>
               <Trans>
-                By connecting a wallet, you agree to Uniswap Labs’{" "}
+                By connecting a wallet, you agree to Intrinsic Labs’{" "}
                 <ExternalLink
                   style={{ textDecoration: "underline" }}
                   href="https://uniswap.org/terms-of-service/"
                 >
                   Terms of Service
                 </ExternalLink>{" "}
-                and acknowledge that you have read and understand the Uniswap{" "}
+                and acknowledge that you have read and understand the Intrinsic{" "}
                 <ExternalLink
                   style={{ textDecoration: "underline" }}
                   href="https://uniswap.org/disclaimer/"

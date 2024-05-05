@@ -47,12 +47,12 @@ export default function ConnectedAccountBlocked(
         </ThemedText.DeprecatedDarkGray>
         <ThemedText.DeprecatedMain fontSize={14} marginBottom={12}>
           <Trans>
-            This address is blocked on the Uniswap Labs interface because it is
+            This address is blocked on the Intrinsic Labs interface because it is
             associated with one or more
           </Trans>{" "}
-          <ExternalLink href="https://help.uniswap.org/en/articles/6149816">
+          {/* <ExternalLink href="https://help.uniswap.org/en/articles/6149816">
             <Trans>blocked activities</Trans>
-          </ExternalLink>
+          </ExternalLink> */}
           .
         </ThemedText.DeprecatedMain>
         <ThemedText.DeprecatedMain fontSize={12}>
