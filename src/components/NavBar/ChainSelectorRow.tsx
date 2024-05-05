@@ -29,7 +29,7 @@ const Container = styled.button`
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.backgroundOutline};
+    background-color: #8A8A8A;
   }
 `
 

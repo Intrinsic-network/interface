@@ -17,7 +17,7 @@ export const navIcon = style([
   }),
   {
     ":hover": {
-      background: vars.color.lightGrayOverlay,
+      background: vars.color.grey500,
     },
     zIndex: 1,
     color: vars.color.navTextColor2,
