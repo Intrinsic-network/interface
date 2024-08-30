@@ -2,6 +2,7 @@ import { colorsDark, colorsLight } from './colors'
 
 const fonts = {
   fontFamily: 'Inter custom',
+  
 }
 
 export const LIGHT_THEME = {
