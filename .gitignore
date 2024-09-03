@@ -10,8 +10,8 @@
 # generated files
 /src/**/__generated__
 
-# schema
-schema.graphql
+# # schema
+# schema.graphql
 
 # dependencies
 /node_modules
