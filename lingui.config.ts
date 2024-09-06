@@ -1,8 +1,17 @@
+/* eslint-env node */
+
 const linguiConfig = {
   catalogs: [
     {
       path: '<rootDir>/src/locales/{locale}',
-      include: ['<rootDir>/src'],
+      include: ['<rootDir>/src/**/*.ts', '<rootDir>/src/**/*.tsx'],
+      exclude: [
+        '<rootDir>/src/**/*.d.ts',
+        '<rootDir>/src/**/*.test.*',
+        '<rootDir>/src/types/v3/**',
+        '<rootDir>/src/abis/types/**',
+        '<rootDir>/src/graphql/**/__generated__/**',
+      ],
     },
   ],
   compileNamespace: 'cjs',
@@ -46,13 +55,11 @@ const linguiConfig = {
     'vi-VN',
     'zh-CN',
     'zh-TW',
-    'pseudo',
   ],
   orderBy: 'messageId',
   rootDir: '.',
   runtimeConfigModule: ['@lingui/core', 'i18n'],
   sourceLocale: 'en-US',
-  pseudoLocale: 'pseudo',
 }
 
 export default linguiConfig

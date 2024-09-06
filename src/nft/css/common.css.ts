@@ -155,7 +155,7 @@ export const lightGrayOverlayOnHover = style([
   }),
   {
     ':hover': {
-      background: vars.color.lightGrayOverlay,
+      background: vars.color.grey500,
     },
   },
 ])

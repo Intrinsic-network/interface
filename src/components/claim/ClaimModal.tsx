@@ -5,7 +5,7 @@ import { useWeb3React } from '@web3-react/core'
 import JSBI from 'jsbi'
 import { useEffect, useState } from 'react'
 import { Text } from 'rebass'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import Circle from '../../assets/images/blue-loader.svg'
 import tokenLogo from '../../assets/images/token-logo.png'
@@ -151,10 +151,10 @@ export default function ClaimModal() {
           <AutoColumn gap="md" style={{ padding: '1rem', paddingTop: '0' }} justify="center">
             <ThemedText.DeprecatedSubHeader fontWeight={500}>
               <Trans>
-                As a member of the Uniswap community you may claim INT to be used for voting and governance.
+                As a member of the Intrinsic community you may claim INT to be used for voting and governance.
                 <br />
                 <br />
-                <ExternalLink href="https://uniswap.org/blog/uni">Read more about INT</ExternalLink>
+                <ExternalLink href="https://docs.intrinsic.finance">Read more about INT</ExternalLink>
               </Trans>
             </ThemedText.DeprecatedSubHeader>
             <ButtonPrimary

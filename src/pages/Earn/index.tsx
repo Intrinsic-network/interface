@@ -1,7 +1,9 @@
 import { Trans } from '@lingui/macro'
 import { useWeb3React } from '@web3-react/core'
 import JSBI from 'jsbi'
-import styled, { useTheme } from 'styled-components/macro'
+import { useTheme } from 'styled-components'
+
+import styled from 'styled-components'
 
 import { OutlineCard } from '../../components/Card'
 import { AutoColumn } from '../../components/Column'
@@ -49,7 +51,7 @@ flex-direction: column;
 `
 
 export default function Earn() {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const { chainId } = useWeb3React()
 
   // staking info for connected account
@@ -74,19 +76,19 @@ export default function Earn() {
             <AutoColumn gap="md">
               <RowBetween>
                 <ThemedText.DeprecatedWhite fontWeight={600}>
-                  <Trans>Uniswap liquidity mining</Trans>
+                  <Trans>Intrinsic liquidity mining</Trans>
                 </ThemedText.DeprecatedWhite>
               </RowBetween>
               <RowBetween>
                 <ThemedText.DeprecatedWhite fontSize={14}>
                   <Trans>
-                    Deposit your Liquidity Provider tokens to receive INT, the Uniswap protocol governance token.
+                    Deposit your Liquidity Provider tokens to receive INT, the Intrinsic protocol governance token.
                   </Trans>
                 </ThemedText.DeprecatedWhite>
               </RowBetween>{' '}
               <ExternalLink
                 style={{ color: theme.deprecated_white, textDecoration: 'underline' }}
-                href="https://uniswap.org/blog/uni/"
+                href="https://docs.intrinsic.finance"
                 target="_blank"
               >
                 <ThemedText.DeprecatedWhite fontSize={14}>

@@ -8,8 +8,8 @@ import { useMemo } from 'react'
 import { ChevronsRight } from 'react-feather'
 import { Link } from 'react-router-dom'
 import { Text } from 'rebass'
-import styled, { useTheme } from 'styled-components/macro'
-
+import { useTheme } from 'styled-components'
+import styled from 'styled-components'
 import { ButtonOutlined, ButtonPrimary, ButtonSecondary } from '../../components/Button'
 import Card from '../../components/Card'
 import { AutoColumn } from '../../components/Column'
@@ -87,7 +87,7 @@ const Layer2Prompt = styled(EmptyProposals)`
 `
 
 export default function Pool() {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const { account, chainId } = useWeb3React()
   const unsupportedV2Network = chainId
 
@@ -160,7 +160,7 @@ export default function Pool() {
                     </Trans>
                   </ThemedText.DeprecatedWhite>
                 </RowBetween>
-                <ExternalLink
+                {/* <ExternalLink
                   style={{ color: theme.deprecated_white, textDecoration: 'underline' }}
                   target="_blank"
                   href="https://docs.uniswap.org/protocol/V2/concepts/core-concepts/pools"
@@ -168,7 +168,7 @@ export default function Pool() {
                   <ThemedText.DeprecatedWhite fontSize={14}>
                     <Trans>Read more about providing liquidity</Trans>
                   </ThemedText.DeprecatedWhite>
-                </ExternalLink>
+                </ExternalLink> */}
               </AutoColumn>
             </CardSection>
             <CardBGImage />

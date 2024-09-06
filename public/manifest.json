@@ -3,7 +3,7 @@
   "display": "standalone",
   "homepage_url": "https://app.uniswap.org",
   "providedBy": {
-    "name": "Uniswap",
+    "name": "Intrinsic",
     "url": "https://uniswap.org"
   },
   "icons": [
@@ -21,10 +21,10 @@
     }
   ],
   "orientation": "portrait",
-  "name": "Uniswap",
+  "name": "Intrinsic",
   "description": "Swap or provide liquidity on Intrinsic",
-  "iconPath": "./images/256x256_App_Icon_Pink.svg",
-  "short_name": "Uniswap",
+  "iconPath": "./images/256x256_App_Icon_Blue.svg",
+  "short_name": "Intrinsic",
   "start_url": ".",
-  "theme_color": "#FC72FFs"
+  "theme_color": "#FC72FF"
 }

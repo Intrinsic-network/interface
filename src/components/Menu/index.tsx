@@ -1,12 +1,22 @@
 // eslint-disable-next-line no-restricted-imports
-import { t, Trans } from '@lingui/macro'
-import { useWeb3React } from '@web3-react/core'
-import FeatureFlagModal from 'components/FeatureFlagModal/FeatureFlagModal'
-import { PrivacyPolicyModal } from 'components/PrivacyPolicy'
-import { LOCALE_LABEL, SUPPORTED_LOCALES, SupportedLocale } from 'constants/locales'
-import { useActiveLocale } from 'hooks/useActiveLocale'
-import { useLocationLinkProps } from 'hooks/useLocationLinkProps'
-import { FunctionComponent, PropsWithChildren, useEffect, useRef, useState } from 'react'
+import { t, Trans } from "@lingui/macro";
+import { useWeb3React } from "@web3-react/core";
+import FeatureFlagModal from "components/FeatureFlagModal/FeatureFlagModal";
+import { PrivacyPolicyModal } from "components/PrivacyPolicy";
+import {
+  LOCALE_LABEL,
+  SUPPORTED_LOCALES,
+  SupportedLocale,
+} from "constants/locales";
+import { useActiveLocale } from "hooks/useActiveLocale";
+import { useLocationLinkProps } from "hooks/useLocationLinkProps";
+import {
+  FunctionComponent,
+  PropsWithChildren,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import {
   BookOpen,
   Check,
@@ -20,29 +30,29 @@ import {
   MessageCircle,
   Moon,
   Sun,
-} from 'react-feather'
-import { Link } from 'react-router-dom'
-import { useDarkModeManager } from 'state/user/hooks'
-import styled, { css } from 'styled-components/macro'
-import { isDevelopmentEnv, isStagingEnv } from 'utils/env'
+} from "react-feather";
+import { Link } from "react-router-dom";
+import { useDarkModeManager } from "state/user/hooks";
+import styled, { css } from "styled-components";
+import { isDevelopmentEnv, isStagingEnv } from "utils/env";
 
-import { ReactComponent as MenuIcon } from '../../assets/images/menu.svg'
-import { useOnClickOutside } from '../../hooks/useOnClickOutside'
-import { useModalIsOpen, useToggleModal } from '../../state/application/hooks'
-import { ApplicationModal } from '../../state/application/reducer'
-import { ExternalLink } from '../../theme'
-import { ButtonPrimary } from '../Button'
+import { ReactComponent as MenuIcon } from "../../assets/images/menu.svg";
+import { useOnClickOutside } from "../../hooks/useOnClickOutside";
+import { useModalIsOpen, useToggleModal } from "../../state/application/hooks";
+import { ApplicationModal } from "../../state/application/reducer";
+import { ExternalLink } from "../../theme";
+import { ButtonPrimary } from "../Button";
 
 export enum FlyoutAlignment {
-  LEFT = 'LEFT',
-  RIGHT = 'RIGHT',
+  LEFT = "LEFT",
+  RIGHT = "RIGHT",
 }
 
 const StyledMenuIcon = styled(MenuIcon)`
   path {
     stroke: ${({ theme }) => theme.deprecated_text1};
   }
-`
+`;
 
 const StyledMenuButton = styled.button`
   width: 100%;
@@ -67,13 +77,18 @@ const StyledMenuButton = styled.button`
   svg {
     margin-top: 2px;
   }
-`
+`;
 
 const UNIbutton = styled(ButtonPrimary)`
   background-color: ${({ theme }) => theme.deprecated_bg3};
-  background: radial-gradient(174.47% 188.91% at 1.84% 0%, #ff007a 0%, #2172e5 100%), #edeef2;
+  background: radial-gradient(
+      174.47% 188.91% at 1.84% 0%,
+      #ff007a 0%,
+      #2172e5 100%
+    ),
+    #edeef2;
   border: none;
-`
+`;
 
 const StyledMenu = styled.div`
   display: flex;
@@ -82,15 +97,15 @@ const StyledMenu = styled.div`
   position: relative;
   border: none;
   text-align: left;
-`
+`;
 
 const MenuFlyout = styled.span<{ flyoutAlignment?: FlyoutAlignment }>`
   min-width: 196px;
   max-height: 350px;
   overflow: auto;
-  background-color: ${({ theme }) => theme.deprecated_bg1};
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
-    0px 24px 32px rgba(0, 0, 0, 0.01);
+  background-color: white;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04),
+    0px 16px 24px rgba(0, 0, 0, 0.04), 0px 24px 32px rgba(0, 0, 0, 0.01);
   border: 1px solid ${({ theme }) => theme.deprecated_bg0};
   border-radius: 12px;
   padding: 0.5rem;
@@ -114,7 +129,7 @@ const MenuFlyout = styled.span<{ flyoutAlignment?: FlyoutAlignment }>`
     right: 0;
     left: unset;
   `};
-`
+`;
 
 const MenuItem = styled(ExternalLink)`
   display: flex;
@@ -129,7 +144,7 @@ const MenuItem = styled(ExternalLink)`
     cursor: pointer;
     text-decoration: none;
   }
-`
+`;
 
 const InternalMenuItem = styled(Link)`
   flex: 1;
@@ -143,7 +158,7 @@ const InternalMenuItem = styled(Link)`
   > svg {
     margin-right: 8px;
   }
-`
+`;
 
 const InternalLinkMenuItem = styled(InternalMenuItem)`
   display: flex;
@@ -157,7 +172,7 @@ const InternalLinkMenuItem = styled(InternalMenuItem)`
     cursor: pointer;
     text-decoration: none;
   }
-`
+`;
 
 const ToggleMenuItem = styled.button`
   background-color: transparent;
@@ -178,23 +193,31 @@ const ToggleMenuItem = styled.button`
     cursor: pointer;
     text-decoration: none;
   }
-`
+`;
 
-function LanguageMenuItem({ locale, active, key }: { locale: SupportedLocale; active: boolean; key: string }) {
-  const { to, onClick } = useLocationLinkProps(locale)
+function LanguageMenuItem({
+  locale,
+  active,
+  key,
+}: {
+  locale: SupportedLocale;
+  active: boolean;
+  key: string;
+}) {
+  const { to, onClick } = useLocationLinkProps(locale);
 
-  if (!to) return null
+  if (!to) return null;
 
   return (
     <InternalLinkMenuItem onClick={onClick} key={key} to={to}>
       <div>{LOCALE_LABEL[locale]}</div>
       {active && <Check opacity={0.6} size={16} />}
     </InternalLinkMenuItem>
-  )
+  );
 }
 
 function LanguageMenu({ close }: { close: () => void }) {
-  const activeLocale = useActiveLocale()
+  const activeLocale = useActiveLocale();
 
   return (
     <MenuFlyout>
@@ -202,31 +225,35 @@ function LanguageMenu({ close }: { close: () => void }) {
         <ChevronLeft size={16} />
       </ToggleMenuItem>
       {SUPPORTED_LOCALES.map((locale) => (
-        <LanguageMenuItem locale={locale} active={activeLocale === locale} key={locale} />
+        <LanguageMenuItem
+          locale={locale}
+          active={activeLocale === locale}
+          key={locale}
+        />
       ))}
     </MenuFlyout>
-  )
+  );
 }
 
 export default function Menu() {
-  const { account, chainId } = useWeb3React()
+  const { account, chainId } = useWeb3React();
 
-  const node = useRef<HTMLDivElement>()
-  const open = useModalIsOpen(ApplicationModal.MENU)
-  const toggleMenu = useToggleModal(ApplicationModal.MENU)
-  useOnClickOutside(node, open ? toggleMenu : undefined)
-  const togglePrivacyPolicy = useToggleModal(ApplicationModal.PRIVACY_POLICY)
-  const openFeatureFlagsModal = useToggleModal(ApplicationModal.FEATURE_FLAGS)
-  const openClaimModal = useToggleModal(ApplicationModal.ADDRESS_CLAIM)
-  const showUNIClaimOption = Boolean(!!account && !!chainId)
+  const node = useRef<HTMLDivElement>();
+  const open = useModalIsOpen(ApplicationModal.MENU);
+  const toggleMenu = useToggleModal(ApplicationModal.MENU);
+  useOnClickOutside(node, open ? toggleMenu : undefined);
+  const togglePrivacyPolicy = useToggleModal(ApplicationModal.PRIVACY_POLICY);
+  const openFeatureFlagsModal = useToggleModal(ApplicationModal.FEATURE_FLAGS);
+  const openClaimModal = useToggleModal(ApplicationModal.ADDRESS_CLAIM);
+  const showUNIClaimOption = Boolean(!!account && !!chainId);
 
-  const [darkMode, toggleDarkMode] = useDarkModeManager()
+  const [darkMode, toggleDarkMode] = useDarkModeManager();
 
-  const [menu, setMenu] = useState<'main' | 'lang'>('main')
+  const [menu, setMenu] = useState<"main" | "lang">("main");
 
   useEffect(() => {
-    setMenu('main')
-  }, [open])
+    setMenu("main");
+  }, [open]);
 
   return (
     <>
@@ -239,9 +266,9 @@ export default function Menu() {
         {open &&
           (() => {
             switch (menu) {
-              case 'lang':
-                return <LanguageMenu close={() => setMenu('main')} />
-              case 'main':
+              case "lang":
+                return <LanguageMenu close={() => setMenu("main")} />;
+              case "main":
               default:
                 return (
                   <MenuFlyout>
@@ -269,17 +296,27 @@ export default function Menu() {
                       </div>
                       <MessageCircle opacity={0.6} size={16} />
                     </MenuItem>
-                    <ToggleMenuItem onClick={() => setMenu('lang')}>
+                    <ToggleMenuItem onClick={() => setMenu("lang")}>
                       <div>
                         <Trans>Language</Trans>
                       </div>
                       <Globe opacity={0.6} size={16} />
                     </ToggleMenuItem>
-                    <ToggleMenuItem onClick={() => toggleDarkMode()}>
-                      <div>{darkMode ? <Trans>Light Theme</Trans> : <Trans>Dark Theme</Trans>}</div>
-                      {darkMode ? <Sun opacity={0.6} size={16} /> : <Moon opacity={0.6} size={16} />}
-                    </ToggleMenuItem>
-                    <MenuItem href="https://docs.uniswap.org/">
+                    {/* <ToggleMenuItem onClick={() => toggleDarkMode()}>
+                      <div>
+                        {darkMode ? (
+                          <Trans>Light Theme</Trans>
+                        ) : (
+                          <Trans>Dark Theme</Trans>
+                        )}
+                      </div>
+                      {darkMode ? (
+                        <Sun opacity={0.6} size={16} />
+                      ) : (
+                        <Moon opacity={0.6} size={16} />
+                      )}
+                    </ToggleMenuItem> */}
+                    <MenuItem href="https://docs.intrinsic.finance/">
                       <div>
                         <Trans>Docs</Trans>
                       </div>
@@ -308,45 +345,50 @@ export default function Menu() {
                       </UNIbutton>
                     )}
                   </MenuFlyout>
-                )
+                );
             }
           })()}
       </StyledMenu>
       <PrivacyPolicyModal />
       <FeatureFlagModal />
     </>
-  )
+  );
 }
 
 interface NewMenuProps {
-  flyoutAlignment?: FlyoutAlignment
-  ToggleUI?: FunctionComponent<PropsWithChildren<unknown>>
+  flyoutAlignment?: FlyoutAlignment;
+  ToggleUI?: FunctionComponent<PropsWithChildren<unknown>>;
   menuItems: {
-    content: any
-    link: string
-    external: boolean
-  }[]
+    content: any;
+    link: string;
+    external: boolean;
+  }[];
 }
 
 const NewMenuFlyout = styled(MenuFlyout)`
   top: 3rem !important;
-`
+`;
 const NewMenuItem = styled(InternalMenuItem)`
   width: max-content;
   text-decoration: none;
-`
+`;
 
 const ExternalMenuItem = styled(MenuItem)`
   width: max-content;
   text-decoration: none;
-`
+`;
 
-export const NewMenu = ({ flyoutAlignment = FlyoutAlignment.RIGHT, ToggleUI, menuItems, ...rest }: NewMenuProps) => {
-  const node = useRef<HTMLDivElement>()
-  const open = useModalIsOpen(ApplicationModal.POOL_OVERVIEW_OPTIONS)
-  const toggle = useToggleModal(ApplicationModal.POOL_OVERVIEW_OPTIONS)
-  useOnClickOutside(node, open ? toggle : undefined)
-  const ToggleElement = ToggleUI || StyledMenuIcon
+export const NewMenu = ({
+  flyoutAlignment = FlyoutAlignment.RIGHT,
+  ToggleUI,
+  menuItems,
+  ...rest
+}: NewMenuProps) => {
+  const node = useRef<HTMLDivElement>();
+  const open = useModalIsOpen(ApplicationModal.POOL_OVERVIEW_OPTIONS);
+  const toggle = useToggleModal(ApplicationModal.POOL_OVERVIEW_OPTIONS);
+  useOnClickOutside(node, open ? toggle : undefined);
+  const ToggleElement = ToggleUI || StyledMenuIcon;
   return (
     <StyledMenu ref={node as any} {...rest}>
       <ToggleElement onClick={toggle} />
@@ -366,5 +408,5 @@ export const NewMenu = ({ flyoutAlignment = FlyoutAlignment.RIGHT, ToggleUI, men
         </NewMenuFlyout>
       )}
     </StyledMenu>
-  )
-}
+  );
+};

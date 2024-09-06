@@ -2,7 +2,7 @@ import { Trans } from '@lingui/macro'
 import { getChainInfo } from 'constants/chainInfo'
 import { SupportedChainId } from 'constants/chains'
 import { AlertCircle } from 'react-feather'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 
 import { ThemedText } from '../../theme'
 import { AutoColumn } from '../Column'
@@ -14,7 +14,7 @@ const RowNoFlex = styled(AutoRow)`
 
 export default function FailedNetworkSwitchPopup({ chainId }: { chainId: SupportedChainId }) {
   const chainInfo = getChainInfo(chainId)
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   return (
     <RowNoFlex>
@@ -24,7 +24,7 @@ export default function FailedNetworkSwitchPopup({ chainId }: { chainId: Support
       <AutoColumn gap="8px">
         <ThemedText.DeprecatedBody fontWeight={500}>
           <Trans>
-            Failed to switch networks from the Uniswap Interface. In order to use Uniswap on {chainInfo.label}, you must
+            Failed to switch networks from the Intrinsic Interface. In order to use Intrinsic on {chainInfo.label}, you must
             change the network in your wallet.
           </Trans>
         </ThemedText.DeprecatedBody>

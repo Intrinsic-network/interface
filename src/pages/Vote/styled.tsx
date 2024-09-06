@@ -1,13 +1,14 @@
 import { Trans } from '@lingui/macro'
-import styled, { DefaultTheme } from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { ProposalState } from '../../state/governance/hooks'
 
-const handleColorType = (status: ProposalState, theme: DefaultTheme) => {
+const handleColorType = (status: ProposalState, theme: any) => {
   switch (status) {
     case ProposalState.PENDING:
-    case ProposalState.ACTIVE:
       return theme.deprecated_blue1
+    case ProposalState.ACTIVE:
+      return theme.deprecated_green1
     case ProposalState.SUCCEEDED:
     case ProposalState.EXECUTED:
       return theme.deprecated_green1

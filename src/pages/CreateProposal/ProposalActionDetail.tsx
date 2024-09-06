@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro'
 import AddressInputPanel from 'components/AddressInputPanel'
 import CurrencyInputPanel from 'components/CurrencyInputPanel'
 import React from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { ProposalAction } from './ProposalActionSelector'
 
@@ -14,7 +14,7 @@ enum ProposalActionDetailField {
 }
 
 const ProposalActionDetailContainer = styled.div`
-  margin-top: 10px;
+  margin-top: 16px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 10px;
@@ -76,6 +76,12 @@ export const ProposalActionDetail = ({
       {
         type: ProposalActionDetailField.RECIPIENT_ADDRESS,
         label: <Trans>Recipient</Trans>,
+      },
+    ],
+    [ProposalAction.ACCEPT_ADMIN]: [
+      {
+        type: ProposalActionDetailField.ADDRESS,
+        label: <Trans>Delegator Address</Trans>,
       },
     ],
   }

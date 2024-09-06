@@ -9,7 +9,7 @@ import { calcPoolPrice, formatWeiToDecimal } from 'nft/utils'
 import { default as Slider } from 'rc-slider'
 import { useEffect, useMemo, useReducer, useState } from 'react'
 import { useQuery } from 'react-query'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { ThemedText } from 'theme'
 
 const SweepContainer = styled.div<{ showSweep: boolean }>`
@@ -158,7 +158,7 @@ interface SweepProps {
 }
 
 export const Sweep = ({ contractAddress, collectionStats, minPrice, maxPrice, showSweep }: SweepProps) => {
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   const [isItemsToggled, toggleSweep] = useReducer((state) => !state, true)
   const [sweepAmount, setSweepAmount] = useState<string>('')

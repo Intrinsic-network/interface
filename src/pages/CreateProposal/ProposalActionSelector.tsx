@@ -6,7 +6,7 @@ import { RowBetween } from 'components/Row'
 import { MenuItem, PaddedColumn, Separator } from 'components/SearchModal/styleds'
 import React, { useCallback } from 'react'
 import { Text } from 'rebass'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { CloseIcon } from 'theme'
 
 export enum ProposalAction {
@@ -14,6 +14,7 @@ export enum ProposalAction {
   APPROVE_TOKEN = 'Approve Token',
   SET_FEE_PROTOCOL = 'Set Fee Protocol',
   COLLECT_PROTOCOL = 'Collect Protocol',
+  ACCEPT_ADMIN = 'Accept Admin',
 }
 
 interface ProposalActionSelectorModalProps {
@@ -27,18 +28,15 @@ const ContentWrapper = styled(Column)`
   flex: 1 1;
   position: relative;
 `
-const ActionSelectorHeader = styled.div`
-  font-size: 14px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.deprecated_text2};
-`
+
 
 const ActionDropdown = styled(ButtonDropdown)`
-  padding: 0px;
+  padding: 16px 12px;
   background-color: transparent;
   color: ${({ theme }) => theme.deprecated_text1};
-  font-size: 1.25rem;
-
+  font-size: 16px;
+  border: 1px solid #AAAAAA;
+  border-radius: 6px;
   :hover,
   :active,
   :focus {
@@ -51,18 +49,22 @@ const ActionDropdown = styled(ButtonDropdown)`
 const ProposalActionSelectorFlex = styled.div`
   margin-top: 10px;
   display: flex;
-  flex-flow: column nowrap;
-  border-radius: 20px;
-  border: 1px solid ${({ theme }) => theme.deprecated_bg2};
-  background-color: ${({ theme }) => theme.deprecated_bg1};
+  margin-right: 28px;
+
 `
 
 const ProposalActionSelectorContainer = styled.div`
-  flex: 1;
-  padding: 1rem;
+  margin-left: 28px;
   display: grid;
   grid-auto-rows: auto;
   grid-row-gap: 10px;
+`
+
+const ProposalActionSelectorLabel = styled.div`
+  padding-top: 20px;
+  width: 150px;
+  font-weight: 600;
+  font-size: 16px;
 `
 
 export const ProposalActionSelector = ({
@@ -76,10 +78,8 @@ export const ProposalActionSelector = ({
 }) => {
   return (
     <ProposalActionSelectorFlex>
+      <ProposalActionSelectorLabel><Trans>Proposed Action</Trans></ProposalActionSelectorLabel>
       <ProposalActionSelectorContainer className={className}>
-        <ActionSelectorHeader>
-          <Trans>Proposed Action</Trans>
-        </ActionSelectorHeader>
         <ActionDropdown onClick={onClick}>{proposalAction}</ActionDropdown>
       </ProposalActionSelectorContainer>
     </ProposalActionSelectorFlex>
@@ -136,6 +136,13 @@ export function ProposalActionSelectorModal({
           <Column>
             <Text fontWeight={500}>
               <Trans>Collect Protocol</Trans>
+            </Text>
+          </Column>
+        </MenuItem>
+        <MenuItem onClick={() => handleProposalActionSelect(ProposalAction.ACCEPT_ADMIN)}>
+          <Column>
+            <Text fontWeight={500}>
+              <Trans>Accept Admin</Trans>
             </Text>
           </Column>
         </MenuItem>

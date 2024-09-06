@@ -6,7 +6,7 @@ import { useRef } from 'react'
 import { Twitter } from 'react-feather'
 import { useModalIsOpen, useToggleModal } from 'state/application/hooks'
 import { ApplicationModal } from 'state/application/reducer'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { ClickableStyle, CopyHelperRefType } from 'theme'
 import { colors } from 'theme/colors'
 import { opacify } from 'theme/utils'
@@ -69,7 +69,7 @@ interface TokenInfo {
 }
 
 export default function ShareButton(tokenInfo: TokenInfo) {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const node = useRef<HTMLDivElement | null>(null)
   const open = useModalIsOpen(ApplicationModal.SHARE)
   const toggleShare = useToggleModal(ApplicationModal.SHARE)

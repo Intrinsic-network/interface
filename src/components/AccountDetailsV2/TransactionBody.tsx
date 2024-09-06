@@ -13,7 +13,7 @@ import {
   TransactionType,
   WrapTransactionInfo,
 } from 'state/transactions/types'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { nativeOnChain } from '../../constants/tokens'
 import { useCurrency, useToken } from '../../hooks/Tokens'

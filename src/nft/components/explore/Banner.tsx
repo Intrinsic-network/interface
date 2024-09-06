@@ -3,7 +3,7 @@ import { fetchTrendingCollections } from 'nft/queries'
 import { TimePeriod } from 'nft/types'
 import { useQuery } from 'react-query'
 import { useNavigate } from 'react-router-dom'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { Carousel } from './Carousel'
 import { CarouselCard, LoadingCarouselCard } from './CarouselCard'

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: uniswap-interface\n"
+"Project-Id-Version: Intrinsic-interface\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2022-10-27 02:48\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: uniswap-interface\n"
+"X-Crowdin-Project: Intrinsic-interface\n"
 "X-Crowdin-Project-ID: 458284\n"
 "X-Crowdin-Language: ko\n"
 "X-Crowdin-File: en-US.po\n"
@@ -60,8 +60,8 @@ msgid "24H volume"
 msgstr "24시간 볼륨"
 
 #: src/components/Tokens/TokenDetails/StatsSection.tsx
-msgid "24H volume is the amount of the asset that has been traded on Uniswap v3 during the past 24 hours."
-msgstr "24H 거래량은 지난 24시간 동안 Uniswap v3에서 거래된 자산의 양입니다."
+msgid "24H volume is the amount of the asset that has been traded on Intrinsic during the past 24 hours."
+msgstr "24H 거래량은 지난 24시간 동안 Intrinsic에서 거래된 자산의 양입니다."
 
 #: src/pages/RemoveLiquidity/V3.tsx
 msgid "25%"
@@ -157,8 +157,8 @@ msgid "Add"
 msgstr "추가"
 
 #: src/components/AccountDetails/TransactionSummary.tsx
-msgid "Add <0/> and <1/> to Uniswap V2"
-msgstr "Uniswap V2에 <0/> 및 <1/> 추가"
+msgid "Add <0/> and <1/> to Intrinsic"
+msgstr "Intrinsic에 <0/> 및 <1/> 추가"
 
 #: src/components/vote/DelegateModal.tsx
 msgid "Add Delegate +"
@@ -227,7 +227,7 @@ msgstr "높은 가격 영향 거래를 허용하고 확인 화면을 건너 뜁�
 
 #: src/pages/Swap/index.tsx
 msgid "Allow Intrinsic to use your {0}"
-msgstr "Uniswap 프로토콜이 귀하의 {0}을(를) 사용하도록 허용"
+msgstr "Intrinsic 프로토콜이 귀하의 {0}을(를) 사용하도록 허용"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
 msgid "Allowed"
@@ -247,8 +247,8 @@ msgid "An error occurred loading tokens. Please try again."
 msgstr "토큰을 로드하는 중에 오류가 발생했습니다. 다시 시도해 주세요."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note: fee on transfer and rebase tokens are incompatible with Uniswap V3."
-msgstr "교환을 실행하는 중에 오류가 발생했습니다. 가격변동 허용치를 높여야 할 수도 있습니다. 그래도 작동하지 않으면 교환중인 토큰이 Uniswap과 호환되지 않는 것일 수 있습니다. 참고: 전송 수수료 및 리베이스 토큰은 Uniswap V3와 호환되지 않습니다."
+msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note: fee on transfer and rebase tokens are incompatible with Intrinsic."
+msgstr "교환을 실행하는 중에 오류가 발생했습니다. 가격변동 허용치를 높여야 할 수도 있습니다. 그래도 작동하지 않으면 교환중인 토큰이 Intrinsic과 호환되지 않는 것일 수 있습니다. 참고: 전송 수수료 및 리베이스 토큰은 Intrinsic와 호환되지 않습니다."
 
 #: src/components/AccountDetailsV2/TransactionBody.tsx
 #: src/components/earn/StakingModal.tsx
@@ -295,8 +295,8 @@ msgid "Are you sure?"
 msgstr "확실합니까?"
 
 #: src/components/claim/ClaimModal.tsx
-msgid "As a member of the Uniswap community you may claim INT to be used for voting and governance.<0/><1/><2>Read more about INT</2>"
-msgstr "Uniswap 커뮤니티의 회원으로서 UNI가 투표 및 거버넌스에 사용되도록 청구할 수 있습니다. <0/> <1/> <2> UN에 대해 자세히 알아보기</2>"
+msgid "As a member of the Intrinsic community you may claim INT to be used for voting and governance.<0/><1/><2>Read more about INT</2>"
+msgstr "Intrinsic 커뮤니티의 회원으로서 UNI가 투표 및 거버넌스에 사용되도록 청구할 수 있습니다. <0/> <1/> <2> UN에 대해 자세히 알아보기</2>"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
 msgid "At least {0} {1} and {2} {3} will be refunded to your wallet due to selected price range."
@@ -352,12 +352,12 @@ msgid "By adding liquidity you'll earn 0.3% of all trades on this pair proportio
 msgstr "유동성을 추가하면 풀 쉐어에 비례하여이 쌍에 대한 모든 거래의 0.3%를 벌 수 있습니다. 수수료는 풀에 추가되고 실시간으로 발생하며 유동성을 인출하여 청구할 수 있습니다."
 
 #: src/components/WalletModal/index.tsx
-msgid "By connecting a wallet, you agree to Uniswap Labs’ <0>Terms of Service</0> and acknowledge that you have read and understand the Uniswap <1>Protocol Disclaimer</1>."
-msgstr "지갑을 연결하면 Uniswap Labs의 <0>서비스 약관</0>을 읽고 이해하여 <1>프로토콜 면책 조항</1>을 인정하는 것입니다."
+msgid "By connecting a wallet, you agree to Intrinsic Labs’ <0>Terms of Service</0> and acknowledge that you have read and understand the Intrinsic <1>Protocol Disclaimer</1>."
+msgstr "지갑을 연결하면 Intrinsic Labs의 <0>서비스 약관</0>을 읽고 이해하여 <1>프로토콜 면책 조항</1>을 인정하는 것입니다."
 
 #: src/components/WalletModal/index.tsx
-msgid "By connecting a wallet, you agree to Uniswap Labs’ <0>Terms of Service</0> and consent to its <1>Privacy Policy</1>."
-msgstr "지갑을 연결하면 Uniswap Labs의 <0>서비스 약관</0> 및 <1>개인 정보 보호 정책</1>에 동의하는 것입니다."
+msgid "By connecting a wallet, you agree to Intrinsic Labs’ <0>Terms of Service</0> and consent to its <1>Privacy Policy</1>."
+msgstr "지갑을 연결하면 Intrinsic Labs의 <0>서비스 약관</0> 및 <1>개인 정보 보호 정책</1>에 동의하는 것입니다."
 
 #: src/pages/Vote/styled.tsx
 msgid "Canceled"
@@ -695,8 +695,8 @@ msgid "Deposit tokens to the {label} network."
 msgstr "{label} 네트워크에 토큰을 예치합니다."
 
 #: src/pages/Earn/index.tsx
-msgid "Deposit your Liquidity Provider tokens to receive INT, the Uniswap protocol governance token."
-msgstr "유동성 제공자 토큰을 예치하여 Uniswap 프로토콜 거버넌스 토큰인 UNI를 받으십시오."
+msgid "Deposit your Liquidity Provider tokens to receive INT, the Intrinsic protocol governance token."
+msgstr "유동성 제공자 토큰을 예치하여 Intrinsic 프로토콜 거버넌스 토큰인 UNI를 받으십시오."
 
 #: src/components/earn/UnstakingModal.tsx
 msgid "Deposited liquidity:"
@@ -749,7 +749,7 @@ msgstr "v2 포지션 중 하나가 보이지 않습니까? <0>가져 오십시�
 
 #: src/components/vote/DelegateModal.tsx
 msgid "Earned INT tokens represent voting shares in Intrinsic governance."
-msgstr "획득한 INT 토큰은 Uniswap 거버넌스의 의결권을 나타냅니다."
+msgstr "획득한 INT 토큰은 Intrinsic 거버넌스의 의결권을 나타냅니다."
 
 #: src/components/FeeSelector/index.tsx
 msgid "Edit"
@@ -862,16 +862,16 @@ msgid "Explore"
 msgstr "탐구하다"
 
 #: src/components/Tokens/TokensBanner.tsx
-msgid "Explore Top Tokens on Uniswap"
-msgstr "Uniswap의 인기 토큰 살펴보기"
+msgid "Explore Top Tokens on Intrinsic"
+msgstr "Intrinsic의 인기 토큰 살펴보기"
 
 #: src/pages/Pool/CTACards.tsx
-msgid "Explore Uniswap Analytics."
-msgstr "Uniswap 분석 정보를 살펴보세요."
+msgid "Explore Intrinsic Analytics."
+msgstr "Intrinsic 분석 정보를 살펴보세요."
 
 #: src/components/Popups/FailedNetworkSwitchPopup.tsx
-msgid "Failed to switch networks from the Uniswap Interface. In order to use Uniswap on {0}, you must change the network in your wallet."
-msgstr "Uniswap 인터페이스에서 네트워크를 전환하지 못했습니다. Uniswap을 {0} 에서 사용하려면 지갑에서 네트워크를 변경해야 합니다."
+msgid "Failed to switch networks from the Intrinsic Interface. In order to use Intrinsic on {0}, you must change the network in your wallet."
+msgstr "Intrinsic 인터페이스에서 네트워크를 전환하지 못했습니다. Intrinsic을 {0} 에서 사용하려면 지갑에서 네트워크를 변경해야 합니다."
 
 #: src/components/NavBar/MenuDropdown.tsx
 msgid "Feature Flags"
@@ -898,8 +898,8 @@ msgid "For"
 msgstr "찬성"
 
 #: src/pages/MigrateV2/index.tsx
-msgid "For each pool shown below, click migrate to remove your liquidity from Uniswap V2 and deposit it into Uniswap V3."
-msgstr "아래 표시된 각 풀에 대해 마이그레이션을 클릭하여 Uniswap V2에서 유동성을 제거하고 Uniswap V3에 입금하십시오."
+msgid "For each pool shown below, click migrate to remove your liquidity from Intrinsic and deposit it into Intrinsic."
+msgstr "아래 표시된 각 풀에 대해 마이그레이션을 클릭하여 Intrinsic에서 유동성을 제거하고 Intrinsic에 입금하십시오."
 
 #: src/pages/Swap/index.tsx
 msgid "From"
@@ -1160,8 +1160,8 @@ msgid "Migrate V2 Liquidity"
 msgstr "V2 유동성 마이그레이션"
 
 #: src/pages/MigrateV2/index.tsx
-msgid "Migrate your liquidity tokens from Uniswap V2 to Uniswap V3."
-msgstr "유동성 토큰을 Uniswap V2에서 Uniswap V3로 마이그레이션하십시오."
+msgid "Migrate your liquidity tokens from Intrinsic to Intrinsic."
+msgstr "유동성 토큰을 Intrinsic에서 Intrinsic로 마이그레이션하십시오."
 
 #: src/components/AccountDetails/TransactionSummary.tsx
 msgid "Migrate {0}/{1} liquidity to V3"
@@ -1489,7 +1489,7 @@ msgstr "UNI에 대해 자세히 알아보기"
 
 #: src/pages/Vote/Landing.tsx
 msgid "Read more about Intrinsic governance"
-msgstr "Uniswap 거버넌스에 대해 자세히 알아보기"
+msgstr "Intrinsic 거버넌스에 대해 자세히 알아보기"
 
 #: src/pages/Pool/v2.tsx
 msgid "Read more about providing liquidity"
@@ -1761,24 +1761,24 @@ msgid "TVL"
 msgstr "TVL"
 
 #: src/components/Popups/SurveyPopup.tsx
-msgid "Take a 10 minute survey to help us improve your experience in the Uniswap app."
-msgstr "Uniswap 앱 경험을 개선하는 데 도움이 되는 10분 설문조사에 참여하세요."
+msgid "Take a 10 minute survey to help us improve your experience in the Intrinsic app."
+msgstr "Intrinsic 앱 경험을 개선하는 데 도움이 되는 10분 설문조사에 참여하세요."
 
 #: src/components/Popups/SurveyPopup.tsx
 msgid "Tell us what you think ↗"
 msgstr "↗ 생각을 알려주세요."
 
 #: src/components/Popups/ClaimPopup.tsx
-msgid "Thanks for being part of the Uniswap community <0/>"
-msgstr "Uniswap 커뮤니티에 참여해 주셔서 감사합니다. <0/>"
+msgid "Thanks for being part of the Intrinsic community <0/>"
+msgstr "Intrinsic 커뮤니티에 참여해 주셔서 감사합니다. <0/>"
 
 #: src/components/FeeSelector/index.tsx
 msgid "The % you will earn in fees."
 msgstr "수수료로받을 수있는 %입니다."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "The Uniswap invariant x*y=k was not satisfied by the swap. This usually means one of the tokens you are swapping incorporates custom behavior on transfer."
-msgstr "Uniswap 불변 x * y = k가 스왑에 의해 충족되지 않았습니다. 이는 일반적으로 스와핑하는 토큰 중 하나가 이체시 사용자 지정 동작을 통합함을 의미합니다."
+msgid "The Intrinsic invariant x*y=k was not satisfied by the swap. This usually means one of the tokens you are swapping incorporates custom behavior on transfer."
+msgstr "Intrinsic 불변 x * y = k가 스왑에 의해 충족되지 않았습니다. 이는 일반적으로 스와핑하는 토큰 중 하나가 이체시 사용자 지정 동작을 통합함을 의미합니다."
 
 #: src/components/swap/AdvancedSwapDetails.tsx
 msgid "The amount you expect to receive at the current market price. You may receive less or more if the market price changes while your transaction is pending."
@@ -1793,8 +1793,8 @@ msgid "The app fetches on-chain data and constructs contract calls with an Infur
 msgstr "앱은 온체인 데이터를 가져오고 Infura API를 사용하여 계약 호출을 구성합니다."
 
 #: src/components/PrivacyPolicy/index.tsx
-msgid "The app fetches the optimal trade route from a Uniswap Labs server."
-msgstr "앱은 Uniswap Labs 서버에서 최적의 무역 경로를 가져옵니다."
+msgid "The app fetches the optimal trade route from a Intrinsic Labs server."
+msgstr "앱은 Intrinsic Labs 서버에서 최적의 무역 경로를 가져옵니다."
 
 #: src/components/PrivacyPolicy/index.tsx
 msgid "The app logs anonymized usage statistics in order to improve over time."
@@ -1850,8 +1850,8 @@ msgid "The output token cannot be transferred. There may be an issue with the ou
 msgstr "산출 토큰을 이체할 수 없습니다. 산출 토큰에 문제가 있을 수 있습니다."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "The output token cannot be transferred. There may be an issue with the output token. Note: fee on transfer and rebase tokens are incompatible with Uniswap V3."
-msgstr "산출 토큰을 이체할 수 없습니다. 산출 토큰에 문제가 있을 수 있습니다. 참고: 이체 수수료 및 리베이스 토큰이 Uniswap V3와 호환되지 않습니다."
+msgid "The output token cannot be transferred. There may be an issue with the output token. Note: fee on transfer and rebase tokens are incompatible with Intrinsic."
+msgstr "산출 토큰을 이체할 수 없습니다. 산출 토큰에 문제가 있을 수 있습니다. 참고: 이체 수수료 및 리베이스 토큰이 Intrinsic와 호환되지 않습니다."
 
 #: src/components/Badge/RangeBadge.tsx
 msgid "The price of this pool is outside of your selected range. Your position is not currently earning fees."
@@ -1874,8 +1874,8 @@ msgid "There is no liquidity data."
 msgstr "유동성 데이터가 없습니다."
 
 #: src/components/ConnectedAccountBlocked/index.tsx
-msgid "This address is blocked on the Uniswap Labs interface because it is associated with one or more"
-msgstr "이 주소는 하나 이상의 주소와 연결되어 있기 때문에 Uniswap Labs 인터페이스에서 차단됩니다."
+msgid "This address is blocked on the Intrinsic Labs interface because it is associated with one or more"
+msgstr "이 주소는 하나 이상의 주소와 연결되어 있기 때문에 Intrinsic Labs 인터페이스에서 차단됩니다."
 
 #: src/components/PrivacyPolicy/index.tsx
 msgid "This app uses the following third-party APIs:"
@@ -1898,20 +1898,20 @@ msgid "This token doesn't appear on the active token list(s). Make sure this is 
 msgstr "이 토큰은 활성 토큰 목록에 표시되지 않습니다. 이것이 거래하려는 토큰인지 확인하십시오."
 
 #: src/components/Tokens/TokenDetails/PriceChart.tsx
-msgid "This token doesn't have chart data because it hasn't been traded on Uniswap v3"
-msgstr "이 토큰은 Uniswap v3에서 거래되지 않았기 때문에 차트 데이터가 없습니다."
+msgid "This token doesn't have chart data because it hasn't been traded on Intrinsic"
+msgstr "이 토큰은 Intrinsic에서 거래되지 않았기 때문에 차트 데이터가 없습니다."
 
 #: src/components/SearchModal/BlockedToken.tsx
-msgid "This token is not supported in the Uniswap Labs app"
-msgstr "이 토큰은 Uniswap Labs 앱에서 지원되지 않습니다."
+msgid "This token is not supported in the Intrinsic Labs app"
+msgstr "이 토큰은 Intrinsic Labs 앱에서 지원되지 않습니다."
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
 msgid "This tool will safely migrate your {0} liquidity to V3. The process is completely trustless thanks to the"
 msgstr "이 도구로 {0} 유동성을 V3로 안전하게 마이그레이션할 수 있습니다. 이 과정은 다음 덕분에 신뢰할 수 있습니다."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "This transaction will not succeed due to price movement. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Uniswap V3."
-msgstr "이 거래는 가격 변동으로 인해 성공하지 못합니다. 슬리피지 허용치를 높이십시오. 참고: 이체 수수료 및 리베이스 토큰은 Uniswap V3와 호환되지 않습니다."
+msgid "This transaction will not succeed due to price movement. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Intrinsic."
+msgstr "이 거래는 가격 변동으로 인해 성공하지 못합니다. 슬리피지 허용치를 높이십시오. 참고: 이체 수수료 및 리베이스 토큰은 Intrinsic와 호환되지 않습니다."
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
 msgid "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance."
@@ -1949,8 +1949,8 @@ msgid "Top pools"
 msgstr "상위 풀"
 
 #: src/pages/Tokens/index.tsx
-msgid "Top tokens on Uniswap"
-msgstr "Uniswap의 인기 토큰"
+msgid "Top tokens on Intrinsic"
+msgstr "Intrinsic의 인기 토큰"
 
 #: src/components/earn/PoolCard.tsx
 msgid "Total deposited"
@@ -1961,8 +1961,8 @@ msgid "Total deposits"
 msgstr "총 입금"
 
 #: src/components/Tokens/TokenTable/TokenRow.tsx
-msgid "Total value locked (TVL) is the amount of the asset that’s currently in a Uniswap v3 liquidity pool."
-msgstr "잠긴 총 가치(TVL)는 현재 Uniswap v3 유동성 풀에 있는 자산의 양입니다."
+msgid "Total value locked (TVL) is the amount of the asset that’s currently in a Intrinsic liquidity pool."
+msgstr "잠긴 총 가치(TVL)는 현재 Intrinsic 유동성 풀에 있는 자산의 양입니다."
 
 #: src/components/swap/RouterLabel.tsx
 msgid "Trade Route"
@@ -2022,7 +2022,7 @@ msgstr "UNI가 도착했습니다"
 
 #: src/pages/Vote/Landing.tsx
 msgid "INT tokens represent voting shares in Intrinsic governance. You can vote on each proposal yourself or delegate your votes to a third party."
-msgstr "INT 토큰은 Uniswap 거버넌스의 의결권을 나타냅니다. 각 제안에 대해 직접 투표하거나 제3자에게 투표를 위임할 수 있습니다."
+msgstr "INT 토큰은 Intrinsic 거버넌스의 의결권을 나타냅니다. 각 제안에 대해 직접 투표하거나 제3자에게 투표를 위임할 수 있습니다."
 
 #: src/pages/RemoveLiquidity/index.tsx
 msgid "INT {0}/{1} Burned"
@@ -2059,35 +2059,35 @@ msgstr "가스 추정에 예상치 못한 문제가 있습니다. 다시 시도�
 
 #: src/pages/Vote/Landing.tsx
 msgid "Intrinsic Governance"
-msgstr "Uniswap 거버넌스"
+msgstr "Intrinsic 거버넌스"
 
 #: src/components/PrivacyPolicy/index.tsx
-msgid "Uniswap Labs' Terms of Service"
-msgstr "Uniswap Labs 서비스 약관"
+msgid "Intrinsic Labs' Terms of Service"
+msgstr "Intrinsic Labs 서비스 약관"
 
 #: src/components/SwitchLocaleLink/index.tsx
-msgid "Uniswap available in: <0>{0}</0>"
-msgstr "Uniswap 사용 가능 : <0>{0}</0>"
+msgid "Intrinsic available in: <0>{0}</0>"
+msgstr "Intrinsic 사용 가능 : <0>{0}</0>"
 
 #: src/components/vote/ProposalEmptyState.tsx
 msgid "Intrinsic governance is only available on Layer 1. Switch your network to Ethereum Mainnet to view Proposals and Vote."
-msgstr "Uniswap 거버넌스는 레이어 1에서만 사용할 수 있습니다. 제안 및 투표를 보려면 네트워크를 이더 리움 메인 넷으로 전환하십시오."
+msgstr "Intrinsic 거버넌스는 레이어 1에서만 사용할 수 있습니다. 제안 및 투표를 보려면 네트워크를 이더 리움 메인 넷으로 전환하십시오."
 
 #: src/pages/Earn/index.tsx
-msgid "Uniswap liquidity mining"
-msgstr "Uniswap 유동성 채굴"
+msgid "Intrinsic liquidity mining"
+msgstr "Intrinsic 유동성 채굴"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
-msgid "Uniswap migration contract↗"
-msgstr "Uniswap 마이그레이션 계약 ↗"
+msgid "Intrinsic migration contract↗"
+msgstr "Intrinsic 마이그레이션 계약 ↗"
 
 #: src/components/SearchModal/TokenImportCard.tsx
 msgid "Unknown Source"
 msgstr "알 수 없는 출처"
 
 #: src/utils/swapErrorToUserReadableMessage.tsx
-msgid "Unknown error{0}. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Uniswap V3."
-msgstr "알 수 없는 오류 {0}. 슬리피지 허용치를 높이십시오. 참고: 이체 수수료 및 리베이스 토큰은 Uniswap V3와 호환되지 않습니다."
+msgid "Unknown error{0}. Try increasing your slippage tolerance. Note: fee on transfer and rebase tokens are incompatible with Intrinsic."
+msgstr "알 수 없는 오류 {0}. 슬리피지 허용치를 높이십시오. 참고: 이체 수수료 및 리베이스 토큰은 Intrinsic와 호환되지 않습니다."
 
 #: src/pages/Vote/Landing.tsx
 #: src/pages/Vote/VotePage.tsx
@@ -2138,8 +2138,8 @@ msgid "Update Delegation"
 msgstr "위임 업데이트"
 
 #: src/components/Settings/index.tsx
-msgid "Use the Uniswap Labs API to get faster quotes."
-msgstr "Uniswap Labs API를 사용하여 더 빠른 견적을 받으세요."
+msgid "Use the Intrinsic Labs API to get faster quotes."
+msgstr "Intrinsic Labs API를 사용하여 더 빠른 견적을 받으세요."
 
 #: src/components/claim/ClaimModal.tsx
 msgid "User"
@@ -2190,8 +2190,8 @@ msgid "View transaction on Explorer"
 msgstr "Explorer에서 거래 보기"
 
 #: src/components/Tokens/TokenTable/TokenRow.tsx
-msgid "Volume is the amount of the asset that has been traded on Uniswap v3 during the selected time frame."
-msgstr "거래량은 선택한 기간 동안 Uniswap v3에서 거래된 자산의 양입니다."
+msgid "Volume is the amount of the asset that has been traded on Intrinsic during the selected time frame."
+msgstr "거래량은 선택한 기간 동안 Intrinsic에서 거래된 자산의 양입니다."
 
 #: src/pages/Vote/VotePage.tsx
 msgid "Vote Against"
@@ -2339,8 +2339,8 @@ msgid "You are creating a pool"
 msgstr "풀을 만들고 있습니다."
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
-msgid "You are the first liquidity provider for this Uniswap V3 pool. Your liquidity will migrate at the current {0} price."
-msgstr "귀하는 이 Uniswap V3 풀의 최초 유동성 제공자입니다. 유동성은 현재 {0} 가격으로 마이그레이션됩니다."
+msgid "You are the first liquidity provider for this Intrinsic pool. Your liquidity will migrate at the current {0} price."
+msgstr "귀하는 이 Intrinsic 풀의 최초 유동성 제공자입니다. 유동성은 현재 {0} 가격으로 마이그레이션됩니다."
 
 #: src/pages/AddLiquidityV2/index.tsx
 msgid "You are the first liquidity provider."
@@ -2375,16 +2375,16 @@ msgid "You must connect an account."
 msgstr "계정을 연결해야합니다."
 
 #: src/pages/Swap/index.tsx
-msgid "You must give the Uniswap smart contracts permission to use your {0}. You only have to do this once per token."
-msgstr "{0}을 사용하려면 Uniswap 스마트 계약에 권한을 부여해야합니다. 토큰 당 한 번만 이 작업을 수행하면 됩니다."
+msgid "You must give the Intrinsic smart contracts permission to use your {0}. You only have to do this once per token."
+msgstr "{0}을 사용하려면 Intrinsic 스마트 계약에 권한을 부여해야합니다. 토큰 당 한 번만 이 작업을 수행하면 됩니다."
 
 #: src/pages/CreateProposal/index.tsx
 msgid "You must have {formattedProposalThreshold} votes to submit a proposal"
 msgstr "제안서를 제출 {formattedProposalThreshold} 표가 있어야합니다."
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
-msgid "You should only deposit liquidity into Uniswap V3 at a price you believe is correct. <0/>If the price seems incorrect, you can either make a swap to move the price or wait for someone else to do so."
-msgstr "유동성을 Uniswap V3에 정확하다고 생각하는 가격으로 예치해야합니다. <0/> 가격이 잘못된 것 같으면 교환하여 가격을 이동하거나 다른 사람이 이동하기를 기다릴 수 있습니다."
+msgid "You should only deposit liquidity into Intrinsic at a price you believe is correct. <0/>If the price seems incorrect, you can either make a swap to move the price or wait for someone else to do so."
+msgstr "유동성을 Intrinsic에 정확하다고 생각하는 가격으로 예치해야합니다. <0/> 가격이 잘못된 것 같으면 교환하여 가격을 이동하거나 다른 사람이 이동하기를 기다릴 수 있습니다."
 
 #: src/pages/RemoveLiquidity/V3.tsx
 msgid "You will also collect fees earned from this position."
@@ -2566,16 +2566,16 @@ msgid "{0, plural, =1 {Import token} other {Import tokens}}"
 msgstr "{0, plural, =1 {토큰 가져오기} other {토큰 가져오기}}"
 
 #: src/constants/tokenSafety.tsx
-msgid "{0, plural, =1 {This token isn't traded on leading U.S. centralized exchanges or frequently swapped on Uniswap.} other {These tokens aren't traded on leading U.S. centralized exchanges or frequently swapped on Uniswap.}}"
-msgstr "{0, plural, =1 {이 토큰은 미국의 주요 중앙 집중식 거래소에서 거래되거나 Uniswap에서 자주 교환되지 않습니다.} other {이 토큰은 미국의 주요 중앙 집중식 거래소에서 거래되거나 Uniswap에서 자주 교환되지 않습니다.}}"
+msgid "{0, plural, =1 {This token isn't traded on leading U.S. centralized exchanges or frequently swapped on Intrinsic.} other {These tokens aren't traded on leading U.S. centralized exchanges or frequently swapped on Intrinsic.}}"
+msgstr "{0, plural, =1 {이 토큰은 미국의 주요 중앙 집중식 거래소에서 거래되거나 Intrinsic에서 자주 교환되지 않습니다.} other {이 토큰은 미국의 주요 중앙 집중식 거래소에서 거래되거나 Intrinsic에서 자주 교환되지 않습니다.}}"
 
 #: src/constants/tokenSafety.tsx
 msgid "{0, plural, =1 {This token isn't traded on leading U.S. centralized exchanges.} other {These tokens aren't traded on leading U.S. centralized exchanges.}}"
 msgstr "{0, plural, =1 {이 토큰은 미국의 주요 중앙 집중식 거래소에서 거래되지 않습니다.} other {이 토큰은 미국의 주요 중앙 집중식 거래소에서 거래되지 않습니다.}}"
 
 #: src/constants/tokenSafety.tsx
-msgid "{0, plural, =1 {You can't trade this token using the Uniswap App.} other {You can't trade these tokens using the Uniswap App.}}"
-msgstr "{0, plural, =1 {Uniswap 앱을 사용하여 이 토큰을 거래할 수 없습니다.} other {Uniswap 앱을 사용하여 이러한 토큰을 거래할 수 없습니다.}}"
+msgid "{0, plural, =1 {You can't trade this token using the Intrinsic App.} other {You can't trade these tokens using the Intrinsic App.}}"
+msgstr "{0, plural, =1 {Intrinsic 앱을 사용하여 이 토큰을 거래할 수 없습니다.} other {Intrinsic 앱을 사용하여 이러한 토큰을 거래할 수 없습니다.}}"
 
 #: src/components/RateToggle/index.tsx
 #: src/components/RateToggle/index.tsx

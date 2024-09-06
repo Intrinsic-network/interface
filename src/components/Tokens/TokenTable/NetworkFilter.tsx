@@ -6,7 +6,7 @@ import { Check, ChevronDown, ChevronUp } from 'react-feather'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useModalIsOpen, useToggleModal } from 'state/application/hooks'
 import { ApplicationModal } from 'state/application/reducer'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 
 import FilterOption from './FilterOption'
 
@@ -89,7 +89,7 @@ const NetworkFilterOption = styled(FilterOption)`
 `
 
 export default function NetworkFilter() {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const node = useRef<HTMLDivElement | null>(null)
   const open = useModalIsOpen(ApplicationModal.NETWORK_FILTER)
   const toggleMenu = useToggleModal(ApplicationModal.NETWORK_FILTER)

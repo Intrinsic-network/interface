@@ -2,7 +2,7 @@ import { Token } from '@intrinsic-network/sdk-core'
 import { Trans } from '@lingui/macro'
 import { ButtonPrimary } from 'components/Button'
 import { AlertCircle, ArrowLeft } from 'react-feather'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { CloseIcon, ThemedText } from 'theme'
 
 import TokenImportCard from './TokenImportCard'
@@ -59,7 +59,7 @@ const BlockedToken = ({ onBack, onDismiss, blockedTokens }: BlockedTokenProps) =
     <Icon />
     <Content>
       <Copy>
-        <Trans>This token is not supported in the Uniswap Labs app</Trans>
+        <Trans>This token is not supported in the Intrinsic Labs app</Trans>
       </Copy>
       <TokenImportCard token={blockedTokens[0]} />
       <Button disabled>

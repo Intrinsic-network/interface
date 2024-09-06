@@ -2,7 +2,7 @@ import { Position } from '@intrinsic-network/intrinsic-sdk'
 import { Currency, CurrencyAmount, Price } from '@intrinsic-network/sdk-core'
 import { AutoColumn } from 'components/Column'
 import { PositionPreview } from 'components/PositionPreview'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { Bound, Field } from '../../state/mint/v3/actions'
 

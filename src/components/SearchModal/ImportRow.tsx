@@ -8,7 +8,7 @@ import { AutoRow, RowFixed } from 'components/Row'
 import { useIsTokenActive, useIsUserAddedToken } from 'hooks/Tokens'
 import { CSSProperties } from 'react'
 import { CheckCircle } from 'react-feather'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { ThemedText } from 'theme'
 
 import { WrappedTokenInfo } from '../../state/lists/wrappedTokenInfo'
@@ -53,7 +53,7 @@ export default function ImportRow({
   showImportView: () => void
   setImportToken: (token: Token) => void
 }) {
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   // check if already active on list or local storage tokens
   const isAdded = useIsUserAddedToken(token)

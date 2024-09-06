@@ -6,7 +6,7 @@ const DUMMY_KEY = '00000000000000000000000000000000'
 const PROXY_URL = undefined
 
 /**
- * Initializes Amplitude SDK and configures it to send events to a Uniswap reverse proxy,
+ * Initializes Amplitude SDK and configures it to send events to a Intrinsic reverse proxy,
  * which relays to events to relevant Amplitude endpoints. You must be a
  * member of the organization on Amplitude to view logged events.
  */

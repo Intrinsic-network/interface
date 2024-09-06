@@ -26,7 +26,7 @@ export default function TopLevelModals() {
     <>
       <AddressClaimModal isOpen={addressClaimOpen} onDismiss={addressClaimToggle} />
       <ConnectedAccountBlocked account={account} isOpen={open} />
-      {(location.pathname.includes('/pool') || location.pathname.includes('/swap')) && <TokensBanner />}
+      {/* {(location.pathname.includes('/pool') || location.pathname.includes('/swap')) && <TokensBanner />} */}
       <Bag />
       {useNftFlag() === NftVariant.Enabled && <TransactionCompleteModal />}
     </>

@@ -4,7 +4,7 @@ import { easeCubicInOut } from 'd3'
 import React from 'react'
 import { useEffect, useRef, useState } from 'react'
 import { animated, useSpring } from 'react-spring'
-import { useTheme } from 'styled-components/macro'
+import { useTheme } from 'styled-components'
 
 import { LineChartProps } from './LineChart'
 
@@ -55,7 +55,7 @@ function AnimatedInLineChart<T>({
       }
     }
   })
-  const theme = useTheme()
+  const theme = useTheme() as any
   const lineColor = color ?? theme.accentAction
 
   return (

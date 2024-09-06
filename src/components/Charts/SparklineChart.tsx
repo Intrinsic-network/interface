@@ -4,7 +4,7 @@ import { PricePoint } from 'graphql/data/TokenPrice'
 import { SparklineMap, TopToken } from 'graphql/data/TopTokens'
 import { TimePeriod } from 'graphql/data/util'
 import { memo } from 'react'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 
 import { getPriceBounds } from '../Tokens/TokenDetails/PriceChart'
 import LineChart from './LineChart'
@@ -33,7 +33,7 @@ function _SparklineChart({
   timePeriod,
   sparklineMap,
 }: SparklineChartProps) {
-  const theme = useTheme()
+  const theme = useTheme() as any
   // for sparkline
   const pricePoints = tokenData?.address ? sparklineMap[tokenData.address] : null
 

@@ -2,7 +2,7 @@ import jazzicon from '@metamask/jazzicon'
 import { useWeb3React } from '@web3-react/core'
 import useENSAvatar from 'hooks/useENSAvatar'
 import { useLayoutEffect, useMemo, useRef, useState } from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 const StyledIdenticon = styled.div<{ iconSize: number }>`
   height: ${({ iconSize }) => `${iconSize}px`};

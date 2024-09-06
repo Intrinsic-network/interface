@@ -2,7 +2,7 @@ import { useCallback, useEffect } from 'react'
 import { X } from 'react-feather'
 import { animated } from 'react-spring'
 import { useSpring } from 'react-spring'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 
 import { useRemovePopup } from '../../state/application/hooks'
 import { PopupContent } from '../../state/application/reducer'
@@ -69,7 +69,7 @@ export default function PopupItem({
     }
   }, [removeAfterMs, removeThisPopup])
 
-  const theme = useTheme()
+  const theme = useTheme() as any
   const faderStyle = useSpring({
     from: { width: '100%' },
     to: { width: '0%' },
