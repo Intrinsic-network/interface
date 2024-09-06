@@ -61,11 +61,11 @@ export default function TokenWarningMessage({ warning, tokenAddress }: TokenWarn
         {Boolean(heading) && ' '}
         {description}
         {Boolean(description) && ' '}
-        {tokenAddress && (
+        {/* {tokenAddress && (
           <StyledLink href={TOKEN_SAFETY_ARTICLE}>
             <Trans>Learn more</Trans>
           </StyledLink>
-        )}
+        )} */}
       </DetailsRow>
     </Label>
   )

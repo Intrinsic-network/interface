@@ -63,9 +63,9 @@ const EXTERNAL_APIS = [
           The app securely collects your wallet address and shares it with TRM Labs Inc. for risk and compliance
           reasons.
         </Trans>{' '}
-        <ExternalLink href="https://help.uniswap.org/en/articles/5675203-terms-of-service-faq">
+        {/* <ExternalLink href="https://help.uniswap.org/en/articles/5675203-terms-of-service-faq">
           <Trans>Learn more</Trans>
-        </ExternalLink>
+        </ExternalLink> */}
       </>
     ),
   },
@@ -167,13 +167,13 @@ export function PrivacyPolicy() {
               </AutoColumn>
             </DarkGreyCard>
           ))}
-          <ThemedText.DeprecatedBody fontSize={12}>
+          {/* <ThemedText.DeprecatedBody fontSize={12}>
             <Row justify="center" marginBottom="1rem">
               <ExternalLink href="https://help.uniswap.org/en/articles/5675203-terms-of-service-faq">
                 <Trans>Learn more</Trans>
               </ExternalLink>
             </Row>
-          </ThemedText.DeprecatedBody>
+          </ThemedText.DeprecatedBody> */}
         </AutoColumn>
       </AutoColumn>
     </Wrapper>

@@ -316,7 +316,7 @@ export default function Menu() {
                         <Moon opacity={0.6} size={16} />
                       )}
                     </ToggleMenuItem> */}
-                    <MenuItem href="https://docs.uniswap.org/">
+                    <MenuItem href="https://docs.intrinsic.finance/">
                       <div>
                         <Trans>Docs</Trans>
                       </div>

@@ -1089,7 +1089,9 @@ export default function AddLiquidity() {
                                   >
                                     <Trans>
                                       Full range positions may earn less fees
-                                      than concentrated positions. Learn more{" "}
+                                      than concentrated positions. 
+                                    </Trans>
+                                    {/* Learn more{" "}
                                       <ExternalLink
                                         style={{
                                           color: theme.deprecated_yellow3,
@@ -1100,9 +1102,7 @@ export default function AddLiquidity() {
                                         }
                                       >
                                         here
-                                      </ExternalLink>
-                                      .
-                                    </Trans>
+                                      </ExternalLink> */}
                                   </ThemedText.DeprecatedYellow>
                                 </RowFixed>
                                 <Row>

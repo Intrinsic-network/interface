@@ -129,7 +129,7 @@ export const MenuDropdown = () => {
         {isOpen && (
           <NavDropdown top={{ sm: 'unset', lg: '56' }} bottom={{ sm: '56', lg: 'unset' }} right="0">
             <Column gap="16">
-              <Column paddingX="8" gap="4">
+              {/* <Column paddingX="8" gap="4">
                 <PrimaryMenuRow to="/vote" close={toggleOpen}>
                   <Icon>
                     <GovernanceIcon width={24} height={24} />
@@ -147,18 +147,19 @@ export const MenuDropdown = () => {
                   </PrimaryMenuRow.Text>
                 </PrimaryMenuRow>
               </Column>
-              <Separator />
+              <Separator /> */}
               <Box
                 display="flex"
                 flexDirection={{ sm: 'row', md: 'column' }}
                 flexWrap="wrap"
                 alignItems={{ sm: 'center', md: 'flex-start' }}
+                minWidth={{md: "160", sm: "160"}}
                 paddingX="8"
               >
                 <SecondaryLinkedText href="https://help.uniswap.org/en/">
                   <Trans>Help center</Trans> ↗
                 </SecondaryLinkedText>
-                <SecondaryLinkedText href="https://docs.uniswap.org/">
+                <SecondaryLinkedText href="https://docs.intrinsic.finance/">
                   <Trans>Documentation</Trans> ↗
                 </SecondaryLinkedText>
                 <SecondaryLinkedText
@@ -169,11 +170,11 @@ export const MenuDropdown = () => {
                 >
                   <Trans>Legal & Privacy</Trans> ↗
                 </SecondaryLinkedText>
-                {(isDevelopmentEnv() || isStagingEnv()) && (
-                  <SecondaryLinkedText onClick={openFeatureFlagsModal}>
-                    <Trans>Feature Flags</Trans>
-                  </SecondaryLinkedText>
-                )}
+                  {(isDevelopmentEnv() || isStagingEnv()) && (
+                    <SecondaryLinkedText onClick={openFeatureFlagsModal}>
+                      <Trans>Feature Flags</Trans>
+                    </SecondaryLinkedText>
+                  )}
               </Box>
               <IconRow>
                 <Icon href="https://discord.com/invite/FCfyBSbCU5">
@@ -192,7 +193,7 @@ export const MenuDropdown = () => {
                     color={themeVars.colors.textSecondary}
                   />
                 </Icon>
-                <Icon href="https://github.com/Uniswap">
+                <Icon href="https://github.com/Intrinsic-network/interface">
                   <GithubIconMenu
                     className={styles.hover}
                     width={24}

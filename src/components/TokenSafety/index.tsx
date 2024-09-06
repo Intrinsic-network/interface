@@ -262,7 +262,8 @@ export default function TokenSafety({
           </ShortColumn>
           <ShortColumn>
             <InfoText>
-              {heading} {description} {learnMoreUrl}
+              {/* {heading} {description} {learnMoreUrl} */}
+              {heading} {description}
             </InfoText>
           </ShortColumn>
           <LinkColumn>{urls}</LinkColumn>

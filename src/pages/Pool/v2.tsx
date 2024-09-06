@@ -160,7 +160,7 @@ export default function Pool() {
                     </Trans>
                   </ThemedText.DeprecatedWhite>
                 </RowBetween>
-                <ExternalLink
+                {/* <ExternalLink
                   style={{ color: theme.deprecated_white, textDecoration: 'underline' }}
                   target="_blank"
                   href="https://docs.uniswap.org/protocol/V2/concepts/core-concepts/pools"
@@ -168,7 +168,7 @@ export default function Pool() {
                   <ThemedText.DeprecatedWhite fontSize={14}>
                     <Trans>Read more about providing liquidity</Trans>
                   </ThemedText.DeprecatedWhite>
-                </ExternalLink>
+                </ExternalLink> */}
               </AutoColumn>
             </CardSection>
             <CardBGImage />

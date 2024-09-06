@@ -243,7 +243,7 @@ export default function SettingsTab({
                 <Trans>Interface Settings</Trans>
               </Text>
 
-              {isSupportedChainId(chainId) && (
+              {/* {isSupportedChainId(chainId) && (
                 <RowBetween style={{ marginBottom: "16px" }}>
                   <RowFixed>
                     <ThemedText.DeprecatedBlack
@@ -275,7 +275,7 @@ export default function SettingsTab({
                     }}
                   />
                 </RowBetween>
-              )}
+              )} */}
               <RowBetween>
                 <RowFixed>
                   <ThemedText.DeprecatedBlack
