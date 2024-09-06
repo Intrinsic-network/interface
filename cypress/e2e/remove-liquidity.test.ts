@@ -1,31 +1,33 @@
+import { ChainId, MaxUint256, UNI_ADDRESSES } from '@uniswap/sdk-core'
+
+const UNI_MAINNET = UNI_ADDRESSES[ChainId.MAINNET]
+
 describe('Remove Liquidity', () => {
-  it('eth remove', () => {
-    cy.visit('/remove/v2/ETH/0xF9bA5210F91D0474bd1e1DcDAeC4C58E359AaD85')
+  it('loads the token pair in v2', () => {
+    cy.visit(`/remove/v2/ETH/${UNI_MAINNET}`)
     cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'ETH')
-    cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'MKR')
+    cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'UNI')
   })
 
-  it('eth remove swap order', () => {
-    cy.visit('/remove/v2/0xF9bA5210F91D0474bd1e1DcDAeC4C58E359AaD85/ETH')
-    cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'MKR')
-    cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'ETH')
+  it('loads the token pair in v3', () => {
+    cy.visit(`/remove/1`)
+    cy.get('#remove-liquidity-tokens').should('contain.text', 'UNI/ETH')
+
+    cy.get('#remove-pooled-tokena-symbol').should('contain.text', 'Pooled UNI')
+    cy.get('#remove-pooled-tokenb-symbol').should('contain.text', 'Pooled ETH')
   })
 
-  it('loads the two correct tokens', () => {
-    cy.visit('/remove/v2/0xc778417E063141139Fce010982780140Aa0cD5Ab/0xF9bA5210F91D0474bd1e1DcDAeC4C58E359AaD85')
-    cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'WETH')
-    cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'MKR')
-  })
+  it('should redirect to error pages if pool does not exist', () => {
+    // Duplicate-token v2 pools redirect to position unavailable
+    cy.visit(`/remove/v2/ETH/ETH`)
+    cy.contains('Position unavailable')
 
-  it('does not crash if ETH is duplicated', () => {
-    cy.visit('/remove/v2/0xc778417E063141139Fce010982780140Aa0cD5Ab/0xc778417E063141139Fce010982780140Aa0cD5Ab')
-    cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'WETH')
-    cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'WETH')
-  })
+    // Single-token pools don't exist
+    cy.visit('/remove/v2/ETH')
+    cy.url().should('match', /\/not-found/)
 
-  it.skip('token not in storage is loaded', () => {
-    cy.visit('/remove/v2/0xb290b2f9f8f108d03ff2af3ac5c8de6de31cdf6d/0xF9bA5210F91D0474bd1e1DcDAeC4C58E359AaD85')
-    cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'SKL')
-    cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'MKR')
+    // Nonexistent v3 pool
+    cy.visit(`/remove/${MaxUint256}`)
+    cy.contains('Position unavailable')
   })
 })

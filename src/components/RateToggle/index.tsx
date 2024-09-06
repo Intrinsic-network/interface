@@ -1,6 +1,7 @@
-import { Currency } from '@intrinsic-network/sdk-core'
-import { Trans } from '@lingui/macro'
-import { ToggleElement, ToggleWrapper } from 'components/Toggle/MultiToggle'
+import { Currency } from "@intrinsic-network/sdk-core";
+import { Trans } from "@lingui/macro";
+import { ToggleElement, ToggleWrapper } from "components/Toggle/MultiToggle";
+import { ThemedText } from "theme";
 
 // the order of displayed base currencies from left to right is always in sort order
 // currencyA is treated as the preferred base currency
@@ -9,25 +10,29 @@ export default function RateToggle({
   currencyB,
   handleRateToggle,
 }: {
-  currencyA: Currency
-  currencyB: Currency
-  handleRateToggle: () => void
+  currencyA: Currency;
+  currencyB: Currency;
+  handleRateToggle: () => void;
 }) {
-  const tokenA = currencyA?.wrapped
-  const tokenB = currencyB?.wrapped
+  const tokenA = currencyA?.wrapped;
+  const tokenB = currencyB?.wrapped;
 
-  const isSorted = tokenA && tokenB && tokenA.sortsBefore(tokenB)
+  const isSorted = tokenA && tokenB && tokenA.sortsBefore(tokenB);
 
   return tokenA && tokenB ? (
-    <div style={{ width: 'fit-content', display: 'flex', alignItems: 'center' }} onClick={handleRateToggle}>
+    <div
+      style={{ width: "fit-content", display: "flex", alignItems: "center" }}
+      onClick={handleRateToggle}
+    >
       <ToggleWrapper width="fit-content">
-        <ToggleElement isActive={isSorted} fontSize="12px">
+        <ToggleElement isActive={isSorted} fontSize="16px">
+          {" "}
           <Trans>{isSorted ? currencyA.symbol : currencyB.symbol}</Trans>
         </ToggleElement>
-        <ToggleElement isActive={!isSorted} fontSize="12px">
+        <ToggleElement isActive={!isSorted} fontSize="16px">
           <Trans>{isSorted ? currencyB.symbol : currencyA.symbol}</Trans>
         </ToggleElement>
       </ToggleWrapper>
     </div>
-  ) : null
+  ) : null;
 }

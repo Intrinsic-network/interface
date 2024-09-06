@@ -1,5 +1,5 @@
 import React, { ChangeEvent, memo, useCallback, useRef } from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 const Input = styled.input<{ error?: boolean; fontSize?: string }>`
   font-size: ${({ fontSize }) => fontSize || '1.25rem'};
@@ -38,7 +38,9 @@ const TextAreaInput = styled.textarea<{ error?: boolean; fontSize?: string }>`
   flex: 1 1 auto;
   width: 0;
   resize: none;
-  background-color: ${({ theme }) => theme.deprecated_bg1};
+  border: 1px solid #AAAAAA;
+  border-radius: 6px;
+  padding: 16px 12px;
   transition: color 300ms ${({ error }) => (error ? 'step-end' : 'step-start')};
   color: ${({ error, theme }) => (error ? theme.deprecated_red1 : theme.deprecated_text1)};
   overflow: hidden;
@@ -46,7 +48,6 @@ const TextAreaInput = styled.textarea<{ error?: boolean; fontSize?: string }>`
   font-weight: 500;
   width: 100%;
   line-height: 1.2;
-  padding: 0px;
   -webkit-appearance: textfield;
 
   ::-webkit-search-decoration {

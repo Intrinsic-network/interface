@@ -1,17 +1,19 @@
-import { Interface } from '@ethersproject/abi'
-import { abi as IIntrinsicPoolStateABI } from '@intrinsic-network/core/artifacts/contracts/interfaces/pool/IIntrinsicPoolState.sol/IIntrinsicPoolState.json'
+
+import IIntrinsicPoolStateABI  from '@intrinsic-network/core/artifacts/contracts/interfaces/pool/IIntrinsicPoolState.sol/IIntrinsicPoolState.json'
 import { computePoolAddress } from '@intrinsic-network/intrinsic-sdk'
 import { FeeAmount, Pool } from '@intrinsic-network/intrinsic-sdk'
 import { BigintIsh, Currency, Token } from '@intrinsic-network/sdk-core'
 import { useWeb3React } from '@web3-react/core'
-import JSBI from 'jsbi'
+
 import { useMultipleContractSingleData } from 'lib/hooks/multicall'
 import { useMemo } from 'react'
 
 import { V3_CORE_FACTORY_ADDRESSES } from '../constants/addresses'
 import { IUniswapV3PoolStateInterface } from '../types/v3/IUniswapV3PoolState'
+import JSBI from 'jsbi'
+import { Interface } from 'ethers/lib/utils'
 
-const POOL_STATE_INTERFACE = new Interface(IIntrinsicPoolStateABI) as IUniswapV3PoolStateInterface
+const POOL_STATE_INTERFACE = new Interface(IIntrinsicPoolStateABI.abi) as IUniswapV3PoolStateInterface
 
 // Classes are expensive to instantiate, so this caches the recently instantiated pools.
 // This avoids re-instantiating pools as the other pools in the same request are loaded.

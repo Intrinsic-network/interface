@@ -1,25 +1,28 @@
-import { darken } from 'polished'
-import { Check, ChevronDown } from 'react-feather'
-import { Button as RebassButton, ButtonProps as ButtonPropsOriginal } from 'rebass/styled-components'
-import styled, { useTheme } from 'styled-components/macro'
+import { darken } from "polished";
+import { Check, ChevronDown } from "react-feather";
+import {
+  Button as RebassButton,
+  ButtonProps as ButtonPropsOriginal,
+} from "rebass/styled-components";
+import styled, { useTheme } from "styled-components";
 
-import { RowBetween } from '../Row'
+import { RowBetween } from "../Row";
 
-type ButtonProps = Omit<ButtonPropsOriginal, 'css'>
+type ButtonProps = Omit<ButtonPropsOriginal, "css">;
 
 export const BaseButton = styled(RebassButton)<
   {
-    padding?: string
-    width?: string
-    $borderRadius?: string
-    altDisabledStyle?: boolean
+    padding?: string;
+    width?: string;
+    $borderRadius?: string;
+    altDisabledStyle?: boolean;
   } & ButtonProps
 >`
-  padding: ${({ padding }) => padding ?? '16px'};
-  width: ${({ width }) => width ?? '100%'};
+  padding: ${({ padding }) => padding ?? "16px"};
+  width: ${({ width }) => width ?? "100%"};
   font-weight: 500;
   text-align: center;
-  border-radius: ${({ $borderRadius }) => $borderRadius ?? '20px'};
+  border-radius: ${({ $borderRadius }) => $borderRadius ?? "20px"};
   outline: none;
   border: 1px solid transparent;
   color: ${({ theme }) => theme.deprecated_text1};
@@ -48,53 +51,70 @@ export const BaseButton = styled(RebassButton)<
   > a {
     text-decoration: none;
   }
-`
+`;
 
 export const ButtonPrimary = styled(BaseButton)`
-  background-color: ${({ theme }) => theme.accentAction};
+  background-color: ${({ theme }) => theme.secondaryButtonColor};
   font-size: 20px;
   font-weight: 600;
   padding: 16px;
   color: ${({ theme }) => theme.accentTextLightPrimary};
   &:focus {
-    box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.05, theme.deprecated_primary1)};
-    background-color: ${({ theme }) => darken(0.05, theme.deprecated_primary1)};
+    box-shadow: 0 0 0 1pt
+      ${({ theme }) => darken(0.05, theme.secondaryButtonColor)};
+    background-color: ${({ theme }) =>
+      darken(0.05, theme.secondaryButtonColor)};
   }
   &:hover {
-    background-color: ${({ theme }) => darken(0.05, theme.deprecated_primary1)};
+    background-color: ${({ theme }) =>
+      darken(0.05, theme.secondaryButtonColor)};
   }
   &:active {
-    box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.1, theme.deprecated_primary1)};
-    background-color: ${({ theme }) => darken(0.1, theme.deprecated_primary1)};
+    box-shadow: 0 0 0 1pt
+      ${({ theme }) => darken(0.1, theme.secondaryButtonColor)};
+    background-color: ${({ theme }) => darken(0.1, theme.secondaryButtonColor)};
   }
   &:disabled {
     background-color: ${({ theme, altDisabledStyle, disabled }) =>
-      altDisabledStyle ? (disabled ? theme.deprecated_primary1 : theme.deprecated_bg2) : theme.deprecated_bg2};
+      altDisabledStyle
+        ? disabled
+          ? theme.intGray3
+          : theme.intGray3
+        : theme.intGray3};
     color: ${({ altDisabledStyle, disabled, theme }) =>
-      altDisabledStyle ? (disabled ? theme.deprecated_white : theme.deprecated_text2) : theme.deprecated_text2};
+      altDisabledStyle
+        ? disabled
+          ? theme.deprecated_white
+          : theme.deprecated_text2
+        : theme.deprecated_text2};
     cursor: auto;
     box-shadow: none;
     border: 1px solid transparent;
     outline: none;
   }
-`
+`;
 
 export const ButtonLight = styled(BaseButton)`
-  background-color: ${({ theme }) => theme.accentActionSoft};
-  color: ${({ theme }) => theme.accentAction};
+  background-color: ${({ theme }) => theme.secondaryAccentColor};
+  color: ${({ theme }) => theme.secondaryButtonColor};
   font-size: 20px;
   font-weight: 600;
 
   &:focus {
-    box-shadow: 0 0 0 1pt ${({ theme, disabled }) => !disabled && theme.accentActionSoft};
-    background-color: ${({ theme, disabled }) => !disabled && theme.accentActionSoft};
+    box-shadow: 0 0 0 1pt
+      ${({ theme, disabled }) => !disabled && theme.secondaryAccentColor};
+    background-color: ${({ theme, disabled }) =>
+      !disabled && theme.secondaryAccentColor};
   }
   &:hover {
-    background-color: ${({ theme, disabled }) => !disabled && theme.accentActionSoft};
+    background-color: ${({ theme, disabled }) =>
+      !disabled && theme.secondaryAccentColor};
   }
   &:active {
-    box-shadow: 0 0 0 1pt ${({ theme, disabled }) => !disabled && theme.accentActionSoft};
-    background-color: ${({ theme, disabled }) => !disabled && theme.accentActionSoft};
+    box-shadow: 0 0 0 1pt
+      ${({ theme, disabled }) => !disabled && theme.secondaryAccentColor};
+    background-color: ${({ theme, disabled }) =>
+      !disabled && theme.secondaryAccentColor};
   }
   :disabled {
     opacity: 0.4;
@@ -106,7 +126,38 @@ export const ButtonLight = styled(BaseButton)`
       outline: none;
     }
   }
-`
+`;
+
+export const ButtonLink = styled(BaseButton)`
+  background-color: transparent;
+  color: #0052cc;
+  font-size: 20px;
+  font-weight: 600;
+
+  &:focus {
+    box-shadow: 0 0 0 1pt ${({ theme, disabled }) => !disabled && `#0052CC`};
+  }
+  &:hover {
+    background-color: ${({ theme, disabled }) => !disabled && theme.intGray3};
+  }
+
+  &:active {
+    box-shadow: 0 0 0 1pt
+      ${({ theme, disabled }) => !disabled && theme.accentActionSoft};
+    
+  }
+
+  :disabled {
+    opacity: 0.4;
+    :hover {
+      cursor: auto;
+      background-color: transparent;
+      box-shadow: none;
+      border: 1px solid transparent;
+      outline: none;
+    }
+  }
+`;
 
 export const ButtonGray = styled(BaseButton)`
   background-color: ${({ theme }) => theme.deprecated_bg1};
@@ -115,20 +166,22 @@ export const ButtonGray = styled(BaseButton)`
   font-weight: 500;
 
   &:hover {
-    background-color: ${({ theme, disabled }) => !disabled && darken(0.05, theme.deprecated_bg2)};
+    background-color: ${({ theme, disabled }) =>
+      !disabled && darken(0.05, theme.deprecated_bg2)};
   }
   &:active {
-    background-color: ${({ theme, disabled }) => !disabled && darken(0.1, theme.deprecated_bg2)};
+    background-color: ${({ theme, disabled }) =>
+      !disabled && darken(0.1, theme.deprecated_bg2)};
   }
-`
+`;
 
 export const ButtonSecondary = styled(BaseButton)`
   border: 1px solid ${({ theme }) => theme.deprecated_primary4};
-  color: ${({ theme }) => theme.deprecated_primary1};
+  color: ${({ theme }) => theme.secondaryButtonColor};
   background-color: transparent;
   font-size: 16px;
   border-radius: 12px;
-  padding: ${({ padding }) => (padding ? padding : '10px')};
+  padding: ${({ padding }) => (padding ? padding : "10px")};
 
   &:focus {
     box-shadow: 0 0 0 1pt ${({ theme }) => theme.deprecated_primary4};
@@ -148,7 +201,7 @@ export const ButtonSecondary = styled(BaseButton)`
   a:hover {
     text-decoration: none;
   }
-`
+`;
 
 export const ButtonOutlined = styled(BaseButton)`
   border: 1px solid ${({ theme }) => theme.deprecated_bg2};
@@ -167,7 +220,7 @@ export const ButtonOutlined = styled(BaseButton)`
     opacity: 50%;
     cursor: auto;
   }
-`
+`;
 
 export const ButtonYellow = styled(BaseButton)`
   background-color: ${({ theme }) => theme.accentWarningSoft};
@@ -187,11 +240,23 @@ export const ButtonYellow = styled(BaseButton)`
     opacity: 60%;
     cursor: auto;
   }
-`
+`;
+
+export const ButtonNakedBlack = styled(BaseButton)`
+  background-color: white;
+  color: black;
+  &:hover {
+    background: ${({ theme }) => theme.stateOverlayHover};
+    mix-blend-mode: normal;
+  }
+  &:active {
+    background-color: ${({ theme }) => theme.stateOverlayHover};
+  }
+`;
 
 export const ButtonEmpty = styled(BaseButton)`
   background-color: transparent;
-  color: ${({ theme }) => theme.deprecated_primary1};
+  color: ${({ theme }) => theme.secondaryButtonColor};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -209,7 +274,7 @@ export const ButtonEmpty = styled(BaseButton)`
     opacity: 50%;
     cursor: auto;
   }
-`
+`;
 
 export const ButtonText = styled(BaseButton)`
   padding: 0;
@@ -231,7 +296,7 @@ export const ButtonText = styled(BaseButton)`
     opacity: 50%;
     cursor: auto;
   }
-`
+`;
 
 const ButtonConfirmedStyle = styled(BaseButton)`
   background-color: ${({ theme }) => theme.deprecated_bg3};
@@ -244,7 +309,7 @@ const ButtonConfirmedStyle = styled(BaseButton)`
     color: ${({ theme }) => theme.deprecated_text2};
     cursor: auto;
   }
-`
+`;
 
 const ButtonErrorStyle = styled(BaseButton)`
   background-color: ${({ theme }) => theme.deprecated_red1};
@@ -263,12 +328,13 @@ const ButtonErrorStyle = styled(BaseButton)`
   }
   &:disabled {
     opacity: 50%;
+    color: white;
     cursor: auto;
     box-shadow: none;
-    background-color: ${({ theme }) => theme.deprecated_red1};
-    border: 1px solid ${({ theme }) => theme.deprecated_red1};
+    background-color: #dddddd;
+    border: 1px solid #dddddd;
   }
-`
+`;
 
 export function ButtonConfirmed({
   confirmed,
@@ -276,56 +342,67 @@ export function ButtonConfirmed({
   ...rest
 }: { confirmed?: boolean; altDisabledStyle?: boolean } & ButtonProps) {
   if (confirmed) {
-    return <ButtonConfirmedStyle {...rest} />
+    return <ButtonConfirmedStyle {...rest} />;
   } else {
-    return <ButtonPrimary {...rest} altDisabledStyle={altDisabledStyle} />
+    return <ButtonPrimary {...rest} altDisabledStyle={altDisabledStyle} />;
   }
 }
 
-export function ButtonError({ error, ...rest }: { error?: boolean } & ButtonProps) {
+export function ButtonError({
+  error,
+  ...rest
+}: { error?: boolean } & ButtonProps) {
   if (error) {
-    return <ButtonErrorStyle {...rest} />
+    return <ButtonErrorStyle {...rest} />;
   } else {
-    return <ButtonPrimary {...rest} />
+    return <ButtonPrimary {...rest} />;
   }
 }
 
-export function ButtonDropdown({ disabled = false, children, ...rest }: { disabled?: boolean } & ButtonProps) {
+export function ButtonDropdown({
+  disabled = false,
+  children,
+  ...rest
+}: { disabled?: boolean } & ButtonProps) {
   return (
     <ButtonPrimary {...rest} disabled={disabled}>
       <RowBetween>
-        <div style={{ display: 'flex', alignItems: 'center' }}>{children}</div>
+        <div style={{ display: "flex", alignItems: "center" }}>{children}</div>
         <ChevronDown size={24} />
       </RowBetween>
     </ButtonPrimary>
-  )
+  );
 }
 
-export function ButtonDropdownLight({ disabled = false, children, ...rest }: { disabled?: boolean } & ButtonProps) {
+export function ButtonDropdownLight({
+  disabled = false,
+  children,
+  ...rest
+}: { disabled?: boolean } & ButtonProps) {
   return (
     <ButtonOutlined {...rest} disabled={disabled}>
       <RowBetween>
-        <div style={{ display: 'flex', alignItems: 'center' }}>{children}</div>
+        <div style={{ display: "flex", alignItems: "center" }}>{children}</div>
         <ChevronDown size={24} />
       </RowBetween>
     </ButtonOutlined>
-  )
+  );
 }
 
 const ActiveOutlined = styled(ButtonOutlined)`
   border: 1px solid;
-  border-color: ${({ theme }) => theme.deprecated_primary1};
-`
+  border-color: ${({ theme }) => theme.secondaryButtonColor};
+`;
 
 const Circle = styled.div`
   height: 17px;
   width: 17px;
   border-radius: 50%;
-  background-color: ${({ theme }) => theme.deprecated_primary1};
+  background-color: ${({ theme }) => theme.secondaryButtonColor};
   display: flex;
   align-items: center;
   justify-content: center;
-`
+`;
 
 const CheckboxWrapper = styled.div`
   width: 20px;
@@ -333,21 +410,25 @@ const CheckboxWrapper = styled.div`
   position: absolute;
   top: 11px;
   right: 15px;
-`
+`;
 
 const ResponsiveCheck = styled(Check)`
   size: 13px;
-`
+`;
 
-export function ButtonRadioChecked({ active = false, children, ...rest }: { active?: boolean } & ButtonProps) {
-  const theme = useTheme()
+export function ButtonRadioChecked({
+  active = false,
+  children,
+  ...rest
+}: { active?: boolean } & ButtonProps) {
+  const theme = useTheme() as any;
 
   if (!active) {
     return (
       <ButtonOutlined $borderRadius="12px" padding="12px 8px" {...rest}>
         {<RowBetween>{children}</RowBetween>}
       </ButtonOutlined>
-    )
+    );
   } else {
     return (
       <ActiveOutlined {...rest} padding="12px 8px" $borderRadius="12px">
@@ -362,7 +443,7 @@ export function ButtonRadioChecked({ active = false, children, ...rest }: { acti
           </RowBetween>
         }
       </ActiveOutlined>
-    )
+    );
   }
 }
 
@@ -395,4 +476,4 @@ export const MediumButton = styled.button`
   :focus {
     background-color: ${({ theme }) => theme.stateOverlayPressed};
   }
-`
+`;

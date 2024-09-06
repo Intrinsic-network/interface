@@ -1,7 +1,7 @@
 import { useWeb3React } from '@web3-react/core'
 import { ConnectionType } from 'connection'
 import useENSAvatar from 'hooks/useENSAvatar'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import CoinbaseWalletIcon from '../../assets/images/coinbaseWalletIcon.svg'
 import WalletConnectIcon from '../../assets/images/walletConnectIcon.svg'

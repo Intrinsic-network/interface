@@ -16,7 +16,7 @@ import { Suspense, useEffect, useMemo } from 'react'
 import { useQuery } from 'react-query'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { useSpring } from 'react-spring'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 const FILTER_WIDTH = 332
 const BAG_WIDTH = 324

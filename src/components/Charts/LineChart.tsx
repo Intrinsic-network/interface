@@ -3,7 +3,7 @@ import { LinePath } from '@visx/shape'
 import { CurveFactory } from 'd3'
 import React from 'react'
 import { ReactNode } from 'react'
-import { useTheme } from 'styled-components/macro'
+import { useTheme } from 'styled-components'
 import { Color } from 'theme/styled'
 
 export interface LineChartProps<T> {
@@ -31,7 +31,7 @@ function LineChart<T>({
   height,
   children,
 }: LineChartProps<T>) {
-  const theme = useTheme()
+  const theme = useTheme() as any
   return (
     <svg width={width} height={height}>
       <Group top={marginTop}>

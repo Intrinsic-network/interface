@@ -1,17 +1,17 @@
-import { CollectionRow, ListingRow, ListingStatus } from 'nft/types'
-import create from 'zustand'
-import { devtools } from 'zustand/middleware'
+import { CollectionRow, ListingRow, ListingStatus } from "nft/types";
+import { create } from "zustand";
+import { devtools } from "zustand/middleware";
 
 interface NFTListState {
-  looksRareNonce: number
-  listingStatus: ListingStatus
-  listings: ListingRow[]
-  collectionsRequiringApproval: CollectionRow[]
-  setLooksRareNonce: (nonce: number) => void
-  getLooksRareNonce: () => number
-  setListingStatus: (status: ListingStatus) => void
-  setListings: (listings: ListingRow[]) => void
-  setCollectionsRequiringApproval: (collections: CollectionRow[]) => void
+  looksRareNonce: number;
+  listingStatus: ListingStatus;
+  listings: ListingRow[];
+  collectionsRequiringApproval: CollectionRow[];
+  setLooksRareNonce: (nonce: number) => void;
+  getLooksRareNonce: () => number;
+  setListingStatus: (status: ListingStatus) => void;
+  setListings: (listings: ListingRow[]) => void;
+  setCollectionsRequiringApproval: (collections: CollectionRow[]) => void;
 }
 
 export const useNFTList = create<NFTListState>()(
@@ -22,22 +22,22 @@ export const useNFTList = create<NFTListState>()(
     collectionsRequiringApproval: [],
     setLooksRareNonce: (nonce) =>
       set(() => {
-        return { looksRareNonce: nonce }
+        return { looksRareNonce: nonce };
       }),
     getLooksRareNonce: () => {
-      return get().looksRareNonce
+      return get().looksRareNonce;
     },
     setListingStatus: (status) =>
       set(() => {
-        return { listingStatus: status }
+        return { listingStatus: status };
       }),
     setListings: (listings) =>
       set(() => {
-        return { listings }
+        return { listings };
       }),
     setCollectionsRequiringApproval: (collections) =>
       set(() => {
-        return { collectionsRequiringApproval: collections }
+        return { collectionsRequiringApproval: collections };
       }),
   }))
-)
+);

@@ -8,7 +8,7 @@ import { CollectionInfoForAsset, Deprecated_SellOrder, GenieAsset, SellOrder, To
 import { ethNumberStandardFormatter, formatEthPrice, getMarketplaceIcon, timeLeft, useUsdPrice } from 'nft/utils'
 import { useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { ThemedText } from 'theme'
 
 interface AssetPriceDetailsProps {
@@ -170,7 +170,7 @@ export const OwnerContainer = ({ asset }: { asset: GenieAsset }) => {
 }
 
 export const NotForSale = ({ collection }: { collection: CollectionInfoForAsset }) => {
-  const theme = useTheme()
+  const theme = useTheme() as any
 
   return (
     <BestPriceContainer>

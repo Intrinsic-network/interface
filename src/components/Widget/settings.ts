@@ -44,7 +44,7 @@ export function useSyncWidgetSettings() {
     setAppSlippage('auto')
   }, [setAppSlippage, setAppTtl])
 
-  const settings: SwapController['settings'] = useMemo(() => {
+  const settings: any = useMemo(() => {
     const auto = appSlippage === 'auto'
     return { slippage: { auto, max: widgetSlippage }, transactionTtl: widgetTtl }
   }, [widgetSlippage, widgetTtl, appSlippage])

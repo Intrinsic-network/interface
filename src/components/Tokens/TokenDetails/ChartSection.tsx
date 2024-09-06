@@ -9,7 +9,7 @@ import { TopToken } from 'graphql/data/TopTokens'
 import { CHAIN_NAME_TO_CHAIN_ID } from 'graphql/data/util'
 import { useAtomValue } from 'jotai/utils'
 import useCurrencyLogoURIs from 'lib/hooks/useCurrencyLogoURIs'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { textFadeIn } from 'theme/animations'
 
 import { filterTimeAtom } from '../state'

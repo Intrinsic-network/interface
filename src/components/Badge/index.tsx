@@ -1,66 +1,66 @@
-import { readableColor } from 'polished'
-import { PropsWithChildren } from 'react'
-import styled, { DefaultTheme } from 'styled-components/macro'
-import { Color } from 'theme/styled'
+import { readableColor } from "polished";
+import { PropsWithChildren } from "react";
+import styled from "styled-components";
+import { Color } from "theme/styled";
 
 export enum BadgeVariant {
-  DEFAULT = 'DEFAULT',
-  NEGATIVE = 'NEGATIVE',
-  POSITIVE = 'POSITIVE',
-  PRIMARY = 'PRIMARY',
-  WARNING = 'WARNING',
+  DEFAULT = "DEFAULT",
+  NEGATIVE = "NEGATIVE",
+  POSITIVE = "POSITIVE",
+  PRIMARY = "PRIMARY",
+  WARNING = "WARNING",
 
-  WARNING_OUTLINE = 'WARNING_OUTLINE',
+  WARNING_OUTLINE = "WARNING_OUTLINE",
 }
 
 interface BadgeProps {
-  variant?: BadgeVariant
+  variant?: "DEFAULT" | "NEGATIVE" | "POSITIVE" | "PRIMARY" | "WARNING";
 }
 
-function pickBackgroundColor(variant: BadgeVariant | undefined, theme: DefaultTheme): Color {
+function pickBackgroundColor(variant: any, theme: any): Color {
   switch (variant) {
     case BadgeVariant.NEGATIVE:
-      return theme.deprecated_error
+      return theme.deprecated_error;
     case BadgeVariant.POSITIVE:
-      return theme.deprecated_success
+      return theme.deprecated_success;
     case BadgeVariant.PRIMARY:
-      return theme.deprecated_primary1
+      return theme.secondaryButtonColor;
     case BadgeVariant.WARNING:
-      return theme.deprecated_warning
+      return theme.deprecated_warning;
     case BadgeVariant.WARNING_OUTLINE:
-      return 'transparent'
+      return "transparent";
     default:
-      return theme.deprecated_bg2
+      return theme.deprecated_bg2;
   }
 }
 
-function pickBorder(variant: BadgeVariant | undefined, theme: DefaultTheme): string {
+function pickBorder(variant: any, theme: any): string {
+  console.log(variant);
   switch (variant) {
     case BadgeVariant.WARNING_OUTLINE:
-      return `1px solid ${theme.deprecated_warning}`
+      return `1px solid ${theme.deprecated_warning}`;
     default:
-      return 'unset'
+      return "unset";
   }
 }
 
-function pickFontColor(variant: BadgeVariant | undefined, theme: DefaultTheme): string {
+function pickFontColor(variant: any, theme: any): string {
   switch (variant) {
     case BadgeVariant.NEGATIVE:
-      return readableColor(theme.deprecated_error)
+      return readableColor(theme.deprecated_error);
     case BadgeVariant.POSITIVE:
-      return readableColor(theme.deprecated_success)
+      return readableColor(theme.deprecated_success);
     case BadgeVariant.WARNING:
-      return readableColor(theme.deprecated_warning)
+      return readableColor(theme.deprecated_warning);
     case BadgeVariant.WARNING_OUTLINE:
-      return theme.deprecated_warning
+      return theme.deprecated_warning;
     default:
-      return readableColor(theme.deprecated_bg2)
+      return readableColor(theme.deprecated_bg2);
   }
 }
 
-const Badge = styled.div<PropsWithChildren<BadgeProps>>`
+const Badge = styled.div<BadgeProps>`
   align-items: center;
-  background-color: ${({ theme, variant }) => pickBackgroundColor(variant, theme)};
   border: ${({ theme, variant }) => pickBorder(variant, theme)};
   border-radius: 0.5rem;
   color: ${({ theme, variant }) => pickFontColor(variant, theme)};
@@ -68,6 +68,6 @@ const Badge = styled.div<PropsWithChildren<BadgeProps>>`
   padding: 4px 6px;
   justify-content: center;
   font-weight: 500;
-`
+`;
 
-export default Badge
+export default Badge;

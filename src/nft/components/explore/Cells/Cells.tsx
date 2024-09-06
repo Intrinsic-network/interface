@@ -2,7 +2,7 @@ import { formatEther } from '@ethersproject/units'
 import { SquareArrowDownIcon, SquareArrowUpIcon, VerifiedIcon } from 'nft/components/icons'
 import { Denomination } from 'nft/types'
 import { volumeFormatter } from 'nft/utils'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { ThemedText } from 'theme'
 
 import { ethNumberStandardFormatter, formatWeiToDecimal } from '../../../utils/currency'

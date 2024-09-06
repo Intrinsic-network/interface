@@ -28,7 +28,7 @@ import {
   useState,
 } from 'react'
 import { AlertTriangle } from 'react-feather'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { ThemedText } from 'theme'
 
 import * as styles from './Card.css'

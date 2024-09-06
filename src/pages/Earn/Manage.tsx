@@ -4,7 +4,7 @@ import { useWeb3React } from '@web3-react/core'
 import JSBI from 'jsbi'
 import { useCallback, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import { CountUp } from 'use-count-up'
 
 import { ButtonEmpty, ButtonPrimary } from '../../components/Button'

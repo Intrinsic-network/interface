@@ -6,7 +6,7 @@ import useCurrentBlockTimestamp from 'hooks/useCurrentBlockTimestamp'
 import { useEffect } from 'react'
 import { MessageCircle, X } from 'react-feather'
 import { useShowSurveyPopup } from 'state/user/hooks'
-import styled, { useTheme } from 'styled-components/macro'
+import styled, { useTheme } from 'styled-components'
 import { ExternalLink, ThemedText } from 'theme'
 import { Z_INDEX } from 'theme/zIndex'
 
@@ -52,7 +52,7 @@ const WrappedCloseIcon = styled(X)`
 const END_TIMESTAMP = 1642272346 // Jan 15th
 
 export default function SurveyPopup() {
-  const theme = useTheme()
+  const theme = useTheme() as any
   const [showPopup, setShowSurveyPopup] = useShowSurveyPopup()
 
   // show popup to 1% of users
@@ -102,7 +102,7 @@ export default function SurveyPopup() {
             fontSize="12px"
             color={theme.deprecated_black}
           >
-            <Trans>Take a 10 minute survey to help us improve your experience in the Uniswap app.</Trans>
+            <Trans>Take a 10 minute survey to help us improve your experience in the Intrinsic app.</Trans>
           </ThemedText.DeprecatedBlack>
         </Wrapper>
       )}
