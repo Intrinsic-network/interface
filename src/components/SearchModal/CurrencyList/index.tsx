@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Token } from '@intrinsic-network/sdk-core'
+import { Currency, CurrencyAmount, Token } from '@intrinsic-finance/sdk-core'
 import { useWeb3React } from '@web3-react/core'
 import { ElementName, Event, EventName } from 'analytics/constants'
 import { TraceEvent } from 'analytics/TraceEvent'

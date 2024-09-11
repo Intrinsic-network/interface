@@ -1,6 +1,6 @@
 import { Interface } from '@ethersproject/abi'
-import { toHex } from '@intrinsic-network/intrinsic-sdk'
-import { Currency, CurrencyAmount } from '@intrinsic-network/sdk-core'
+import { toHex } from '@intrinsic-finance/intrinsic-sdk'
+import { Currency, CurrencyAmount } from '@intrinsic-finance/sdk-core'
 
 import { Erc20Interface } from '../abis/types/Erc20'
 

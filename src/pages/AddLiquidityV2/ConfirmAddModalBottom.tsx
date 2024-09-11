@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Fraction, Percent } from '@intrinsic-network/sdk-core'
+import { Currency, CurrencyAmount, Fraction, Percent } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import { Text } from 'rebass'
 

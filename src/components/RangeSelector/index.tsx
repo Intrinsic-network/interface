@@ -1,4 +1,4 @@
-import { Currency, Price, Token } from '@intrinsic-network/sdk-core'
+import { Currency, Price, Token } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import { AutoColumn } from 'components/Column'
 import StepCounter from 'components/InputStepCounter/InputStepCounter'

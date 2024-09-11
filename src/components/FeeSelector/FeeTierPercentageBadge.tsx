@@ -1,4 +1,4 @@
-import { FeeAmount } from '@intrinsic-network/intrinsic-sdk'
+import { FeeAmount } from '@intrinsic-finance/intrinsic-sdk'
 import { Trans } from '@lingui/macro'
 import Badge from 'components/Badge'
 import { useFeeTierDistribution } from 'hooks/useFeeTierDistribution'

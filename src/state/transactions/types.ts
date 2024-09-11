@@ -1,4 +1,4 @@
-import { TradeType } from '@intrinsic-network/sdk-core'
+import { TradeType } from '@intrinsic-finance/sdk-core'
 
 import { VoteOption } from '../governance/types'
 

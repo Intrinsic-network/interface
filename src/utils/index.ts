@@ -2,7 +2,7 @@ import { getAddress } from '@ethersproject/address'
 import { AddressZero } from '@ethersproject/constants'
 import { Contract } from '@ethersproject/contracts'
 import type { JsonRpcProvider, JsonRpcSigner } from '@ethersproject/providers'
-import { Token } from '@intrinsic-network/sdk-core'
+import { Token } from '@intrinsic-finance/sdk-core'
 import { ChainTokenMap } from 'lib/hooks/useTokenList/utils'
 
 // returns the checksummed address if the address is valid, otherwise returns false

@@ -1,5 +1,5 @@
-import { FeeAmount } from '@intrinsic-network/intrinsic-sdk'
-import { Currency } from '@intrinsic-network/sdk-core'
+import { FeeAmount } from '@intrinsic-finance/intrinsic-sdk'
+import { Currency } from '@intrinsic-finance/sdk-core'
 import { TickProcessed, usePoolActiveLiquidity } from 'hooks/usePoolTickData'
 import { useCallback, useMemo } from 'react'
 

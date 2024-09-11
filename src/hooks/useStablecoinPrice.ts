@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Price, Token, TradeType } from '@intrinsic-network/sdk-core'
+import { Currency, CurrencyAmount, Price, Token, TradeType } from '@intrinsic-finance/sdk-core'
 import { useWeb3React } from '@web3-react/core'
 import tryParseCurrencyAmount from 'lib/utils/tryParseCurrencyAmount'
 import { useMemo, useRef } from 'react'

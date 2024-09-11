@@ -1,6 +1,6 @@
-import { FeeAmount, Pool, Route as V3Route } from '@intrinsic-network/intrinsic-sdk'
-import { MixedRouteSDK, Protocol } from '@intrinsic-network/router-sdk'
-import { Currency, CurrencyAmount, Token, TradeType } from '@intrinsic-network/sdk-core'
+import { FeeAmount, Pool, Route as V3Route } from '@intrinsic-finance/intrinsic-sdk'
+import { MixedRouteSDK, Protocol } from '@intrinsic-finance/router-sdk'
+import { Currency, CurrencyAmount, Token, TradeType } from '@intrinsic-finance/sdk-core'
 import { Pair, Route as V2Route } from '@uniswap/v2-sdk'
 
 import { nativeOnChain } from '../../constants/tokens'

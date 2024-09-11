@@ -1,4 +1,4 @@
-import { Token, TradeType } from '@intrinsic-network/sdk-core'
+import { Token, TradeType } from '@intrinsic-finance/sdk-core'
 
 import { nativeOnChain } from '../../constants/tokens'
 import { computeRoutes } from './utils'

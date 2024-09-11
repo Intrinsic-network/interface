@@ -1,4 +1,4 @@
-import { FeeAmount } from '@intrinsic-network/intrinsic-sdk'
+import { FeeAmount } from '@intrinsic-finance/intrinsic-sdk'
 import { Trans } from '@lingui/macro'
 import { ButtonRadioChecked } from 'components/Button'
 import { AutoColumn } from 'components/Column'

@@ -1,4 +1,4 @@
-import { Currency, Token } from "@intrinsic-network/sdk-core";
+import { Currency, Token } from "@intrinsic-finance/sdk-core";
 // eslint-disable-next-line no-restricted-imports
 import { t, Trans } from "@lingui/macro";
 import { useWeb3React } from "@web3-react/core";

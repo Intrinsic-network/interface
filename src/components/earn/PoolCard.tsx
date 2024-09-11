@@ -1,4 +1,4 @@
-import { CurrencyAmount, Token } from '@intrinsic-network/sdk-core'
+import { CurrencyAmount, Token } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import JSBI from 'jsbi'
 import styled from 'styled-components'

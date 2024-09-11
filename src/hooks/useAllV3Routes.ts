@@ -1,5 +1,5 @@
-import { Pool, Route } from '@intrinsic-network/intrinsic-sdk'
-import { Currency } from '@intrinsic-network/sdk-core'
+import { Pool, Route } from '@intrinsic-finance/intrinsic-sdk'
+import { Currency } from '@intrinsic-finance/sdk-core'
 import { useWeb3React } from '@web3-react/core'
 import { useMemo } from 'react'
 

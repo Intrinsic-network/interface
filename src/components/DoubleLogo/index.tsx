@@ -1,4 +1,4 @@
-import { Currency } from '@intrinsic-network/sdk-core'
+import { Currency } from '@intrinsic-finance/sdk-core'
 import styled from 'styled-components'
 
 import CurrencyLogo from '../CurrencyLogo'
