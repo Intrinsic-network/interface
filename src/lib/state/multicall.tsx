@@ -1,4 +1,4 @@
-import { createMulticall, ListenerOptions } from '@intrinsic-network/redux-multicall'
+import { createMulticall, ListenerOptions } from '@intrinsic-finance/redux-multicall'
 import { useWeb3React } from '@web3-react/core'
 import { useInterfaceMulticall } from 'hooks/useContract'
 import useBlockNumber from 'lib/hooks/useBlockNumber'
@@ -31,7 +31,6 @@ export function MulticallUpdater() {
       chainId={chainId}
       latestBlockNumber={latestBlockNumber}
       contract={contract}
-      listenerOptions={listenerOptions}
     />
   )
 }

@@ -1,4 +1,4 @@
-import { Currency, NativeCurrency, RBTC, Token, WRBTC } from '@intrinsic-network/sdk-core'
+import { Currency, NativeCurrency, RBTC, Token, WRBTC } from '@intrinsic-finance/sdk-core'
 import invariant from 'tiny-invariant'
 
 import { UNI_ADDRESS } from './addresses'

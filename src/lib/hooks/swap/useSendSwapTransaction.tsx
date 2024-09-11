@@ -1,7 +1,7 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import type { JsonRpcProvider, TransactionResponse } from '@ethersproject/providers'
-import { Trade } from '@intrinsic-network/router-sdk'
-import { Currency, TradeType } from '@intrinsic-network/sdk-core'
+import { Trade } from '@intrinsic-finance/router-sdk'
+import { Currency, TradeType } from '@intrinsic-finance/sdk-core'
 // eslint-disable-next-line no-restricted-imports
 import { t, Trans } from '@lingui/macro'
 import { useMemo } from 'react'

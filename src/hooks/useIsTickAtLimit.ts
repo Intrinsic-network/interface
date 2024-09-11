@@ -1,4 +1,4 @@
-import { FeeAmount, nearestUsableTick, TICK_SPACINGS, TickMath } from '@intrinsic-network/intrinsic-sdk'
+import { FeeAmount, nearestUsableTick, TICK_SPACINGS, TickMath } from '@intrinsic-finance/intrinsic-sdk'
 import { useMemo } from 'react'
 import { Bound } from 'state/mint/v3/actions'
 

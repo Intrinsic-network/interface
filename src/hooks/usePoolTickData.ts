@@ -1,5 +1,5 @@
-import { FeeAmount, nearestUsableTick, Pool, TICK_SPACINGS, tickToPrice } from '@intrinsic-network/intrinsic-sdk'
-import { Currency } from '@intrinsic-network/sdk-core'
+import { FeeAmount, nearestUsableTick, Pool, TICK_SPACINGS, tickToPrice } from '@intrinsic-finance/intrinsic-sdk'
+import { Currency } from '@intrinsic-finance/sdk-core'
 import { useWeb3React } from '@web3-react/core'
 import { ZERO_ADDRESS } from 'constants/misc'
 import useAllV3TicksQuery, { TickData } from 'graphql/thegraph/AllV3TicksQuery'

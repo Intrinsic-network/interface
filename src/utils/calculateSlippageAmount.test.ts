@@ -1,5 +1,5 @@
 import { AddressZero } from '@ethersproject/constants'
-import { CurrencyAmount, Percent, Token } from '@intrinsic-network/sdk-core'
+import { CurrencyAmount, Percent, Token } from '@intrinsic-finance/sdk-core'
 
 import { calculateSlippageAmount } from './calculateSlippageAmount'
 

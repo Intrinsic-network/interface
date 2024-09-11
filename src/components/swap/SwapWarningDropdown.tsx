@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Token, TradeType } from '@intrinsic-network/sdk-core'
+import { Currency, CurrencyAmount, Token, TradeType } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import { RowBetween } from 'components/Row'
 import { MouseoverTooltipContent } from 'components/Tooltip'

@@ -1,4 +1,4 @@
-import { Currency, NativeCurrency, Token } from '@intrinsic-network/sdk-core'
+import { Currency, NativeCurrency, Token } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import { ParentSize } from '@visx/responsive'
 import CurrencyLogo from 'components/CurrencyLogo'

@@ -1,6 +1,6 @@
-import { FeeAmount, Pool } from '@intrinsic-network/intrinsic-sdk'
-import { Trade } from '@intrinsic-network/router-sdk'
-import { Currency, CurrencyAmount, Fraction, Percent, TradeType } from '@intrinsic-network/sdk-core'
+import { FeeAmount, Pool } from '@intrinsic-finance/intrinsic-sdk'
+import { Trade } from '@intrinsic-finance/router-sdk'
+import { Currency, CurrencyAmount, Fraction, Percent, TradeType } from '@intrinsic-finance/sdk-core'
 import { Pair } from '@uniswap/v2-sdk'
 import JSBI from 'jsbi'
 

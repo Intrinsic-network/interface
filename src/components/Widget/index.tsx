@@ -1,5 +1,5 @@
-import { Trade } from '@intrinsic-network/router-sdk'
-import { Currency, TradeType } from '@intrinsic-network/sdk-core'
+import { Trade } from '@intrinsic-finance/router-sdk'
+import { Currency, TradeType } from '@intrinsic-finance/sdk-core'
 import {
   AddEthereumChainParameter,
   EMPTY_TOKEN_LIST,

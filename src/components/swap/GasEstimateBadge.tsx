@@ -1,4 +1,4 @@
-import { Currency, TradeType } from '@intrinsic-network/sdk-core'
+import { Currency, TradeType } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import { sendEvent } from 'components/analytics'
 import { AutoColumn } from 'components/Column'

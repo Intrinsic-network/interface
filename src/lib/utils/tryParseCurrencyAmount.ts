@@ -1,5 +1,5 @@
 import { parseUnits } from '@ethersproject/units'
-import { Currency, CurrencyAmount } from '@intrinsic-network/sdk-core'
+import { Currency, CurrencyAmount } from '@intrinsic-finance/sdk-core'
 import JSBI from 'jsbi'
 
 /**

@@ -1,5 +1,5 @@
-import { tickToPrice } from '@intrinsic-network/intrinsic-sdk'
-import { Price, Token } from '@intrinsic-network/sdk-core'
+import { tickToPrice } from '@intrinsic-finance/intrinsic-sdk'
+import { Price, Token } from '@intrinsic-finance/sdk-core'
 
 export function getTickToPrice(baseToken?: Token, quoteToken?: Token, tick?: number): Price<Token, Token> | undefined {
   if (!baseToken || !quoteToken || typeof tick !== 'number') {

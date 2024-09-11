@@ -1,5 +1,5 @@
-import { Position } from "@intrinsic-network/intrinsic-sdk";
-import { Percent, Price, Token } from "@intrinsic-network/sdk-core";
+import { Position } from "@intrinsic-finance/intrinsic-sdk";
+import { Percent, Price, Token } from "@intrinsic-finance/sdk-core";
 import { Trans } from "@lingui/macro";
 import Badge from "components/Badge";
 import RangeBadge from "components/Badge/RangeBadge";

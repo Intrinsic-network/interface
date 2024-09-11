@@ -1,4 +1,4 @@
-import { Pool, Position } from '@intrinsic-network/intrinsic-sdk'
+import { Pool, Position } from '@intrinsic-finance/intrinsic-sdk'
 import { usePool } from 'hooks/usePools'
 import { PositionDetails } from 'types/position'
 

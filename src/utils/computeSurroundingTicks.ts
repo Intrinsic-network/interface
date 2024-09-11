@@ -1,5 +1,5 @@
-import { tickToPrice } from '@intrinsic-network/intrinsic-sdk'
-import { Token } from '@intrinsic-network/sdk-core'
+import { tickToPrice } from '@intrinsic-finance/intrinsic-sdk'
+import { Token } from '@intrinsic-finance/sdk-core'
 import { TickProcessed } from 'hooks/usePoolTickData'
 import JSBI from 'jsbi'
 

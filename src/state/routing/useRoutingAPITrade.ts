@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, TradeType } from '@intrinsic-network/sdk-core'
+import { Currency, CurrencyAmount, TradeType } from '@intrinsic-finance/sdk-core'
 import { IMetric, MetricLoggerUnit, setGlobalMetric } from '@intrinsic-network/smart-order-router'
 import { skipToken } from '@reduxjs/toolkit/query/react'
 import { sendTiming } from 'components/analytics'

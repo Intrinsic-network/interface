@@ -1,4 +1,4 @@
-import { Percent } from '@intrinsic-network/sdk-core'
+import { Percent } from '@intrinsic-finance/sdk-core'
 
 import { warningSeverity } from '../../utils/prices'
 import { ErrorText } from './styleds'
