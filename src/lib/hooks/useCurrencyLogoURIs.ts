@@ -18,12 +18,12 @@ export function getNativeLogoURI(chainId: SupportedChainId = SupportedChainId.RS
 
 export function getTokenLogoURI(
   address: string,
-  chainId: SupportedChainId = SupportedChainId.RSK_MAINNET
+  chainId: SupportedChainId = SupportedChainId.RSK_MAINNET,
+  token?: any
 ): string | void {
-  const networkName = chainIdToNetworkName(chainId)
   const networksWithUrls = [SupportedChainId.RSK_MAINNET, SupportedChainId.RSK_TESTNET]
   if (networksWithUrls.includes(chainId)) {
-    return `https://raw.githubusercontent.com/Uniswap/assets/master/blockchains/${networkName}/assets/${address}/logo.png`
+    return `https://raw.githubusercontent.com/Intrinsic-network/interface/refs/heads/main/src/assets/images/${token}/logo.png`;
   }
 }
 
@@ -34,7 +34,8 @@ export default function useCurrencyLogoURIs(
         isToken?: boolean
         address?: string
         chainId: number
-        logoURI?: string
+        logoURI?: string,
+        symbol?: any,
       }
     | null
     | undefined
@@ -47,7 +48,7 @@ export default function useCurrencyLogoURIs(
         logoURIs.push(getNativeLogoURI(currency.chainId))
       } else if (currency.isToken || currency.address) {
         const checksummedAddress = isAddress(currency.address)
-        const logoURI = checksummedAddress && getTokenLogoURI(checksummedAddress, currency.chainId)
+        const logoURI = checksummedAddress && getTokenLogoURI(checksummedAddress, currency.chainId, currency.symbol)
         if (logoURI) {
           logoURIs.push(logoURI)
         }

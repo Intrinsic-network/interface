@@ -1,9 +1,9 @@
 /**
- * List of all the networks supported by the Uniswap Interface
+ * List of all the networks supported by the Intrinsic Interface
  */
 export enum SupportedChainId {
   RSK_MAINNET = 30,
-  RSK_TESTNET = 31,
+  RSK_TESTNET = 31
 }
 
 export const CHAIN_IDS_TO_NAMES = {
