@@ -156,9 +156,9 @@ export const MenuDropdown = () => {
                 minWidth={{md: "160", sm: "160"}}
                 paddingX="8"
               >
-                <SecondaryLinkedText href="https://help.uniswap.org/en/">
+                {/* <SecondaryLinkedText href="https://help.uniswap.org/en/">
                   <Trans>Help center</Trans> ↗
-                </SecondaryLinkedText>
+                </SecondaryLinkedText> */}
                 <SecondaryLinkedText href="https://docs.intrinsic.finance/">
                   <Trans>Documentation</Trans> ↗
                 </SecondaryLinkedText>

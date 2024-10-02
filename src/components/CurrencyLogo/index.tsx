@@ -37,8 +37,7 @@ export default function CurrencyLogo({
   src?: string | null
 }) {
   const logoURIs = useCurrencyLogoURIs(currency);
-  console.log(logoURIs);
-  console.log(currency);
+
   const srcs = useMemo(() => (src ? [src, ...logoURIs] : logoURIs), [src, logoURIs])
   const props = {
     alt: `${currency?.symbol ?? 'token'} logo`,
