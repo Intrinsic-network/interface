@@ -3,17 +3,17 @@ import useHttpLocations from 'hooks/useHttpLocations'
 import { useMemo } from 'react'
 import { isAddress } from 'utils'
 
-import EthereumLogo from '../../assets/images/ethereum-logo.png'
+import RBTCLogo from '../../assets/images/rbtc-logo.png'
 import { NATIVE_CHAIN_ID } from '../../constants/tokens'
 
-type Network = 'ethereum' | 'arbitrum' | 'optimism' | 'polygon'
+type Network = 'ethereum' | 'arbitrum' | 'optimism' | 'polygon' | 'rootstock'
 
 function chainIdToNetworkName(chainId: SupportedChainId = SupportedChainId.RSK_MAINNET): Network {
-  return 'ethereum'
+  return 'rootstock'
 }
 
 export function getNativeLogoURI(chainId: SupportedChainId = SupportedChainId.RSK_MAINNET): string {
-  return EthereumLogo
+  return RBTCLogo
 }
 
 export function getTokenLogoURI(
