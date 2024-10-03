@@ -1,4 +1,4 @@
-import { Percent, Token } from '@intrinsic-network/sdk-core'
+import { Percent, Token } from '@intrinsic-finance/sdk-core'
 import { computePairAddress, Pair } from '@uniswap/v2-sdk'
 import { useWeb3React } from '@web3-react/core'
 import { SupportedLocale } from 'constants/locales'

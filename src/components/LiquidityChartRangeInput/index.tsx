@@ -1,5 +1,5 @@
-import { FeeAmount } from '@intrinsic-network/intrinsic-sdk'
-import { Currency, Price, Token } from '@intrinsic-network/sdk-core'
+import { FeeAmount } from '@intrinsic-finance/intrinsic-sdk'
+import { Currency, Price, Token } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import { sendEvent } from 'components/analytics'
 import { AutoColumn, ColumnCenter } from 'components/Column'

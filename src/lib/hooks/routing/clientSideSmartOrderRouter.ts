@@ -1,4 +1,4 @@
-import { BigintIsh, CurrencyAmount, Token, TradeType } from '@intrinsic-network/sdk-core'
+import { BigintIsh, CurrencyAmount, Token, TradeType } from '@intrinsic-finance/sdk-core'
 // This file is lazy-loaded, so the import of smart-order-router is intentional.
 // eslint-disable-next-line no-restricted-imports
 import { AlphaRouter, AlphaRouterConfig, ChainId } from '@intrinsic-network/smart-order-router'

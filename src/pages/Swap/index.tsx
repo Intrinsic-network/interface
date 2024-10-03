@@ -1,11 +1,11 @@
-import { Trade } from "@intrinsic-network/router-sdk";
+import { Trade } from "@intrinsic-finance/router-sdk";
 import {
   Currency,
   CurrencyAmount,
   Percent,
   Token,
   TradeType,
-} from "@intrinsic-network/sdk-core";
+} from "@intrinsic-finance/sdk-core";
 import { Trans } from "@lingui/macro";
 import { useWeb3React } from "@web3-react/core";
 import { sendAnalyticsEvent } from "analytics";

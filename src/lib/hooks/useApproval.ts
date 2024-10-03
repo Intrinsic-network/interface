@@ -1,6 +1,6 @@
 import { MaxUint256 } from '@ethersproject/constants'
 import type { TransactionResponse } from '@ethersproject/providers'
-import { Currency, CurrencyAmount, Token } from '@intrinsic-network/sdk-core'
+import { Currency, CurrencyAmount, Token } from '@intrinsic-finance/sdk-core'
 import { useWeb3React } from '@web3-react/core'
 import { sendAnalyticsEvent } from 'analytics'
 import { EventName } from 'analytics/constants'

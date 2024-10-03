@@ -1,5 +1,5 @@
-import { FeeAmount } from '@intrinsic-network/intrinsic-sdk'
-import { Currency, Token } from '@intrinsic-network/sdk-core'
+import { FeeAmount } from '@intrinsic-finance/intrinsic-sdk'
+import { Currency, Token } from '@intrinsic-finance/sdk-core'
 import { sendEvent } from 'components/analytics'
 import useBlockNumber from 'lib/hooks/useBlockNumber'
 import ms from 'ms.macro'

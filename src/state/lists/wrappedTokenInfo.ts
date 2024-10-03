@@ -1,4 +1,4 @@
-import { Currency, Token } from '@intrinsic-network/sdk-core'
+import { Currency, Token } from '@intrinsic-finance/sdk-core'
 import { Tags, TokenInfo, TokenList } from '@uniswap/token-lists'
 
 import { isAddress } from '../../utils'

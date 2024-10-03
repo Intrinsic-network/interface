@@ -1,5 +1,5 @@
-import { Trade } from '@intrinsic-network/router-sdk'
-import { Currency, CurrencyAmount, Percent, Token, TradeType } from '@intrinsic-network/sdk-core'
+import { Trade } from '@intrinsic-finance/router-sdk'
+import { Currency, CurrencyAmount, Percent, Token, TradeType } from '@intrinsic-finance/sdk-core'
 import { useWeb3React } from '@web3-react/core'
 import { SWAP_ROUTER_ADDRESSES } from 'constants/addresses'
 import { useMemo } from 'react'

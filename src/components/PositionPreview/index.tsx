@@ -1,5 +1,5 @@
-import { Position } from "@intrinsic-network/intrinsic-sdk";
-import { Currency } from "@intrinsic-network/sdk-core";
+import { Position } from "@intrinsic-finance/intrinsic-sdk";
+import { Currency } from "@intrinsic-finance/sdk-core";
 import { Trans } from "@lingui/macro";
 import RangeBadge from "components/Badge/RangeBadge";
 import { LightCard } from "components/Card";

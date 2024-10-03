@@ -1,4 +1,4 @@
-import { Currency, Token } from '@intrinsic-network/sdk-core'
+import { Currency, Token } from '@intrinsic-finance/sdk-core'
 import { useWeb3React } from '@web3-react/core'
 import { getChainInfo } from 'constants/chainInfo'
 import { SupportedChainId } from 'constants/chains'

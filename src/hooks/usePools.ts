@@ -1,8 +1,8 @@
 
-import IIntrinsicPoolStateABI  from '@intrinsic-network/core/artifacts/contracts/interfaces/pool/IIntrinsicPoolState.sol/IIntrinsicPoolState.json'
-import { computePoolAddress } from '@intrinsic-network/intrinsic-sdk'
-import { FeeAmount, Pool } from '@intrinsic-network/intrinsic-sdk'
-import { BigintIsh, Currency, Token } from '@intrinsic-network/sdk-core'
+import IIntrinsicPoolStateABI  from '@intrinsic-finance/core/artifacts/contracts/interfaces/pool/IIntrinsicPoolState.sol/IIntrinsicPoolState.json'
+import { computePoolAddress } from '@intrinsic-finance/intrinsic-sdk'
+import { FeeAmount, Pool } from '@intrinsic-finance/intrinsic-sdk'
+import { BigintIsh, Currency, Token } from '@intrinsic-finance/sdk-core'
 import { useWeb3React } from '@web3-react/core'
 
 import { useMultipleContractSingleData } from 'lib/hooks/multicall'

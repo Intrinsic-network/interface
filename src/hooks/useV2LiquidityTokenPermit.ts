@@ -1,4 +1,4 @@
-import { CurrencyAmount, Token } from '@intrinsic-network/sdk-core'
+import { CurrencyAmount, Token } from '@intrinsic-finance/sdk-core'
 
 import { PermitInfo, PermitType, useERC20Permit } from './useERC20Permit'
 import useTransactionDeadline from './useTransactionDeadline'

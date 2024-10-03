@@ -1,4 +1,4 @@
-import { Currency, Token } from '@intrinsic-network/sdk-core'
+import { Currency, Token } from '@intrinsic-finance/sdk-core'
 import { PageName } from 'analytics/constants'
 import { Trace } from 'analytics/Trace'
 import { AboutSection } from 'components/Tokens/TokenDetails/About'

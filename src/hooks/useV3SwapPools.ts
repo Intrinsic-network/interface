@@ -1,5 +1,5 @@
-import { FeeAmount, Pool } from '@intrinsic-network/intrinsic-sdk'
-import { Currency, Token } from '@intrinsic-network/sdk-core'
+import { FeeAmount, Pool } from '@intrinsic-finance/intrinsic-sdk'
+import { Currency, Token } from '@intrinsic-finance/sdk-core'
 import { useWeb3React } from '@web3-react/core'
 import { SupportedChainId } from 'constants/chains'
 import { useMemo } from 'react'

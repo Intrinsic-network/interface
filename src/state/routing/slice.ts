@@ -1,4 +1,4 @@
-import { Protocol } from '@intrinsic-network/router-sdk'
+import { Protocol } from '@intrinsic-finance/router-sdk'
 import { AlphaRouter, ChainId } from '@intrinsic-network/smart-order-router'
 import { createApi, fetchBaseQuery, FetchBaseQueryError } from '@reduxjs/toolkit/query/react'
 import { RPC_PROVIDERS } from 'constants/providers'

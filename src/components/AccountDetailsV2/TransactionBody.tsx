@@ -1,4 +1,4 @@
-import { Fraction, TradeType } from '@intrinsic-network/sdk-core'
+import { Fraction, TradeType } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import JSBI from 'jsbi'
 import {

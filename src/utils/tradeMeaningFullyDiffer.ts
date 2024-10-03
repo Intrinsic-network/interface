@@ -1,5 +1,5 @@
-import { Trade } from '@intrinsic-network/router-sdk'
-import { Currency, TradeType } from '@intrinsic-network/sdk-core'
+import { Trade } from '@intrinsic-finance/router-sdk'
+import { Currency, TradeType } from '@intrinsic-finance/sdk-core'
 
 /**
  * Returns true if the trade requires a confirmation of details before we can submit it

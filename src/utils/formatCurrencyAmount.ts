@@ -3,7 +3,7 @@ import {
   CurrencyAmount,
   Fraction,
   Price,
-} from "@intrinsic-network/sdk-core";
+} from "@intrinsic-finance/sdk-core";
 import { DEFAULT_LOCALE, SupportedLocale } from "constants/locales";
 import JSBI from "jsbi";
 import formatLocaleNumber from "lib/utils/formatLocaleNumber";
