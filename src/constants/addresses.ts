@@ -5,7 +5,7 @@ import { SupportedChainId } from './chains'
 
 type AddressMap = { [chainId: number]: string }
 
-export const UNI_ADDRESS: AddressMap = {
+export const INT_ADDRESS: AddressMap = {
   [SupportedChainId.RSK_TESTNET]: '0x53376356b542B8764c64411511b74dA9B9381E87',
 }
 
