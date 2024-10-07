@@ -22,7 +22,7 @@ import {
   useUserVotes,
 } from "state/governance/hooks";
 import styled from "styled-components";
-import { ExternalLink, ThemedText } from "theme";
+import { ThemedText } from "theme";
 import { isAddress } from "utils";
 
 import { CreateProposalTabs } from "../../components/NavigationTabs";
@@ -203,7 +203,7 @@ export default function CreateProposal() {
   );
 
   const isFormInvalid = useMemo(() => {
-    if (proposalAction === ProposalAction.SET_FEE_PROTOCOL) {
+    if (proposalAction === ProposalAction.SET_FEE_PROTOCOL || proposalAction === ProposalAction.ACCEPT_ADMIN) {
       return Boolean(!toAddressValue || titleValue === "" || bodyValue === "");
     }
 
@@ -251,17 +251,20 @@ export default function CreateProposal() {
     setAttempting(true);
 
     const createProposalData: CreateProposalData = {} as CreateProposalData;
+    let tokenAmount;
 
-    if (!createProposalCallback || !proposalAction || !currencyValue.isToken)
-      return;
-
-    const tokenAmount = tryParseCurrencyAmount(amountValue, currencyValue);
-    if (
-      proposalAction !== ProposalAction.SET_FEE_PROTOCOL &&
-      proposalAction !== ProposalAction.COLLECT_PROTOCOL &&
-      !tokenAmount
-    )
-      return;
+    if (proposalAction !== ProposalAction.ACCEPT_ADMIN) {
+      if (!createProposalCallback || !proposalAction || !currencyValue.isToken)
+        return;
+  
+      tokenAmount = tryParseCurrencyAmount(amountValue, currencyValue);
+      if (
+        proposalAction !== ProposalAction.SET_FEE_PROTOCOL &&
+        proposalAction !== ProposalAction.COLLECT_PROTOCOL &&
+        !tokenAmount
+      )
+        return;
+    }
 
     createProposalData.values = ["0"];
     createProposalData.description = `# ${titleValue}
@@ -273,7 +276,7 @@ ${bodyValue}
     let values: string[][];
     switch (proposalAction) {
       case ProposalAction.TRANSFER_TOKEN: {
-        createProposalData.targets = [currencyValue.address];
+        createProposalData.targets = [(currencyValue as Token).address];
         types = [["address", "uint256"]];
         values = [
           [getAddress(toAddressValue), tokenAmount?.quotient?.toString() ?? ""],
@@ -283,7 +286,7 @@ ${bodyValue}
       }
 
       case ProposalAction.APPROVE_TOKEN: {
-        createProposalData.targets = [currencyValue.address];
+        createProposalData.targets = [(currencyValue as Token).address];
         types = [["address", "uint256"]];
         values = [
           [getAddress(toAddressValue), tokenAmount?.quotient?.toString() ?? ""],
@@ -329,9 +332,10 @@ ${bodyValue}
 
     createProposalData.calldatas = [];
     for (let i = 0; i < createProposalData.signatures.length; i++) {
+      console.log('defaultAbiCoder:', defaultAbiCoder);
       createProposalData.calldatas[i] = defaultAbiCoder.encode(
-        types[i],
-        values[i]
+        types[i] || [],
+        values[i] || []
       );
     }
 
@@ -358,7 +362,7 @@ ${bodyValue}
               <AutoColumn gap="10px">
                 <ThemedText.DeprecatedLink
                   fontWeight={400}
-                  color={"deprecated_primaryText1"}
+                  color="deprecated_primaryText1"
                 >
                   <Trans>
                     <strong>Tip:</strong> Select an action and describe your
