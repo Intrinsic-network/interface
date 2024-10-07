@@ -5,7 +5,7 @@ import { ZERO_ADDRESS } from './misc'
 type AddressMap = { [chainId: number]: string }
 
 export const INT_ADDRESS: AddressMap = {
-  [SupportedChainId.RSK_TESTNET]: ZERO_ADDRESS,
+  [SupportedChainId.RSK_TESTNET]: '0x6C75e389605F74dfdF0f1B1909ea2feaAA6D660F',
 }
 
 export const V2_FACTORY_ADDRESSES: AddressMap = constructSameAddressMap(ZERO_ADDRESS)
@@ -41,11 +41,11 @@ export const SWAP_ROUTER_ADDRESSES: AddressMap = {
  * The latest governor bravo that is currently admin of timelock
  */
 export const GOVERNANCE_BRAVO_ADDRESSES: AddressMap = {
-  [SupportedChainId.RSK_TESTNET]: ZERO_ADDRESS,
+  [SupportedChainId.RSK_TESTNET]: '0xe87880b3Bcf0766EEf6828Fba356C32690101A5b',
 }
 
 export const TIMELOCK_ADDRESS: AddressMap = {
-  [SupportedChainId.RSK_TESTNET]: ZERO_ADDRESS,
+  [SupportedChainId.RSK_TESTNET]: '0xCdEde91f9F6585f5187615009391149417C00991',
 }
 
 export const MERKLE_DISTRIBUTOR_ADDRESS: AddressMap = {
