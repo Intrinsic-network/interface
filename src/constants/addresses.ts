@@ -1,16 +1,15 @@
-import { FACTORY_ADDRESS as V2_FACTORY_ADDRESS } from '@uniswap/v2-sdk'
-
 import { constructSameAddressMap } from '../utils/constructSameAddressMap'
 import { SupportedChainId } from './chains'
+import { ZERO_ADDRESS } from './misc'
 
 type AddressMap = { [chainId: number]: string }
 
 export const INT_ADDRESS: AddressMap = {
-  [SupportedChainId.RSK_TESTNET]: '0x53376356b542B8764c64411511b74dA9B9381E87',
+  [SupportedChainId.RSK_TESTNET]: ZERO_ADDRESS,
 }
 
-export const V2_FACTORY_ADDRESSES: AddressMap = constructSameAddressMap(V2_FACTORY_ADDRESS)
-export const V2_ROUTER_ADDRESS: AddressMap = constructSameAddressMap('0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D')
+export const V2_FACTORY_ADDRESSES: AddressMap = constructSameAddressMap(ZERO_ADDRESS)
+export const V2_ROUTER_ADDRESS: AddressMap = constructSameAddressMap(ZERO_ADDRESS)
 
 // rsk testnet v3 addresses
 const RSK_TESTNET_V3_CORE_FACTORY_ADDRESSES = '0x372E5a6341C0aAa80adc70Eb261727c3DD74515d'
@@ -42,19 +41,19 @@ export const SWAP_ROUTER_ADDRESSES: AddressMap = {
  * The latest governor bravo that is currently admin of timelock
  */
 export const GOVERNANCE_BRAVO_ADDRESSES: AddressMap = {
-  [SupportedChainId.RSK_TESTNET]: '0xFE077b3E2af1e6eF728248B2d0b4e7Fe3E5d2891',
+  [SupportedChainId.RSK_TESTNET]: ZERO_ADDRESS,
 }
 
 export const TIMELOCK_ADDRESS: AddressMap = {
-  [SupportedChainId.RSK_TESTNET]: '0x66414B5543025a347aA9705B732a2e686ba219bB',
+  [SupportedChainId.RSK_TESTNET]: ZERO_ADDRESS,
 }
 
 export const MERKLE_DISTRIBUTOR_ADDRESS: AddressMap = {
-  [SupportedChainId.RSK_MAINNET]: '0x090D4613473dEE047c3f2706764f49E0821D256e',
+  [SupportedChainId.RSK_MAINNET]: ZERO_ADDRESS,
 }
 
 export const ARGENT_WALLET_DETECTOR_ADDRESS: AddressMap = {
-  [SupportedChainId.RSK_MAINNET]: '0xeca4B0bDBf7c55E9b7925919d03CbF8Dc82537E8',
+  [SupportedChainId.RSK_MAINNET]: ZERO_ADDRESS,
 }
 
 export const QUOTER_ADDRESSES: AddressMap = {
@@ -66,11 +65,11 @@ export const NONFUNGIBLE_POSITION_MANAGER_ADDRESSES: AddressMap = {
 }
 
 export const ENS_REGISTRAR_ADDRESSES: AddressMap = {
-  [SupportedChainId.RSK_MAINNET]: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
+  [SupportedChainId.RSK_MAINNET]: ZERO_ADDRESS,
 }
 
 export const SOCKS_CONTROLLER_ADDRESSES: AddressMap = {
-  [SupportedChainId.RSK_MAINNET]: '0x65770b5283117639760beA3F867b69b3697a91dd',
+  [SupportedChainId.RSK_MAINNET]: ZERO_ADDRESS,
 }
 
 export const TICK_LENS_ADDRESSES: AddressMap = {
