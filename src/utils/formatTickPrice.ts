@@ -1,4 +1,4 @@
-import { Price, Token } from '@intrinsic-network/sdk-core'
+import { Price, Token } from '@intrinsic-finance/sdk-core'
 
 import { Bound } from '../state/mint/v3/actions'
 import { formatPrice } from './formatCurrencyAmount'

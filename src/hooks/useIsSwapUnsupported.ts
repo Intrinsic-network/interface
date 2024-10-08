@@ -1,4 +1,4 @@
-import { Currency } from '@intrinsic-network/sdk-core'
+import { Currency } from '@intrinsic-finance/sdk-core'
 import { useMemo } from 'react'
 
 import { useUnsupportedTokens } from './Tokens'

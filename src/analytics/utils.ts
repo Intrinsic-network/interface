@@ -1,5 +1,5 @@
-import { Trade } from '@intrinsic-network/router-sdk'
-import { Currency, CurrencyAmount, Percent, Price, Token, TradeType } from '@intrinsic-network/sdk-core'
+import { Trade } from '@intrinsic-finance/router-sdk'
+import { Currency, CurrencyAmount, Percent, Price, Token, TradeType } from '@intrinsic-finance/sdk-core'
 import { NATIVE_CHAIN_ID } from 'constants/tokens'
 import { InterfaceTrade } from 'state/routing/types'
 import { computeRealizedPriceImpact } from 'utils/prices'

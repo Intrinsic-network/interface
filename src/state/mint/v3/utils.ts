@@ -5,8 +5,8 @@ import {
   priceToClosestTick,
   TICK_SPACINGS,
   TickMath,
-} from '@intrinsic-network/intrinsic-sdk'
-import { Price, Token } from '@intrinsic-network/sdk-core'
+} from '@intrinsic-finance/intrinsic-sdk'
+import { Price, Token } from '@intrinsic-finance/sdk-core'
 import JSBI from 'jsbi'
 
 export function tryParsePrice(baseToken?: Token, quoteToken?: Token, value?: string) {

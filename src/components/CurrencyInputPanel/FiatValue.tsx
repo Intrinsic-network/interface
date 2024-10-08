@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Percent } from "@intrinsic-network/sdk-core";
+import { Currency, CurrencyAmount, Percent } from "@intrinsic-finance/sdk-core";
 import { Trans } from "@lingui/macro";
 // eslint-disable-next-line no-restricted-imports
 import { t } from "@lingui/macro";

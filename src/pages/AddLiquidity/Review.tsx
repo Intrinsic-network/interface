@@ -1,5 +1,5 @@
-import { Position } from '@intrinsic-network/intrinsic-sdk'
-import { Currency, CurrencyAmount, Price } from '@intrinsic-network/sdk-core'
+import { Position } from '@intrinsic-finance/intrinsic-sdk'
+import { Currency, CurrencyAmount, Price } from '@intrinsic-finance/sdk-core'
 import { AutoColumn } from 'components/Column'
 import { PositionPreview } from 'components/PositionPreview'
 import styled from 'styled-components'

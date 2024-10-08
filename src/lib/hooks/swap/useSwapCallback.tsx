@@ -1,9 +1,9 @@
 // eslint-disable-next-line no-restricted-imports
 import { BigNumber } from '@ethersproject/bignumber'
 import type { TransactionResponse } from '@ethersproject/providers'
-import { FeeOptions } from '@intrinsic-network/intrinsic-sdk'
-import { Trade } from '@intrinsic-network/router-sdk'
-import { Currency, Percent, TradeType } from '@intrinsic-network/sdk-core'
+import { FeeOptions } from '@intrinsic-finance/intrinsic-sdk'
+import { Trade } from '@intrinsic-finance/router-sdk'
+import { Currency, Percent, TradeType } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import { useWeb3React } from '@web3-react/core'
 import useENS from 'hooks/useENS'

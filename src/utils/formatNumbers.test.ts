@@ -1,4 +1,4 @@
-import { CurrencyAmount, Price } from '@intrinsic-network/sdk-core'
+import { CurrencyAmount, Price } from '@intrinsic-finance/sdk-core'
 import { renBTC, USDC_MAINNET } from 'constants/tokens'
 
 import {

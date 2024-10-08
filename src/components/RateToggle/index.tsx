@@ -1,4 +1,4 @@
-import { Currency } from "@intrinsic-network/sdk-core";
+import { Currency } from "@intrinsic-finance/sdk-core";
 import { Trans } from "@lingui/macro";
 import { ToggleElement, ToggleWrapper } from "components/Toggle/MultiToggle";
 import { ThemedText } from "theme";

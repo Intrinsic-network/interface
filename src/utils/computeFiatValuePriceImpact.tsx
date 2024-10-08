@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Percent } from '@intrinsic-network/sdk-core'
+import { Currency, CurrencyAmount, Percent } from '@intrinsic-finance/sdk-core'
 import JSBI from 'jsbi'
 
 import { ONE_HUNDRED_PERCENT } from '../constants/misc'

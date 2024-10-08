@@ -1,4 +1,4 @@
-import { Currency } from '@intrinsic-network/sdk-core'
+import { Currency } from '@intrinsic-finance/sdk-core'
 import useCurrencyLogoURIs from 'lib/hooks/useCurrencyLogoURIs'
 import React, { useMemo } from 'react'
 import styled from 'styled-components'

@@ -137,7 +137,7 @@ function toTradeType(modifiedField: Field) {
   }
 }
 
-// TODO(zzmp): Include in @intrinsic-network/sdk-core (on TradeType, if possible).
+// TODO(zzmp): Include in @intrinsic-finance/sdk-core (on TradeType, if possible).
 function invertTradeType(tradeType: TradeType) {
   switch (tradeType) {
     case TradeType.EXACT_INPUT:

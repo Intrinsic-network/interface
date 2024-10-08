@@ -1,6 +1,6 @@
-import { Pool } from '@intrinsic-network/intrinsic-sdk'
-import { Protocol } from '@intrinsic-network/router-sdk'
-import { Currency, CurrencyAmount } from '@intrinsic-network/sdk-core'
+import { Pool } from '@intrinsic-finance/intrinsic-sdk'
+import { Protocol } from '@intrinsic-finance/router-sdk'
+import { Currency, CurrencyAmount } from '@intrinsic-finance/sdk-core'
 import { routeAmountsToString, SwapRoute } from '@intrinsic-network/smart-order-router'
 import { GetQuoteResult, V2PoolInRoute, V3PoolInRoute } from 'state/routing/types'
 

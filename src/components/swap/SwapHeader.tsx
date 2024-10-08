@@ -1,4 +1,4 @@
-import { Percent } from "@intrinsic-network/sdk-core";
+import { Percent } from "@intrinsic-finance/sdk-core";
 import { Trans } from "@lingui/macro";
 import styled, { css, useTheme } from "styled-components";
 

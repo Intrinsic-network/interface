@@ -1,4 +1,4 @@
-import { Currency } from '@intrinsic-network/sdk-core'
+import { Currency } from '@intrinsic-finance/sdk-core'
 
 import { nativeOnChain, WRAPPED_NATIVE_CURRENCY } from '../constants/tokens'
 import { supportedChainId } from './supportedChainId'

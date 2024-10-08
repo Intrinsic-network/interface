@@ -1,4 +1,4 @@
-import { Currency } from '@intrinsic-network/sdk-core'
+import { Currency } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import AddressInputPanel from 'components/AddressInputPanel'
 import CurrencyInputPanel from 'components/CurrencyInputPanel'

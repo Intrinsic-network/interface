@@ -1,4 +1,4 @@
-import { Token } from '@intrinsic-network/sdk-core'
+import { Token } from '@intrinsic-finance/sdk-core'
 import { SupportedChainId } from 'constants/chains'
 import uriToHttp from 'lib/utils/uriToHttp'
 import Vibrant from 'node-vibrant/lib/bundle.js'

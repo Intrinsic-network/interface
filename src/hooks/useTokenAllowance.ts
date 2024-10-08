@@ -1,4 +1,4 @@
-import { CurrencyAmount, Token } from '@intrinsic-network/sdk-core'
+import { CurrencyAmount, Token } from '@intrinsic-finance/sdk-core'
 import { useSingleCallResult } from 'lib/hooks/multicall'
 import { useMemo } from 'react'
 

@@ -1,4 +1,4 @@
-import { Currency } from "@intrinsic-network/sdk-core";
+import { Currency } from "@intrinsic-finance/sdk-core";
 import { Trans } from "@lingui/macro";
 import { useWeb3React } from "@web3-react/core";
 import { ButtonEmpty } from "components/Button";

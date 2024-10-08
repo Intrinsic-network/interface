@@ -1,7 +1,7 @@
 import { BigNumber } from "@ethersproject/bignumber";
 import { Contract } from "@ethersproject/contracts";
 import type { TransactionResponse } from "@ethersproject/providers";
-import { Currency, Percent } from "@intrinsic-network/sdk-core";
+import { Currency, Percent } from "@intrinsic-finance/sdk-core";
 import { Trans } from "@lingui/macro";
 import { useWeb3React } from "@web3-react/core";
 import { ElementName, Event, EventName } from "analytics/constants";

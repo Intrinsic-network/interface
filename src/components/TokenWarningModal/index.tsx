@@ -1,4 +1,4 @@
-import { Token } from '@intrinsic-network/sdk-core'
+import { Token } from '@intrinsic-finance/sdk-core'
 import { ImportToken } from 'components/SearchModal/ImportToken'
 
 import Modal from '../Modal'

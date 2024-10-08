@@ -1,7 +1,7 @@
 import { BigNumber } from "@ethersproject/bignumber";
 import type { TransactionResponse } from "@ethersproject/providers";
-import { NonfungiblePositionManager } from "@intrinsic-network/intrinsic-sdk";
-import { CurrencyAmount, Percent } from "@intrinsic-network/sdk-core";
+import { NonfungiblePositionManager } from "@intrinsic-finance/intrinsic-sdk";
+import { CurrencyAmount, Percent } from "@intrinsic-finance/sdk-core";
 import { Trans } from "@lingui/macro";
 import { useWeb3React } from "@web3-react/core";
 import { sendEvent } from "components/analytics";

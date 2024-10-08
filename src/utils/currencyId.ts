@@ -1,4 +1,4 @@
-import { Currency } from '@intrinsic-network/sdk-core'
+import { Currency } from '@intrinsic-finance/sdk-core'
 
 export function currencyId(currency: Currency): string {
   if (currency.isNative) return 'ETH'

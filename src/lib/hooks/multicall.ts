@@ -3,8 +3,8 @@ import useBlockNumber from 'lib/hooks/useBlockNumber'
 import multicall from 'lib/state/multicall'
 import { SkipFirst } from 'types/tuple'
 
-export type { CallStateResult } from '@intrinsic-network/redux-multicall' // re-export for convenience
-export { NEVER_RELOAD } from '@intrinsic-network/redux-multicall' // re-export for convenience
+export type { CallStateResult } from '@intrinsic-finance/redux-multicall' // re-export for convenience
+export { NEVER_RELOAD } from '@intrinsic-finance/redux-multicall' // re-export for convenience
 
 // Create wrappers for hooks so consumers don't need to get latest block themselves
 

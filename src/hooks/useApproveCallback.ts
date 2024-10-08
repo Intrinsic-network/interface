@@ -1,5 +1,5 @@
-import { Trade } from '@intrinsic-network/router-sdk'
-import { Currency, CurrencyAmount, Percent, TradeType } from '@intrinsic-network/sdk-core'
+import { Trade } from '@intrinsic-finance/router-sdk'
+import { Currency, CurrencyAmount, Percent, TradeType } from '@intrinsic-finance/sdk-core'
 import useSwapApproval from 'lib/hooks/swap/useSwapApproval'
 import { ApprovalState, useApproval } from 'lib/hooks/useApproval'
 import { useCallback } from 'react'

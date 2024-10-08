@@ -1,4 +1,4 @@
-import { CurrencyAmount, TradeType } from '@intrinsic-network/sdk-core'
+import { CurrencyAmount, TradeType } from '@intrinsic-finance/sdk-core'
 import { renderHook } from '@testing-library/react'
 import { DAI, USDC_MAINNET } from 'constants/tokens'
 import { RouterPreference } from 'state/routing/slice'

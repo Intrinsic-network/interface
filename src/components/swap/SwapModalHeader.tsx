@@ -1,4 +1,4 @@
-import { Currency, Percent, TradeType } from "@intrinsic-network/sdk-core";
+import { Currency, Percent, TradeType } from "@intrinsic-finance/sdk-core";
 import { Trans } from "@lingui/macro";
 import { sendAnalyticsEvent } from "analytics";
 import {

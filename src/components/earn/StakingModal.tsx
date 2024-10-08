@@ -1,5 +1,5 @@
 import type { TransactionResponse } from '@ethersproject/providers'
-import { CurrencyAmount, Token } from '@intrinsic-network/sdk-core'
+import { CurrencyAmount, Token } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import StakingRewardsJson from '@uniswap/liquidity-staker/build/StakingRewards.json'
 import { Pair } from '@uniswap/v2-sdk'

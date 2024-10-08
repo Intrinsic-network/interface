@@ -1,6 +1,6 @@
 import { getCreate2Address } from '@ethersproject/address'
 import { keccak256, pack } from '@ethersproject/solidity'
-import { Token } from '@intrinsic-network/sdk-core'
+import { Token } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import { Pair } from '@uniswap/v2-sdk'
 import { useWeb3React } from '@web3-react/core'

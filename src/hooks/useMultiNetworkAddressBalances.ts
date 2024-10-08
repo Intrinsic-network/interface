@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, NativeCurrency, Token } from '@intrinsic-network/sdk-core'
+import { Currency, CurrencyAmount, NativeCurrency, Token } from '@intrinsic-finance/sdk-core'
 import { useWeb3React } from '@web3-react/core'
 import { Weth } from 'abis/types'
 import WETH_ABI from 'abis/weth.json'

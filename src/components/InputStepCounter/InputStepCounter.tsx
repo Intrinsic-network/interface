@@ -1,4 +1,4 @@
-import { FeeAmount } from '@intrinsic-network/intrinsic-sdk'
+import { FeeAmount } from '@intrinsic-finance/intrinsic-sdk'
 import { Trans } from '@lingui/macro'
 import { ButtonGray } from 'components/Button'
 import { OutlineCard } from 'components/Card'

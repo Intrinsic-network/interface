@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import { Pool } from '@intrinsic-network/intrinsic-sdk'
-import { Currency, CurrencyAmount } from '@intrinsic-network/sdk-core'
+import { Pool } from '@intrinsic-finance/intrinsic-sdk'
+import { Currency, CurrencyAmount } from '@intrinsic-finance/sdk-core'
 import { useSingleCallResult } from 'lib/hooks/multicall'
 import useBlockNumber from 'lib/hooks/useBlockNumber'
 import { useEffect, useState } from 'react'

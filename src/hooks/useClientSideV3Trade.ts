@@ -1,5 +1,5 @@
-import { Route, SwapQuoter } from '@intrinsic-network/intrinsic-sdk'
-import { Currency, CurrencyAmount, TradeType } from '@intrinsic-network/sdk-core'
+import { Route, SwapQuoter } from '@intrinsic-finance/intrinsic-sdk'
+import { Currency, CurrencyAmount, TradeType } from '@intrinsic-finance/sdk-core'
 import { useWeb3React } from '@web3-react/core'
 import JSBI from 'jsbi'
 import { useSingleContractWithCallData } from 'lib/hooks/multicall'

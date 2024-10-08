@@ -8,8 +8,8 @@ import {
   TICK_SPACINGS,
   TickMath,
   tickToPrice,
-} from '@intrinsic-network/intrinsic-sdk'
-import { Currency, CurrencyAmount, Price, Rounding, Token } from '@intrinsic-network/sdk-core'
+} from '@intrinsic-finance/intrinsic-sdk'
+import { Currency, CurrencyAmount, Price, Rounding, Token } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import { useWeb3React } from '@web3-react/core'
 import { usePool } from 'hooks/usePools'

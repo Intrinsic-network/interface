@@ -1,5 +1,5 @@
 import { isAddress } from '@ethersproject/address'
-import { CurrencyAmount, Token } from '@intrinsic-network/sdk-core'
+import { CurrencyAmount, Token } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import { useWeb3React } from '@web3-react/core'
 import { useState } from 'react'

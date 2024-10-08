@@ -8,9 +8,9 @@ import {
   Utf8ErrorFuncs,
   Utf8ErrorReason,
 } from "@ethersproject/strings";
-import GOVERNANCE_ABI from "@intrinsic-network/governance/artifacts/contracts/GovernorBravoDelegator.sol/GovernorBravoDelegator.json";
-import INT_ABI from "@intrinsic-network/governance/artifacts/contracts/Int.sol/Int.json";
-import { CurrencyAmount, Token } from "@intrinsic-network/sdk-core";
+import GOVERNANCE_ABI from "@intrinsic-finance/governance/artifacts/contracts/GovernorBravoDelegator.sol/GovernorBravoDelegator.json";
+import INT_ABI from "@intrinsic-finance/governance/artifacts/contracts/Int.sol/Int.json";
+import { CurrencyAmount, Token } from "@intrinsic-finance/sdk-core";
 // eslint-disable-next-line no-restricted-imports
 import { t } from "@lingui/macro";
 import { useWeb3React } from "@web3-react/core";
