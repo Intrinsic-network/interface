@@ -1,1 +1,1 @@
-export const BRAVO_START_BLOCK = 4917300;
+export const BRAVO_START_BLOCK = 5625529;
