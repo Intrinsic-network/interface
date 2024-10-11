@@ -1,7 +1,7 @@
-import { Currency, NativeCurrency, RBTC, Token, WRBTC } from '@intrinsic-network/sdk-core'
+import { Currency, NativeCurrency, RBTC, Token, WRBTC } from '@intrinsic-finance/sdk-core'
 import invariant from 'tiny-invariant'
 
-import { UNI_ADDRESS } from './addresses'
+import { INT_ADDRESS } from './addresses'
 import { SupportedChainId } from './chains'
 
 export const NATIVE_CHAIN_ID = 'NATIVE'
@@ -65,18 +65,18 @@ export const USDC: { [chainId in SupportedChainId]: Token } = {
 
 export const BPD = new Token(
   SupportedChainId.RSK_TESTNET,
-  '0x4CA89A9299E1217D24CF4DfE618a6517C5998f79',
+  '0x38F059Db83cc27F929d9B65d93B92Bb08c9dEe1b',
   18,
   'BPD',
   'BPD Stablecoin'
 )
 
-export const MP = new Token(SupportedChainId.RSK_TESTNET, '0xAd80ED0490f1D93C273345800A14A7Fe8792db83', 18, 'MP', 'MP')
+export const MP = new Token(SupportedChainId.RSK_TESTNET, '0x55f863e058729Ea7BbBdBA2cBF7675081cc067Db', 18, 'MP', 'MP')
 
 export const INT: { [chainId: number]: Token } = {
   [SupportedChainId.RSK_TESTNET]: new Token(
     SupportedChainId.RSK_TESTNET,
-    UNI_ADDRESS[SupportedChainId.RSK_TESTNET],
+    INT_ADDRESS[SupportedChainId.RSK_TESTNET],
     18,
     'INT',
     'INT'

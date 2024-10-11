@@ -1,4 +1,4 @@
-import { Token } from '@intrinsic-network/sdk-core'
+import { Token } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import Badge, { BadgeVariant } from 'components/Badge'
 import { transparentize } from 'polished'

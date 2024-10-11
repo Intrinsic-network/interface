@@ -1,4 +1,4 @@
-import { Currency } from "@intrinsic-network/sdk-core";
+import { Currency } from "@intrinsic-finance/sdk-core";
 import { ElementName, Event, EventName } from "analytics/constants";
 import { TraceEvent } from "analytics/TraceEvent";
 import { getTokenAddress } from "analytics/utils";

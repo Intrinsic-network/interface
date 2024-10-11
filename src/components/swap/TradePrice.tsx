@@ -1,4 +1,4 @@
-import { Currency, Price } from '@intrinsic-network/sdk-core'
+import { Currency, Price } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import useStablecoinPrice from 'hooks/useStablecoinPrice'
 import { useCallback } from 'react'

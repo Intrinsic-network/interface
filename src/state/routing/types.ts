@@ -1,6 +1,6 @@
-import { Route as V3Route } from '@intrinsic-network/intrinsic-sdk'
-import { MixedRouteSDK, Trade } from '@intrinsic-network/router-sdk'
-import { Currency, CurrencyAmount, Token, TradeType } from '@intrinsic-network/sdk-core'
+import { Route as V3Route } from '@intrinsic-finance/intrinsic-sdk'
+import { MixedRouteSDK, Trade } from '@intrinsic-finance/router-sdk'
+import { Currency, CurrencyAmount, Token, TradeType } from '@intrinsic-finance/sdk-core'
 import { Route as V2Route } from '@uniswap/v2-sdk'
 
 export enum TradeState {

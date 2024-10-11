@@ -3,8 +3,8 @@ import type { TransactionResponse } from "@ethersproject/providers";
 import {
   FeeAmount,
   NonfungiblePositionManager,
-} from "@intrinsic-network/intrinsic-sdk";
-import { Currency, CurrencyAmount, Percent } from "@intrinsic-network/sdk-core";
+} from "@intrinsic-finance/intrinsic-sdk";
+import { Currency, CurrencyAmount, Percent } from "@intrinsic-finance/sdk-core";
 import { Trans } from "@lingui/macro";
 import { useWeb3React } from "@web3-react/core";
 import { ElementName, Event, EventName } from "analytics/constants";

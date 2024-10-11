@@ -3544,15 +3544,96 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@intrinsic-finance/core@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@intrinsic-finance/core/-/core-1.0.0.tgz#1d75225da7dbcedd5e852a428e68355fbcbb2658"
+  integrity sha512-Zoa2hKhSalNl3gQYlGSEaKv7G81Q1nZG14HsqIRUoUsTPN5gxNLtt+/XKntoEscjEyAnezgtxce8tpxDqorhhw==
+
+"@intrinsic-finance/governance@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@intrinsic-finance/governance/-/governance-1.1.0.tgz#538843d2c29d5d77ec42b43bf016b6019164c854"
+  integrity sha512-9mnMQcd96go0L2tU/zbiuVDMNZlBAB2Srj+45j6oOS/r7zYFN0y3TPSfg4gOsjFULwokKfXebG7pEsJTg9x+pA==
+  dependencies:
+    "@typechain/ethers-v5" "^11.1.2"
+    "@typechain/hardhat" "^9.1.0"
+
+"@intrinsic-finance/intrinsic-sdk@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@intrinsic-finance/intrinsic-sdk/-/intrinsic-sdk-1.0.0.tgz#7fb16fc48e9d78794f012cd783a49a6424f57e4e"
+  integrity sha512-ilWIT5qbMkLEfe10RwTna0AvUlnDKdALD2RoyB+jVs2tkw06qpVSuriHqlM5GeuY3TKQu0yg1AeboQB4whvmhw==
+  dependencies:
+    "@ethersproject/abi" "^5.0.12"
+    "@ethersproject/solidity" "^5.0.9"
+    "@intrinsic-finance/periphery" "1.0.0"
+    "@intrinsic-finance/staker" "1.0.0"
+    "@intrinsic-finance/swap-router-contracts" "1.0.0"
+    "@uniswap/sdk-core" "^3.0.1"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
+
+"@intrinsic-finance/periphery@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@intrinsic-finance/periphery/-/periphery-1.0.0.tgz#dce9926bd640d39c18ac8a324c621e417a07a8db"
+  integrity sha512-Gx0MLH9NDk4qVtg6Jzg/InR14yBa4tbYMLysFUUTCXX3nRhMnai0paEVL/+0Q5lEkPcpRZQqphsmYgCZW0J6yg==
+  dependencies:
+    "@intrinsic-finance/core" "1.0.0"
+    "@openzeppelin/contracts" "3.4.1-solc-0.7-2"
+    "@uniswap/lib" "^4.0.1-alpha"
+    "@uniswap/v2-core" "1.0.1"
+    base64-sol "1.0.1"
+
+"@intrinsic-finance/redux-multicall@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@intrinsic-finance/redux-multicall/-/redux-multicall-1.0.0.tgz#3bd91ed541a35df535f2da9b6ee1c0cf1898c008"
+  integrity sha512-LXhoL7MyPmgDFknbAODXLeHmcpXsK+9X3m/evO6S6iqvk9vrS+AkyfKWCdKkQUGdOVy/vxN40nE8cUAIOztscQ==
+
+"@intrinsic-finance/router-sdk@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@intrinsic-finance/router-sdk/-/router-sdk-1.0.0.tgz#09791ae2649be745ec8dd4fc2d261e7ee026bcc1"
+  integrity sha512-5PRlaP7I9pGwa8Of/ZkVcoPgl4pUdP02utn/p5nAZay5hcxNI1AbOtWXk6yvBp2MXKUXbuUfckKCE9z6njGbBg==
+  dependencies:
+    "@ethersproject/abi" "^5.5.0"
+    "@intrinsic-finance/intrinsic-sdk" "1.0.0"
+    "@intrinsic-finance/sdk-core" "1.0.0"
+    "@intrinsic-finance/swap-router-contracts" "1.0.0"
+    "@uniswap/v2-sdk" "^3.0.1"
+
+"@intrinsic-finance/sdk-core@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@intrinsic-finance/sdk-core/-/sdk-core-1.0.0.tgz#75b889e7bdb66ee3e413d738f77049752d5e8519"
+  integrity sha512-e30NQQ/YtOZ4cLDwUlLebBE+hSVn5YhxD/Hm3otvOPBnf5dnVTEaQT7QyKH3JwnWAGCGv2ZflLzh+ICHwUsrdg==
+  dependencies:
+    "@ethersproject/address" "^5.0.2"
+    big.js "^5.2.2"
+    decimal.js-light "^2.5.0"
+    jsbi "^3.1.4"
+    tiny-invariant "^1.1.0"
+    toformat "^2.0.0"
+
+"@intrinsic-finance/staker@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@intrinsic-finance/staker/-/staker-1.0.0.tgz#09c5aac9944461a9fb9461a4e34912884cd7e66e"
+  integrity sha512-vjvzeeCWhjvT8/eV3VzbNtShoScocqQ0T1OVFGclQIB8rg60xGNt+Wp8MFbTakimYycOos36/f9m8nIeH4ihPQ==
+  dependencies:
+    "@intrinsic-finance/core" "1.0.0"
+    "@intrinsic-finance/periphery" "1.0.0"
+    "@openzeppelin/contracts" "3.4.1-solc-0.7-2"
+
+"@intrinsic-finance/swap-router-contracts@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@intrinsic-finance/swap-router-contracts/-/swap-router-contracts-1.0.0.tgz#435d0b2d7c3aef58441a76dfcea499e074e9f365"
+  integrity sha512-L6W6wo4bAg6oMmqc2V/LY5u27LdpD57zSge8NbRDYF1gasYK+k4H169v3GPdgj3ZDo7/xdTwKGkmP5qsFT0q9w==
+  dependencies:
+    "@intrinsic-finance/core" "1.0.0"
+    "@intrinsic-finance/periphery" "1.0.0"
+    "@openzeppelin/contracts" "3.4.1-solc-0.7-2"
+    "@uniswap/v2-core" "1.0.1"
+    hardhat-watcher "^2.1.1"
+
 "@intrinsic-network/core@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@intrinsic-network/core/-/core-1.0.0.tgz#17b2f075221900d96463361639760bb28f77dc3b"
   integrity sha512-svPp+RPeSmf3X8IIxAWFCQpWBX1ZuaH9+xURYXodoeGaZhqUs+XgOv3GkgTwLdyzTrbjmZHx/p1Qr8pQrnv0Hw==
-
-"@intrinsic-network/governance@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@intrinsic-network/governance/-/governance-1.0.1.tgz#3034f65ff20d6a18f8d45d4dca584388122adde4"
-  integrity sha512-7H69ztvx58Vm0kDFNItsrUCefnGHpE/0HCK7lIqdCJpOOr25jwDsjkxqAGRPbv95Gb96irs0FJlDhCpQOjICFg==
 
 "@intrinsic-network/intrinsic-sdk@1.0.0":
   version "1.0.0"
@@ -3578,11 +3659,6 @@
     "@uniswap/lib" "^4.0.1-alpha"
     "@uniswap/v2-core" "1.0.1"
     base64-sol "1.0.1"
-
-"@intrinsic-network/redux-multicall@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@intrinsic-network/redux-multicall/-/redux-multicall-1.0.0.tgz#967715c1bdf28c313898d47265103df8de17f69d"
-  integrity sha512-6ekQjHaBBO8uPYlm7/FgFCNoOpNGB+I5NN2MBb7zGGYRORswn6n54w0W2DBqAoy67V/OlYMDwi9CLPcBrXzYxg==
 
 "@intrinsic-network/router-sdk@1.0.0":
   version "1.0.0"
@@ -5842,10 +5918,25 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.3.tgz#472eaab5f15c1ffdd7f8628bd4c4f753995ec79e"
   integrity sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==
 
+"@typechain/ethers-v5@^11.1.2":
+  version "11.1.2"
+  resolved "https://registry.yarnpkg.com/@typechain/ethers-v5/-/ethers-v5-11.1.2.tgz#82510c1744f37a2f906b9e0532ac18c0b74ffe69"
+  integrity sha512-ID6pqWkao54EuUQa0P5RgjvfA3MYqxUQKpbGKERbsjBW5Ra7EIXvbMlPp2pcP5IAdUkyMCFYsP2SN5q7mPdLDQ==
+  dependencies:
+    lodash "^4.17.15"
+    ts-essentials "^7.0.1"
+
 "@typechain/ethers-v5@^7.0.0":
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/@typechain/ethers-v5/-/ethers-v5-7.0.1.tgz#f9ae60ae5bd9e8ea8a996f66244147e8e74034ae"
   integrity sha512-mXEJ7LG0pOYO+MRPkHtbf30Ey9X2KAsU0wkeoVvjQIn7iAY6tB3k3s+82bbmJAUMyENbQ04RDOZit36CgSG6Gg==
+
+"@typechain/hardhat@^9.1.0":
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/@typechain/hardhat/-/hardhat-9.1.0.tgz#6985015f01dfb37ef2ca8a29c742d05890351ddc"
+  integrity sha512-mtaUlzLlkqTlfPwB3FORdejqBskSnh+Jl8AIJGjXNAQfRQ4ofHADPl1+oU7Z3pAJzmZbUXII8MhOLQltcHgKnA==
+  dependencies:
+    fs-extra "^9.1.0"
 
 "@types/aria-query@^4.2.0":
   version "4.2.2"

@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-restricted-imports
-import { Trade } from '@intrinsic-network/router-sdk'
-import { Currency, Percent, TradeType } from '@intrinsic-network/sdk-core'
+import { Trade } from '@intrinsic-finance/router-sdk'
+import { Currency, Percent, TradeType } from '@intrinsic-finance/sdk-core'
 import { useWeb3React } from '@web3-react/core'
 import { SwapCallbackState, useSwapCallback as useLibSwapCallBack } from 'lib/hooks/swap/useSwapCallback'
 import { ReactNode, useMemo } from 'react'

@@ -1,4 +1,4 @@
-import { Percent } from "@intrinsic-network/sdk-core";
+import { Percent } from "@intrinsic-finance/sdk-core";
 import { Trans } from "@lingui/macro";
 import { useWeb3React } from "@web3-react/core";
 import { DEFAULT_DEADLINE_FROM_NOW } from "constants/misc";

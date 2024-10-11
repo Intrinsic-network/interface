@@ -1,4 +1,4 @@
-import { CurrencyAmount, Percent, Token } from '@intrinsic-network/sdk-core'
+import { CurrencyAmount, Percent, Token } from '@intrinsic-finance/sdk-core'
 import { Trans } from '@lingui/macro'
 import { Pair } from '@uniswap/v2-sdk'
 import { useWeb3React } from '@web3-react/core'

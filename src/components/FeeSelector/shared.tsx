@@ -1,4 +1,4 @@
-import { FeeAmount } from '@intrinsic-network/intrinsic-sdk'
+import { FeeAmount } from '@intrinsic-finance/intrinsic-sdk'
 import { Trans } from '@lingui/macro'
 import { ALL_SUPPORTED_CHAIN_IDS, SupportedChainId } from 'constants/chains'
 import type { ReactNode } from 'react'
