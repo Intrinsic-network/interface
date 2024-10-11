@@ -169,7 +169,7 @@
     "@graphql-codegen/typescript-react-apollo": "^3.3.7",
     "@graphql-codegen/typescript-resolvers": "^3.2.1",
     "@intrinsic-finance/core": "1.0.0",
-    "@intrinsic-finance/governance": "1.0.0",
+    "@intrinsic-finance/governance": "1.1.0",
     "@intrinsic-finance/intrinsic-sdk": "1.0.0",
     "@intrinsic-finance/periphery": "1.0.0",
     "@intrinsic-finance/redux-multicall": "1.0.0",

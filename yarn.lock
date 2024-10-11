@@ -3549,10 +3549,10 @@
   resolved "https://registry.yarnpkg.com/@intrinsic-finance/core/-/core-1.0.0.tgz#1d75225da7dbcedd5e852a428e68355fbcbb2658"
   integrity sha512-Zoa2hKhSalNl3gQYlGSEaKv7G81Q1nZG14HsqIRUoUsTPN5gxNLtt+/XKntoEscjEyAnezgtxce8tpxDqorhhw==
 
-"@intrinsic-finance/governance@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@intrinsic-finance/governance/-/governance-1.0.0.tgz#bfa51a5f8f4675ae2a4dc245c6d908dbaf3c832b"
-  integrity sha512-8kMFUuCLUWIQ1v2WIWlsK1Ax6JSdVp5LXbSKdXv0Pt2JuPv7DhXG47PpyuvoqQG9sj7qGvSFoL8RbfkYbqpzNQ==
+"@intrinsic-finance/governance@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@intrinsic-finance/governance/-/governance-1.1.0.tgz#538843d2c29d5d77ec42b43bf016b6019164c854"
+  integrity sha512-9mnMQcd96go0L2tU/zbiuVDMNZlBAB2Srj+45j6oOS/r7zYFN0y3TPSfg4gOsjFULwokKfXebG7pEsJTg9x+pA==
   dependencies:
     "@typechain/ethers-v5" "^11.1.2"
     "@typechain/hardhat" "^9.1.0"
