@@ -65,13 +65,13 @@ export const USDC: { [chainId in SupportedChainId]: Token } = {
 
 export const BPD = new Token(
   SupportedChainId.RSK_TESTNET,
-  '0x4CA89A9299E1217D24CF4DfE618a6517C5998f79',
+  '0x38F059Db83cc27F929d9B65d93B92Bb08c9dEe1b',
   18,
   'BPD',
   'BPD Stablecoin'
 )
 
-export const MP = new Token(SupportedChainId.RSK_TESTNET, '0xAd80ED0490f1D93C273345800A14A7Fe8792db83', 18, 'MP', 'MP')
+export const MP = new Token(SupportedChainId.RSK_TESTNET, '0x55f863e058729Ea7BbBdBA2cBF7675081cc067Db', 18, 'MP', 'MP')
 
 export const INT: { [chainId: number]: Token } = {
   [SupportedChainId.RSK_TESTNET]: new Token(
