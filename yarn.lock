@@ -6795,6 +6795,11 @@
   resolved "https://registry.yarnpkg.com/@uniswap/default-token-list/-/default-token-list-11.2.0.tgz#f7babd37b8f2f1d5c724bd4689be93c4aedd9205"
   integrity sha512-royMoeeONKRheGEQD7eeLKdwWvdl6l4qzpFr5Jh9Mp09xdQoBaF7zqZuM/5URIXV0cvvWGWnbIqVKbtFikkMRA==
 
+"@uniswap/default-token-list@^12.23.0":
+  version "12.23.0"
+  resolved "https://registry.yarnpkg.com/@uniswap/default-token-list/-/default-token-list-12.23.0.tgz#55a20975d0f546efd77dd27a07d302688a5dd9e0"
+  integrity sha512-MZLLN84UBlYbgkacH2bMVM0F30RHfMS6fcp9IPQnQVTJkOntL60Z2xpHWKBpBme1QgpcIQ2CQCMzKh/6ST7nMw==
+
 "@uniswap/default-token-list@^2.0.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@uniswap/default-token-list/-/default-token-list-2.3.0.tgz#e5e522e775791999643aac9b0faf1ccfb4c49bd8"
