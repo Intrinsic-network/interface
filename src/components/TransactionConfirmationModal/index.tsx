@@ -137,7 +137,7 @@ function TransactionSubmittedContent({
   const logoURL = useCurrencyLogoURIs(token)[0];
 
   const [success, setSuccess] = useState<boolean | undefined>();
-
+  const [hasAddedToken, setHasAddedToken] = useState<boolean>(false);
   const addToken = useCallback(() => {
     if (!token?.symbol || !connector.watchAsset) return;
     connector
@@ -183,7 +183,7 @@ function TransactionSubmittedContent({
                 </Text>
               </ButtonLink>
             </div>
-            <div style={{ marginRight: "12px" }}>
+            <div style={{ marginRight: "12px", paddingTop:"20px" }}>
               {chainId && hash && (
                 <ExternalLink
                   href={getExplorerLink(
@@ -192,14 +192,14 @@ function TransactionSubmittedContent({
                     ExplorerDataType.TRANSACTION
                   )}
                 >
-                  <Text fontWeight={400} fontSize={16}>
+                  <Text fontWeight={400} fontSize={16} style={{padding: "16px"}}>
                     <Trans>View on RSK Explorer</Trans>
                   </Text>
                 </ExternalLink>
               )}
             </div>
             <div>
-              {currencyToAdd && connector.watchAsset && (
+              {currencyToAdd && connector.watchAsset&& !hasAddedToken && (
                 <ButtonPrimary
                   mt="12px"
                   padding="6px 12px"
