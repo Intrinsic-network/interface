@@ -23,7 +23,7 @@ export function getTokenLogoURI(
 ): string | void {
   const networksWithUrls = [SupportedChainId.RSK_MAINNET, SupportedChainId.RSK_TESTNET]
   if (networksWithUrls.includes(chainId)) {
-    return `https://raw.githubusercontent.com/Intrinsic-network/interface/refs/heads/main/src/assets/images/${token}/logo.png`;
+    return `https://raw.githubusercontent.com/Intrinsic-network/interface/refs/heads/main/src/assets/images/${token}/logo.svg`;
   }
 }
 
