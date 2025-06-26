@@ -10,11 +10,13 @@ import { useEffect, useMemo, useState } from 'react'
 import computeSurroundingTicks from 'utils/computeSurroundingTicks'
 
 import { V3_CORE_FACTORY_ADDRESSES } from '../constants/addresses'
+import { SupportedChainId } from '../constants/chains'
 import { useTickLens } from './useContract'
 import { PoolState, usePool } from './usePools'
 
 const PRICE_FIXED_DIGITS = 8
-const CHAIN_IDS_MISSING_SUBGRAPH_DATA: any[] = []
+// RSK chains don't have proper subgraph data yet, force use of TickLens
+const CHAIN_IDS_MISSING_SUBGRAPH_DATA: any[] = [SupportedChainId.RSK_MAINNET, SupportedChainId.RSK_TESTNET]
 
 // Tick with fields parsed to JSBIs, and active liquidity computed.
 export interface TickProcessed {
@@ -27,7 +29,7 @@ export interface TickProcessed {
 const REFRESH_FREQUENCY = { blocksPerFetch: 2 }
 
 const getActiveTick = (tickCurrent: number | undefined, feeAmount: FeeAmount | undefined) =>
-  tickCurrent && feeAmount ? Math.floor(tickCurrent / TICK_SPACINGS[feeAmount]) * TICK_SPACINGS[feeAmount] : undefined
+  tickCurrent !== undefined && tickCurrent !== null && feeAmount ? Math.floor(tickCurrent / TICK_SPACINGS[feeAmount]) * TICK_SPACINGS[feeAmount] : undefined
 
 const bitmapIndex = (tick: number, tickSpacing: number) => {
   return Math.floor(tick / tickSpacing / 256)
@@ -46,7 +48,9 @@ function useTicksFromTickLens(
   const tickSpacing = feeAmount && TICK_SPACINGS[feeAmount]
 
   // Find nearest valid tick for pool in case tick is not initialized.
-  const activeTick = pool?.tickCurrent && tickSpacing ? nearestUsableTick(pool?.tickCurrent, tickSpacing) : undefined
+  const activeTick = pool?.tickCurrent !== undefined && pool?.tickCurrent !== null && tickSpacing 
+    ? nearestUsableTick(pool.tickCurrent, tickSpacing) 
+    : undefined
 
   const { chainId } = useWeb3React()
 
@@ -166,7 +170,8 @@ function useAllV3Ticks(
   error: unknown
   ticks: readonly TickData[] | undefined
 } {
-  const useSubgraph = currencyA ? !CHAIN_IDS_MISSING_SUBGRAPH_DATA.includes(currencyA.chainId) : true
+  // Check if subgraph data is available for this chain
+  const useSubgraph = currencyA ? !CHAIN_IDS_MISSING_SUBGRAPH_DATA.includes(currencyA.chainId) : false
 
   const tickLensTickData = useTicksFromTickLens(!useSubgraph ? currencyA : undefined, currencyB, feeAmount)
   const subgraphTickData = useTicksFromSubgraph(useSubgraph ? currencyA : undefined, currencyB, feeAmount)

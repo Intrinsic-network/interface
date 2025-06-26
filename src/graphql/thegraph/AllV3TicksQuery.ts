@@ -36,7 +36,9 @@ export default function useAllV3TicksQuery(poolAddress: string | undefined, skip
         poolAddress: poolAddress.toLowerCase(),
         skip,
       }).subscribe({
-        next: setData,
+        next: (data: AllV3TicksQuery$data) => {
+          setData(data);
+        },
         error: setError,
         complete: () => setIsLoading(false),
       })
@@ -49,5 +51,6 @@ export default function useAllV3TicksQuery(poolAddress: string | undefined, skip
   useEffect(refreshData, [refreshData, poolAddress, skip])
 
   useInterval(refreshData, interval, true)
+
   return { error, isLoading, data }
 }

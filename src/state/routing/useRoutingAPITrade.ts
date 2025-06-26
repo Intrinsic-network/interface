@@ -51,7 +51,12 @@ export function useRoutingAPITrade<TTradeType extends TradeType>(
   const quoteResult: GetQuoteResult | undefined = useIsValidBlock(Number(data?.blockNumber) || 0) ? data : undefined
 
   const route = useMemo(
-    () => computeRoutes(currencyIn, currencyOut, tradeType, quoteResult),
+    () => {
+      console.log('currencyIn:', currencyIn, 'currencyOut:', currencyOut);
+      console.log('quoteResult:', quoteResult);
+      console.log('tradeType:', tradeType);
+      return computeRoutes(currencyIn, currencyOut, tradeType, quoteResult)
+    },
     [currencyIn, currencyOut, quoteResult, tradeType]
   )
 

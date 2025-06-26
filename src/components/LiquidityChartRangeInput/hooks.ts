@@ -38,7 +38,7 @@ export function useDensityChartData({
 
     return newData
   }, [data])
-
+  
   return useMemo(() => {
     return {
       isLoading,

@@ -35,7 +35,6 @@ function pickBackgroundColor(variant: any, theme: any): Color {
 }
 
 function pickBorder(variant: any, theme: any): string {
-  console.log(variant);
   switch (variant) {
     case BadgeVariant.WARNING_OUTLINE:
       return `1px solid ${theme.deprecated_warning}`;

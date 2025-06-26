@@ -49,19 +49,7 @@ module.exports = {
     configure(jestConfig) {
       return Object.assign(jestConfig, {
         cacheDirectory: getCacheDirectory("jest"),
-        transform: {
-          ...Object.entries(jestConfig.transform).reduce(
-            (transform, [key, value]) => {
-              if (value.match(/babel/)) return transform;
-              return { ...transform, [key]: value };
-            },
-            {}
-          ),
-          // Transform vanilla-extract using its own transformer.
-          // See https://sandroroth.com/blog/vanilla-extract-cra#jest-transform.
-          "\\.css\\.ts$": "@vanilla-extract/jest-transform",
-          "\\.(t|j)sx?$": "@swc/jest",
-        },
+       
         // Use d3-arrays's build directly, as jest does not support its exports.
         transformIgnorePatterns: ["d3-array"],
         moduleNameMapper: {
