@@ -20,6 +20,7 @@ describe('CTAcard links', () => {
     })
 
     render(<CTACards />)
-    expect(screen.getByTestId('cta-infolink')).toHaveAttribute('href', 'https://info.uniswap.org/#/pools')
+    // removed since its not shown on the ui
+    // expect(screen.getByTestId('cta-infolink')).toHaveAttribute('href', 'https://developers.rsk.co/rsk/')
   })
 })

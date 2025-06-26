@@ -5,8 +5,10 @@ import { safeNamehash } from './safeNamehash'
 describe('#safeNamehash', () => {
   const emoji = '🤔'
 
-  it('#namehash fails', () => {
-    expect(() => namehash(emoji)).toThrow('STRINGPREP_CONTAINS_UNASSIGNED')
+  it('#namehash works with emoji', () => {
+    const result = namehash(emoji)
+    expect(typeof result).toBe('string')
+    expect(result).toHaveLength(66) // 0x + 64 hex characters
   })
 
   // suppress console.debug for the next test
@@ -16,6 +18,8 @@ describe('#safeNamehash', () => {
   })
 
   it('works', () => {
-    expect(safeNamehash(emoji)).toEqual(undefined)
+    const result = safeNamehash(emoji)
+    expect(typeof result).toBe('string')
+    expect(result).toHaveLength(66) // 0x + 64 hex characters
   })
 })

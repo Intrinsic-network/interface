@@ -10,9 +10,20 @@ import { GraphQLResponse, ObservableFromValue, RequestParameters } from 'relay-r
 
 import store, { AppState } from '../../state/index'
 
-const CHAIN_SUBGRAPH_URL: Record<number, string> = {}
+const API_KEY = '8497beedb1d338d6f442d4a9bf3f3250';
+// const THEGRAPH_API_KEY = process.env.REACT_APP_THEGRAPH_API_KEY;
+
+// if (!THEGRAPH_API_KEY) {
+//   throw new Error('REACT_APP_THEGRAPH_API_KEY is not defined in environment variables');
+// }
+
+const CHAIN_SUBGRAPH_URL: Record<number, string> = {
+  [SupportedChainId.RSK_MAINNET]: `https://gateway.thegraph.com/api/subgraphs/id/BYMVt5pKLd8ATPhHD25BdD2K9RTyCes5q7jjd3Z5rWXy`,
+  [SupportedChainId.RSK_TESTNET]: `https://gateway.thegraph.com/api/subgraphs/id/BYMVt5pKLd8ATPhHD25BdD2K9RTyCes5q7jjd3Z5rWXy`,
+}
 
 const headers = {
+  Authorization: `Bearer ${API_KEY}`,
   Accept: 'application/json',
   'Content-type': 'application/json',
 }

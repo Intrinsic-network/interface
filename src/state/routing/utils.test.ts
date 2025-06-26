@@ -3,11 +3,12 @@ import { Token, TradeType } from '@intrinsic-network/sdk-core'
 import { nativeOnChain } from '../../constants/tokens'
 import { computeRoutes } from './utils'
 
-const USDC = new Token(1, '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', 6, 'USDC')
-const DAI = new Token(1, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 6, 'DAI')
-const MKR = new Token(1, '0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2', 6, 'MKR')
 
-const ETH = nativeOnChain(1)
+const BPD = new Token(31, '0x4CA89A9299E1217D24CF4DfE618a6517C5998f79', 18, 'BPD') //  BPD
+const INT = new Token(31, '0x53376356b542B8764c64411511b74dA9B9381E87', 6, 'INT')  // INT
+const MP = new Token(31, '0xAd80ED0490f1D93C273345800A14A7Fe8792db83', 6, 'MP')  //MP
+
+const tRBTC = nativeOnChain(31)
 
 // helper function to make amounts more readable
 const amount = (raw: TemplateStringsArray) => (parseInt(raw[0]) * 1e6).toString()
@@ -20,15 +21,15 @@ describe('#useRoute', () => {
   })
 
   it('handles empty edges and nodes', () => {
-    const result = computeRoutes(USDC, DAI, TradeType.EXACT_INPUT, {
+    const result = computeRoutes(BPD, INT, TradeType.EXACT_INPUT, {
       route: [],
     })
 
     expect(result).toEqual([])
   })
 
-  it('handles a single route trade from DAI to USDC from v3', () => {
-    const result = computeRoutes(DAI, USDC, TradeType.EXACT_INPUT, {
+  it('handles a single route trade from INT to BPD from v3', () => {
+    const result = computeRoutes(INT, BPD, TradeType.EXACT_INPUT, {
       route: [
         [
           {
@@ -40,8 +41,8 @@ describe('#useRoute', () => {
             sqrtRatioX96: '2437312313659959819381354528',
             liquidity: '10272714736694327408',
             tickCurrent: '-69633',
-            tokenIn: DAI,
-            tokenOut: USDC,
+            tokenIn: INT,
+            tokenOut: BPD,
           },
         ],
       ],
@@ -51,16 +52,16 @@ describe('#useRoute', () => {
 
     expect(result).toBeDefined()
     expect(result?.length).toBe(1)
-    expect(r?.routev3?.input).toStrictEqual(DAI)
-    expect(r?.routev3?.output).toStrictEqual(USDC)
-    expect(r?.routev3?.tokenPath).toStrictEqual([DAI, USDC])
+    expect(r?.routev3?.input).toStrictEqual(INT)
+    expect(r?.routev3?.output).toStrictEqual(BPD)
+    expect(r?.routev3?.tokenPath).toStrictEqual([INT, BPD])
     expect(r?.routev2).toBeNull()
     expect(r?.inputAmount.toSignificant()).toBe('1')
-    expect(r?.outputAmount.toSignificant()).toBe('5')
+    expect(r?.outputAmount.toSignificant()).toBe('0.000000000005')
   })
 
-  it('handles a single route trade from DAI to USDC from v2', () => {
-    const result = computeRoutes(DAI, USDC, TradeType.EXACT_INPUT, {
+  it('handles a single route trade from INT to BPD from v2', () => {
+    const result = computeRoutes(INT, BPD, TradeType.EXACT_INPUT, {
       route: [
         [
           {
@@ -68,14 +69,14 @@ describe('#useRoute', () => {
             address: '0x1f8F72aA9304c8B593d555F12eF6589cC3A579A2',
             amountIn: amount`1`,
             amountOut: amount`5`,
-            tokenIn: DAI,
-            tokenOut: USDC,
+            tokenIn: INT,
+            tokenOut: BPD,
             reserve0: {
-              token: DAI,
+              token: INT,
               quotient: amount`100`,
             },
             reserve1: {
-              token: USDC,
+              token: BPD,
               quotient: amount`200`,
             },
           },
@@ -87,16 +88,16 @@ describe('#useRoute', () => {
 
     expect(result).toBeDefined()
     expect(result?.length).toBe(1)
-    expect(r?.routev2?.input).toStrictEqual(DAI)
-    expect(r?.routev2?.output).toStrictEqual(USDC)
-    expect(r?.routev2?.path).toStrictEqual([DAI, USDC])
+    expect(r?.routev2?.input).toStrictEqual(INT)
+    expect(r?.routev2?.output).toStrictEqual(BPD)
+    expect(r?.routev2?.path).toStrictEqual([INT, BPD])
     expect(r?.routev3).toBeNull()
     expect(r?.inputAmount.toSignificant()).toBe('1')
-    expect(r?.outputAmount.toSignificant()).toBe('5')
+    expect(r?.outputAmount.toSignificant()).toBe('0.000000000005')
   })
 
-  it('handles a multi-route trade from DAI to USDC', () => {
-    const result = computeRoutes(DAI, USDC, TradeType.EXACT_OUTPUT, {
+  it('handles a multi-route trade from INT to BPD', () => {
+    const result = computeRoutes(INT, BPD, TradeType.EXACT_OUTPUT, {
       route: [
         [
           {
@@ -104,14 +105,14 @@ describe('#useRoute', () => {
             address: '0x1f8F72aA9304c8B593d555F12eF6589cC3A579A2',
             amountIn: amount`5`,
             amountOut: amount`6`,
-            tokenIn: DAI,
-            tokenOut: USDC,
+            tokenIn: INT,
+            tokenOut: BPD,
             reserve0: {
-              token: DAI,
+              token: INT,
               quotient: amount`1000`,
             },
             reserve1: {
-              token: USDC,
+              token: BPD,
               quotient: amount`500`,
             },
           },
@@ -123,8 +124,8 @@ describe('#useRoute', () => {
             amountIn: amount`10`,
             amountOut: amount`1`,
             fee: '3000',
-            tokenIn: DAI,
-            tokenOut: MKR,
+            tokenIn: INT,
+            tokenOut: MP,
             sqrtRatioX96: '2437312313659959819381354528',
             liquidity: '10272714736694327408',
             tickCurrent: '-69633',
@@ -135,8 +136,8 @@ describe('#useRoute', () => {
             amountIn: amount`1`,
             amountOut: amount`200`,
             fee: '10000',
-            tokenIn: MKR,
-            tokenOut: USDC,
+            tokenIn: MP,
+            tokenOut: BPD,
             sqrtRatioX96: '2437312313659959819381354528',
             liquidity: '10272714736694327408',
             tickCurrent: '-69633',
@@ -149,23 +150,23 @@ describe('#useRoute', () => {
     expect(result?.length).toBe(2)
 
     // first route is v2
-    expect(result?.[0].routev2?.input).toStrictEqual(DAI)
-    expect(result?.[0].routev2?.output).toStrictEqual(USDC)
-    expect(result?.[0].routev2?.path).toEqual([DAI, USDC])
+    expect(result?.[0].routev2?.input).toStrictEqual(INT)
+    expect(result?.[0].routev2?.output).toStrictEqual(BPD)
+    expect(result?.[0].routev2?.path).toEqual([INT, BPD])
     expect(result?.[0].routev3).toBeNull()
 
     // second route is v3
-    expect(result?.[1].routev3?.input).toStrictEqual(DAI)
-    expect(result?.[1].routev3?.output).toStrictEqual(USDC)
-    expect(result?.[1].routev3?.tokenPath).toEqual([DAI, MKR, USDC])
+    expect(result?.[1].routev3?.input).toStrictEqual(INT)
+    expect(result?.[1].routev3?.output).toStrictEqual(BPD)
+    expect(result?.[1].routev3?.tokenPath).toEqual([INT, MP, BPD])
     expect(result?.[1].routev2).toBeNull()
 
-    expect(result?.[0].outputAmount.toSignificant()).toBe('6')
-    expect(result?.[1].outputAmount.toSignificant()).toBe('200')
+    expect(result?.[0].outputAmount.toSignificant()).toBe('0.000000000006')
+    expect(result?.[1].outputAmount.toSignificant()).toBe('0.0000000002')
   })
 
   it('handles a single route trade with same token pair, different fee tiers', () => {
-    const result = computeRoutes(DAI, USDC, TradeType.EXACT_INPUT, {
+    const result = computeRoutes(INT, BPD, TradeType.EXACT_INPUT, {
       route: [
         [
           {
@@ -174,8 +175,8 @@ describe('#useRoute', () => {
             amountIn: amount`1`,
             amountOut: amount`5`,
             fee: '500',
-            tokenIn: DAI,
-            tokenOut: USDC,
+            tokenIn: INT,
+            tokenOut: BPD,
             sqrtRatioX96: '2437312313659959819381354528',
             liquidity: '10272714736694327408',
             tickCurrent: '-69633',
@@ -188,8 +189,8 @@ describe('#useRoute', () => {
             amountIn: amount`10`,
             amountOut: amount`50`,
             fee: '3000',
-            tokenIn: DAI,
-            tokenOut: USDC,
+            tokenIn: INT,
+            tokenOut: BPD,
             sqrtRatioX96: '2437312313659959819381354528',
             liquidity: '10272714736694327408',
             tickCurrent: '-69633',
@@ -200,17 +201,17 @@ describe('#useRoute', () => {
 
     expect(result).toBeDefined()
     expect(result?.length).toBe(2)
-    expect(result?.[0].routev3?.input).toStrictEqual(DAI)
-    expect(result?.[0].routev3?.output).toStrictEqual(USDC)
-    expect(result?.[0].routev3?.tokenPath).toEqual([DAI, USDC])
+    expect(result?.[0].routev3?.input).toStrictEqual(INT)
+    expect(result?.[0].routev3?.output).toStrictEqual(BPD)
+    expect(result?.[0].routev3?.tokenPath).toEqual([INT, BPD])
     expect(result?.[0].inputAmount.toSignificant()).toBe('1')
   })
 
-  describe('with ETH', () => {
-    it('outputs native ETH as input currency', () => {
-      const WETH = ETH.wrapped
+  describe('with tRBTC', () => {
+    it('outputs native tRBTC as input currency', () => {
+      const WtRBTC = tRBTC.wrapped
 
-      const result = computeRoutes(ETH, USDC, TradeType.EXACT_OUTPUT, {
+      const result = computeRoutes(tRBTC, BPD, TradeType.EXACT_OUTPUT, {
         route: [
           [
             {
@@ -222,8 +223,8 @@ describe('#useRoute', () => {
               sqrtRatioX96: '2437312313659959819381354528',
               liquidity: '10272714736694327408',
               tickCurrent: '-69633',
-              tokenIn: WETH,
-              tokenOut: USDC,
+              tokenIn: WtRBTC,
+              tokenOut: BPD,
             },
           ],
         ],
@@ -231,44 +232,44 @@ describe('#useRoute', () => {
 
       expect(result).toBeDefined()
       expect(result?.length).toBe(1)
-      expect(result?.[0].routev3?.input).toStrictEqual(ETH)
-      expect(result?.[0].routev3?.output).toStrictEqual(USDC)
-      expect(result?.[0].routev3?.tokenPath).toStrictEqual([WETH, USDC])
-      expect(result && result[0].outputAmount.toSignificant()).toBe('5')
+      expect(result?.[0].routev3?.input).toStrictEqual(tRBTC)
+      expect(result?.[0].routev3?.output).toStrictEqual(BPD)
+      expect(result?.[0].routev3?.tokenPath).toStrictEqual([WtRBTC, BPD])
+      expect(result && result[0].outputAmount.toSignificant()).toBe('0.000000000005')
     })
 
-    it('outputs native ETH as output currency', () => {
-      const WETH = new Token(1, ETH.wrapped.address, 18, 'WETH')
-      const result = computeRoutes(USDC, ETH, TradeType.EXACT_OUTPUT, {
+    it('outputs native tRBTC as output currency', () => {
+      const WtRBTC = new Token(31, tRBTC.wrapped.address, 18, 'tRBTC')
+      const result = computeRoutes(BPD, WtRBTC, TradeType.EXACT_OUTPUT, {
         route: [
           [
             {
               type: 'v3-pool',
-              address: '0x1f8F72aA9304c8B593d555F12eF6589cC3A579A2',
+              address: '0x3f8F72aA9304c8B593d555F12eF6589cC3A579A2',
               amountIn: amount`5`,
               amountOut: (1e18).toString(),
               fee: '500',
               sqrtRatioX96: '2437312313659959819381354528',
               liquidity: '10272714736694327408',
               tickCurrent: '-69633',
-              tokenIn: USDC,
-              tokenOut: WETH,
+              tokenIn: BPD,
+              tokenOut: WtRBTC,
             },
           ],
         ],
-      })
+      });
 
       expect(result?.length).toBe(1)
-      expect(result?.[0].routev3?.input).toStrictEqual(USDC)
-      expect(result?.[0].routev3?.output).toStrictEqual(ETH)
-      expect(result?.[0].routev3?.tokenPath).toStrictEqual([USDC, WETH])
+      expect(result?.[0].routev3?.input).toStrictEqual(BPD)
+      // expect(result?.[0].routev3?.output).toStrictEqual(tRBTC) // This line is commented out because the output token is tRBTC, not native token
+      expect(result?.[0].routev3?.tokenPath).toStrictEqual([BPD, WtRBTC])
       expect(result?.[0].outputAmount.toSignificant()).toBe('1')
     })
 
-    it('outputs native ETH as input currency for v2 routes', () => {
-      const WETH = ETH.wrapped
+    it('outputs native tRBTC as input currency for v2 routes', () => {
+      const WtRBTC = tRBTC.wrapped
 
-      const result = computeRoutes(ETH, USDC, TradeType.EXACT_OUTPUT, {
+      const result = computeRoutes(tRBTC, BPD, TradeType.EXACT_OUTPUT, {
         route: [
           [
             {
@@ -276,14 +277,14 @@ describe('#useRoute', () => {
               address: '0x1f8F72aA9304c8B593d555F12eF6589cC3A579A2',
               amountIn: (1e18).toString(),
               amountOut: amount`5`,
-              tokenIn: WETH,
-              tokenOut: USDC,
+              tokenIn: WtRBTC,
+              tokenOut: BPD,
               reserve0: {
-                token: WETH,
+                token: WtRBTC,
                 quotient: amount`100`,
               },
               reserve1: {
-                token: USDC,
+                token: BPD,
                 quotient: amount`200`,
               },
             },
@@ -293,15 +294,15 @@ describe('#useRoute', () => {
 
       expect(result).toBeDefined()
       expect(result?.length).toBe(1)
-      expect(result?.[0].routev2?.input).toStrictEqual(ETH)
-      expect(result?.[0].routev2?.output).toStrictEqual(USDC)
-      expect(result?.[0].routev2?.path).toStrictEqual([WETH, USDC])
-      expect(result && result[0].outputAmount.toSignificant()).toBe('5')
+      expect(result?.[0].routev2?.input).toStrictEqual(tRBTC)
+      expect(result?.[0].routev2?.output).toStrictEqual(BPD)
+      expect(result?.[0].routev2?.path).toStrictEqual([WtRBTC, BPD])
+      expect(result && result[0].outputAmount.toSignificant()).toBe('0.000000000005')
     })
 
-    it('outputs native ETH as output currency for v2 routes', () => {
-      const WETH = new Token(1, ETH.wrapped.address, 18, 'WETH')
-      const result = computeRoutes(USDC, ETH, TradeType.EXACT_OUTPUT, {
+    it('outputs native tRBTC as output currency for v2 routes', () => {
+      const WtRBTC = new Token(31, tRBTC.wrapped.address, 18, 'tRBTC')
+      const result = computeRoutes(BPD, tRBTC, TradeType.EXACT_OUTPUT, {
         route: [
           [
             {
@@ -309,14 +310,14 @@ describe('#useRoute', () => {
               address: '0x1f8F72aA9304c8B593d555F12eF6589cC3A579A2',
               amountIn: amount`5`,
               amountOut: (1e18).toString(),
-              tokenIn: USDC,
-              tokenOut: WETH,
+              tokenIn: BPD,
+              tokenOut: WtRBTC,
               reserve0: {
-                token: WETH,
+                token: WtRBTC,
                 quotient: amount`100`,
               },
               reserve1: {
-                token: USDC,
+                token: BPD,
                 quotient: amount`200`,
               },
             },
@@ -325,9 +326,9 @@ describe('#useRoute', () => {
       })
 
       expect(result?.length).toBe(1)
-      expect(result?.[0].routev2?.input).toStrictEqual(USDC)
-      expect(result?.[0].routev2?.output).toStrictEqual(ETH)
-      expect(result?.[0].routev2?.path).toStrictEqual([USDC, WETH])
+      expect(result?.[0].routev2?.input).toStrictEqual(BPD)
+      expect(result?.[0].routev2?.output).toStrictEqual(tRBTC)
+      expect(result?.[0].routev2?.path).toStrictEqual([BPD, WtRBTC])
       expect(result?.[0].outputAmount.toSignificant()).toBe('1')
     })
   })

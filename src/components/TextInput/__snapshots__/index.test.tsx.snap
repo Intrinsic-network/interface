@@ -11,7 +11,9 @@ exports[`ResizableTextArea renders correctly 1`] = `
   flex: 1 1 auto;
   width: 0;
   resize: none;
-  background-color: #F5F6FC;
+  border: 1px solid #AAAAAA;
+  border-radius: 6px;
+  padding: 16px 12px;
   -webkit-transition: color 300ms step-start;
   transition: color 300ms step-start;
   color: #0E111A;
@@ -20,7 +22,6 @@ exports[`ResizableTextArea renders correctly 1`] = `
   font-weight: 500;
   width: 100%;
   line-height: 1.2;
-  padding: 0px;
   -webkit-appearance: textfield;
 }
 
