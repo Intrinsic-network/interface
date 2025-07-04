@@ -4,12 +4,12 @@ import { useWeb3React } from "@web3-react/core";
 import Badge from "components/Badge";
 import { getChainInfo } from "constants/chainInfo";
 import { SupportedL2ChainId } from "constants/chains";
+import { useAllTokens } from "hooks/Tokens";
 import useCurrencyLogoURIs from "lib/hooks/useCurrencyLogoURIs";
-import { ReactNode, useCallback, useState } from "react";
+import { ReactNode, useCallback, useMemo, useState } from "react";
 import {
   AlertCircle,
   AlertTriangle,
-  ArrowUpCircle,
   CheckCircle,
 } from "react-feather";
 import { Text } from "rebass";
@@ -25,7 +25,7 @@ import { ExternalLink, ThemedText } from "../../theme";
 import { CloseIcon, CustomLightSpinner } from "../../theme";
 import { ExplorerDataType, getExplorerLink } from "../../utils/getExplorerLink";
 import { TransactionSummary } from "../AccountDetails/TransactionSummary";
-import { ButtonLight, ButtonLink, ButtonPrimary } from "../Button";
+import { ButtonLink, ButtonPrimary } from "../Button";
 import { AutoColumn, ColumnCenter } from "../Column";
 import Modal from "../Modal";
 import { AutoRow, RowBetween, RowFixed } from "../Row";
@@ -132,9 +132,28 @@ function TransactionSubmittedContent({
   const theme = useTheme() as any;
 
   const { connector } = useWeb3React();
+  const allTokens = useAllTokens();
 
   const token = currencyToAdd?.wrapped;
   const logoURL = useCurrencyLogoURIs(token)[0];
+
+  // Check if token is already in user's token list or was previously added to wallet
+  const isTokenAlreadyAdded = useMemo(() => {
+    if (!token?.address) return false;
+    
+    // Check both the original address and lowercased version in app token list
+    const tokenAddress = token.address;
+    const tokenAddressLower = tokenAddress.toLowerCase();
+    const inAppTokenList = Boolean(allTokens[tokenAddress] || allTokens[tokenAddressLower]);
+    
+    // Check if we've previously added this token to the wallet (stored in localStorage)
+    const storageKey = `addedToWallet_${tokenAddressLower}`;
+    const previouslyAddedToWallet = localStorage.getItem(storageKey) === 'true';
+    
+    // Token is considered "already added" if it's in the app's token list OR was previously added to wallet
+    
+    return inAppTokenList || previouslyAddedToWallet;
+  }, [allTokens, token?.address]);
 
   const [success, setSuccess] = useState<boolean | undefined>();
   const [hasAddedToken, setHasAddedToken] = useState<boolean>(false);
@@ -147,7 +166,13 @@ function TransactionSubmittedContent({
         decimals: token.decimals,
         image: logoURL,
       })
-      .then(() => setSuccess(true))
+      .then(() => {
+        setSuccess(true);
+        setHasAddedToken(true);
+        // Remember that we've added this token to the wallet
+        const storageKey = `addedToWallet_${token.address.toLowerCase()}`;
+        localStorage.setItem(storageKey, 'true');
+      })
       .catch(() => setSuccess(false));
   }, [connector, logoURL, token]);
 
@@ -199,7 +224,7 @@ function TransactionSubmittedContent({
               )}
             </div>
             <div>
-              {currencyToAdd && connector.watchAsset&& !hasAddedToken && (
+              {currencyToAdd && !currencyToAdd.isNative && connector.watchAsset && !hasAddedToken && !isTokenAlreadyAdded && (
                 <ButtonPrimary
                   mt="12px"
                   padding="6px 12px"
