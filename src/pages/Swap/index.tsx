@@ -546,11 +546,9 @@ export default function Swap() {
       swapErrorMessage,
       txHash,
     });
-    // if there was a tx hash, we want to clear the input
-    if (txHash) {
-      onUserInput(Field.INPUT, "");
-    }
-  }, [attemptingTxn, onUserInput, swapErrorMessage, tradeToConfirm, txHash]);
+    // Don't clear the input after successful transactions to preserve approval state
+    // This allows users to make subsequent swaps without re-approving the same token
+  }, [attemptingTxn, swapErrorMessage, tradeToConfirm, txHash]);
 
   const handleAcceptChanges = useCallback(() => {
     setSwapState({
@@ -564,10 +562,13 @@ export default function Swap() {
 
   const handleInputSelect = useCallback(
     (inputCurrency: Currency) => {
-      setApprovalSubmitted(false); // reset 2 step UI for approvals
+      // Only reset approval state if the currency is actually changing
+      if (currencies[Field.INPUT]?.equals(inputCurrency) !== true) {
+        setApprovalSubmitted(false); // reset 2 step UI for approvals
+      }
       onCurrencySelection(Field.INPUT, inputCurrency);
     },
-    [onCurrencySelection]
+    [onCurrencySelection, currencies]
   );
 
   const handleMaxInput = useCallback(() => {
