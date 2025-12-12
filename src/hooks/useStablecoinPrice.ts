@@ -5,13 +5,12 @@ import { useMemo, useRef } from 'react'
 import { RouterPreference } from 'state/routing/slice'
 import { useRoutingAPITrade } from 'state/routing/useRoutingAPITrade'
 
-import { SupportedChainId } from '../constants/chains'
-import { USDC_MAINNET } from '../constants/tokens'
+// import { USDC_MAINNET } from '../constants/tokens'
 
 // Stablecoin amounts used when calculating spot price for a given currency.
 // The amount is large enough to filter low liquidity pairs.
 export const STABLECOIN_AMOUNT_OUT: { [chainId: number]: CurrencyAmount<Token> } = {
-  [SupportedChainId.RSK_MAINNET]: CurrencyAmount.fromRawAmount(USDC_MAINNET, 100_000e6),
+  // [SupportedChainId.RSK_MAINNET]: CurrencyAmount.fromRawAmount(USDC_MAINNET, 100_000e6),
 }
 
 /**

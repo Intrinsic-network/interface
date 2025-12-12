@@ -20,8 +20,6 @@ import { formatTickPrice } from "utils/formatTickPrice";
 import { unwrappedToken } from "utils/unwrappedToken";
 
 import {
-  DAI,
-  USDC_MAINNET,
   USDT,
   WBTC,
   WRAPPED_NATIVE_CURRENCY,
@@ -134,7 +132,7 @@ export function getPriceOrderingFromPositionForUI(position?: Position): {
   const token1 = position.amount1.currency;
 
   // if token0 is a dollar-stable asset, set it as the quote token
-  const stables = [DAI, USDC_MAINNET, USDT];
+  const stables = [USDT];
   if (stables.some((stable) => stable.equals(token0))) {
     return {
       priceLower: position.token0PriceUpper.invert() as any,
