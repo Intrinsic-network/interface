@@ -34,12 +34,17 @@ export const CUSTOM_BASES: { [chainId: number]: { [tokenAddress: string]: Token[
  * Shows up in the currency select for swap and add liquidity
  */
 export const COMMON_BASES: ChainCurrencyList = {
-  // TODO CNBTC add mainnet
   [SupportedChainId.RSK_TESTNET]: [
     nativeOnChain(SupportedChainId.RSK_TESTNET),
-    BPD,
-    MP,
+    BPD[SupportedChainId.RSK_TESTNET] as Token,
+    MP[SupportedChainId.RSK_TESTNET] as Token,
     WRAPPED_NATIVE_CURRENCY[SupportedChainId.RSK_TESTNET] as Token,
+  ],
+  [SupportedChainId.RSK_MAINNET]: [
+    nativeOnChain(SupportedChainId.RSK_MAINNET),
+    BPD[SupportedChainId.RSK_MAINNET] as Token,
+    MP[SupportedChainId.RSK_MAINNET] as Token,
+    WRAPPED_NATIVE_CURRENCY[SupportedChainId.RSK_MAINNET] as Token,
   ],
 }
 

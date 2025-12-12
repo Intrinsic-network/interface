@@ -1,9 +1,9 @@
-import { GOVERNANCE_BRAVO_ADDRESSES, TIMELOCK_ADDRESS, UNI_ADDRESS } from './addresses'
+import { GOVERNANCE_BRAVO_ADDRESSES, INT_ADDRESS,TIMELOCK_ADDRESS } from './addresses'
 import { SupportedChainId } from './chains'
 
 export const COMMON_CONTRACT_NAMES: Record<number, { [address: string]: string }> = {
   [SupportedChainId.RSK_MAINNET]: {
-    [UNI_ADDRESS[SupportedChainId.RSK_MAINNET]]: 'INT',
+    [INT_ADDRESS[SupportedChainId.RSK_MAINNET]]: 'INT',
     [TIMELOCK_ADDRESS[SupportedChainId.RSK_MAINNET]]: 'Timelock',
     [GOVERNANCE_BRAVO_ADDRESSES[SupportedChainId.RSK_MAINNET]]: 'Governance',
     // '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e': 'ENS Registry',
