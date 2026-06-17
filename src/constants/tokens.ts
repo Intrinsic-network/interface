@@ -90,6 +90,17 @@ export const MP: { [chainId: number]: Token } = {
   ),
 };
 
+export const USDT0: { [chainId: number]: Token } = {
+  [SupportedChainId.RSK_MAINNET]: new Token(
+    SupportedChainId.RSK_MAINNET,
+    // EIP-55 checksum of 0x779dED0C9e1022225F8e0630b35A9B54Be713736 (the explorer shows the RSK EIP-1191 form, which sdk-core rejects)
+    '0x779Ded0c9e1022225f8E0630b35a9b54bE713736',
+    6,
+    'USD₮0',
+    'USD₮0'
+  ),
+};
+
 export const INT: { [chainId: number]: Token } = {
   [SupportedChainId.RSK_TESTNET]: new Token(
     SupportedChainId.RSK_TESTNET,

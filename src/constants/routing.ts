@@ -2,7 +2,7 @@
 import { Currency, Token } from '@intrinsic-network/sdk-core'
 
 import { SupportedChainId } from './chains'
-import { BPD, MP, nativeOnChain, WRAPPED_NATIVE_CURRENCY } from './tokens'
+import { BPD, MP, nativeOnChain, USDT0, WRAPPED_NATIVE_CURRENCY } from './tokens'
 
 type ChainTokenList = {
   readonly [chainId: number]: Token[]
@@ -44,6 +44,7 @@ export const COMMON_BASES: ChainCurrencyList = {
     nativeOnChain(SupportedChainId.RSK_MAINNET),
     BPD[SupportedChainId.RSK_MAINNET] as Token,
     MP[SupportedChainId.RSK_MAINNET] as Token,
+    USDT0[SupportedChainId.RSK_MAINNET] as Token,
     WRAPPED_NATIVE_CURRENCY[SupportedChainId.RSK_MAINNET] as Token,
   ],
 }

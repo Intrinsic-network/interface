@@ -23,7 +23,9 @@ export function getTokenLogoURI(
 ): string | void {
   const networksWithUrls = [SupportedChainId.RSK_MAINNET, SupportedChainId.RSK_TESTNET]
   if (networksWithUrls.includes(chainId)) {
-    return `https://raw.githubusercontent.com/Intrinsic-network/interface/refs/heads/main/src/assets/images/${token}/logo.svg`;
+    // Asset folders are ASCII; map display-only glyphs (e.g. ₮ in USD₮0) to ASCII for the URL path.
+    const folder = String(token).replace(/₮/g, 'T')
+    return `https://raw.githubusercontent.com/Intrinsic-network/interface/refs/heads/main/src/assets/images/${folder}/logo.svg`;
   }
 }
 
